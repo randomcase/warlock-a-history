@@ -125,17 +125,17 @@ public final class MasterNavigationAndIndexGenerator {
                 new PortalCatalogEntry(1, "index.html", "Master Index Hub",
                         "Sovereign Master Index, Search & 7-Row Cross-Wing Relational Matrix",
                         "01. Master Hubs & Architecture", "#D4AF37", 0, "#D4AF37",
-                        "Al-Fihris Al-Jāmi' • All 67 Portals Continually Integrated",
+                        "Al-Fihris Al-Jāmi' • All 68 Portals Continually Integrated",
                         "Central navigation command center with instant search, multi-wing filter, 7-row cross-series matrix, continual sync, and embedded live workspace."),
                 new PortalCatalogEntry(2, "master-combined-omnibus.html", "Combined Omnibus Reader",
                         "Combined Multi-Portal Omnibus Workspace & Split-Screen Comparator",
                         "01. Master Hubs & Architecture", "#38BDF8", 0, "#38BDF8",
-                        "Al-Majmū' Al-Muwahhad • All 67 Portals Side-by-Side & Sequential Reader",
-                        "Combines all 67 HTML portals into a single unified application with sidebar tree navigation, single or dual split-screen comparison, continual auto-cycle, and keyboard shortcuts."),
+                        "Al-Majmū' Al-Muwahhad • All 68 Portals Side-by-Side & Sequential Reader",
+                        "Combines all 68 HTML portals into a single unified application with sidebar tree navigation, single or dual split-screen comparison, continual auto-cycle, and keyboard shortcuts."),
                 new PortalCatalogEntry(3, "dependencies-report.html", "Dependencies & Java 21+ Audit",
                         "Master Spring Boot 3.4 & Java 21+/26 Essentials Dependency Usage Report",
                         "01. Master Hubs & Architecture", "#34D399", 0, "#34D399",
-                        "SPC State S0 • SHA-256 Artifact Ledger (All 67 Portals)",
+                        "SPC State S0 • SHA-256 Artifact Ledger (All 68 Portals)",
                         "Complete audit of Spring Boot starters, Java 21+/26 virtual threads, sealed types, record patterns, and SHA-256 verification across all generated portals."),
 
                 // Wing 02: 7 Pre-Prophetic Color Orders
@@ -516,7 +516,14 @@ public final class MasterNavigationAndIndexGenerator {
                         "Interactive Simulator of Every Era of Islamic Conquest, Caliphates, Canonical Movements (East, West, North & South), Pinnacles & Recessions As They Happen",
                         "01. Master Hubs & Architecture", "#38BDF8", 0, "#38BDF8",
                         "Qur'an 3:140 (Sunnat Al-Tadāwul), 24:55, 48:1 & 110:1-2 • 16 Chronological Eras (610–2026 CE) • 4 Compass Vectors (N/S/E/W) • 10 Canonical Movements • 8 Pinnacle/Recession Cycles",
-                        "AI-illustrated and live interactive 16-era simulator tracking every Caliphate, Sultanate, Imamate, and canonical movement across East, West, North, and South — animating every historical Pinnacle (Al-Awj) and Recession/Rebirth (Al-Inḥisār wa Al-Inbi'āth) as they happen.")
+                        "AI-illustrated and live interactive 16-era simulator tracking every Caliphate, Sultanate, Imamate, and canonical movement across East, West, North, and South — animating every historical Pinnacle (Al-Awj) and Recession/Rebirth (Al-Inḥisār wa Al-Inbi'āth) as they happen."),
+
+                // Wing 01 / 68: Unified Single-Castle 2.5D/3D Sprite RPG, Caravan Logistics, Castle Siege, 6-Mode Wargame, 67-Tome Library & 3.14 Pi Studio Game Launch Portal
+                new PortalCatalogEntry(68, "islamic-single-castle-25d-rpg-caravan-siege-314-studio-game.html", "Single-Castle 2.5D/3D Sprite RPG, Caravan Siege & 3.14 Studio Game (#68)",
+                        "The Sovereign Single-Castle 2.5D/3D Sprite RPG, Caravan & Port Logistics, Castle Siege, 6-Mode Automated Wargame, 67-Tome Castle Library & 12-Format 3.14 π Studio",
+                        "01. Master Hubs & Architecture", "#10B981", 0, "#10B981",
+                        "313 of Badr (+1 = 314 π Anchor) • Prophetic Hope, Levity & Order • Good Warlock Uncapped Idle Power • 11-Vector Character Combat • 67 Tomes Abstracted • 12 Data Formats",
+                        "Unified Single-Page Game Launch Portal abstracting all 67 knowledge bases inside the Single Castle Library: govern from the Throne Room (Cafeteria Vinegar/Sawm, Barracks, Sciences, Suffrage & Patronage), trade Vinegar/Cotton/Tobacco/Compasses, engage Rumored Kings, uncover Syndications, and command 3D sprites across RPG, Tower Defense, TDM, Brawl, Ambush & Siege modes.")
         );
     }
 

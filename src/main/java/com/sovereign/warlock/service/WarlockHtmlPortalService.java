@@ -346,6 +346,10 @@ public final class WarlockHtmlPortalService {
                     new IslamicConquestMovementsPinnaclesAndRecessionsPortalGenerator();
             artifacts.add(conquestMovementsGenerator.generatePortal(outputDir));
 
+            IslamicSingleCastleRpgCaravanSiegeGamePortalGenerator singleCastleGameGenerator =
+                    new IslamicSingleCastleRpgCaravanSiegeGamePortalGenerator();
+            artifacts.add(singleCastleGameGenerator.generatePortal(outputDir));
+
             MasterNavigationAndIndexGenerator masterNavGenerator = new MasterNavigationAndIndexGenerator();
             return masterNavGenerator.integrateAllPortalsAndGenerateMasterIndex(outputDir, artifacts);
         } catch (IOException e) {
