@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal #66 | Alchemical Wares, Douching &amp; Hygiene, Homogeneity &amp; Insular Governance, The 7 Caravan &amp; Man Archetypes, Caliphate Organization &amp; Islamic Suffrage</title>
+  <style>
+    :root {
+      --bg-deep: #070B12;
+      --bg-card: #0F1624;
+      --bg-card-alt: #151F32;
+      --accent-gold: #D4AF37;
+      --accent-emerald: #10B981;
+      --accent-cyan: #38BDF8;
+      --accent-rose: #F43F5E;
+      --accent-violet: #A855F7;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --border-subtle: rgba(212, 175, 55, 0.22);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 0%, #112233 0%, var(--bg-deep) 55%);
+      color: var(--text-main);
+      line-height: 1.68;
+      padding-bottom: 5rem;
+    }
+    .container {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 2rem 1.75rem;
+    }
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(15, 22, 36, 0.96), rgba(16, 185, 129, 0.14), rgba(212, 175, 55, 0.14));
+      border: 1px solid var(--border-subtle);
+      border-left: 6px solid var(--accent-gold);
+      border-radius: 16px;
+      padding: 2.4rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-bottom: 1rem;
+    }
+    .pill-badge {
+      display: inline-block;
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 2.25rem;
+      line-height: 1.22;
+      color: #FFF;
+      margin-bottom: 0.85rem;
+    }
+    .hero-lead {
+      font-size: 1.08rem;
+      color: #CBD5E1;
+      max-width: 1180px;
+    }
+    .arabic-banner {
+      margin-top: 1.25rem;
+      padding: 1rem 1.35rem;
+      background: rgba(7, 11, 18, 0.78);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 10px;
+      font-size: 1.15rem;
+      color: #FDE68A;
+    }
+    .section-block {
+      margin-bottom: 3.2rem;
+    }
+    .section-header {
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-header h2 {
+      font-size: 1.65rem;
+      color: #FDE68A;
+    }
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-top: 0.3rem;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+      gap: 1.35rem;
+    }
+    .card-panel {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.3);
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .arabic-chip {
+      font-family: 'Traditional Arabic', 'Amiri', serif;
+      font-size: 1.05rem;
+      color: #FDE68A;
+      background: rgba(212, 175, 55, 0.12);
+      padding: 0.2rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    .card-panel h3 {
+      font-size: 1.2rem;
+      color: #FFF;
+    }
+    .sub-author {
+      font-size: 0.9rem;
+      color: #38BDF8;
+    }
+    .detail-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.94rem;
+      color: #E2E8F0;
+    }
+    .fiqh-box {
+      background: rgba(16, 185, 129, 0.09);
+      border-left: 3px solid #10B981;
+      padding: 0.65rem 0.85rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.91rem;
+      color: #D1FAE5;
+    }
+    .svg-showcase {
+      background: #090E18;
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+      overflow-x: auto;
+    }
+    .table-wrap {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.25rem;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    th, td {
+      padding: 0.85rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      vertical-align: top;
+    }
+    th {
+      color: #FDE68A;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(255,255,255,0.03);
+    }
+    code {
+      font-family: 'Consolas', monospace;
+      color: #7DD3FC;
+      font-size: 0.85rem;
+    }
+  </style>
+<!-- SOV_CHROME_CSS_START -->
+<style id="sovereign-universal-nav-css">
+  .sov-global-wrap {
+    background: linear-gradient(90deg, #04060C 0%, #0C1324 50%, #04060C 100%);
+    border-bottom: 2px solid #D4AF37;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.65);
+  }
+  .sov-global-bar {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0.55rem 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+  .sov-wing-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .sov-pill:hover, .sov-pill.sov-active {
+    color: #FFFFFF;
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.22);
+  }
+  .sov-pill-master {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(16, 185, 129, 0.22));
+    border-color: #D4AF37;
+    color: #FDE68A;
+    font-weight: 700;
+  }
+  .sov-pill-omnibus {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.22));
+    border-color: #38BDF8;
+    color: #E0F2FE;
+    font-weight: 700;
+  }
+  .sov-pill-drawer {
+    background: #1E293B;
+    border-color: #F43F5E;
+    color: #FDA4AF;
+    font-weight: 700;
+  }
+  .sov-pill-counter {
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.18);
+    color: #FDE68A;
+    font-family: 'Consolas', monospace;
+    font-weight: 700;
+  }
+  .sov-pill-sync {
+    border-color: #10B981;
+    background: rgba(16, 185, 129, 0.14);
+    color: #6EE7B7;
+    font-family: 'Consolas', monospace;
+    font-size: 0.71rem;
+  }
+  .sov-sister-ribbon {
+    background: rgba(10, 15, 28, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.45rem 1.2rem;
+  }
+  .sov-sister-inner {
+    max-width: 1560px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .sov-sister-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-sister-label {
+    font-family: 'Consolas', monospace;
+    color: #FDE68A;
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .sov-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 5, 10, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 100000;
+    overflow-y: auto;
+    padding: 2rem 1.2rem;
+  }
+  .sov-modal-backdrop.open {
+    display: block;
+  }
+  .sov-modal-box {
+    max-width: 1380px;
+    margin: 0 auto;
+    background: #0B101D;
+    border: 2px solid #D4AF37;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.85);
+  }
+  .sov-modal-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .sov-search-input {
+    flex: 1;
+    min-width: 260px;
+    background: #050811;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.86rem;
+  }
+  .sov-drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 0.65rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.3rem;
+  }
+  .sov-drawer-item {
+    display: block;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #D4AF37;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    text-decoration: none;
+    color: #E2E8F0;
+    transition: all 0.14s ease;
+  }
+  .sov-drawer-item:hover, .sov-drawer-item.current {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: #D4AF37;
+    transform: translateY(-1px);
+  }
+  .sov-footer-wrap {
+    max-width: 1480px;
+    margin: 3rem auto 1rem auto;
+    padding: 1.5rem;
+    background: rgba(8, 12, 22, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-top: 3px solid #D4AF37;
+    border-radius: 14px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .sov-footer-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .sov-footer-cat h4 {
+    font-size: 0.78rem;
+    color: #FDE68A;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.25rem;
+  }
+  .sov-footer-cat a {
+    display: block;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.76rem;
+    padding: 0.14rem 0;
+  }
+  .sov-footer-cat a:hover, .sov-footer-cat a.active-link {
+    color: #38BDF8;
+    font-weight: 600;
+  }
+</style>
+<!-- SOV_CHROME_CSS_END -->
+</head>
+<body>
+<!-- SOV_CHROME_TOP_START -->
+<div id="sovereign-universal-nav" class="sov-global-wrap" data-portal-seq="66" data-portal-total="66">
+  <div class="sov-global-bar">
+    <div class="sov-wing-links">
+      <a class="sov-pill sov-pill-master " href="index.html">🏠 Master Index (<span data-sov-total>66</span>)</a>
+      <a class="sov-pill sov-pill-omnibus sov-active" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">⚖️ Alchemical Hygiene, Caravan &amp; Suffrage (#66)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">🧭 Compass, Caliphate Maps &amp; 57 Flags (#65)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime, Astrolabe &amp; Oman/Yemen (#64)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
+      <a class="sov-pill sov-pill-omnibus " href="quranic-timeline-expansion-vol1-chronology.html">🎓 Collegiate Thesis (#58–#60)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caliphates-sultans-shahs-dynasties-return.html">👑 Caliphates &amp; Return (#57)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-countries-history-canonical-embrace-atlas.html">🌍 57 OIC Countries (#56)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">🚰 Naming &amp; Sewer (#55)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-modesty-evolution-western-frontier-men-women.html">🧕 Western Modesty (#54)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">⚗️ Philosophy &amp; Alchemy (#53)</a>
+      <a class="sov-pill sov-pill-omnibus " href="greco-roman-gods-titans-daimones-islamic-judgment.html">⚖️ Greco-Roman &amp; Titans (#52)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caravans-battles-conquest-chronicle.html">🐪 Caravans &amp; Fatḥ (#51)</a>
+      <a class="sov-pill sov-pill-omnibus " href="conjoined-worlds-realms-principles-node-grid.html">⛰️ 3D Node-Art Grid (#50)</a>
+      <a class="sov-pill sov-pill-omnibus " href="master-combined-omnibus.html?portal=islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">🧭 Combined Omnibus View</a>
+      <button type="button" class="sov-pill sov-pill-drawer" onclick="toggleSovDrawer()">⚡ All <span data-sov-total>66</span> Portals (Ctrl+K)</button>
+      <a class="sov-pill " href="order-1-white.html">🎨 7 Orders</a>
+      <a class="sov-pill " href="warlock-3d-sanctum.html">🏛️ 3D Sanctum &amp; Realms</a>
+      <a class="sov-pill " href="priory-negentropy-order.html">📐 Priory &amp; Planes</a>
+      <a class="sov-pill " href="zalim-1-fasad.html">⚠️ 7 Zalim</a>
+      <a class="sov-pill " href="worlds-hegemon-disorder.html">🌍 7 Worlds</a>
+      <a class="sov-pill " href="warlock-formation-dissolution-jafar-aladdin.html">🏺 Ja'far/Aladdin</a>
+      <a class="sov-pill " href="sequester-between-worlds.html">🧱 7 Sequesters</a>
+      <a class="sov-pill " href="interlocker-egg-binder-islam.html">🥚 Egg Binder</a>
+      <a class="sov-pill " href="warlock-apocrypha-islamic-theorems.html">📜 Apocrypha</a>
+      <a class="sov-pill " href="islamic-husbandry-sovereign-estate.html">🛡️ Husbandry</a>
+      <a class="sov-pill " href="way-of-the-flower-rose-garden-islam.html">🌹 Rose Garden</a>
+      <a class="sov-pill " href="disney-daffy-donald-islamic-microcosm.html">🦆 Disney/Daffy</a>
+      <a class="sov-pill " href="warlock-islamic-visual-eras-history.html">🕌 7 Visual Eras</a>
+      <a class="sov-pill " href="dependencies-report.html">📦 Dependencies</a>
+    </div>
+    <div class="sov-wing-links">
+      <a class="sov-pill" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html" title="The Full Islamic Compass (32-Point Star &amp; Qiblah), Cartographic Map of the Caliphates &amp; Every Flag for Every Age, Caliphate &amp; Country">← Prev: Compass, Caliphate Maps &amp; Every Flag (14 Ages / 57 Countries)</a>
+      <span id="sovPortalCounterBadge" class="sov-pill sov-pill-counter" title="Continually Synchronized Portal Index (#66 of 66)">#66 / 66</span>
+      <button type="button" id="sovContinualCycleBtn" class="sov-pill sov-pill-sync" onclick="toggleSovContinualCycle()" title="Click to toggle Continual Auto-Advance across all 66 portals">🔄 Continual Sync: #66/66</button>
+      <a class="sov-pill" href="index.html" title="Sovereign Master Index, Search &amp; 7-Row Cross-Wing Relational Matrix">Next: Master Index Hub →</a>
+    </div>
+  </div>
+  <div class="sov-sister-ribbon">
+  <div class="sov-sister-inner">
+    <div class="sov-sister-group">
+      <span class="sov-sister-label">7-FOLD SERIES QUICK JUMP:</span>
+      <a class="sov-pill" href="order-1-white.html"><span style="width:8px;height:8px;border-radius:50%;background:#F8F5E6;display:inline-block;"></span>Row #1: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-2-black.html"><span style="width:8px;height:8px;border-radius:50%;background:#A78BFA;display:inline-block;"></span>Row #2: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-3-sapphire.html"><span style="width:8px;height:8px;border-radius:50%;background:#38BDF8;display:inline-block;"></span>Row #3: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-4-gold.html"><span style="width:8px;height:8px;border-radius:50%;background:#D4AF37;display:inline-block;"></span>Row #4: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-5-crimson.html"><span style="width:8px;height:8px;border-radius:50%;background:#F43F5E;display:inline-block;"></span>Row #5: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-6-brass.html"><span style="width:8px;height:8px;border-radius:50%;background:#B87333;display:inline-block;"></span>Row #6: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-7-emerald.html"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;"></span>Row #7: Order/Realm/Plane/Zalim/World</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="sovMegaDrawer" class="sov-modal-backdrop" onclick="if(event.target===this)toggleSovDrawer()">
+  <div class="sov-modal-box">
+    <div class="sov-modal-header">
+      <div>
+        <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">SOVEREIGN MASTER ATLAS • ALL <span data-sov-total>66</span> HTML PORTALS CONTINUALLY INTEGRATED</div>
+        <h2 style="font-size:1.25rem;color:#FFF;margin:0.15rem 0;">Instant Portal Switcher &amp; Cross-Wing Navigator (#66 / 66)</h2>
+      </div>
+      <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all 66 portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+        <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (66)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">⚖️ Hygiene, Caravan &amp; Suffrage (#66)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">🧭 Compass, Maps &amp; 57 Flags (#65)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime &amp; Oman/Yemen (#64)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="quranic-timeline-expansion-vol1-chronology.html">Collegiate Thesis (#58–#60)</a>
+        <a class="sov-pill sov-pill-omnibus" href="conjoined-worlds-realms-principles-node-grid.html">3D Node-Art Grid (#50)</a>
+        <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">Open in Split Omnibus</a>
+        <button type="button" class="sov-pill" onclick="toggleSovDrawer()">✕ Close (Esc)</button>
+      </div>
+    </div>
+    <div id="sovDrawerGrid" class="sov-drawer-grid">
+      <a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="index.html" data-search="master index hub sovereign master index, search &amp; 7-row cross-wing relational matrix 01. master hubs &amp; architecture al-fihris al-jāmi&#39; • all 63 portals continually integrated index.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#01 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">index.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Master Index Hub</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Fihris Al-Jāmi' • All 63 Portals Continually Integrated</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="master-combined-omnibus.html" data-search="combined omnibus reader combined multi-portal omnibus workspace &amp; split-screen comparator 01. master hubs &amp; architecture al-majmū&#39; al-muwahhad • all 63 portals side-by-side &amp; sequential reader master-combined-omnibus.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#02 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">master-combined-omnibus.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Combined Omnibus Reader</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Majmū' Al-Muwahhad • All 63 Portals Side-by-Side &amp; Sequential Reader</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="dependencies-report.html" data-search="dependencies &amp; java 21+ audit master spring boot 3.4 &amp; java 21+/26 essentials dependency usage report 01. master hubs &amp; architecture spc state s0 • sha-256 artifact ledger (all 63 portals) dependencies-report.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#03 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">dependencies-report.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Dependencies &amp; Java 21+ Audit</div><div style="font-size:0.72rem;color:#CBD5E1;">SPC State S0 • SHA-256 Artifact Ledger (All 63 Portals)</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="order-1-white.html" data-search="order #1: white order #1 (warlock-1-white) — malakh-azal (sephirotic white #f8f5e6) 02. seven pre-prophetic color orders malakh-azal • qur&#39;an 2:102 &amp; 53:19-23 order-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#04 / 66 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #1: White</div><div style="font-size:0.72rem;color:#CBD5E1;">Malakh-Azal • Qur'an 2:102 &amp; 53:19-23</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="order-2-black.html" data-search="order #2: black order #2 (warlock-2-black) — katib al-qalam (abbasid black #141416) 02. seven pre-prophetic color orders kātib al-qalam • qur&#39;an 68:1 &amp; 24:22 order-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#05 / 66 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #2: Black</div><div style="font-size:0.72rem;color:#CBD5E1;">Kātib Al-Qalam • Qur'an 68:1 &amp; 24:22</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="order-3-sapphire.html" data-search="order #3: sapphire order #3 (warlock-3-sapphire) — yored ha-merkabah (babylonian sapphire #0f2c59) 02. seven pre-prophetic color orders yored ha-merkabah • qur&#39;an 6:75-79 &amp; 53:1-18 order-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#06 / 66 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #3: Sapphire</div><div style="font-size:0.72rem;color:#CBD5E1;">Yored Ha-Merkabah • Qur'an 6:75-79 &amp; 53:1-18</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="order-4-gold.html" data-search="order #4: gold order #4 (warlock-4-gold) — shahid al-alast (covenant gold #d4af37) 02. seven pre-prophetic color orders shāhid al-alast • qur&#39;an 7:172 &amp; 3:67 order-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#07 / 66 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #4: Gold</div><div style="font-size:0.72rem;color:#CBD5E1;">Shāhid Al-Alast • Qur'an 7:172 &amp; 3:67</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="order-5-crimson.html" data-search="order #5: crimson order #5 (warlock-5-crimson) — saraph ha-ritzpah (seraphic crimson #8b0000) 02. seven pre-prophetic color orders saraph ha-ritzpah • qur&#39;an 72:8-9 &amp; 25:1 order-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#08 / 66 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #5: Crimson</div><div style="font-size:0.72rem;color:#CBD5E1;">Saraph Ha-Ritzpah • Qur'an 72:8-9 &amp; 25:1</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="order-6-brass.html" data-search="order #6: brass order #6 (warlock-6-brass) — ba&#39;al ha-nechoshet (solomonic brass #b87333) 02. seven pre-prophetic color orders ba&#39;al ha-nechoshet • qur&#39;an 2:102 &amp; 34:12 order-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#09 / 66 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #6: Brass</div><div style="font-size:0.72rem;color:#CBD5E1;">Ba'al Ha-Nechoshet • Qur'an 2:102 &amp; 34:12</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="order-7-emerald.html" data-search="order #7: emerald order #7 (warlock-7-emerald) — wali al-ghaib (khidrian emerald #006b54) 02. seven pre-prophetic color orders walī al-ghaib • qur&#39;an 18:65 &amp; 9:108 order-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#10 / 66 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #7: Emerald</div><div style="font-size:0.72rem;color:#CBD5E1;">Walī Al-Ghaib • Qur'an 18:65 &amp; 9:108</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="warlock-3d-sanctum.html" data-search="3d sanctum master interactive 3d seven-realm warlock sanctum &amp; celestial geometry 03. 3d sanctum &amp; seven realms al-haykal al-handasī • interactive webgl/canvas 3d warlock-3d-sanctum.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#11 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">warlock-3d-sanctum.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Sanctum Master</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Haykal Al-Handasī • Interactive WebGL/Canvas 3D</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="realm-1-white.html" data-search="realm #1: &#39;aravot realm #1 (white #f8f5e6) — &#39;aravot / sidrat al-muntaha 03. 3d sanctum &amp; seven realms seventh heaven • 390nm alabaster realm-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#12 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #1: 'Aravot</div><div style="font-size:0.72rem;color:#CBD5E1;">Seventh Heaven • 390nm Alabaster</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="realm-2-black.html" data-search="realm #2: makhon realm #2 (black #141416) — makhon / bayt al-qalam 03. 3d sanctum &amp; seven realms hidden ink treasury • 405nm obsidian realm-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#13 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #2: Makhon</div><div style="font-size:0.72rem;color:#CBD5E1;">Hidden Ink Treasury • 405nm Obsidian</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="realm-3-sapphire.html" data-search="realm #3: zevul realm #3 (sapphire #0f2c59) — zevul / al-bayt al-ma&#39;mur 03. 3d sanctum &amp; seven realms sapphire pavement • 465nm lapis realm-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#14 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #3: Zevul</div><div style="font-size:0.72rem;color:#CBD5E1;">Sapphire Pavement • 465nm Lapis</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="realm-4-gold.html" data-search="realm #4: shehaqim realm #4 (gold #d4af37) — shehaqim / diwan al-mithaq 03. 3d sanctum &amp; seven realms golden covenant court • 580nm amber-gold realm-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#15 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #4: Shehaqim</div><div style="font-size:0.72rem;color:#CBD5E1;">Golden Covenant Court • 580nm Amber-Gold</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="realm-5-crimson.html" data-search="realm #5: ma&#39;on realm #5 (crimson #8b0000) — ma&#39;on / rasad ash-shuhub 03. 3d sanctum &amp; seven realms seraphic garrison • 650nm crimson realm-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#16 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #5: Ma'on</div><div style="font-size:0.72rem;color:#CBD5E1;">Seraphic Garrison • 650nm Crimson</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="realm-6-brass.html" data-search="realm #6: raqia&#39; realm #6 (brass #b87333) — raqia&#39; / madinat an-nuhas 03. 3d sanctum &amp; seven realms city of brass • 605nm burnished brass realm-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#17 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #6: Raqia'</div><div style="font-size:0.72rem;color:#CBD5E1;">City of Brass • 605nm Burnished Brass</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="realm-7-emerald.html" data-search="realm #7: vilon realm #7 (emerald #006b54) — vilon / majma&#39; al-bahrayn 03. 3d sanctum &amp; seven realms junction of the two seas • 520nm emerald realm-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#18 / 66 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #7: Vilon</div><div style="font-size:0.72rem;color:#CBD5E1;">Junction of the Two Seas • 520nm Emerald</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="priory-negentropy-order.html" data-search="negentropic priory atlas the negentropic priory (sigma -1n &amp; 0n beta): ordering the 7 warlocks 04. negentropic priory &amp; seven planes sigma -1n &amp; 0n beta • δh = 0.000 bits priory-negentropy-order.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#19 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">priory-negentropy-order.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Negentropic Priory Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Sigma -1n &amp; 0n Beta • ΔH = 0.000 bits</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="plane-1-white.html" data-search="plane #1: adam kadmon / lahut plane #1 (white #f8f5e6) — olam adam kadmon / hadrat al-lahut 04. negentropic priory &amp; seven planes priory seat i • c_p = 1.62 plane-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#20 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #1: Adam Kadmon / Lahut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat I • C_p = 1.62</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="plane-2-black.html" data-search="plane #2: malbush / al-qalam plane #2 (black #141416) — olam ha-malbush / hadrat al-lawh wa al-qalam 04. negentropic priory &amp; seven planes priory seat vi • c_p = 1.38 plane-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#21 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #2: Malbush / Al-Qalam</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VI • C_p = 1.38</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="plane-3-sapphire.html" data-search="plane #3: beri&#39;ah / jabarut plane #3 (sapphire #0f2c59) — olam ha-beri&#39;ah / &#39;alam al-jabarut 04. negentropic priory &amp; seven planes priory seat iv • c_p = 1.44 plane-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#22 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #3: Beri'ah / Jabarut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat IV • C_p = 1.44</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="plane-4-gold.html" data-search="plane #4: atzilut / al-arwah plane #4 (gold #d4af37) — olam ha-atzilut / &#39;alam al-arwah 04. negentropic priory &amp; seven planes priory seat ii • c_p = 1.54 plane-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#23 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #4: Atzilut / Al-Arwah</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat II • C_p = 1.54</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="plane-5-crimson.html" data-search="plane #5: tohu / ash-shuhub plane #5 (crimson #8b0000) — olam ha-tohu / falak ash-shuhub 04. negentropic priory &amp; seven planes priory seat vii • c_p = 1.35 plane-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#24 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #5: Tohu / Ash-Shuhub</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VII • C_p = 1.35</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="plane-6-brass.html" data-search="plane #6: yetzirah / al-marij plane #6 (brass #b87333) — olam ha-yetzirah / &#39;alam al-marij 04. negentropic priory &amp; seven planes priory seat v • c_p = 1.40 plane-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#25 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #6: Yetzirah / Al-Marij</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat V • C_p = 1.40</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="plane-7-emerald.html" data-search="plane #7: tikkun / al-mithal plane #7 (emerald #006b54) — olam ha-tikkun / &#39;alam al-mithal wa al-barzakh 04. negentropic priory &amp; seven planes priory seat iii • c_p = 1.48 plane-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#26 / 66 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #7: Tikkun / Al-Mithal</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat III • C_p = 1.48</div></a><a class="sov-drawer-item" style="border-left-color:#EF4444;" href="zalim-1-fasad.html" data-search="zalim #1: al-fasad zalim #1 (zalim-1-fasad) — mufsid al-ard (ecological &amp; ritual disorder) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:204-205 • al-fasad fi al-ard zalim-1-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#27 / 66 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-1-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #1: Al-Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:204-205 • Al-Fasad fi Al-Ard</div></a><a class="sov-drawer-item" style="border-left-color:#EC4899;" href="zalim-2-fahishah.html" data-search="zalim #2: al-fahishah zalim #2 (zalim-2-fahishah) — da&#39;i al-fahishah (immodesty &amp; tabarruj) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 7:28 &amp; 24:19 • al-fahishah zalim-2-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#28 / 66 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-2-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #2: Al-Fahishah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:28 &amp; 24:19 • Al-Fahishah</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="zalim-3-baghy.html" data-search="zalim #3: al-baghy (nimrod) zalim #3 (zalim-3-baghy) — jabbar an-namrud (tyrannical counter-hegemony) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:258 &amp; 21:68-69 • al-baghy zalim-3-baghy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#29 / 66 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-3-baghy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #3: Al-Baghy (Nimrod)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:68-69 • Al-Baghy</div></a><a class="sov-drawer-item" style="border-left-color:#F97316;" href="zalim-4-fitnah.html" data-search="zalim #4: al-fitnah zalim #4 (zalim-4-fitnah) — nafikh al-fitnah (sectarian schism &amp; sedition) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:191 &amp; 3:103 • al-fitnah zalim-4-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#30 / 66 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-4-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #4: Al-Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:191 &amp; 3:103 • Al-Fitnah</div></a><a class="sov-drawer-item" style="border-left-color:#EAB308;" href="zalim-5-hawa.html" data-search="zalim #5: al-hawa zalim #5 (zalim-5-hawa) — &#39;abid al-hawa (deification of caprice) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 45:23 &amp; 25:43 • ittiba&#39; al-hawa zalim-5-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#31 / 66 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-5-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #5: Al-Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 45:23 &amp; 25:43 • Ittiba' Al-Hawa</div></a><a class="sov-drawer-item" style="border-left-color:#14B8A6;" href="zalim-6-jibt.html" data-search="zalim #6: al-jibt &amp; taghut zalim #6 (zalim-6-jibt) — kahin al-jibt (sorcerous idolatry &amp; azar&#39;s guild) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 4:51 &amp; 21:57-58 • al-jibt wa at-taghut zalim-6-jibt.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#32 / 66 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-6-jibt.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #6: Al-Jibt &amp; Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:51 &amp; 21:57-58 • Al-Jibt wa At-Taghut</div></a><a class="sov-drawer-item" style="border-left-color:#94A3B8;" href="zalim-7-zulm.html" data-search="zalim #7: masjid ad-dirar zalim #7 (zalim-7-zulm) — imam az-zalimin (counter-sanctuary subversion) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:124 &amp; 9:107-109 • masjid ad-dirar zalim-7-zulm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#33 / 66 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-7-zulm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #7: Masjid Ad-Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:124 &amp; 9:107-109 • Masjid Ad-Dirar</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="worlds-hegemon-disorder.html" data-search="7 worlds master atlas master atlas: the 7 islamic worlds of hegemon (al-muhaymin) &amp; disorder (al-fasad) 06. seven islamic worlds of hegemon &amp; disorder al-muhaymin vs. al-fasad • 3d dual-hemisphere globe worlds-hegemon-disorder.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#34 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">worlds-hegemon-disorder.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Worlds Master Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Muhaymin vs. Al-Fasad • 3D Dual-Hemisphere Globe</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="world-1-mizan-fasad.html" data-search="world #1: amanah vs. fasad world #1 — &#39;alam al-amanah wa al-fasad (trust vs. ecological disorder) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 14:35 &amp; 2:205 • order #1 vs. zalim #1 world-1-mizan-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#35 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-1-mizan-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #1: Amanah vs. Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 14:35 &amp; 2:205 • Order #1 vs. Zalim #1</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="world-2-haya-fahishah.html" data-search="world #2: haya&#39; vs. tabarruj world #2 — &#39;alam al-haram wa at-tabarruj (modesty vs. immodesty) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 7:26-28 • order #2 vs. zalim #2 world-2-haya-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#36 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-2-haya-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #2: Haya' vs. Tabarruj</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26-28 • Order #2 vs. Zalim #2</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="world-3-babil-namrud.html" data-search="world #3: ibrahim vs. namrud world #3 — &#39;alam babil wa al-jabbarin (cool-fire sanctuary vs. nimrod) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:258 &amp; 21:69 • order #3 vs. zalim #3 world-3-babil-namrud.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#37 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-3-babil-namrud.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #3: Ibrahim vs. Namrud</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:69 • Order #3 vs. Zalim #3</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="world-4-ummah-fitnah.html" data-search="world #4: ummah vs. fitnah world #4 — &#39;alam al-ummah al-wahidah wa al-fitnah (unity vs. schism) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 21:92 &amp; 3:103 • order #4 vs. zalim #4 world-4-ummah-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#38 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-4-ummah-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #4: Ummah vs. Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:92 &amp; 3:103 • Order #4 vs. Zalim #4</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="world-5-furqan-hawa.html" data-search="world #5: furqan vs. hawa world #5 — &#39;alam al-furqan wa al-hawa (revelation vs. caprice) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 5:48 &amp; 45:23 • order #5 vs. zalim #5 world-5-furqan-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#39 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-5-furqan-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #5: Furqan vs. Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 5:48 &amp; 45:23 • Order #5 vs. Zalim #5</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="world-6-tawhid-taghut.html" data-search="world #6: tawhid vs. taghut world #6 — &#39;alam al-&#39;urwah al-wuthqa wa at-taghut (iconoclasm vs. idols) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:256 &amp; 21:58 • order #6 vs. zalim #6 world-6-tawhid-taghut.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#40 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-6-tawhid-taghut.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #6: Tawhid vs. Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:256 &amp; 21:58 • Order #6 vs. Zalim #6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="world-7-taqwa-dirar.html" data-search="world #7: taqwa vs. dirar world #7 — &#39;alam bunyan at-taqwa wa juruf al-har (taqwa vs. counter-mosque) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 9:107-109 • order #7 vs. zalim #7 world-7-taqwa-dirar.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#41 / 66 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-7-taqwa-dirar.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #7: Taqwa vs. Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 9:107-109 • Order #7 vs. Zalim #7</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="warlock-formation-dissolution-jafar-aladdin.html" data-search="ja&#39;far &amp; aladdin qumqum islamic warlock formation (ja&#39;far / istidraj) &amp; dissolution (&#39;ala&#39; ad-din / qumqum) 07. warlock formation, dissolution &amp; inter-world sequesters istidrāj (qur&#39;an 6:44) -&gt; qumqum sulaymānī (21:18) warlock-formation-dissolution-jafar-aladdin.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#42 / 66 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">warlock-formation-dissolution-jafar-aladdin.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ja'far &amp; Aladdin Qumqum</div><div style="font-size:0.72rem;color:#CBD5E1;">Istidrāj (Qur'an 6:44) -&gt; Qumqum Sulaymānī (21:18)</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="sequester-between-worlds.html" data-search="7 inter-world sequesters the 7 inter-world sequesters (al-hijr al-mahjur &amp; sur al-hadid) 07. warlock formation, dissolution &amp; inter-world sequesters barzakh (55:19-20) &amp; sūr al-ḥadīd (18:96-97) sequester-between-worlds.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#43 / 66 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">sequester-between-worlds.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Inter-World Sequesters</div><div style="font-size:0.72rem;color:#CBD5E1;">Barzakh (55:19-20) &amp; Sūr Al-Ḥadīd (18:96-97)</div></a><a class="sov-drawer-item" style="border-left-color:#FBBF24;" href="interlocker-egg-binder-islam.html" data-search="egg-in-baking intelocketer the islamic intelocketer (al-murabbit al-kalim): egg-in-baking emulsifier &amp; al-a&#39;raf 08. the islamic egg-in-baking intelocketer qur&#39;an 37:49 (bayḍun maknūn) &amp; 7:46-48 (al-a&#39;rāf) interlocker-egg-binder-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#44 / 66 • 08. The Islamic Egg-in-Baking Intelocketer</span><code style="color:#38BDF8;">interlocker-egg-binder-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Egg-in-Baking Intelocketer</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 37:49 (Bayḍun Maknūn) &amp; 7:46-48 (Al-A'rāf)</div></a><a class="sov-drawer-item" style="border-left-color:#C084FC;" href="warlock-apocrypha-islamic-theorems.html" data-search="warlock apocrypha &amp; theorems the warlock apocrypha &amp; 5 islamic theological philosophy theorems on western modernity 09. the warlock apocrypha &amp; modernity theorems al-ghazālī • ibn khaldūn • mullā ṣadrā • al-attas • hallaq warlock-apocrypha-islamic-theorems.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#45 / 66 • 09. The Warlock Apocrypha &amp; Modernity Theorems</span><code style="color:#38BDF8;">warlock-apocrypha-islamic-theorems.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Warlock Apocrypha &amp; Theorems</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Ghazālī • Ibn Khaldūn • Mullā Ṣadrā • Al-Attas • Hallaq</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="islamic-husbandry-sovereign-estate.html" data-search="vanguard husbandry estate islamic action-based vanguard husbandry (al-qiwamah al-khadimah) &amp; husbandrystate 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-event simulation islamic-husbandry-sovereign-estate.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#46 / 66 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-husbandry-sovereign-estate.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vanguard Husbandry Estate</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-Event Simulation</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="way-of-the-flower-rose-garden-islam.html" data-search="flower, rose &amp; chahar bagh the islamic way of the flower (az-zahrah), the rose (al-wardah), the cultivating hand &amp; garden 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 55:37 (wardatan ka-ad-dihān), 3:37 &amp; 47:15 way-of-the-flower-rose-garden-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#47 / 66 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">way-of-the-flower-rose-garden-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Flower, Rose &amp; Chahar Bagh</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 55:37 (Wardatan ka-ad-Dihān), 3:37 &amp; 47:15</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="disney-daffy-donald-islamic-microcosm.html" data-search="disney/daffy &amp; jungle microcosm islamic animalism &amp; husbandry microcosm: donald, daffy, daisy &amp; the jungle book 11. islamic animalism &amp; visual history atlases qur&#39;an 6:38 (umamun amthālukum) • kalīlah wa dimnah disney-daffy-donald-islamic-microcosm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#48 / 66 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">disney-daffy-donald-islamic-microcosm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Disney/Daffy &amp; Jungle Microcosm</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 6:38 (Umamun Amthālukum) • Kalīlah wa Dimnah</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="warlock-islamic-visual-eras-history.html" data-search="7 islamic visual eras &amp; ai art warlock visuals across every era of islamic history: ai art plates &amp; sacred geometry 11. islamic animalism &amp; visual history atlases eras i–vii: bābil/saba&#39; to neo-islamic ai cyber-geometry warlock-islamic-visual-eras-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#49 / 66 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">warlock-islamic-visual-eras-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Islamic Visual Eras &amp; AI Art</div><div style="font-size:0.72rem;color:#CBD5E1;">Eras I–VII: Bābil/Saba' to Neo-Islamic AI Cyber-Geometry</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="conjoined-worlds-realms-principles-node-grid.html" data-search="3d node-art terrain grid (meridian guard) conjoined worlds, realms &amp; principles: 3d/2.5d islamic node-art terrain grid &amp; color guard of the meridian 01. master hubs &amp; architecture ḥaras al-alwān li-khaṭṭ al-mīzān • 7x7 (49-node) 3d heightmap conjoined-worlds-realms-principles-node-grid.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#50 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">conjoined-worlds-realms-principles-node-grid.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Node-Art Terrain Grid (Meridian Guard)</div><div style="font-size:0.72rem;color:#CBD5E1;">Ḥaras Al-Alwān li-Khaṭṭ Al-Mīzān • 7x7 (49-Node) 3D Heightmap</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caravans-battles-conquest-chronicle.html" data-search="caravans, trade battles, fatḥ &amp; tadwīn canonical islamic caravans (ilaf), battles for trade (badr/qaradah), founding of conquest (al-fath) &amp; recording of conquest (tadwin al-maghazi / futuh al-buldan) 01. master hubs &amp; architecture qur&#39;an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • al-&#39;īr, al-maghāzī, al-fatḥ &amp; dīwān islamic-caravans-battles-conquest-chronicle.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#51 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caravans-battles-conquest-chronicle.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caravans, Trade Battles, Fatḥ &amp; Tadwīn</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • Al-'Īr, Al-Maghāzī, Al-Fatḥ &amp; Dīwān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="greco-roman-gods-titans-daimones-islamic-judgment.html" data-search="greco-roman gods &amp; titans made whole greco-roman gods, titans (titanomachy), 12 olympians, morpheus/oneiroi, 7 erotes &amp; 150+ minor spirits: islamic reception, judgment &amp; wholeness 01. master hubs &amp; architecture al-furqān (21:22, 12:39-40, 39:42) &amp; at-takmīl • titans, oneiroi, erotes &amp; daimones greco-roman-gods-titans-daimones-islamic-judgment.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#52 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">greco-roman-gods-titans-daimones-islamic-judgment.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Greco-Roman Gods &amp; Titans Made Whole</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Furqān (21:22, 12:39-40, 39:42) &amp; At-Takmīl • Titans, Oneiroi, Erotes &amp; Daimones</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html" data-search="philosophy, alchemy, theocracies &amp; socrates philosophy &amp; alchemy in islam: canonical adjustment to 7 theocracies &amp; theocrats, 5 socratic critiques &amp; 7 stages of message meaning shift 01. master hubs &amp; architecture al-falsafah, al-kīmiyā&#39; (55:7-9), lā kahanūta (9:31), suqrāṭ &amp; lafẓ maḥfūẓ (15:9) islamic-philosophy-alchemy-theocracies-socratic-messages.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#53 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-philosophy-alchemy-theocracies-socratic-messages.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Philosophy, Alchemy, Theocracies &amp; Socrates</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Falsafah, Al-Kīmiyā' (55:7-9), Lā Kahanūta (9:31), Suqrāṭ &amp; Lafẓ Maḥfūẓ (15:9)</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-modesty-evolution-western-frontier-men-women.html" data-search="men &amp; women modesty: western frontier how the modesty standard (al-haya&#39; &amp; libas at-taqwa) for men &amp; women changed across the western frontier &amp; expansions 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 7:26, 24:30-31, 33:59 &amp; 7:199 (&#39;urf) • hijaz, maghreb lithām, al-andalus, oran 1504 &amp; modern west islamic-modesty-evolution-western-frontier-men-women.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#54 / 66 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-modesty-evolution-western-frontier-men-women.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Men &amp; Women Modesty: Western Frontier</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26, 24:30-31, 33:59 &amp; 7:199 ('Urf) • Hijaz, Maghreb Lithām, Al-Andalus, Oran 1504 &amp; Modern West</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" data-search="naming (261 wafq), indonesia, sewer &amp; calligraphy canonical naming in islam by region (zakeem malik mccaleb abjad 261 wafq), development of indonesia (87.2% muslim), sewer project structure, language &amp; calligraphy 01. master hubs &amp; architecture abjad 261 wafq (9×29) • nusantara (87.2% muslim) • jss sewer grid • jawi/pegon &amp; ibn muqlah islamic-naming-indonesia-infrastructure-language-calligraphy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#55 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-naming-indonesia-infrastructure-language-calligraphy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</div><div style="font-size:0.72rem;color:#CBD5E1;">Abjad 261 Wafq (9×29) • Nusantara (87.2% Muslim) • JSS Sewer Grid • Jawi/Pegon &amp; Ibn Muqlah</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-countries-history-canonical-embrace-atlas.html" data-search="history of islamic countries &amp; canonical embrace the history of islamic countries (57 oic nations across 7 civilizational zones) &amp; how they canonically embrace being muslim 01. master hubs &amp; architecture diyār al-islām • 5 pathways of embrace (2:256) • 7 civilizational zones &amp; 6 institutional pillars islamic-countries-history-canonical-embrace-atlas.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#56 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-countries-history-canonical-embrace-atlas.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">History of Islamic Countries &amp; Canonical Embrace</div><div style="font-size:0.72rem;color:#CBD5E1;">Diyār Al-Islām • 5 Pathways of Embrace (2:256) • 7 Civilizational Zones &amp; 6 Institutional Pillars</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caliphates-sultans-shahs-dynasties-return.html" data-search="caliphates, sultans, shahs &amp; promise of return the caliphates, the sultans, the shahs &amp; the dynasties instantiated &amp; dissolved by islam: origin, journey &amp; the promise of returning 01. master hubs &amp; architecture qur&#39;an 3:26, 24:55 &amp; 15:9 • musnad aḥmad 18406 • sahih muslim 145 • ibn khaldūn&#39;s 4-gen law islamic-caliphates-sultans-shahs-dynasties-return.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#57 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caliphates-sultans-shahs-dynasties-return.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caliphates, Sultans, Shahs &amp; Promise of Return</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 3:26, 24:55 &amp; 15:9 • Musnad Aḥmad 18406 • Sahih Muslim 145 • Ibn Khaldūn's 4-Gen Law</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="quranic-timeline-expansion-vol1-chronology.html" data-search="vol. i: qur&#39;anic timeline of expansion collegiate multi-html suite vol. i: canonical qur&#39;anic timeline of islamic expansion across 10 epochs 01. master hubs &amp; architecture qur&#39;an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 canonical epochs quranic-timeline-expansion-vol1-chronology.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#58 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol1-chronology.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. I: Qur'anic Timeline of Expansion</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 Canonical Epochs</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="quranic-timeline-expansion-vol2-properties-kingdoms.html" data-search="vol. ii: islamic properties, countries &amp; kingdoms collegiate multi-html suite vol. ii: canonical islamic properties (waqf, kharāj, &#39;ushr, ḥimā, mawāt), countries &amp; kingdoms 01. master hubs &amp; architecture qur&#39;an 7:128, 59:7 &amp; 4:7-12 • fiqh al-amwāl &amp; al-aqālīm as-sab&#39;ah quranic-timeline-expansion-vol2-properties-kingdoms.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#59 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol2-properties-kingdoms.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. II: Islamic Properties, Countries &amp; Kingdoms</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:128, 59:7 &amp; 4:7-12 • Fiqh Al-Amwāl &amp; Al-Aqālīm As-Sab'ah</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html" data-search="vol. iii: beauty of islam &amp; collegiate thesis collegiate multi-html suite vol. iii: the 7 dimensions of the beauty of islam &amp; 8-chapter collegiate universal thesis monograph 01. master hubs &amp; architecture sahih muslim 91 &amp; 8 • qur&#39;an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6 quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#60 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. III: Beauty of Islam &amp; Collegiate Thesis</div><div style="font-size:0.72rem;color:#CBD5E1;">Sahih Muslim 91 &amp; 8 • Qur'an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islam-through-ages-vol1-reception-history.html" data-search="ages vol. i: islam &amp; global reception expansive multi-html suite vol. i: islam through the ages &amp; its global civilizational reception across 7 historical ages 01. master hubs &amp; architecture qur&#39;an 19:1-36, 39:18 &amp; 41:53 • aksum, baghdad, toledo, maragheh, oxford, weimar &amp; modern labs islam-through-ages-vol1-reception-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#61 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol1-reception-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. I: Islam &amp; Global Reception</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 19:1-36, 39:18 &amp; 41:53 • Aksum, Baghdad, Toledo, Maragheh, Oxford, Weimar &amp; Modern Labs</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="islam-through-ages-vol2-philosophical-connotations.html" data-search="ages vol. ii: philosophical connotations expansive multi-html suite vol. ii: the 7 philosophical connotations &amp; paradigms instantiated by islamic thought 01. master hubs &amp; architecture wājib al-wujūd • floating man • sunnat allāh • faṣl al-maqāl • al-i&#39;tibār • 4d motion • &#39;ilm al-&#39;umrān islam-through-ages-vol2-philosophical-connotations.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#62 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol2-philosophical-connotations.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. II: Philosophical Connotations</div><div style="font-size:0.72rem;color:#CBD5E1;">Wājib Al-Wujūd • Floating Man • Sunnat Allāh • Faṣl Al-Maqāl • Al-I'tibār • 4D Motion • 'Ilm Al-'Umrān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html" data-search="ages vol. iii: scientific discoveries instantiated expansive multi-html suite vol. iii: scientific discoveries alluded to in the qur&#39;an &amp; hadith instantiated through science 01. master hubs &amp; architecture qur&#39;an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (supernova iron z=26) islam-through-ages-vol3-scientific-discoveries-instantiated.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#63 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol3-scientific-discoveries-instantiated.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. III: Scientific Discoveries Instantiated</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (Supernova Iron Z=26)</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html" data-search="maritime: boating, piracy, currency, astrolabe &amp; oman/yemen boating, piracy, mercantilism, currency, maps, astrolabes, compasses &amp; the omani and yemeni coasting caliphates &amp; sultanates 01. master hubs &amp; architecture qur&#39;an 16:14, 55:24 &amp; 18:71/79 • sewn dhows, akriyat al-sufun, qirāḍ/ṣakk, dīnār/lārīn, kamāl, 32-star compass, oman &amp; yemen islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#64 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Maritime: Boating, Piracy, Currency, Astrolabe &amp; Oman/Yemen</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 16:14, 55:24 &amp; 18:71/79 • Sewn Dhows, Akriyat Al-Sufun, Qirāḍ/Ṣakk, Dīnār/Lārīn, Kamāl, 32-Star Compass, Oman &amp; Yemen</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html" data-search="compass, caliphate maps &amp; every flag (14 ages / 57 countries) the full islamic compass (32-point star &amp; qiblah), cartographic map of the caliphates &amp; every flag for every age, caliphate &amp; country 01. master hubs &amp; architecture qur&#39;an 2:144 &amp; 6:97 • ṭāsat al-qiblah, dā&#39;irat al-akhnān, 14 caliphate maps &amp; svg flags, all 57 oic country flags across every age islamic-compass-caliphate-maps-and-flags-every-age-every-country.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#65 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-compass-caliphate-maps-and-flags-every-age-every-country.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Compass, Caliphate Maps &amp; Every Flag (14 Ages / 57 Countries)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:144 &amp; 6:97 • Ṭāsat Al-Qiblah, Dā'irat Al-Akhnān, 14 Caliphate Maps &amp; SVG Flags, All 57 OIC Country Flags Across Every Age</div></a><a class="sov-drawer-item current" style="border-left-color:#F43F5E;" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html" data-search="alchemical hygiene, caravan man &amp; islamic suffrage (#66) alchemical wares, douching &amp; hygiene, homogeneity &amp; insular governance, the 7 caravan &amp; man archetypes, caliphate organization &amp; islamic suffrage 01. master hubs &amp; architecture qur&#39;an 58:1 (al-mujādilah), 42:38 (al-shūrā), 60:12 (bay&#39;at al-nisā&#39;), 9:60 &amp; 9:118 • ālāt al-kīmiyā&#39;, fiqh al-ṭahārah, 7 caravan stations &amp; suffrage islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#66 / 66 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Alchemical Hygiene, Caravan Man &amp; Islamic Suffrage (#66)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 58:1 (Al-Mujādilah), 42:38 (Al-Shūrā), 60:12 (Bay'at Al-Nisā'), 9:60 &amp; 9:118 • Ālāt Al-Kīmiyā', Fiqh Al-Ṭahārah, 7 Caravan Stations &amp; Suffrage</div></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SOVEREIGN_CURRENT_SEQ = 66;
+  const SOVEREIGN_TOTAL_PORTALS = 66;
+  const SOVEREIGN_NEXT_FILE = "index.html";
+  let sovContinualTimer = null;
+
+  function syncSovereignPortalCounts() {
+    const items = document.querySelectorAll('#sovDrawerGrid .sov-drawer-item');
+    const liveTotal = items.length > 0 ? items.length : SOVEREIGN_TOTAL_PORTALS;
+    document.querySelectorAll('[data-sov-total]').forEach(el => {
+      el.textContent = String(liveTotal);
+    });
+    const badge = document.getElementById('sovPortalCounterBadge');
+    if (badge) {
+      badge.textContent = '#' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + ' / ' + String(liveTotal).padStart(2, '0');
+    }
+  }
+
+  function toggleSovContinualCycle() {
+    const btn = document.getElementById('sovContinualCycleBtn');
+    const active = sessionStorage.getItem('sovContinualCycleActive') === '1';
+    if (active) {
+      sessionStorage.removeItem('sovContinualCycleActive');
+      if (sovContinualTimer) { clearTimeout(sovContinualTimer); sovContinualTimer = null; }
+      if (btn) btn.textContent = '🔄 Continual Sync: #' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + '/' + String(SOVEREIGN_TOTAL_PORTALS).padStart(2, '0');
+    } else {
+      sessionStorage.setItem('sovContinualCycleActive', '1');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  }
+
+  function toggleSovDrawer() {
+    const el = document.getElementById('sovMegaDrawer');
+    if (!el) return;
+    el.classList.toggle('open');
+    if (el.classList.contains('open')) {
+      const inp = document.getElementById('sovDrawerSearch');
+      if (inp) { inp.value = ''; filterSovDrawer(''); inp.focus(); }
+    }
+  }
+  function filterSovDrawer(q) {
+    const query = (q || '').toLowerCase().trim();
+    document.querySelectorAll('#sovDrawerGrid .sov-drawer-item').forEach(el => {
+      const hay = el.getAttribute('data-search') || '';
+      el.style.display = (!query || hay.includes(query)) ? 'block' : 'none';
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      toggleSovDrawer();
+    } else if (e.key === 'Escape') {
+      const el = document.getElementById('sovMegaDrawer');
+      if (el && el.classList.contains('open')) el.classList.remove('open');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    syncSovereignPortalCounts();
+    if (sessionStorage.getItem('sovContinualCycleActive') === '1') {
+      const btn = document.getElementById('sovContinualCycleBtn');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  });
+</script>
+<!-- SOV_CHROME_TOP_END -->
+
+  <div class="container">
+    <section class="hero-banner">
+      <div class="badge-row">
+        <span class="pill-badge" style="background:rgba(212,175,55,0.2);color:#FDE68A;border:1px solid #D4AF37;">PORTAL #66 • COLLEGIATE ANTHROPOLOGY, JURISPRUDENCE &amp; CONSTITUTIONAL THESIS</span>
+        <span class="pill-badge" style="background:rgba(16,185,129,0.2);color:#34D399;border:1px solid #10B981;">ALCHEMICAL WARES, DOUCHING &amp; FIQH AL-ṬAHĀRAH</span>
+        <span class="pill-badge" style="background:rgba(56,189,248,0.2);color:#7DD3FC;border:1px solid #38BDF8;">7 ARCHETYPES OF THE ISLAMIC MAN &amp; THE CARAVAN</span>
+        <span class="pill-badge" style="background:rgba(244,63,94,0.2);color:#FDA4AF;border:1px solid #F43F5E;">ISLAMIC SUFFRAGE: AL-SHŪRĀ, AL-BAY'AH &amp; AL-MUJĀDILAH (58:1)</span>
+      </div>
+      <h1>Alchemical Wares, Douching &amp; Hygiene, Homogeneity &amp; Insular Self-Governance, The Man of the Caravan Through Antiquity, Caliphate Organization &amp; Islamic Suffrage</h1>
+      <p class="hero-lead">
+        An exhaustive canonical and historical synthesis examining: <strong>(I) Alchemical Wares (Ālāt Al-Kīmiyā'), Clinical &amp; Ritual Douching (Al-Istinjā', Al-Ḥuqnah, Al-Zarāqah), and Hygiene (Fiqh Al-Ṭahārah)</strong>;
+        <strong>(II) Homosexuality, Evidentiary Privacy (Satr), Liturgical/Urban Homogeneity, Fasting, Prayer, Community, and Insular Self-Governing Structures (Waqf, Maḥallah, Futūwwah/Akhī Guilds)</strong>;
+        <strong>(III) The Seven Archetypes of the Islamic Man—Common, Royal, Poor, Man of the Caravan, Lost at the Caravan (Ibn Al-Sabīl), At the End of the Caravan (Al-Sāqah), and Left Behind by the Caravan (Qur'an 9:118 &amp; Abū Dharr)</strong>; and
+        <strong>(IV) Caliphate Self-Organization &amp; Naming Islamic Suffrage (Al-Shūrā, Al-Bay'ah, Al-Mujādilah 58:1 &amp; Wilāyat Al-Maẓālim) Across Common, Royal, Young, Old, and Gender Causes Past &amp; Today</strong>.
+      </p>
+      <div class="arabic-banner">
+        ﴿ قَدْ سَمِعَ اللَّهُ قَوْلَ الَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِي إِلَى اللَّهِ وَاللَّهُ يَسْمَعُ تَحَاوُرَكُمَا ﴾ (المجادلة ٥٨:١) &nbsp;|&nbsp;
+        ﴿ وَأَمْرُهُمْ شُورَىٰ بَيْنَهُمْ ﴾ (الشورى ٤٢:٣٨) &nbsp;|&nbsp;
+        « الطُّهُورُ شَطْرُ الإِيمَانِ » (صحيح مسلم ٢٢٣)
+      </div>
+    </section>
+
+    <!-- SECTION I: ALCHEMICAL WARES, DOUCHING & HYGIENE -->
+    <section class="section-block" id="alchemical-hygiene">
+      <div class="section-header">
+        <h2>I. Alchemical Wares (Ālāt Al-Kīmiyā'), Douching / Bodily Irrigation (Al-Istinjā' &amp; Al-Ḥuqnah) &amp; Hygiene (Al-Ṭahārah)</h2>
+        <p>How Jābir ibn Ḥayyān, Al-Rāzī, and Al-Zahrāwī fused laboratory distillation, alkali saponification, and precision surgical irrigation with the Qur'anic theology of bodily purity (Qur'an 2:222 &amp; 9:108).</p>
+      </div>
+
+      <div class="svg-showcase">
+        <svg viewBox="0 0 1160 250" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1160" height="250" rx="12" fill="#0B1322" stroke="#D4AF37" stroke-opacity="0.35"/>
+          <text x="580" y="30" text-anchor="middle" fill="#FDE68A" font-size="15" font-weight="bold">CLASSICAL ISLAMIC ALCHEMICAL, HYGIENIC &amp; CLINICAL IRRIGATION APPARATUS MATRIX</text>
+          <!-- Node 1: Alembic -->
+          <rect x="25" y="52" width="205" height="175" rx="10" fill="#111C30" stroke="#10B981" stroke-width="1.5"/>
+          <circle cx="127" cy="95" r="24" fill="none" stroke="#10B981" stroke-width="2"/>
+          <path d="M 127 71 Q 165 65 185 110" fill="none" stroke="#34D399" stroke-width="2.5"/>
+          <text x="127" y="140" text-anchor="middle" fill="#FFF" font-size="12.5" font-weight="bold">1. Al-Anbīq &amp; Al-Qar'</text>
+          <text x="127" y="160" text-anchor="middle" fill="#94A3B8" font-size="11">Jābir &amp; Al-Rāzī Alembic Still</text>
+          <text x="127" y="178" text-anchor="middle" fill="#34D399" font-size="10.5">Mā' Al-Ward (Rosewater)</text>
+          <text x="127" y="196" text-anchor="middle" fill="#34D399" font-size="10.5">&amp; Clinical Al-Kuḥūl Antiseptic</text>
+          <!-- Node 2: Sabun -->
+          <rect x="250" y="52" width="205" height="175" rx="10" fill="#111C30" stroke="#38BDF8" stroke-width="1.5"/>
+          <rect x="322" y="75" width="60" height="36" rx="6" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="2"/>
+          <text x="352" y="140" text-anchor="middle" fill="#FFF" font-size="12.5" font-weight="bold">2. Al-Ṣābūn &amp; Al-Qalī</text>
+          <text x="352" y="160" text-anchor="middle" fill="#94A3B8" font-size="11">Aleppo/Nablus Alkali Soap</text>
+          <text x="352" y="178" text-anchor="middle" fill="#7DD3FC" font-size="10.5">Olive + Laurel Oil + Soda Ash</text>
+          <text x="352" y="196" text-anchor="middle" fill="#7DD3FC" font-size="10.5">Nūrah Depilatory &amp; Ushnān</text>
+          <!-- Node 3: Ibriq & Istinja -->
+          <rect x="475" y="52" width="210" height="175" rx="10" fill="#111C30" stroke="#D4AF37" stroke-width="1.5"/>
+          <ellipse cx="580" cy="96" rx="22" ry="18" fill="none" stroke="#D4AF37" stroke-width="2"/>
+          <path d="M 602 92 Q 625 75 632 68" fill="none" stroke="#FDE68A" stroke-width="2.5"/>
+          <text x="580" y="140" text-anchor="middle" fill="#FFF" font-size="12.5" font-weight="bold">3. Al-Ibrīq &amp; Al-Istinjā'</text>
+          <text x="580" y="160" text-anchor="middle" fill="#94A3B8" font-size="11">Spouted Brass Ewer / Shattaf</text>
+          <text x="580" y="178" text-anchor="middle" fill="#FDE68A" font-size="10.5">Mandatory Water Cleansing</text>
+          <text x="580" y="196" text-anchor="middle" fill="#FDE68A" font-size="10.5">Qur'an 9:108 &amp; Sunan Al-Fiṭrah</text>
+          <!-- Node 4: Mihqan & Huqnah -->
+          <rect x="705" y="52" width="205" height="175" rx="10" fill="#111C30" stroke="#F43F5E" stroke-width="1.5"/>
+          <line x1="775" y1="92" x2="840" y2="92" stroke="#F43F5E" stroke-width="4"/>
+          <circle cx="770" cy="92" r="10" fill="none" stroke="#FDA4AF" stroke-width="2"/>
+          <text x="807" y="140" text-anchor="middle" fill="#FFF" font-size="12.5" font-weight="bold">4. Al-Miḥqan &amp; Al-Ḥuqnah</text>
+          <text x="807" y="160" text-anchor="middle" fill="#94A3B8" font-size="11">Al-Zahrāwī Silver Cannulas</text>
+          <text x="807" y="178" text-anchor="middle" fill="#FDA4AF" font-size="10.5">Clinical Douching &amp; Clysters</text>
+          <text x="807" y="196" text-anchor="middle" fill="#FDA4AF" font-size="10.5">4-Madhhab vs. Ibn Ḥazm Fast Law</text>
+          <!-- Node 5: Hammam & Ghusl -->
+          <rect x="930" y="52" width="205" height="175" rx="10" fill="#111C30" stroke="#A855F7" stroke-width="1.5"/>
+          <path d="M 1000 108 A 32 32 0 0 1 1064 108 Z" fill="none" stroke="#C084FC" stroke-width="2"/>
+          <text x="1032" y="140" text-anchor="middle" fill="#FFF" font-size="12.5" font-weight="bold">5. Al-Ḥammām &amp; Al-Ghusl</text>
+          <text x="1032" y="160" text-anchor="middle" fill="#94A3B8" font-size="11">3-Zone Running-Water Bath</text>
+          <text x="1032" y="178" text-anchor="middle" fill="#E9D5FF" font-size="10.5">Barrānī • Wusṭānī • Juwwānī</text>
+          <text x="1032" y="196" text-anchor="middle" fill="#E9D5FF" font-size="10.5">Qur'an 5:6 &amp; 2:222 Ablution</text>
+        </svg>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card-panel" style="border-top: 4px solid #10B981;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#10B98122;color:#10B981;border:1px solid #10B98166;">APPARATUS #1</span>
+    <span class="arabic-chip">Al-Anbīq wa Al-Qar' wa Al-Qābilah (الأَنْبِيق وَالقَرْع وَالقَابِلَة)</span>
+  </div>
+  <h3>The Alembic Still-Head, Cucurbit Gourd-Flask &amp; Receiver for Hydro-Distillation</h3>
+  <p class="sub-author"><strong>Pioneers &amp; Treatises:</strong> Jābir ibn Ḥayyān (Geber, 8th c., Kitāb Al-Sab'īn), Abū Bakr Al-Rāzī (Rhazes, Kitāb Al-Asrār, c. 900 CE), and Al-Kindī (Kitāb Kīmiyā' Al-'Iṭr wa Al-Taṣ'īdāt)</p>
+  <div class="detail-grid">
+    <div><strong>Material &amp; Alchemical Synthesis:</strong> Blown soda-lime glass, glazed ceramic, or tinned Damascus copper with an overhead condensing dome (Anbīq), delivery snout (Mi'zāb), and lower heating gourd (Qar') seated in a water bath (Ḥammām Māriyah) or sand/ash bath.</div>
+    <div><strong>Hygienic, Clinical &amp; Douching Function:</strong> Engineered the large-scale steam and hydro-distillation of pure rosewater (Mā' Al-Ward), orange-blossom water (Mā' Al-Zahr), camphor (Kāfūr), and high-proof distilled alcohol (Al-Kuḥūl, used strictly as a clinical antiseptic solvent in Bīmāristān hospitals).</div>
+    <div class="fiqh-box"><strong>Canonical Fiqh &amp; Scriptural Anchor:</strong> Anchored in Sahih Muslim 223 ('Cleanliness is half of faith' — Al-Ṭuhūru shaṭru al-īmān). Distilled floral waters classified as Ṭāhir (pure) for perfuming the body, clothing, and mosque sanctuaries.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #F59E0B;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F59E0B22;color:#F59E0B;border:1px solid #F59E0B66;">APPARATUS #2</span>
+    <span class="arabic-chip">Al-Ūthāl wa Al-Būṭaqah (الأُوثَال وَالبُوطَقَة)</span>
+  </div>
+  <h3>The Aludel Sublimation Vessel, Crucible &amp; Mineral Purification Wares</h3>
+  <p class="sub-author"><strong>Pioneers &amp; Treatises:</strong> Abū Bakr Al-Rāzī (Kitāb Sirr Al-Asrār), Al-Majrīṭī (Rutbat Al-Ḥakīm), and Abū Al-Qāsim Al-Kāshānī</p>
+  <div class="detail-grid">
+    <div><strong>Material &amp; Alchemical Synthesis:</strong> Refractory clay crucibles (Būṭaqāt), tiered sublimation condensers (Ūthāl / Aludel), and hydrostatic precision balances (Mīzān Al-Ḥikmah of Al-Khāzinī) processing alum (Shabb), vitriol (Zāj), natron, sulfur (Kibrīt), and sal-ammoniac (Nūshādir).</div>
+    <div><strong>Hygienic, Clinical &amp; Douching Function:</strong> Produced pharmaceutical-grade astringents, styptic alum crystals for staunching bleeding after shaving or cupping (Ḥijāmah), zinc oxide eye salves (Tūtiyā / Kuḥl) for ophthalmic prophylaxis, and dermatological ointments.</div>
+    <div class="fiqh-box"><strong>Canonical Fiqh &amp; Scriptural Anchor:</strong> Fulfilled the Prophetic medical maxim: 'Allah has not sent down any disease without sending down its cure; whoever knows it knows it, and whoever is ignorant of it is ignorant of it' (Sahih Al-Bukhari 5678).</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #38BDF8;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#38BDF822;color:#38BDF8;border:1px solid #38BDF866;">APPARATUS #3</span>
+    <span class="arabic-chip">Al-Ṣābūn Al-Ḥalabī wa Al-Nūrah (الصَّابُون الحَلَبِيّ وَالنُّورَة)</span>
+  </div>
+  <h3>Saponified Hard Olive-Laurel Alkali Soap, Potash (Ushnān) &amp; Depilatory Paste</h3>
+  <p class="sub-author"><strong>Pioneers &amp; Treatises:</strong> Syrian, Levantine &amp; Iraqi Alchemical Guilds (Aleppo, Nablus, Damascus, Baghdad, 8th–12th c.); documented by Al-Muqaddasī and Ibn Al-Ukhuwwah (Ma'ālim Al-Qurbah)</p>
+  <div class="detail-grid">
+    <div><strong>Material &amp; Alchemical Synthesis:</strong> Saponification of virgin olive oil (Zayt Al-Zaytūn) and aromatic laurel berry oil (Zayt Al-Ghār) reacted with calcined barilla plant soda ash (Al-Qalī -&gt; English 'Alkali') and slaked lime (Kils), alongside Al-Nūrah (quicklime depilatory paste) and Ushnān (alkaline soapwort).</div>
+    <div><strong>Hygienic, Clinical &amp; Douching Function:</strong> Created the world's first hard, antiseptic, perfumed toilet soaps exported across the Mediterranean, paired with weekly body hair removal in the Ḥammām to prevent ectoparasites, sweat odor, and skin infections.</div>
+    <div class="fiqh-box"><strong>Canonical Fiqh &amp; Scriptural Anchor:</strong> Directly instantiates the Prophetic Sunan Al-Fiṭrah (Sahih Al-Bukhari 5889; Sahih Muslim 257): plucking/shaving axillary and pubic hair (Ḥalq Al-'Ānah) at least once every 40 days.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #D4AF37;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#D4AF3722;color:#D4AF37;border:1px solid #D4AF3766;">APPARATUS #4</span>
+    <span class="arabic-chip">Al-Ibrīq, Al-Aftābah wa Al-Shattaf (الإِبْرِيق وَالأَفْتَابَة وَالاسْتِنْجَاء)</span>
+  </div>
+  <h3>The Spouted Brass Ewer &amp; Intimate Water Irrigation (Al-Istinjā')</h3>
+  <p class="sub-author"><strong>Pioneers &amp; Treatises:</strong> Universal across all Islamic lands from Umayyad Damascus &amp; Abbasid Baghdad to Timurid Herat, Ottoman Istanbul, and Mughal Delhi</p>
+  <div class="detail-grid">
+    <div><strong>Material &amp; Alchemical Synthesis:</strong> Hammered brass or tinned copper ewer (Ibrīq / Aftābah) with a long curved swan-neck spout and lidded reservoir, paired in modern engineering with the pressurized water bidet/Shattaf.</div>
+    <div><strong>Hygienic, Clinical &amp; Douching Function:</strong> Provides running, directed water irrigation for mandatory perineal, urethral, and anal washing (Al-Istinjā') with the left hand after every urination or defecation, eliminating fecal-oral contamination and urinary residue.</div>
+    <div class="fiqh-box"><strong>Canonical Fiqh &amp; Scriptural Anchor:</strong> Qur'an 9:108 ('In it are men who love to purify themselves; and Allah loves those who purify themselves' — revealed regarding the Ansar of Quba' who combined dry stones with water washing) &amp; Sunan Abi Dawud 44.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #F43F5E;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F43F5E22;color:#F43F5E;border:1px solid #F43F5E66;">APPARATUS #5</span>
+    <span class="arabic-chip">Al-Miḥqan, Al-Ḥuqnah wa Al-Zarāqah (المِحْقَن وَالحُقْنَة وَالزَّرَّاقَة)</span>
+  </div>
+  <h3>Clinical Douching, Vaginal/Uterine Irrigators, Bladder Syringes &amp; Rectal Clysters</h3>
+  <p class="sub-author"><strong>Pioneers &amp; Treatises:</strong> Abū Al-Qāsim Al-Zahrāwī (Albucasis, Kitāb Al-Taṣrīf, Book 30, 1000 CE), Ibn Sīnā (Al-Qānūn fī Al-Ṭibb), and Al-Rāzī (Kitāb Al-Ḥāwī)</p>
+  <div class="detail-grid">
+    <div><strong>Material &amp; Alchemical Synthesis:</strong> Cast silver, burnished brass, ivory, or porcelain piston-syringes (Zarāqah) and double-channeled cannulas (Miḥqan) fitted with smooth perforated nozzles or oiled leather/bladder bulbs, plus medicated wool pessaries (Farzajah / Ḥamūl).</div>
+    <div><strong>Hygienic, Clinical &amp; Douching Function:</strong> Engineered for clinical douching and internal irrigation: (1) gynecological/uterine douching with warm infusions of rosewater, myrtle (Ās), pomegranate rind, chamomile, and alum for postpartum recovery, leukorrhea, or ulcerations; (2) urological bladder irrigation; and (3) therapeutic rectal enemas/clysters (Al-Ḥuqnah). In daily ritual hygiene, nasal douching (Al-Istinshāq) and oral rinsing (Al-Maḍmaḍah) are performed 15 times daily across the 5 prayers, while post-menstrual purification uses a musk-scented cloth (Firṣah Mumatthakhah, Sahih Muslim 332).</div>
+    <div class="fiqh-box"><strong>Canonical Fiqh &amp; Scriptural Anchor:</strong> Classical Fiqh extensively debated internal douching/clysters during fasting (Ṣawm): the Majority (Ḥanafī, Mālikī, Shāfi'ī, Ḥanbalī) held that a deep rectal clyster (Ḥuqnah) reaches the body cavity (Jawf) and requires make-up fasting (Qaḍā'), whereas the Zāhirī school (Ibn Ḥazm in Al-Muḥallā) and Shaykh Al-Islām Ibn Taymiyyah ruled that neither rectal enemas, urethral catheters, nor vaginal douching invalidate the fast because they provide neither nutrition nor enter through the digestive tract.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #A855F7;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#A855F722;color:#A855F7;border:1px solid #A855F766;">APPARATUS #6</span>
+    <span class="arabic-chip">Al-Ḥammām Al-Islāmī wa Al-Ghusl (الحَمَّام الإِسْلَامِيّ وَالغُسْل)</span>
+  </div>
+  <h3>The Tri-Chambered Hydrological Bathhouse &amp; Full-Body Ritual Ablution</h3>
+  <p class="sub-author"><strong>Pioneers &amp; Treatises:</strong> Umayyad Desert Castles (Qusayr 'Amra, Khirbat Al-Mafjar), Damascus, Fez, Cairo &amp; Istanbul Sinan Bathhouses; medical treatises by Qusṭā ibn Lūqā and Ibn Riḍwān</p>
+  <div class="detail-grid">
+    <div><strong>Material &amp; Alchemical Synthesis:</strong> Hypocaust underfloor furnace (Qamīm) heating copper cauldrons, feeding pressurized terracotta pipes to wall basins (Jurn) and marble pouring bowls (Ṭāsah) under glass star-oculi domes (Qamariyyāt) across three thermal zones: Barrānī (cold), Wusṭānī (tepid), and Juwwānī (hot steam).</div>
+    <div><strong>Hygienic, Clinical &amp; Douching Function:</strong> Crucially redesigned the Roman bath by replacing stagnant communal immersion pools with continuous running water poured from marble basins (because Islamic law forbids bathing in small stagnant pools, Sahih Muslim 283), enabling full-body ritual purification (Ghusl) after marital intimacy (Janābah), menstruation (Ḥayḍ), childbirth (Nifās), and before Friday Jumu'ah prayer.</div>
+    <div class="fiqh-box"><strong>Canonical Fiqh &amp; Scriptural Anchor:</strong> Qur'an 5:6 ('And if you are in a state of Janābah, then purify yourselves [fa-ṭṭahharū]') and Qur'an 2:222 ('Indeed, Allah loves those who are constantly repentant and loves those who purify themselves').</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #14B8A6;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#14B8A622;color:#14B8A6;border:1px solid #14B8A666;">APPARATUS #7</span>
+    <span class="arabic-chip">Al-Qumqum, Al-Mabkharah wa Al-Miswāk (القُمْقُم وَالمَبْخَرَة وَالمِسْوَاك)</span>
+  </div>
+  <h3>The Rosewater Sprinkler, Agarwood ('Ūd) Censer &amp; Salvadora Persica Tooth-Stick</h3>
+  <p class="sub-author"><strong>Pioneers &amp; Treatises:</strong> Prophetic Sunnah of the Miswāk; Abbasid, Mamluk &amp; Ottoman metalwork guilds (Damascus inlaid brass Qumqum &amp; Mabkharah)</p>
+  <div class="detail-grid">
+    <div><strong>Material &amp; Alchemical Synthesis:</strong> Silver-inlaid brass teardrop sprinkler (Qumqum), pierced geometric incense burner (Mabkharah) burning agarwood ('Ūd), frankincense (Lubān), and ambergris ('Anbar), and fibrous Salvadora persica root-twigs (Miswāk / Siwāk) rich in natural fluoride, silica, tannins, and antibacterial benzyl isothiocyanate.</div>
+    <div><strong>Hygienic, Clinical &amp; Douching Function:</strong> Maintains oral microbiome hygiene before every prayer and social gathering ('Were it not that I might overburden my Ummah, I would have ordered them to use the Siwāk before every prayer,' Sahih Al-Bukhari 887), while rosewater and 'Ūd fumigation sanitize clothing and assembly halls.</div>
+    <div class="fiqh-box"><strong>Canonical Fiqh &amp; Scriptural Anchor:</strong> Sahih Muslim 2253 ('Three things from your world have been made beloved to me: women and perfume [al-ṭīb], and the coolness of my eyes has been placed in prayer').</div>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <!-- SECTION II: HOMOSEXUALITY, HOMOGENEITY, FASTING, PRAYER, COMMUNITY & INSULAR SELF-GOVERNANCE -->
+    <section class="section-block" id="homogeneity-insular">
+      <div class="section-header">
+        <h2>II. Homosexuality (Fiqh vs. Adab &amp; Satr), Liturgical/Urban Homogeneity, Fasting, Prayer &amp; Insular Self-Governing Structures</h2>
+        <p>Examining classical evidentiary privacy (Satr &amp; Lā Tajassasū), the homogeneous geometry of the Ṣaff prayer row and Ramadan fast, and the bottom-up insular organs (Waqf, Maḥallah, Futūwwah/Akhī Guilds, Madhhab Courts) by which Muslim communities govern themselves.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card-panel" style="border-left: 5px solid #F43F5E;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F43F5E22;color:#F43F5E;border:1px solid #F43F5E66;">#1 • SEXUALITY, PRIVACY (SATR) &amp; CLASSICAL JURISPRUDENCE VS. ADAB</span>
+  </div>
+  <h3>Homosexuality, Homosociality, Evidentiary Privacy (Satr) &amp; Gender Variance in Classical Islam <span style="color:#94A3B8;font-size:0.92rem;font-weight:500;">(Fiqh Al-Satr, Qawm Lūṭ, Al-Mukhannathūn wa Adab Al-Majālis)</span></h3>
+  <p class="sub-author"><strong>Scriptural &amp; Juristic Foundation:</strong> Qur'an 7:80–81, 26:165–166 &amp; 49:12 ('And do not spy' — Wa lā tajassasū); Hadith of Satr (Sahih Muslim 2590: 'Whoever covers a Muslim in this world, Allah will cover him in this world and the Hereafter')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Structural &amp; Legal Mechanism:</strong> Classical Islamic law (Fiqh) strictly prohibited extra-marital sexual acts—including anal sodomy (Liwāṭ) and female-to-female tribadism (Siḥāq)—while simultaneously erecting an almost impenetrable legal wall around the private home (Ḥurmat Al-Masākin): (1) Unacted internal attraction or desire carries zero legal sin or punishment in Islam; (2) Prosecuting any sexual act required four upright eyewitnesses who directly saw the physical act of penetration without committing unlawful spying (Tajassus), rendering state policing of consenting private bedrooms virtually impossible; (3) Abū Ḥanīfah (founder of the Ḥanafī school) classified Liwāṭ under discretionary judicial correction (Ta'zīr) rather than fixed capital Ḥadd, whereas Shāfi'ī, Mālikī, and Ḥanbalī jurists analogized it to Zinā.</p>
+  <p style="color:#CBD5E1;"><strong>Historical &amp; Sociological Reality:</strong> As historians Everett Rowson and Khaled El-Rouayheb document, pre-modern Islamic society did not categorize humans into modern binary 'orientations,' nor did it criminalize homosocial affection or poetic praise of beauty (Ghazal) so long as public modesty and legal bounds were respected. Furthermore, classical Medina and Damascus recognized distinct gender-liminal social groups—such as the Mukhannathūn (effeminate male musicians/courtiers like Ṭuways in early Medina, protected from harm though regulated in domestic access) and the revered Aghawāt (eunuch guardians of the Prophet's Mosque in Medina and the Ka'bah in Mecca).</p>
+</article>
+<article class="card-panel" style="border-left: 5px solid #10B981;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#10B98122;color:#10B981;border:1px solid #10B98166;">#2 • LITURGICAL &amp; SPATIAL HOMOGENEITY</span>
+  </div>
+  <h3>The Homogeneous Prayer Row (Ṣaff), Universal Qiblah Axis &amp; Unstitched Iḥrām Equality <span style="color:#94A3B8;font-size:0.92rem;font-weight:500;">(Al-Ṣaff Al-Wāḥid, Al-Qiblah wa Libās Al-Iḥrām)</span></h3>
+  <p class="sub-author"><strong>Scriptural &amp; Juristic Foundation:</strong> Qur'an 2:144 ('Turn your face toward Al-Masjid Al-Ḥarām') &amp; Sahih Muslim 432 ('Straighten your rows, for straightening the row is part of establishing prayer')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Structural &amp; Legal Mechanism:</strong> Five times every twenty-four hours, across every time zone on earth, Muslims form perfectly straight, shoulder-to-shoulder, ankle-to-ankle concentric arcs facing a single geodesic focal point (the Ka'bah at 21.4225° N, 39.8262° E). No pew, caste reservation, or royal throne is permitted inside the prayer lines; whoever arrives first stands in the front row, and during the Ḥajj every rich monarch and destitute laborer wears the exact same two unstitched white towels (Iḥrām).</p>
+  <p style="color:#CBD5E1;"><strong>Historical &amp; Sociological Reality:</strong> This physical, bodily choreography generates an unmatched civilizational homogeneity: a traveler from 14th-century Tangier (like Ibn Baṭṭūṭah) could walk into a mosque in Cairo, Damascus, Delhi, Malé, or Quanzhou and immediately step into the exact same Arabic liturgy, posture, and legal fraternity without feeling like a foreigner.</p>
+</article>
+<article class="card-panel" style="border-left: 5px solid #D4AF37;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#D4AF3722;color:#D4AF37;border:1px solid #D4AF3766;">#3 • TEMPORAL &amp; METABOLIC HOMOGENEITY (FASTING &amp; PRAYER)</span>
+  </div>
+  <h3>Planetary Synchronization of Fasting (Ramadan) &amp; the Five Solar-Horizon Prayer Times <span style="color:#94A3B8;font-size:0.92rem;font-weight:500;">(Al-Ṣawm wa Al-Mawāqīt Al-Khams)</span></h3>
+  <p class="sub-author"><strong>Scriptural &amp; Juristic Foundation:</strong> Qur'an 2:183–187 ('Fasting is prescribed for you... eat and drink until the white thread of dawn becomes distinct to you from the black thread') &amp; Qur'an 4:103</p>
+  <p style="margin-bottom:0.75rem;"><strong>Structural &amp; Legal Mechanism:</strong> Fasting (Al-Ṣawm) from true dawn (Fajr) to sunset (Maghrib) during the lunar month of Ramadan synchronizes the entire community's metabolic, culinary, charitable, and nocturnal rhythm. The rich experience the visceral hunger of the poor in their own stomachs; the entire city breaks bread at the exact same second (Ifṭār) and rises together before dawn (Suḥūr).</p>
+  <p style="color:#CBD5E1;"><strong>Historical &amp; Sociological Reality:</strong> Combined with the five daily prayers (Fajr, Ẓuhr, 'Aṣr, Maghrib, 'Ishā'), time in an Islamic society is never an abstract bureaucratic clock—it is a lived astronomical and communal cadence linking personal self-restraint (Taqwā) to collective solidarity.</p>
+</article>
+<article class="card-panel" style="border-left: 5px solid #38BDF8;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#38BDF822;color:#38BDF8;border:1px solid #38BDF866;">#4 • ARCHITECTURAL &amp; URBAN HOMOGENEITY</span>
+  </div>
+  <h3>The Isomorphic Islamic City Blueprint Across All Seven Climes <span style="color:#94A3B8;font-size:0.92rem;font-weight:500;">(Binyat Al-Madīnah Al-Islāmiyyah (Jāmi' – Sūq – Ḥammām – Dār))</span></h3>
+  <p class="sub-author"><strong>Scriptural &amp; Juristic Foundation:</strong> Qur'an 24:36–37 ('In houses which Allah has ordered to be raised... men whom neither commerce nor sale distracts from the remembrance of Allah')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Structural &amp; Legal Mechanism:</strong> Every classical Islamic city—whether Fez, Córdoba, Tunis, Cairo, Damascus, Aleppo, Isfahan, Samarkand, or Banda Aceh—organizes itself around the same modular, self-replicating civic DNA: (1) The central Friday Mosque (Al-Jāmi') and Madrasah; (2) Radiating guild bazaars (Al-Sūq) ordered by cleanliness and aroma (perfumers, booksellers, and silk-weavers closest to the mosque; tanners, dyers, and blacksmiths on the periphery); (3) The public bathhouse (Ḥammām), hospital (Bīmāristān), and water fountain (Sabīl); and (4) Residential quarters of inward-looking courtyard houses (Dār) with blank exterior walls minimizing street envy and maximizing interior garden beauty.</p>
+  <p style="color:#CBD5E1;"><strong>Historical &amp; Sociological Reality:</strong> Even when conquerors changed at the citadel (Qal'ah), this homogeneous urban cellular matrix remained intact, allowing neighborhoods to function with uninterrupted civic order.</p>
+</article>
+<article class="card-panel" style="border-left: 5px solid #A855F7;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#A855F722;color:#A855F7;border:1px solid #A855F766;">#5 • INSULAR SELF-GOVERNANCE I: WAQF ENDOWMENTS &amp; THE MAḤALLAH WARD</span>
+  </div>
+  <h3>Fiscal Immunity of the Waqf Trust &amp; Self-Governing Urban Neighborhoods <span style="color:#94A3B8;font-size:0.92rem;font-weight:500;">(Al-Waqf Al-Khayrī wa Niẓām Al-Ḥārah / Al-Maḥallah)</span></h3>
+  <p class="sub-author"><strong>Scriptural &amp; Juristic Foundation:</strong> Sahih Muslim 1631 ('When a human being dies, his deeds end except for three: ongoing charity [Ṣadaqah Jāriyah], beneficial knowledge, or a righteous child who prays for him')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Structural &amp; Legal Mechanism:</strong> How did Islamic society govern itself autonomously without relying on state bureaucracy? Through two insular institutions: (1) Al-Waqf, an irrevocable legal trust that permanently removes revenue-producing property (markets, orchards, bathhouses, mills) from state taxation or royal confiscation and dedicates its income forever to schools, hospitals, orphans, water aqueducts, and even stray animals; and (2) The Maḥallah / Ḥārah (walled urban neighborhood ward), governed by its own locally chosen Shaykh Al-Ḥārah, night watchman ('Assās), fire brigade, and communal arbitration council.</p>
+  <p style="color:#CBD5E1;"><strong>Historical &amp; Sociological Reality:</strong> By the 18th century, between one-third and one-half of all arable land and urban real estate in the Ottoman, Mamluk, and Moroccan realms was held in Waqf—meaning education, healthcare, water supply, and poor relief were 100% community-funded and insulated from palace coups.</p>
+</article>
+<article class="card-panel" style="border-left: 5px solid #F59E0B;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F59E0B22;color:#F59E0B;border:1px solid #F59E0B66;">#6 • INSULAR SELF-GOVERNANCE II: AṢNĀF GUILDS, FUTŪWWAH &amp; AKHĪ BROTHERHOODS</span>
+  </div>
+  <h3>Self-Regulating Craft Guilds &amp; Chivalric Artisan Confraternities <span style="color:#94A3B8;font-size:0.92rem;font-weight:500;">(Al-Aṣnāf, Al-Futūwwah wa Al-Ukhuwwah (Akhī))</span></h3>
+  <p class="sub-author"><strong>Scriptural &amp; Juristic Foundation:</strong> Qur'an 18:13 ('Indeed, they were youths [Fityah] who believed in their Lord, and We increased them in guidance') &amp; Caliph Al-Nāṣir's Futūwwah Charter (c. 1182 CE)</p>
+  <p style="margin-bottom:0.75rem;"><strong>Structural &amp; Legal Mechanism:</strong> Every trade in the Islamic city (bakers, weavers, apothecaries, coppersmiths, masons, caravan drivers) formed a self-governing guild (Ṣinf / Ṭā'ifah) fused with the ethical chivalry code of Futūwwah (in Arabic lands) or Akhīlik (in Seljuk/Ottoman Anatolia, famously described by Ibn Baṭṭūṭah). Each guild elected its own Shaykh Al-Ṣinf, tested apprentices before conferring the belt of mastery (Shadd), fixed quality standards, maintained a mutual-aid treasury (Ṣundūq Al-Ta'āwun) for sick or widowed members, and hosted nightly hospitality lodges (Zāwiyah) for strangers.</p>
+  <p style="color:#CBD5E1;"><strong>Historical &amp; Sociological Reality:</strong> When central government collapsed in Anatolia or Syria during Mongol or Crusader invasions, the Akhī and Futūwwah brotherhoods seamlessly stepped in to govern cities, defend walls, and keep markets honest.</p>
+</article>
+<article class="card-panel" style="border-left: 5px solid #14B8A6;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#14B8A622;color:#14B8A6;border:1px solid #14B8A666;">#7 • INSULAR SELF-GOVERNANCE III: MADHHAB PLURALISM &amp; DĀR AL-IFTĀ'</span>
+  </div>
+  <h3>Decentralized Legal Schools &amp; Autonomous Communal Courts <span style="color:#94A3B8;font-size:0.92rem;font-weight:500;">(Ta'addud Al-Madhāhib, Al-Iftā' wa Al-Qaḍā' Al-Ahlī)</span></h3>
+  <p class="sub-author"><strong>Scriptural &amp; Juristic Foundation:</strong> Qur'an 16:43 ('So ask the people of knowledge if you do not know') &amp; Qur'an 5:48 ('To each of you We prescribed a law and a method')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Structural &amp; Legal Mechanism:</strong> Unlike modern nation-states where the legislature holds a monopoly on lawmaking, classical Islamic law (Sharī'ah / Fiqh) was authored from the bottom up by independent civilian jurists (Fuqahā' and Muftīs) across the four Sunni Madhhabs (Ḥanafī, Mālikī, Shāfi'ī, Ḥanbalī), the Ja'farī and Zaydī schools, and the Ibāḍī school. In Mamluk Cairo and Damascus, four Chief Judges (Qāḍī Al-Quḍāt)—one for each Sunni school—sat simultaneously so citizens could contract marriages, commerce, or inheritance under the school that best resolved their case, while non-Muslim communities (Ahl Al-Dhimmah / Millets) governed their own family and communal law in autonomous rabbinical and ecclesiastical courts.</p>
+  <p style="color:#CBD5E1;"><strong>Historical &amp; Sociological Reality:</strong> This legal polycentrism meant that the Caliph or Sultan was subject to the law rather than its creator; if a ruler attempted to alter canonical Fiqh by decree, the independent 'Ulamā' and guild networks simply refused to validate it.</p>
+</article>
+
+      </div>
+    </section>
+
+    <!-- SECTION III: THE 7 ARCHETYPES OF THE ISLAMIC MAN & THE CARAVAN THROUGH ANTIQUITY -->
+    <section class="section-block" id="caravan-archetypes">
+      <div class="section-header">
+        <h2>III. The Common Man, Royal Man, Poor Man &amp; The Four Stations of the Caravan Through Antiquity</h2>
+        <p>From the artisan of the Sūq, the Caliph trembling over his flock, and the destitute Companion of Ahl Al-Ṣuffah to the Man of the Caravan, Lost at the Caravan (Ibn Al-Sabīl), At the End of the Caravan (Al-Sāqah), and Left Behind by the Caravan (Abū Dharr &amp; Qur'an 9:118).</p>
+      </div>
+
+      <div class="svg-showcase">
+        <svg viewBox="0 0 1160 220" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1160" height="220" rx="12" fill="#0B1322" stroke="#F59E0B" stroke-opacity="0.4"/>
+          <text x="580" y="28" text-anchor="middle" fill="#FDE68A" font-size="14.5" font-weight="bold">SPATIAL &amp; MORAL TOPOLOGY OF THE ISLAMIC CARAVAN THROUGH ANTIQUITY (AL-QĀFILAH WA AL-RAKB)</text>
+          <path d="M 90 125 Q 350 90 600 125 T 1070 115" fill="none" stroke="#D4AF37" stroke-width="3" stroke-dasharray="7 5"/>
+          <!-- Station 1: Left Behind -->
+          <circle cx="115" cy="122" r="18" fill="#14B8A6" fill-opacity="0.25" stroke="#14B8A6" stroke-width="2.5"/>
+          <text x="115" y="126" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">#7</text>
+          <text x="115" y="160" text-anchor="middle" fill="#5EEAD4" font-size="11.5" font-weight="bold">Left by the Caravan</text>
+          <text x="115" y="177" text-anchor="middle" fill="#94A3B8" font-size="10">Al-Mukhallaf (Qur'an 9:118)</text>
+          <text x="115" y="192" text-anchor="middle" fill="#94A3B8" font-size="10">&amp; Abū Dharr at Tabuk</text>
+          <!-- Station 2: End of Caravan -->
+          <circle cx="365" cy="108" r="18" fill="#F43F5E" fill-opacity="0.25" stroke="#F43F5E" stroke-width="2.5"/>
+          <text x="365" y="112" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">#6</text>
+          <text x="365" y="148" text-anchor="middle" fill="#FDA4AF" font-size="11.5" font-weight="bold">End of the Caravan</text>
+          <text x="365" y="165" text-anchor="middle" fill="#94A3B8" font-size="10">Al-Sāqah (Prophet ﷺ at Rear</text>
+          <text x="365" y="180" text-anchor="middle" fill="#94A3B8" font-size="10">Carrying the Weak &amp; Jābir)</text>
+          <!-- Station 3: Lost at Caravan -->
+          <circle cx="615" cy="58" r="18" fill="#A855F7" fill-opacity="0.25" stroke="#A855F7" stroke-width="2.5"/>
+          <line x1="615" y1="76" x2="615" y2="122" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <text x="615" y="62" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">#5</text>
+          <text x="725" y="55" text-anchor="start" fill="#D8B4FE" font-size="11.5" font-weight="bold">Lost at the Caravan (Ibn Al-Sabīl)</text>
+          <text x="725" y="71" text-anchor="start" fill="#94A3B8" font-size="10">Qur'an 9:60 Zakāh Share &amp; Darb Zubaydah Fire-Towers</text>
+          <!-- Station 4: Man of Caravan -->
+          <circle cx="885" cy="132" r="18" fill="#F59E0B" fill-opacity="0.25" stroke="#F59E0B" stroke-width="2.5"/>
+          <text x="885" y="136" text-anchor="middle" fill="#FFF" font-size="11" font-weight="bold">#4</text>
+          <text x="885" y="170" text-anchor="middle" fill="#FDE68A" font-size="11.5" font-weight="bold">Man of the Caravan</text>
+          <text x="885" y="187" text-anchor="middle" fill="#94A3B8" font-size="10">Amīr Al-Rakb, Dalīl &amp; Khān</text>
+          <!-- Destination: Mecca/Sanctuary -->
+          <rect x="1040" y="96" width="36" height="36" rx="4" fill="#111" stroke="#D4AF37" stroke-width="2.5"/>
+          <text x="1058" y="152" text-anchor="middle" fill="#FDE68A" font-size="11" font-weight="bold">Al-Ka'bah / Khān</text>
+        </svg>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card-panel" style="border-top: 4px solid #10B981;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#10B98122;color:#10B981;border:1px solid #10B98166;">ARCHETYPE #1 • THE COMMON ISLAMIC MAN</span>
+  </div>
+  <h3>The Common Islamic Man: Artisan, Householder, Guildsman &amp; Pillar of the Congregation</h3>
+  <p class="arabic-chip" style="margin-bottom:0.65rem;display:inline-block;">Al-Rajul Al-'Āmmī / Ibn Al-Balad / Ahl Al-Sūq (الرَّجُل العَامِّيّ وَابْن البَلَد)</p>
+  <div class="detail-grid">
+    <div><strong>Social Station &amp; Daily / Desert Rhythm:</strong> Rises at true dawn (Fajr) for ablution (Wuḍū') and congregational prayer in the neighborhood masjid; opens his shop or workshop in the Sūq with the Bismillāh; earns lawful sustenance (Kasb Ḥalāl) under the ethical eye of his guild and the Muḥtasib; returns home to provide Nafaqah (maintenance, food, clothing, and shelter) for his wife, children, and aging parents; visits the Ḥammām on Thursday evening; and stands dressed in clean white cotton with perfume and Miswāk at the Friday Jumu'ah sermon.</div>
+    <div class="fiqh-box"><strong>Qur'anic &amp; Prophetic Sunnah Anchor:</strong> Sahih Muslim 995 ('The best dinar a man spends is the dinar he spends on his dependents [family]') &amp; Sahih Al-Bukhari 2072 ('Nobody has ever eaten a better meal than that which one has earned by working with one's own hands; the Prophet of Allah, Dāwūd, used to eat from the earnings of his own hands').</div>
+    <div><strong>Historical Exemplars &amp; Phenomenology Through Antiquity:</strong> The Common Man is the moral backbone of Al-Sawād Al-A'ẓam (the Great Majority of the Ummah). Without royal titles, he builds the Waqf fountains, sustains the craft guilds, memorizes the Qur'an, and judges rulers by whether bread is affordable, roads are safe, and the Qāḍī's court is fair.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #D4AF37;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#D4AF3722;color:#D4AF37;border:1px solid #D4AF3766;">ARCHETYPE #2 • THE ROYAL ISLAMIC MAN</span>
+  </div>
+  <h3>The Royal Islamic Man: Sovereign Steward Between Imperial Majesty &amp; Eschatological Dread</h3>
+  <p class="arabic-chip" style="margin-bottom:0.65rem;display:inline-block;">Al-Rajul Al-Malakī / Al-Khalīfah wa Al-Sulṭān (الخَلِيفَة وَالسُّلْطَان وَالمَلِك)</p>
+  <div class="detail-grid">
+    <div><strong>Social Station &amp; Daily / Desert Rhythm:</strong> Invested with the insignias of sovereignty—the Khuṭbah (Friday sermon invocation), the Sikkah (minting of gold Dīnārs), the Ṭirāz (embroidered robe of honor), and the Maẓālim High Court of Grievances—yet haunted day and night by the Prophetic warning that a ruler who betrays his flock will be barred from the fragrance of Paradise.</div>
+    <div class="fiqh-box"><strong>Qur'anic &amp; Prophetic Sunnah Anchor:</strong> Sahih Al-Bukhari 7138 ('All of you are shepherds, and each of you is responsible for his flock: the Imām [ruler] is a shepherd and is responsible for his flock') &amp; Sahih Muslim 1829 ('There is no servant whom Allah entrusts with subjects and who dies while cheating his subjects, except that Allah forbids Paradise to him').</div>
+    <div><strong>Historical Exemplars &amp; Phenomenology Through Antiquity:</strong> Embodied at its zenith by 'Umar ibn Al-Khaṭṭāb (walking the night streets of Medina carrying a sack of flour on his own back for a hungry widow), 'Umar ibn 'Abd Al-'Azīz (Umar II, who returned all royal Umayyad estates to the public treasury Bayt Al-Māl and wept thinking of a single mule stumbling on an unpaved road in Iraq), Nūr Al-Dīn Zangī, Saladin (who died with only 47 silver dirhams and 1 gold dinar left after giving everything to charity), and Ottoman Sultans who kept the dust of campaigns in their turbans to be buried under their cheeks.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #38BDF8;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#38BDF822;color:#38BDF8;border:1px solid #38BDF866;">ARCHETYPE #3 • THE POOR ISLAMIC MAN</span>
+  </div>
+  <h3>The Poor Islamic Man: Holder of a Statutory Share in Wealth &amp; Vanguard of Paradise</h3>
+  <p class="arabic-chip" style="margin-bottom:0.65rem;display:inline-block;">Al-Faqīr wa Al-Miskīn / Ahl Al-Ṣuffah (الفَقِير وَالمِسْكِين وَأَهْل الصُّفَّة)</p>
+  <div class="detail-grid">
+    <div><strong>Social Station &amp; Daily / Desert Rhythm:</strong> Possesses little or no surplus property (below the Niṣāb threshold of 85g of gold), yet is never treated in Islamic law as a social outcast or beggar without rights. Instead, he holds an explicit, divinely legislated property claim (Ḥaqq Ma'lūm) inside the wealth of the rich, disbursed through mandatory Zakāh (2.5% of wealth, 5–10% of harvests), Ṣadaqat Al-Fiṭr before Eid, Kaffārāt (expiatory feedings), and Waqf soup kitchens ('Imārat / Takiyyah).</div>
+    <div class="fiqh-box"><strong>Qur'anic &amp; Prophetic Sunnah Anchor:</strong> Qur'an 70:24–25 ('And those within whose wealth is a known right [ḥaqqun ma'lūm] for the petitioner [al-sā'il] and the deprived [al-maḥrūm]'), Qur'an 9:60 ('Zakāh expenditures are only for the poor [al-fuqarā'] and the needy [al-masākīn]...'), and Sahih Al-Bukhari 6546 ('The poor will enter Paradise five hundred years before the rich').</div>
+    <div><strong>Historical Exemplars &amp; Phenomenology Through Antiquity:</strong> Canonized in the Prophetic era by Ahl Al-Ṣuffah—the 70 to 400 destitute Companions (including Abū Hurayrah, Bilāl ibn Rabāḥ, Salmān Al-Fārisī, and Abū Dharr) who lived on the shaded portico of the Prophet's Mosque in Medina, studying revelation day and night, with whom the Prophet ﷺ was commanded by Qur'an 18:28 to sit patiently rather than seeking the company of wealthy aristocrats.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #F59E0B;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F59E0B22;color:#F59E0B;border:1px solid #F59E0B66;">ARCHETYPE #4 • THE MAN OF THE CARAVAN</span>
+  </div>
+  <h3>The Man of the Caravan: Master of the Desert Artery, the Khān &amp; Celestial Navigation</h3>
+  <p class="arabic-chip" style="margin-bottom:0.65rem;display:inline-block;">Ibn Al-Qāfilah / Amīr Al-Rakb / Al-Dalīl (ابْن القَافِلَة وَأَمِير الرَّكْب وَالدَّلِيل)</p>
+  <div class="detail-grid">
+    <div><strong>Social Station &amp; Daily / Desert Rhythm:</strong> Marches across the great trans-continental arteries—the Hijazi Spice &amp; Ḥajj Roads (Darb Zubaydah, Darb Al-Ḥājj Al-Shāmī, Darb Al-Ḥājj Al-Miṣrī), the Silk Road (Samarkand–Kashgar–Nishapur), and the Trans-Saharan Gold Routes (Sijilmasa–Taghaza–Timbuktu–Kano)—guided by the desert navigator (Al-Dalīl / Al-Khirrīt) who reads the stars, wind-dunes, and soil scent by night, halting every 30 km (1 Marḥalah) at a fortified Caravanserai (Khān / Ribāṭ).</div>
+    <div class="fiqh-box"><strong>Qur'anic &amp; Prophetic Sunnah Anchor:</strong> Qur'an 106:1–2 ('For the accustomed security of the Quraysh—their accustomed security in the caravan of winter [Yemen] and summer [Syria]') &amp; Sahih Al-Bukhari 2998 ('Travel is a piece of torment [Al-Safaru qiṭ'atun min al-'adhāb]; it prevents one of you from his sleep, food, and drink').</div>
+    <div><strong>Historical Exemplars &amp; Phenomenology Through Antiquity:</strong> Governed by strict Prophetic caravan constitutionalism: 'When three people set out on a journey, let them appoint one of their number as their Amīr [leader]' (Sunan Abi Dawud 2608). The Caravan Man carries not only silk, frankincense, gold dust, and paper manuscripts, but also letters of credit (Suftajah), judicial correspondence, and Hajj pilgrims from every corner of the earth.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #A855F7;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#A855F722;color:#A855F7;border:1px solid #A855F766;">ARCHETYPE #5 • THE MAN LOST AT THE CARAVAN</span>
+  </div>
+  <h3>The Man Lost at the Caravan: 'The Son of the Road' (Ibn Al-Sabīl) &amp; Desert Rescue Theology</h3>
+  <p class="arabic-chip" style="margin-bottom:0.65rem;display:inline-block;">Al-Ḍāll / Al-Munqaṭi' / Ibn Al-Sabīl (ابْن السَّبِيل وَالضَّالّ فِي الفَلَاة)</p>
+  <div class="detail-grid">
+    <div><strong>Social Station &amp; Daily / Desert Rhythm:</strong> Separated from the main column by a blinding sandstorm (Samūm / Habūb), a broken camel tether in the dead of night, or raiders, finding himself stranded in the waterless waste (Al-Falāt / Al-Mafāzah) with his provisions cut off—even if he is a wealthy merchant or scholar back in his distant homeland.</div>
+    <div class="fiqh-box"><strong>Qur'anic &amp; Prophetic Sunnah Anchor:</strong> Qur'an 9:60 (naming Ibn Al-Sabīl—the stranded wayfarer cut off from his resources—as the 8th canonical category of Zakāh recipients), Qur'an 2:177, and Sahih Muslim 2747 ('Allah is more joyful at the repentance of His servant when he turns to Him than one of you who was upon his mount in a waterless desert [ard falāt], and it escaped from him carrying his food and drink, so he despaired of it and lay down under a tree awaiting death—then suddenly he awakens to find his camel standing right before him with its reins!).</div>
+    <div><strong>Historical Exemplars &amp; Phenomenology Through Antiquity:</strong> Because of this Qur'anic mandate, Islamic civilization constructed an entire life-saving infrastructure for the Man Lost at the Caravan: fire-lit beacon towers (Al-Manāwir / Al-Mīl) along Darb Zubaydah that burned all night to guide lost stragglers, endowed Waqf cisterns (Sabīl / Birak), and the special Waqf of Ibn Al-Sabīl in Damascus, Cairo, and Fez specifically tasked with clothing, feeding, and financing lost travelers back to their homes.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #F43F5E;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F43F5E22;color:#F43F5E;border:1px solid #F43F5E66;">ARCHETYPE #6 • THE MAN AT THE END OF THE CARAVAN</span>
+  </div>
+  <h3>The Man at the End of the Caravan: The Exhausted Straggler &amp; the Prophetic Rear-Guard</h3>
+  <p class="arabic-chip" style="margin-bottom:0.65rem;display:inline-block;">Ṣāḥib Al-Sāqah / Al-Ḍa'īf fī Ākhir Al-Qāfilah (صَاحِب السَّاقَة فِي آخِر القَافِلَة)</p>
+  <div class="detail-grid">
+    <div><strong>Social Station &amp; Daily / Desert Rhythm:</strong> Lags at the dusty tail-end of the column (Al-Sāqah / Al-Mu'akhkharah) because his mount is lame, his water-skin is leaking, his feet are blistered, or he is carrying the sick and elderly—the exact position where predatory bandits strike and where ruthless empires abandon the weak.</div>
+    <div class="fiqh-box"><strong>Qur'anic &amp; Prophetic Sunnah Anchor:</strong> Sunan Abi Dawud 2639 &amp; Al-Ḥākim ('The Messenger of Allah ﷺ used to march at the very rear of the caravan [fī ākhiri al-qāfilah] to urge on the weak [yuzjī al-ḍa'īf], carry the straggler behind him on his own saddle [yurdifu], and make supplication for them') &amp; Sahih Al-Bukhari 2902 ('Seek me among your weak ones, for you are only given provision and victory by virtue of your weak ones!').</div>
+    <div><strong>Historical Exemplars &amp; Phenomenology Through Antiquity:</strong> Immortalized in the Hadith of Jābir ibn 'Abd Allāh (Sahih Al-Bukhari 2097; Sahih Muslim 715): Jābir was riding a slow, exhausted camel at the very end of the caravan when the Prophet ﷺ caught up to him from the rear, prayed over the camel and tapped it (whereupon it surged ahead to the front of the column), conversed gently with Jābir about his father's debts and his marriage, bought the camel for gold, and upon reaching Medina gave Jābir both the gold price and the camel itself! In the Ottoman and Mamluk Hajj caravans, the Amīr Al-Ḥājj maintained a dedicated rear-guard ambulance corps (Sāqat Al-Maḥmal) with spare camels, physicians, and water-skins specifically so no person at the end of the caravan would ever be abandoned.</div>
+  </div>
+</article>
+<article class="card-panel" style="border-top: 4px solid #14B8A6;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#14B8A622;color:#14B8A6;border:1px solid #14B8A666;">ARCHETYPE #7 • THE MAN LEFT BEHIND BY THE CARAVAN THROUGH ANTIQUITY</span>
+  </div>
+  <h3>The Man Left Behind by the Caravan: Abū Dharr, the Three of Qur'an 9:118 &amp; the Poetic Ruin</h3>
+  <p class="arabic-chip" style="margin-bottom:0.65rem;display:inline-block;">Al-Mukhallaf / Al-Mutakhallif 'an Al-Rakb (المُخَلَّف عَن الرَّكْب عَبْرَ العُصُور)</p>
+  <div class="detail-grid">
+    <div><strong>Social Station &amp; Daily / Desert Rhythm:</strong> Experiences the ultimate existential solitude of antiquity: watching the dust of the departing caravan vanish over the horizon while remaining behind—either through physical exhaustion of his mount, through moral hesitation followed by piercing remorse, or through ascetic renunciation of the world.</div>
+    <div class="fiqh-box"><strong>Qur'anic &amp; Prophetic Sunnah Anchor:</strong> Qur'an 9:118 ('And [He also forgave] the three who were left behind [wa 'alā al-thalāthati alladhīna khullifū] to the point that the earth closed in on them in spite of its vastness, and their own souls closed in on them, and they realized that there is no refuge from Allah except in Him; then He turned to them so that they might repent! Indeed, Allah is the Accepting of Repentance, the Merciful').</div>
+    <div><strong>Historical Exemplars &amp; Phenomenology Through Antiquity:</strong> Three timeless historical archetypes define the Man Left Behind by the Caravan: (1) Abū Dharr Al-Ghifārī on the Tabuk march (630 CE / 9 AH): when his emaciated camel collapsed in the desert, he untied his pack, hoisted it onto his own shoulders, and walked alone on foot in the tracks of the army until the watchers saw a lone silhouette shimmering in the mirage, prompting the Prophet ﷺ to declare: 'Be he Abū Dharr! May Allah have mercy on Abū Dharr—he walks alone, he will die alone, and he will be resurrected alone!' (Ibn Hishām / Al-Ḥākim); (2) Ka'b ibn Mālik, Murārah ibn Al-Rabī', and Hilāl ibn Umayyah, who stayed behind in the shade and ripe dates of Medina without excuse, refused to lie to the Prophet ﷺ upon his return, endured 50 days of penitent solitude until the earth felt constricted around them, and were immortalized forever in Qur'an 9:118 as the paradigm of truth-telling redeeming failure; and (3) The Pre-Islamic &amp; Islamic Poetic Archetype of Wuqūf 'alā Al-Aṭlāl (standing alone at the abandoned camp-traces after the beloved's caravan has departed), transformed by Sufi masters like Ibn 'Arabī and Rūmī into the awakening of the soul that misses the worldly caravan only to find God waiting in the stillness.</div>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <!-- SECTION IV: CALIPHATE ORGANIZATION & ISLAMIC SUFFRAGE -->
+    <section class="section-block" id="caliphate-suffrage">
+      <div class="section-header">
+        <h2>IV. Caliphate Self-Organization (Al-Aḥkām Al-Sulṭāniyyah) &amp; Islamic Suffrage: Naming It &amp; Effecting Change</h2>
+        <p>How Islam organizes and governs itself in the Caliphate stage, and the canonical Qur'anic &amp; Prophetic names for Suffrage (Al-Shūrā, Al-Bay'ah, Al-Mujādilah 58:1 &amp; Wilāyat Al-Maẓālim) across Common, Royal, Young, Old, and Gender Causes.</p>
+      </div>
+
+      <h3 style="color:#34D399;margin-bottom:0.85rem;font-size:1.25rem;">A. The 6 Constitutional Organs of Caliphate Self-Governance</h3>
+      <div class="table-wrap" style="margin-bottom:2.2rem;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Constitutional Organ &amp; Arabic Name</th>
+              <th>Primary Juristic &amp; Historical Sources</th>
+              <th>Organizational Jurisdiction</th>
+              <th>Constitutional Checks &amp; Accountability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+  <td><strong>#1</strong></td>
+  <td><strong style="color:#FDE68A;">The Constitutional Executive Trustee Contract</strong><br><span style="font-size:0.84rem;color:#34D399;">Al-Imāmah wa 'Aqd Al-Khilāfah (عَقْد الإِمَامَة وَالخِلَافَة)</span></td>
+  <td>Al-Māwardī (Al-Aḥkām Al-Sulṭāniyyah, 1058 CE), Al-Juwaynī (Ghiyāth Al-Umam), and Ibn Khaldūn (Al-Muqaddimah, 1377 CE)</td>
+  <td>Defines the Caliphate as a vicarship of Prophetic stewardship 'for the guarding of the religion and the temporal governance of the world' (Ḥirāsat al-dīn wa siyāsat al-dunyā). The Caliph is not an infallible theocrat or divine monarch, but a contracted agent (Wakīl) of the Ummah bound by the first constitutional address of Abū Bakr Al-Ṣiddīq (632 CE): 'Obey me so long as I obey Allah and His Messenger among you; if I disobey Allah and His Messenger, you owe me no obedience!'</td>
+  <td>Subject to deposition or correction if he violates the covenant of justice ('Adālah) or abandons the defense and welfare of the public.</td>
+</tr>
+<tr>
+  <td><strong>#2</strong></td>
+  <td><strong style="color:#FDE68A;">'Those Who Loosen and Bind' — The Consultative &amp; Electoral Assembly</strong><br><span style="font-size:0.84rem;color:#34D399;">Ahl Al-Ḥall wa Al-'Aqd wa Majlis Al-Shūrā (أَهْل الحَلّ وَالعَقْد وَالشُّورَى)</span></td>
+  <td>Qur'an 42:38 ('And their affair is determined by consultation among themselves') &amp; 'Umar ibn Al-Khaṭṭāb's Six-Member Electoral Shūrā Council (644 CE)</td>
+  <td>Composed of the foremost jurists ('Ulamā'), civic leaders (Nuqabā'), tribal/provincial representatives, military commanders, and guild elders who nominate, vet, and contract the head of state and deliberate on war, peace, taxation, and public policy.</td>
+  <td>Holds the constitutional authority to bind ('Aqd) and dissolve (Ḥall) executive legitimacy prior to general public ratification (Al-Bay'ah Al-'Āmmah).</td>
+</tr>
+<tr>
+  <td><strong>#3</strong></td>
+  <td><strong style="color:#FDE68A;">The Vizierate &amp; Specialized Administrative Ministries (Dīwāns)</strong><br><span style="font-size:0.84rem;color:#34D399;">Al-Wizārah wa Al-Dawāwīn (الوِزَارَة وَالدَّوَانِين)</span></td>
+  <td>Instituted by 'Umar ibn Al-Khaṭṭāb (638–640 CE) and expanded under the Umayyads, Abbasids, Fatimids, and Ottomans</td>
+  <td>Divided by Al-Māwardī into Wizārat Al-Tafwīḍ (plenipotentiary Prime Ministry) and Wizārat Al-Tanfīdh (executive cabinet), overseeing the specialized ministries: Dīwān Al-Bayt Al-Māl (Public Treasury separating Zakāh, Kharāj, Jizyah, and Fay'), Dīwān Al-Jund (Military Stipends &amp; Pensions), Dīwān Al-Rasā'il (Chancery), Dīwān Al-Barīd (Postal &amp; Intelligence Network), and Dīwān Al-Mā' (Hydraulic &amp; Irrigation Board).</td>
+  <td>Every Dīwān is audited by Dīwān Al-Zimām / Dīwān Al-Azimmah (the Supreme Audit Bureau established under Caliph Al-Mahdī in 779 CE).</td>
+</tr>
+<tr>
+  <td><strong>#4</strong></td>
+  <td><strong style="color:#FDE68A;">The Independent Judiciary &amp; Chief Justice of the Realm</strong><br><span style="font-size:0.84rem;color:#34D399;">Al-Qaḍā' wa Qāḍī Al-Quḍāt (القَضَاء وَقَاضِي القُضَاة)</span></td>
+  <td>'Umar ibn Al-Khaṭṭāb's Constitutional Letter on Judicial Procedure to Abū Mūsā Al-Ash'arī; Abū Yūsuf (Kitāb Al-Kharāj, first Qāḍī Al-Quḍāt)</td>
+  <td>Applies canonical Fiqh across civil, commercial, family, property, and criminal cases. In classical Islamic constitutionalism, the Qāḍī's court is strictly egalitarian: when Caliph 'Alī ibn Abī Ṭālib appeared before Qāḍī Shurayḥ in a dispute with a Jewish citizen over a coat of armor, Qāḍī Shurayḥ ruled in favor of the Jewish citizen because the Caliph had no independent witness beyond his own son and freedman!</td>
+  <td>Judges hold tenure independent of provincial governors; judicial rulings remain valid even after the Caliph who appointed the judge dies or is deposed.</td>
+</tr>
+<tr>
+  <td><strong>#5</strong></td>
+  <td><strong style="color:#FDE68A;">The Supreme Court of Public Grievances Against State Officials</strong><br><span style="font-size:0.84rem;color:#34D399;">Wilāyat Al-Maẓālim wa Dār Al-'Adl (وِلَايَة المَظَالِم وَدَار العَدْل)</span></td>
+  <td>Prophetic endorsement of Ḥilf Al-Fuḍūl; Abbasid Caliph Al-Muhtadī, Nūr Al-Dīn Zangī's Dār Al-'Adl in Damascus, and Mamluk Cairo's Sultanic Maẓālim sessions</td>
+  <td>A specialized high constitutional tribunal possessing coercive power superior to ordinary courts, specifically created so that any commoner, peasant, woman, merchant, or non-Muslim Dhimmi could file a direct petition (Qiṣṣah / Ruq'ah) against a powerful governor, tax collector, general, or royal prince for extortion, land seizure, or abuse of authority.</td>
+  <td>Combines the authority of the sovereign with the presence of the Chief Qāḍīs and Muftīs, compelling governors to restore seized property on the spot.</td>
+</tr>
+<tr>
+  <td><strong>#6</strong></td>
+  <td><strong style="color:#FDE68A;">The Municipal Ombudsman, Market Regulator &amp; Public Welfare Inspector</strong><br><span style="font-size:0.84rem;color:#34D399;">Wilāyat Al-Ḥisbah wa Al-Muḥtasib (وِلَايَة الحِسْبَة وَالمُحْتَسِب)</span></td>
+  <td>Qur'an 3:104; Al-Shayzarī (Nihāyat Al-Rutbah fī Ṭalab Al-Ḥisbah) and Ibn Al-Ukhuwwah</td>
+  <td>Patrols the markets, streets, bathhouses, and workshops daily to verify calibrated brass weights and measures, test milk and bread for adulteration, prevent price-gouging hoarding (Iḥtikār), inspect building safety, enforce municipal hygiene and sewer clearance, and—remarkably—prohibit the overloading or beating of pack animals and the overworking of laborers and apprentices.</td>
+  <td>Historically staffed by both men and women (beginning with 'Umar ibn Al-Khaṭṭāb's appointment of Al-Shifā' bint 'Abd Allāh as market inspector of Medina).</td>
+</tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="color:#FDE68A;margin-bottom:0.85rem;font-size:1.25rem;">B. Naming Islamic Suffrage &amp; The 5 Vectors of Causes (Common, Royal, Young, Old &amp; Gender)</h3>
+      <div class="cards-grid" style="margin-bottom:2.4rem;">
+        <article class="card-panel" style="border-left: 5px solid #10B981;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#10B98122;color:#10B981;border:1px solid #10B98166;">#1 • PILLAR I OF ISLAMIC SUFFRAGE: DELIBERATIVE FRANCHISE</span>
+  </div>
+  <h3>Constitutional Deliberation &amp; Collective Decision-Making — <span style="color:#FDE68A;">Al-Shūrā (الشُّورَى — Mutual Consultation)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 42:38 ('And their affair is determined by mutual consultation among themselves' — wa amruhum shūrā baynahum) &amp; Qur'an 3:159 ('So pardon them, ask forgiveness for them, and consult them in the matter' — wa shāwirhum fī al-amr)</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> Names the fundamental deliberative right of the community. Remarkably, Qur'an 3:159 was revealed immediately after the Battle of Uḥud (625 CE)—where the Prophet ﷺ had personally favored staying inside Medina, but yielded to the majority vote of the enthusiastically vocal young Companions to march out, and even after that majority vote led to a military setback, God commanded the Prophet ﷺ to keep consulting them!</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Establishes that participatory suffrage (Shūrā) is never revoked because of human error; prior to Badr (Al-Ḥubāb ibn Al-Mundhir changing camp strategy) and the Trench (Salmān Al-Fārisī proposing the Khandaq), ordinary citizens reshaped state strategy through Shūrā.</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #D4AF37;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#D4AF3722;color:#D4AF37;border:1px solid #D4AF3766;">#2 • PILLAR II OF ISLAMIC SUFFRAGE: ELECTORAL CONSENT &amp; PLEBISCITE</span>
+  </div>
+  <h3>Bilateral Electoral Pledge, Universal Polling &amp; Independent Female Suffrage — <span style="color:#FDE68A;">Al-Bay'ah wa Al-Ikhtiyār (البَيْعَة وَالاخْتِيَار — Contractual Suffrage)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 48:10, 48:18 (Bay'at Al-Riḍwān) &amp; Qur'an 60:12 ('O Prophet, when the believing women come to you pledging allegiance to you... then accept their pledge' — Bay'at Al-Nisā')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> Derived from Bay' (a bilateral contract of exchange), Al-Bay'ah means that political authority in Islam is never self-originating; it is conferred by the explicit consent and handshake/oath of the governed. Crucially, Qur'an 60:12 instituted independent female political suffrage in 628–630 CE, centuries before modern Western feminism: women gave Bay'ah directly in their own legal capacity, even when their fathers or husbands had not yet accepted Islam.</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Reached its procedural apex in the 644 CE (23 AH) Election of Caliph 'Uthmān ibn 'Affān: as recorded by Al-Ṭabarī and Ibn Kathīr, the electoral commissioner 'Abd Al-Raḥmān ibn 'Awf spent three days and nights conducting a universal plebiscite across Medina—polling the senior Companions, the army commanders, the common artisans, 'even the women in their private quarters' (ḥattā al-nisā' fī khudūrihinna), the students in the schools, and the incoming caravan riders at the city gates!</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #F43F5E;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F43F5E22;color:#F43F5E;border:1px solid #F43F5E66;">#3 • PILLAR III OF ISLAMIC SUFFRAGE: TRANSFORMING PAIN INTO LAW</span>
+  </div>
+  <h3>The Canonical Name for Turning What You Go Through Into Systemic Change — <span style="color:#FDE68A;">Al-Tajādul wa Al-Ishtikā' (التَّجَادُل وَالاشْتِكَاء — Sūrat Al-Mujādilah)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 58:1–4 ('Certainly has Allah heard the speech of the woman who argues with you [qawl allatī tujādiluka] concerning her husband and directs her complaint to Allah [wa tashtakī ilā Allāh]. And Allah hears your dialogue; indeed, Allah is Hearing and Seeing')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> If one asks: 'What does the Qur'an name the ability to take the suffering you go through, voice it to authority, and effect permanent legal change?' The canonical Qur'anic name is Al-Mujādilah / Al-Ishtikā' (Principled Contestation &amp; Petition). When Khawlah bint Tha'labah was subjected by her husband Aws ibn Al-Ṣāmit to the pagan Arab custom of Ẓihār (declaring 'You are to me like my mother's back,' which left a wife trapped in lifelong marital limbo with hungry children), she refused to accept silent victimization. She walked straight to Muhammad ﷺ, debated the legal vacuum with him, and raised her complaint to God.</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Her personal anguish immediately triggered the descent of Sūrat Al-Mujādilah (Chapter 58), outlawing the oppressive custom of Ẓihār across all of Islamic law forever and instituting mandatory expiation (freeing a slave, fasting two months, or feeding sixty poor people). Years later, when Caliph 'Umar ibn Al-Khaṭṭāb was riding with his retinue of generals and governors, an elderly Khawlah stopped him in the street and admonished him at length to fear God regarding the poor; when a guard asked 'Umar why he stood in the sun listening to an old woman, 'Umar replied: 'Woe to you! Do you know who this is? This is the woman whose complaint Allah heard from above the seven heavens—so by Allah, if she kept me standing until nightfall, I would only leave for mandatory prayer!'</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #38BDF8;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#38BDF822;color:#38BDF8;border:1px solid #38BDF866;">#4 • PILLAR IV OF ISLAMIC SUFFRAGE: SPEAKING TRUTH TO POWER</span>
+  </div>
+  <h3>The Civic Franchise of Accountability, Protest Against Tyranny &amp; The League of the Virtuous — <span style="color:#FDE68A;">Al-Naṣīḥah wa Ḥilf Al-Fuḍūl (النَّصِيحَة وَحِلْف الفُضُول وَكَلِمَة العَدْل)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 9:71 ('The believing men and believing women are allies of one another; they enjoin what is right and forbid what is wrong'); Sahih Muslim 55 ('Religion is sincere counsel [Al-Dīnu al-naṣīḥah]—to Allah, His Book, His Messenger, the leaders of the Muslims, and their common folk'); Sunan Abi Dawud 4344 ('The greatest Jihad is a word of justice spoken before an unjust ruler')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> Paired with the Prophet's ﷺ lifelong celebration of Ḥilf Al-Fuḍūl (The Pact of the Virtuous)—formed in Mecca after a Yemeni merchant from Zabid was defrauded of his goods by a powerful Qurayshi noble, stood on Mount Abū Qubays crying out his grievance, and compelled the honorable clans to swear that no person, native or stranger, would ever be wronged in Mecca without the league rising as one hand until his right was restored.</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Gives every citizen—male or female, rich or poor—both the constitutional right and the religious duty to audit rulers, strike down unlawful decrees, and mobilize collective civic solidarity.</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #F59E0B;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#F59E0B22;color:#F59E0B;border:1px solid #F59E0B66;">#5 • CAUSE VECTOR I: THE MOST COMMON CAUSES</span>
+  </div>
+  <h3>The Everyday Causes of the Common People Across the Caliphates — <span style="color:#FDE68A;">Qaḍāyā Al-'Āmmah (قَضَايَا العَامَّة — Bread, Water, Taxes, Wages &amp; Courts)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Sunan Ibn Majah 2443 ('Give the worker his wages before his sweat dries'); Sunan Abi Dawud 3477 ('Muslims are partners in three things: water, pasture, and fire'); Sahih Muslim 1605 ('Whoever hoards grain to drive up prices is a sinner')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> Throughout Islamic history, when the common people (Al-'Āmmah), artisans, and peasants exercised their suffrage in Friday mosque protests, petitions to Dār Al-Maẓālim, or guild strikes, their Five Most Common Causes were: (1) Bread &amp; Grain Anti-Hoarding (demanding the Muḥtasib open state granaries and punish grain monopolists during drought); (2) Abolition of Non-Canonical Taxes (Al-Mukūs — illegal market tolls and urban octrois condemned by the 'Ulamā'); (3) Public Water &amp; Commons Access (protecting rivers, canals, and Sabīl fountains from private privatization); (4) Prompt Living Wages &amp; Debt Relief; and (5) Removal of Tyrannical Provincial Governors.</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Notably, in Mamluk Cairo, Abbasid Baghdad, and Ottoman Damascus/Istanbul, when bread prices spiked or a governor imposed illegal Mukūs taxes, the commoners marched with the 'Ulamā' holding open Qur'ans to the citadel until the Sultan issued a carved stone decree (Marsūm) on the mosque wall abolishing the tax!</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #A855F7;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#A855F722;color:#A855F7;border:1px solid #A855F766;">#6 • CAUSE VECTOR II: THE ROYAL CAUSES</span>
+  </div>
+  <h3>The Causes of Caliphs, Sultans &amp; Viziers: Legitimacy, Frontiers, Sound Coinage &amp; Waqf Monumentality — <span style="color:#FDE68A;">Qaḍāyā Al-Khāṣṣah wa Al-Mulūk (قَضَايَا الخَاصَّة وَالمُلُوك وَالسِّيَاسَة)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 4:58 ('Indeed, Allah commands you to render trusts to whom they are due and when you judge between people to judge with justice') &amp; Qur'an 22:41</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> The Royal Causes centered on: (1) Constitutional Legitimacy &amp; Succession (securing the Bay'ah of Ahl Al-Ḥall wa Al-'Aqd and the recognition of the Khuṭbah in Mecca and Medina); (2) Defense of the Frontier Marches (Al-Thughūr) and the Security of the Hajj Caravans (Amīr Al-Ḥājj); (3) Monetary Integrity of the Gold Dīnār and Silver Dirham against debasement; (4) Solvency of Bayt Al-Māl to pay the army without oppressing the peasantry (as formulated in the Circle of Justice / Dā'irat Al-'Adl); and (5) Immortalizing the dynasty through grand Waqf complexes (Kuliyyahs, Bīmāristāns, observatories, and libraries).</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> A ruler who maintained the Circle of Justice—where no royal power survives without the army, no army without wealth, no wealth without prosperous subjects, and no prosperous subjects without justice—enjoyed enduring legitimacy.</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #38BDF8;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#38BDF822;color:#38BDF8;border:1px solid #38BDF866;">#7 • CAUSE VECTOR III: THE YOUNG CAUSES</span>
+  </div>
+  <h3>The Causes of Youth: Meritocracy, Moral Courage, Marriage Access &amp; Reform Vanguard — <span style="color:#FDE68A;">Qaḍāyā Al-Shabāb wa Al-Fityān (قَضَايَا الشَّبَاب وَالفِتْيَان)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 18:13 ('Indeed, they were youths [Fityah] who believed in their Lord, and We increased them in guidance'); Qur'an 21:60 ('We heard a youth [Fatan] mention them who is called Ibrāhīm'); Sahih Al-Bukhari 660 (The Youth Who Grew Up in the Worship of Allah under the Shade of the Throne)</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> Rooted in the extraordinary youth of the early Islamic vanguard—where 'Alī ibn Abī Ṭālib accepted Islam as a boy, Al-Arqam opened his house (Dār Al-Arqam) at age 16, Muṣ'ab ibn 'Umayr became Medina's first teacher-ambassador in his twenties, Mu'ādh ibn Jabal was appointed Chief Judge and Governor of Yemen at age 27, and Usāmah ibn Zayd (son of a formerly enslaved father) was appointed by the Prophet ﷺ at age 18 as Supreme Commander over Abū Bakr and 'Umar!</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Across history and today, the Young Causes champion: (1) Meritocracy over aristocratic lineage (enabling an emancipated youth or poor Madrasah student on a Waqf stipend to rise to Chief Judge or Grand Vizier); (2) Facilitating Marriage (Taysīr Al-Nikāḥ) against prohibitive dowry inflation and tribal elitism; (3) Chivalric Futūwwah solidarity against corruption; and (4) Educational, scientific, and employment empowerment.</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #14B8A6;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#14B8A622;color:#14B8A6;border:1px solid #14B8A666;">#8 • CAUSE VECTOR IV: THE OLD CAUSES</span>
+  </div>
+  <h3>The Causes of Elders: Filial Reverence, Statutory Exemptions, Pension Security &amp; Isnād Wisdom — <span style="color:#FDE68A;">Qaḍāyā Al-Shuyūkh wa Ahl Al-Shaybah (قَضَايَا الشُّيُوخ وَالبِرّ وَالوَقَار)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 17:23–24 ('Whether one or both of them reach old age with you, say not to them as much as &quot;uff,&quot; and do not repel them, but speak to them a noble word, and lower to them the wing of humility out of mercy'); Sunan Abi Dawud 4843 ('Part of glorifying Allah is honoring the grey-haired Muslim elder')</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> The Old Causes institutionalize four pillars of senior dignity: (1) Statutory Legal &amp; Ritual Relief—exempting the frail elder (Al-Shaykh Al-Fānī) from fasting Ramadan (replaced by Fidyah feeding a poor person per day, Qur'an 2:184), permitting seated or lying prayer, and strictly forbidding the harming of elders in warfare; (2) Universal Social Security Pensions—exemplified when Caliph 'Umar ibn Al-Khaṭṭāb saw an elderly blind Jewish beggar in Medina/Damascus, took him by the hand to his own home, and ordered the head of Bayt Al-Māl: 'By Allah, we would not be fair if we ate his tax in his youth and abandoned him in his old age!'—abolishing his Jizyah and granting him a lifelong state pension (Abū Yūsuf, Kitāb Al-Kharāj); (3) Authority of the Isnād (where the oldest living transmitter of Hadith, the Musnid Al-'Aṣr, held the highest scholarly prestige because of his short chain to the Prophet ﷺ); and (4) Family Waqf (Waqf Ahlī) protection against elder abandonment.</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Ensures that aging in Islamic civilization is an ascent in honor, consultative weight (Majlis Al-Shuyūkh), and legal protection rather than economic dispossession.</div>
+</article>
+<article class="card-panel" style="border-left: 5px solid #EC4899;">
+  <div class="card-meta">
+    <span class="pill-badge" style="background:#EC489922;color:#EC4899;border:1px solid #EC489966;">#9 • CAUSE VECTOR V: GENDER, AGENCY &amp; EFFECTING CHANGE (PAST &amp; TODAY)</span>
+  </div>
+  <h3>How Gender Impacts Suffrage: From Prophetic Constitutional Precedents to Modern Global Reform — <span style="color:#FDE68A;">Al-Mar'ah wa Al-Taghyīr Al-Tashrī'ī (المَرْأَة وَالتَّغْيِير التَّشْرِيعِيّ ماضِياً وَحَاضِراً)</span></h3>
+  <p class="sub-author"><strong>Qur'anic &amp; Prophetic Foundation:</strong> Qur'an 33:35 (revealed after Umm Salamah's question, explicitly naming Muslim men and Muslim women across 10 moral ranks), Qur'an 58:1 (Khawlah bint Tha'labah), Qur'an 60:12 (Bay'at Al-Nisā'), and Qur'an 4:7 &amp; 4:32</p>
+  <p style="margin-bottom:0.75rem;"><strong>Mechanism of Suffrage, Voice &amp; Representation:</strong> Demonstrates that in Islam's foundational architecture, women's suffrage was not a passive grant from men, but an active constitutional force whereby women took what they personally endured—marital abuse, forced marriage, inheritance deprivation, dowry caps, or wartime displacement—brought it directly before the Prophet ﷺ, the Caliphs, and the Qāḍī courts, and transformed their lived experience into binding scripture and statutory law.</p>
+  <div class="fiqh-box"><strong>Taking What You Go Through &amp; Effecting Change:</strong> Today, this heritage powers formal electoral suffrage across all 57 OIC states, 10+ female Presidents and Prime Ministers in Muslim-majority democracies, female Sharī'ah judges (Qāḍiyāt) and state Muftiyāt, and landmark family-code reforms (such as Morocco's 2004 Mudawwanah and statutory Khul' reforms).</div>
+</article>
+
+      </div>
+
+      <h3 style="color:#F472B6;margin-bottom:0.85rem;font-size:1.25rem;">C. Gender &amp; Suffrage (Past &amp; Today): Taking What You Go Through &amp; Effecting Constitutional Change</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Historical Era</th>
+              <th>Protagonist / Movement</th>
+              <th>Scriptural / Legal Anchor</th>
+              <th>What They Went Through (Lived Ordeal / Question)</th>
+              <th>Permanent Legal, Scriptural &amp; Institutional Change Effected</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+  <td><strong>#1</strong></td>
+  <td><span class="pill-badge" style="background:rgba(236,72,153,0.16);color:#F472B6;border:1px solid rgba(236,72,153,0.4);">622–632 CE (Medinan Revelation — Sūrat Al-Mujādilah 58:1–4)</span></td>
+  <td><strong style="color:#FDE68A;">Khawlah bint Tha'labah (خَوْلَة بِنْت ثَعْلَبَة)</strong></td>
+  <td><code>Qur'an 58:1 ('Certainly has Allah heard the speech of the woman who argues with you concerning her husband and directs her complaint to Allah')</code></td>
+  <td>Subjected by her elderly husband Aws ibn Al-Ṣāmit to the pre-Islamic pagan formula of Ẓihār ('You are to me like my mother's back'), which trapped a woman in perpetual limbo—forbidden to her husband yet never freed to remarry, while her children faced starvation.</td>
+  <td style="color:#A7F3D0;">Refused to accept the status quo; argued her case directly before the Prophet ﷺ and pleaded to God, resulting in the immediate revelation of Sūrat Al-Mujādilah (Chapter 58), permanently abolishing pagan Ẓihār across the entire Muslim world and establishing the supreme Qur'anic precedent that a single woman's lived grievance can overturn centuries of patriarchal custom.</td>
+</tr>
+<tr>
+  <td><strong>#2</strong></td>
+  <td><span class="pill-badge" style="background:rgba(236,72,153,0.16);color:#F472B6;border:1px solid rgba(236,72,153,0.4);">626–628 CE (Medina — Sūrat Al-Aḥzāb 33:35 &amp; Sūrat Āl 'Imrān 3:195)</span></td>
+  <td><strong style="color:#FDE68A;">Umm Salamah Hind bint Abī Umayyah &amp; Asmā' bint 'Umays (أُمّ سَلَمَة وَأَسْمَاء بِنْت عُمَيْس)</strong></td>
+  <td><code>Qur'an 33:35 ('Indeed, the Muslim men and Muslim women, the believing men and believing women, the obedient men and obedient women, the truthful men and truthful women...') &amp; Qur'an 3:195 ('Never will I allow to be lost the work of any worker among you, whether male or female; you are of one another')</code></td>
+  <td>Questioned why the Qur'anic revelations up to that moment frequently used the default Arabic masculine plural (Al-Muslimūn) when women were enduring the exact same persecutions, migrations (Hijrah to Abyssinia and Medina), and sacrifices as men.</td>
+  <td style="color:#A7F3D0;">Prompted the descent of Qur'an 33:35—which explicitly pairs the feminine plural beside the masculine plural ten consecutive times in a single verse—and Qur'an 3:195, forever enshriningontological, spiritual, and moral parity in the text of the Qur'an.</td>
+</tr>
+<tr>
+  <td><strong>#3</strong></td>
+  <td><span class="pill-badge" style="background:rgba(236,72,153,0.16);color:#F472B6;border:1px solid rgba(236,72,153,0.4);">625–631 CE (Medina — Precedent of Autonomous Marriage Consent &amp; Inheritance)</span></td>
+  <td><strong style="color:#FDE68A;">Al-Khansā' bint Khidām &amp; The Young Woman of Medina (الخَنْسَاء بِنْت خِدَام وَالفَتَاة البِكْر)</strong></td>
+  <td><code>Sunan Ibn Majah 1874, Sahih Al-Bukhari 5138 &amp; Qur'an 4:7 (Revealed after the widow of Sa'd ibn Al-Rabī' petitioned on behalf of her two orphaned daughters)</code></td>
+  <td>A young woman came to the Prophet ﷺ to report that her father had married her off to his nephew without her consent to elevate his own social standing; similarly, the widow of the martyr Sa'd ibn Al-Rabī' came to the Prophet ﷺ when her husband's brother seized the entire estate under pagan custom because Sa'd left only daughters.</td>
+  <td style="color:#A7F3D0;">In the marriage suit, the Prophet ﷺ immediately granted the young woman the right to annul the marriage; once she won the ruling, she declared: 'I now validate what my father did, Settle it—I only did this so that women would know that fathers have no authority over their daughters' affairs!' In the inheritance suit, Qur'an 4:7 and 4:11 were revealed, granting women and daughters fixed, unalterable statutory inheritance shares 1,200 years before the British Married Women's Property Act of 1882.</td>
+</tr>
+<tr>
+  <td><strong>#4</strong></td>
+  <td><span class="pill-badge" style="background:rgba(236,72,153,0.16);color:#F472B6;border:1px solid rgba(236,72,153,0.4);">c. 636–644 CE (Caliphate of 'Umar ibn Al-Khaṭṭāb — Medina &amp; Mecca)</span></td>
+  <td><strong style="color:#FDE68A;">The Woman of Medina in the Mosque &amp; Al-Shifā' bint 'Abd Allāh (المرأة المُعْتَرِضَة وَالشِّفَاء بِنْت عَبْد اللَّه)</strong></td>
+  <td><code>Qur'an 4:20 ('And if you have given one of them a heap of gold [Qinṭār], take nothing back from it'); Musannaf 'Abd Al-Razzāq 10420; Ibn Sa'd (Al-Ṭabaqāt)</code></td>
+  <td>When Caliph 'Umar ibn Al-Khaṭṭāb stood on the pulpit of the Prophet's Mosque and proposed placing a statutory ceiling on women's marriage dowries (Mahr), a woman rose from the back rows of the mosque and publicly challenged the Caliph's constitutional authority by reciting Qur'an 4:20 ('You have no right to restrict what Allah has granted us!').</td>
+  <td style="color:#A7F3D0;">Caliph 'Umar immediately withdrew his decree on the spot, proclaiming before the entire congregation: 'A woman is right, and 'Umar is wrong!' (Aṣābat imra'atun wa akhṭa'a 'Umar). Furthermore, 'Umar appointed the literate physician-scholar Al-Shifā' bint 'Abd Allāh as public Market Inspector (Muḥtasibah / Wāliyat Al-Sūq) of Medina and Samrā' bint Nuhayk in Mecca.</td>
+</tr>
+<tr>
+  <td><strong>#5</strong></td>
+  <td><span class="pill-badge" style="background:rgba(236,72,153,0.16);color:#F472B6;border:1px solid rgba(236,72,153,0.4);">802–859 CE (Abbasid Hijaz &amp; Idrisid Fez — Civil Engineering &amp; University Waqf)</span></td>
+  <td><strong style="color:#FDE68A;">Zubaydah bint Ja'far (802 CE) &amp; Fāṭimah Al-Fihriyyah (859 CE) (زُبَيْدَة بِنْت جَعْفَر وَفَاطِمَة الفِهْرِيَّة)</strong></td>
+  <td><code>Ibn Khallikān (Wafayāt Al-A'yān) &amp; Ibn Abī Zar' (Rawḍ Al-Qirṭās)</code></td>
+  <td>Zubaydah personally witnessed the agonizing thirst of pilgrims and the poor in Mecca and along the desert caravan trail; when her chief engineers warned that blasting aqueducts through solid granite mountains and building 54 reservoirs across 1,500 km from Kufa to Mecca would cost a fortune, she replied: 'Carry it out, even if every single stroke of the pickaxe costs a gold Dīnār!' Half a century later in Fez, Fāṭimah Al-Fihriyyah fasted continuously while supervising the construction of Al-Qarawiyyīn from her own lawful inheritance.</td>
+  <td style="color:#A7F3D0;">Transformed personal empathy and female financial autonomy into the two greatest public works of classical Islamic civilization: the 1,500 km Darb Zubaydah hydraulic system and the world's oldest continuously operating degree-granting university (Al-Qarawiyyīn, 859 CE).</td>
+</tr>
+<tr>
+  <td><strong>#6</strong></td>
+  <td><span class="pill-badge" style="background:rgba(236,72,153,0.16);color:#F472B6;border:1px solid rgba(236,72,153,0.4);">12th–19th Centuries (Damascus, Cairo, Fez &amp; Istanbul — Sharī'ah Court Sijillāt &amp; Hadith Chairs)</span></td>
+  <td><strong style="color:#FDE68A;">Shuhdah Al-Kātibah ('Pride of Women', d. 1178), 'Ā'ishah Al-Bā'ūniyyah (d. 1517), Nana Asma'u of Sokoto (d. 1864) &amp; Litigants of the Qāḍī Courts</strong></td>
+  <td><code>Documented in biographical dictionaries (Al-Sakhāwī's Kitāb Al-Nisā' with 1,075 female scholars; Ibn Ḥajar studied under 53 female Hadith masters) and Ottoman/Mamluk court registers (Sijillāt)</code></td>
+  <td>Women across the classical Sultanates faced domestic disputes, property encroachment, or distance from formal schooling (as in rural West Africa under the Sokoto Caliphate).</td>
+  <td style="color:#A7F3D0;">In Damascus, Baghdad, and Cairo, female Muḥaddithāt held public chairs in the Umayyad and Al-Azhar mosques issuing signed Ijāzahs to male and female scholars alike; in West Africa, Nana Asma'u organized the Yan Taru network of traveling women teachers educating tens of thousands of rural women in Arabic, Hausa, and Fulfulde; and across Ottoman/Mamluk courts, women personally argued their own lawsuits and inserted binding marriage contract stipulations (Shurūṭ—such as forbidding the husband from taking a second wife or relocating her without consent).</td>
+</tr>
+<tr>
+  <td><strong>#7</strong></td>
+  <td><span class="pill-badge" style="background:rgba(236,72,153,0.16);color:#F472B6;border:1px solid rgba(236,72,153,0.4);">1918–Present (Modern Constitutional Suffrage, Heads of State &amp; Legal Reform Across the 57 OIC Nations)</span></td>
+  <td><strong style="color:#FDE68A;">First Muslim-World Universal Suffrage in Azerbaijan (1918) &amp; Türkiye (1930/1934) to 10+ Female Heads of State &amp; Contemporary Female Qāḍīs</strong></td>
+  <td><code>Modern Constitutional Charters, Morocco's 2004 Mudawwanah, Egypt's 2000 Khul' Law, and OIC Women's Development Organization (WDO)</code></td>
+  <td>Confronted colonial disruption, post-colonial authoritarianism, patriarchal custom masquerading as religion, and barriers to ballot access and judicial office.</td>
+  <td style="color:#A7F3D0;">The Azerbaijan Democratic Republic granted women full voting suffrage in 1918 (ahead of the United States in 1920 and the UK in 1928), followed by Türkiye (1930/1934), Indonesia (1945), Pakistan (1947), and Syria (1949). Muslim-majority nations have elected over ten female Presidents and Prime Ministers—including Benazir Bhutto (Pakistan, 1988), Khaleda Zia &amp; Sheikh Hasina (Bangladesh, 1991/1996), Tansu Çiller (Türkiye, 1993), Megawati Sukarnoputri (Indonesia, 2001), Mame Madior Boye (Senegal, 2001), Cissé Mariam Kaïdama Sidibé (Mali, 2011), Atifete Jahjaga &amp; Vjosa Osmani (Kosovo), and Samia Suluhu Hassan (Tanzania)—while female Islamic judges (Qāḍiyāt) and state Muftiyāt adjudicate in Indonesia, Malaysia, Morocco, Tunisia, Palestine, Egypt, and Pakistan.</td>
+</tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+<!-- SOV_CHROME_FOOTER_START -->
+<footer class="sov-footer-wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;padding-bottom:0.9rem;border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div>
+      <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">COMPLETE <span data-sov-total>66</span>-PORTAL CONTINUALLY UPDATED SITEMAP • CURRENT: #66 / 66 — Alchemical Hygiene, Caravan Man &amp; Islamic Suffrage (#66) (islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html)</div>
+      <div style="font-size:0.84rem;color:#CBD5E1;">Every HTML portal is directly cross-linked and continually synchronized across all 11 Architectural Wings and all 7 Chromatic/Theological Rows.</div>
+    </div>
+    <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+      <a class="sov-pill" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">← Prev: Compass, Caliphate Maps &amp; Every Flag (14 Ages / 57 Countries)</a>
+      <span class="sov-pill sov-pill-counter">#66 / 66</span>
+      <a class="sov-pill sov-pill-master" href="index.html">🏠 Master Index (66)</a>
+      <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">🧭 Combined Omnibus</a>
+      <a class="sov-pill" href="index.html">Next: Master Index Hub →</a>
+    </div>
+  </div>
+  <div class="sov-footer-cols">
+    <div class="sov-footer-cat"><h4>01. Master Hubs &amp; Architecture</h4><a class="" href="index.html">#01/66 Master Index Hub</a><a class="" href="master-combined-omnibus.html">#02/66 Combined Omnibus Reader</a><a class="" href="dependencies-report.html">#03/66 Dependencies &amp; Java 21+ Audit</a><a class="" href="conjoined-worlds-realms-principles-node-grid.html">#50/66 3D Node-Art Terrain Grid (Meridian Guard)</a><a class="" href="islamic-caravans-battles-conquest-chronicle.html">#51/66 Caravans, Trade Battles, Fatḥ &amp; Tadwīn</a><a class="" href="greco-roman-gods-titans-daimones-islamic-judgment.html">#52/66 Greco-Roman Gods &amp; Titans Made Whole</a><a class="" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">#53/66 Philosophy, Alchemy, Theocracies &amp; Socrates</a><a class="" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">#55/66 Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a><a class="" href="islamic-countries-history-canonical-embrace-atlas.html">#56/66 History of Islamic Countries &amp; Canonical Embrace</a><a class="" href="islamic-caliphates-sultans-shahs-dynasties-return.html">#57/66 Caliphates, Sultans, Shahs &amp; Promise of Return</a><a class="" href="quranic-timeline-expansion-vol1-chronology.html">#58/66 Vol. I: Qur'anic Timeline of Expansion</a><a class="" href="quranic-timeline-expansion-vol2-properties-kingdoms.html">#59/66 Vol. II: Islamic Properties, Countries &amp; Kingdoms</a><a class="" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html">#60/66 Vol. III: Beauty of Islam &amp; Collegiate Thesis</a><a class="" href="islam-through-ages-vol1-reception-history.html">#61/66 Ages Vol. I: Islam &amp; Global Reception</a><a class="" href="islam-through-ages-vol2-philosophical-connotations.html">#62/66 Ages Vol. II: Philosophical Connotations</a><a class="" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">#63/66 Ages Vol. III: Scientific Discoveries Instantiated</a><a class="" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">#64/66 Maritime: Boating, Piracy, Currency, Astrolabe &amp; Oman/Yemen</a><a class="" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">#65/66 Compass, Caliphate Maps &amp; Every Flag (14 Ages / 57 Countries)</a><a class="active-link" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">#66/66 Alchemical Hygiene, Caravan Man &amp; Islamic Suffrage (#66)</a></div><div class="sov-footer-cat"><h4>02. Seven Pre-Prophetic Color Orders</h4><a class="" href="order-1-white.html">#04/66 Order #1: White</a><a class="" href="order-2-black.html">#05/66 Order #2: Black</a><a class="" href="order-3-sapphire.html">#06/66 Order #3: Sapphire</a><a class="" href="order-4-gold.html">#07/66 Order #4: Gold</a><a class="" href="order-5-crimson.html">#08/66 Order #5: Crimson</a><a class="" href="order-6-brass.html">#09/66 Order #6: Brass</a><a class="" href="order-7-emerald.html">#10/66 Order #7: Emerald</a></div><div class="sov-footer-cat"><h4>03. 3D Sanctum &amp; Seven Realms</h4><a class="" href="warlock-3d-sanctum.html">#11/66 3D Sanctum Master</a><a class="" href="realm-1-white.html">#12/66 Realm #1: 'Aravot</a><a class="" href="realm-2-black.html">#13/66 Realm #2: Makhon</a><a class="" href="realm-3-sapphire.html">#14/66 Realm #3: Zevul</a><a class="" href="realm-4-gold.html">#15/66 Realm #4: Shehaqim</a><a class="" href="realm-5-crimson.html">#16/66 Realm #5: Ma'on</a><a class="" href="realm-6-brass.html">#17/66 Realm #6: Raqia'</a><a class="" href="realm-7-emerald.html">#18/66 Realm #7: Vilon</a></div><div class="sov-footer-cat"><h4>04. Negentropic Priory &amp; Seven Planes</h4><a class="" href="priory-negentropy-order.html">#19/66 Negentropic Priory Atlas</a><a class="" href="plane-1-white.html">#20/66 Plane #1: Adam Kadmon / Lahut</a><a class="" href="plane-2-black.html">#21/66 Plane #2: Malbush / Al-Qalam</a><a class="" href="plane-3-sapphire.html">#22/66 Plane #3: Beri'ah / Jabarut</a><a class="" href="plane-4-gold.html">#23/66 Plane #4: Atzilut / Al-Arwah</a><a class="" href="plane-5-crimson.html">#24/66 Plane #5: Tohu / Ash-Shuhub</a><a class="" href="plane-6-brass.html">#25/66 Plane #6: Yetzirah / Al-Marij</a><a class="" href="plane-7-emerald.html">#26/66 Plane #7: Tikkun / Al-Mithal</a></div><div class="sov-footer-cat"><h4>05. Seven Wrongdoer (Az-Zalimun) Profiles</h4><a class="" href="zalim-1-fasad.html">#27/66 Zalim #1: Al-Fasad</a><a class="" href="zalim-2-fahishah.html">#28/66 Zalim #2: Al-Fahishah</a><a class="" href="zalim-3-baghy.html">#29/66 Zalim #3: Al-Baghy (Nimrod)</a><a class="" href="zalim-4-fitnah.html">#30/66 Zalim #4: Al-Fitnah</a><a class="" href="zalim-5-hawa.html">#31/66 Zalim #5: Al-Hawa</a><a class="" href="zalim-6-jibt.html">#32/66 Zalim #6: Al-Jibt &amp; Taghut</a><a class="" href="zalim-7-zulm.html">#33/66 Zalim #7: Masjid Ad-Dirar</a></div><div class="sov-footer-cat"><h4>06. Seven Islamic Worlds of Hegemon &amp; Disorder</h4><a class="" href="worlds-hegemon-disorder.html">#34/66 7 Worlds Master Atlas</a><a class="" href="world-1-mizan-fasad.html">#35/66 World #1: Amanah vs. Fasad</a><a class="" href="world-2-haya-fahishah.html">#36/66 World #2: Haya' vs. Tabarruj</a><a class="" href="world-3-babil-namrud.html">#37/66 World #3: Ibrahim vs. Namrud</a><a class="" href="world-4-ummah-fitnah.html">#38/66 World #4: Ummah vs. Fitnah</a><a class="" href="world-5-furqan-hawa.html">#39/66 World #5: Furqan vs. Hawa</a><a class="" href="world-6-tawhid-taghut.html">#40/66 World #6: Tawhid vs. Taghut</a><a class="" href="world-7-taqwa-dirar.html">#41/66 World #7: Taqwa vs. Dirar</a></div><div class="sov-footer-cat"><h4>07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</h4><a class="" href="warlock-formation-dissolution-jafar-aladdin.html">#42/66 Ja'far &amp; Aladdin Qumqum</a><a class="" href="sequester-between-worlds.html">#43/66 7 Inter-World Sequesters</a></div><div class="sov-footer-cat"><h4>08. The Islamic Egg-in-Baking Intelocketer</h4><a class="" href="interlocker-egg-binder-islam.html">#44/66 Egg-in-Baking Intelocketer</a></div><div class="sov-footer-cat"><h4>09. The Warlock Apocrypha &amp; Modernity Theorems</h4><a class="" href="warlock-apocrypha-islamic-theorems.html">#45/66 Warlock Apocrypha &amp; Theorems</a></div><div class="sov-footer-cat"><h4>10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</h4><a class="" href="islamic-husbandry-sovereign-estate.html">#46/66 Vanguard Husbandry Estate</a><a class="" href="way-of-the-flower-rose-garden-islam.html">#47/66 Flower, Rose &amp; Chahar Bagh</a><a class="" href="islamic-modesty-evolution-western-frontier-men-women.html">#54/66 Men &amp; Women Modesty: Western Frontier</a></div><div class="sov-footer-cat"><h4>11. Islamic Animalism &amp; Visual History Atlases</h4><a class="" href="disney-daffy-donald-islamic-microcosm.html">#48/66 Disney/Daffy &amp; Jungle Microcosm</a><a class="" href="warlock-islamic-visual-eras-history.html">#49/66 7 Islamic Visual Eras &amp; AI Art</a></div>
+  </div>
+</footer>
+<!-- SOV_CHROME_FOOTER_END -->
+</body>
+</html>

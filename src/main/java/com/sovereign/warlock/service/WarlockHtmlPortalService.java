@@ -338,6 +338,10 @@ public final class WarlockHtmlPortalService {
                     new IslamicCompassCaliphateMapsAndFlagsPortalGenerator();
             artifacts.add(compassMapsFlagsGenerator.generatePortal(outputDir));
 
+            IslamicAlchemicalHygieneCaravanAndSuffragePortalGenerator alchemicalCaravanSuffrageGenerator =
+                    new IslamicAlchemicalHygieneCaravanAndSuffragePortalGenerator();
+            artifacts.add(alchemicalCaravanSuffrageGenerator.generatePortal(outputDir));
+
             MasterNavigationAndIndexGenerator masterNavGenerator = new MasterNavigationAndIndexGenerator();
             return masterNavGenerator.integrateAllPortalsAndGenerateMasterIndex(outputDir, artifacts);
         } catch (IOException e) {

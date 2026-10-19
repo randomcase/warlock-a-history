@@ -4,6 +4,7 @@ import com.sovereign.warlock.config.SevenWarlockProfileConfig;
 import com.sovereign.warlock.config.SevenZalimProfileConfig;
 import com.sovereign.warlock.domain.ConjoinedWorldsRealmsPrinciplesGrid;
 import com.sovereign.warlock.domain.GrecoRomanPantheonIslamicJudgmentAndWholeness;
+import com.sovereign.warlock.domain.IslamicAlchemicalHygieneCaravanAndSuffrageAtlas;
 import com.sovereign.warlock.domain.IslamicCaliphatesSultansShahsAndPromiseOfReturn;
 import com.sovereign.warlock.domain.IslamicCaravansBattlesAndConquestChronicle;
 import com.sovereign.warlock.domain.IslamicCompassCaliphateMapsAndFlagsAtlas;
@@ -93,6 +94,7 @@ public class WarlockApplication {
         printIslamThroughAgesReceptionPhilosophyAndScience();
         printIslamicMaritimeBoatingPiracyMercantilismAndOmanYemen();
         printIslamicCompassCaliphateMapsAndFlagsAtlas();
+        printIslamicAlchemicalHygieneCaravanAndSuffrageAtlas();
         printGeneratedHtmlArtifacts(htmlArtifacts);
         printOpticalSpectrumSort(warlocksByColor7);
         printPillarGrouping(engine.groupByMysticalPillar(warlocksByColor7));
@@ -728,8 +730,31 @@ public class WarlockApplication {
         System.out.println("----------------------------------------------------------------------------------------------------------");
     }
 
+    private static void printIslamicAlchemicalHygieneCaravanAndSuffrageAtlas() {
+        System.out.println("\n[25] ALCHEMICAL WARES, DOUCHING & HYGIENE, HOMOGENEITY, 7 CARAVAN ARCHETYPES, CALIPHATE GOVERNANCE & ISLAMIC SUFFRAGE:");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicAlchemicalHygieneCaravanAndSuffrageAtlas.AlchemicalHygieneApparatus w :
+                IslamicAlchemicalHygieneCaravanAndSuffrageAtlas.allSevenAlchemicalHygieneWares()) {
+            System.out.printf("  * ALCHEMICAL & HYGIENE WARE #%d: %s [%s]%n",
+                    w.index(), w.englishTitle(), w.arabicName());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicAlchemicalHygieneCaravanAndSuffrageAtlas.IslamicManAndCaravanArchetype a :
+                IslamicAlchemicalHygieneCaravanAndSuffrageAtlas.allSevenIslamicManAndCaravanArchetypes()) {
+            System.out.printf("  * CARAVAN & MAN ARCHETYPE #%d (%s): %s%n",
+                    a.index(), a.archetypeCode(), a.englishTitle());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicAlchemicalHygieneCaravanAndSuffrageAtlas.IslamicSuffragePillarAndCause s :
+                IslamicAlchemicalHygieneCaravanAndSuffrageAtlas.allNineSuffragePillarsAndCauses()) {
+            System.out.printf("  * ISLAMIC SUFFRAGE & CAUSE #%d (%s): %s [%s]%n",
+                    s.index(), s.categoryBadge(), s.englishTitle(), s.arabicTerm());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+    }
+
     private static void printGeneratedHtmlArtifacts(List<WarlockHtmlPortalService.GeneratedHtmlArtifact> artifacts) {
-        System.out.println("\n[25] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
+        System.out.println("\n[26] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
         for (WarlockHtmlPortalService.GeneratedHtmlArtifact a : artifacts) {
             System.out.printf("  * %-26s | %6d bytes | SHA-256: %s... | %s%n",
                     a.fileName(), a.byteSize(), a.sha256Hash().substring(0, 16), a.description());

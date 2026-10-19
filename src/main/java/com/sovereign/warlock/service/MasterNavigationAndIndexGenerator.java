@@ -502,7 +502,14 @@ public final class MasterNavigationAndIndexGenerator {
                         "The Full Islamic Compass (32-Point Star & Qiblah), Cartographic Map of the Caliphates & Every Flag for Every Age, Caliphate & Country",
                         "01. Master Hubs & Architecture", "#10B981", 0, "#10B981",
                         "Qur'an 2:144 & 6:97 • Ṭāsat Al-Qiblah, Dā'irat Al-Akhnān, 14 Caliphate Maps & SVG Flags, All 57 OIC Country Flags Across Every Age",
-                        "AI-illustrated and interactive 32-point Islamic Qiblah & star compass synthesizer, multi-age Caliphate map explorer, 14 historical Caliphate vector flags, and all 57 Islamic country flags across every age.")
+                        "AI-illustrated and interactive 32-point Islamic Qiblah & star compass synthesizer, multi-age Caliphate map explorer, 14 historical Caliphate vector flags, and all 57 Islamic country flags across every age."),
+
+                // Wing 01 / 66: Alchemical Wares, Douching & Hygiene, Homogeneity & Insular Governance, 7 Caravan/Man Archetypes, Caliphate Organization & Islamic Suffrage
+                new PortalCatalogEntry(66, "islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html", "Alchemical Hygiene, Caravan Man & Islamic Suffrage (#66)",
+                        "Alchemical Wares, Douching & Hygiene, Homogeneity & Insular Governance, The 7 Caravan & Man Archetypes, Caliphate Organization & Islamic Suffrage",
+                        "01. Master Hubs & Architecture", "#F43F5E", 0, "#F43F5E",
+                        "Qur'an 58:1 (Al-Mujādilah), 42:38 (Al-Shūrā), 60:12 (Bay'at Al-Nisā'), 9:60 & 9:118 • Ālāt Al-Kīmiyā', Fiqh Al-Ṭahārah, 7 Caravan Stations & Suffrage",
+                        "Synthesizes alchemical wares, clinical/ritual douching & hygiene, evidentiary privacy (Satr), liturgical/urban homogeneity, insular self-governance (Waqf/Maḥallah/Futūwwah), the 7 Islamic Man & Caravan archetypes, Caliphate organization, and Islamic Suffrage across Common, Royal, Young, Old & Gender causes.")
         );
     }
 
@@ -883,6 +890,7 @@ public final class MasterNavigationAndIndexGenerator {
     <div class="sov-global-bar">
       <div class="sov-wing-links">
         <a class="sov-pill sov-pill-master %s" href="index.html">🏠 Master Index (<span data-sov-total>%d</span>)</a>
+        <a class="sov-pill sov-pill-omnibus %s" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">⚖️ Alchemical Hygiene, Caravan &amp; Suffrage (#66)</a>
         <a class="sov-pill sov-pill-omnibus %s" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">🧭 Compass, Caliphate Maps &amp; 57 Flags (#65)</a>
         <a class="sov-pill sov-pill-omnibus %s" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime, Astrolabe &amp; Oman/Yemen (#64)</a>
         <a class="sov-pill sov-pill-omnibus %s" href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
@@ -932,6 +940,7 @@ public final class MasterNavigationAndIndexGenerator {
         <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all %d portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
         <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
           <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (%d)</a>
+          <a class="sov-pill sov-pill-omnibus" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">⚖️ Hygiene, Caravan &amp; Suffrage (#66)</a>
           <a class="sov-pill sov-pill-omnibus" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">🧭 Compass, Maps &amp; 57 Flags (#65)</a>
           <a class="sov-pill sov-pill-omnibus" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime &amp; Oman/Yemen (#64)</a>
           <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
@@ -1021,6 +1030,7 @@ public final class MasterNavigationAndIndexGenerator {
                 totalPortals,
                 current.fileName().equals("index.html") ? "sov-active" : "",
                 totalPortals,
+                current.fileName().equals("islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html") ? "sov-active" : "",
                 current.fileName().equals("islamic-compass-caliphate-maps-and-flags-every-age-every-country.html") ? "sov-active" : "",
                 current.fileName().equals("islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html") ? "sov-active" : "",
                 current.fileName().startsWith("islam-through-ages-") ? "sov-active" : "",
@@ -1563,10 +1573,14 @@ public final class MasterNavigationAndIndexGenerator {
         Canonical Naming &amp; Sewer Economics, the 57 OIC Countries, Caliphates/Sultans/Shahs &amp; Promise of Return,
         the 3-Volume Collegiate Qur'anic Timeline &amp; Properties Thesis (`#58–#60`), the 3-Volume Suite on
         Islam Through the Ages: Global Reception, Philosophical Connotations &amp; Scientific Discoveries Instantiated (`#61–#63`),
-        Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses &amp; Omani/Yemeni Coasting Caliphates (`#64`), and
-        <strong>The Full Islamic Compass, Cartographic Maps of the Caliphates &amp; Every Flag for Every Age, Caliphate &amp; All 57 Islamic Countries (`#65`)</strong>.
+        Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses &amp; Omani/Yemeni Coasting Caliphates (`#64`),
+        The Full Islamic Compass, Cartographic Maps of the Caliphates &amp; Every Flag for Every Age, Caliphate &amp; All 57 Islamic Countries (`#65`), and
+        <strong>Alchemical Wares, Douching &amp; Hygiene, Homogeneity &amp; Insular Governance, The 7 Caravan &amp; Man Archetypes, Caliphate Organization &amp; Islamic Suffrage (`#66`)</strong>.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+        <a class="card-btn primary" style="padding:0.55rem 1.1rem;font-size:0.86rem;" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">
+          ⚖️ Portal #66: Alchemical Hygiene, Caravan Archetypes, Caliphate Governance &amp; Islamic Suffrage →
+        </a>
         <a class="card-btn primary" style="padding:0.55rem 1.1rem;font-size:0.86rem;" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">
           🧭 Portal #65: Islamic Compass, Caliphate Maps &amp; Every Flag (14 Ages / 57 Countries) →
         </a>
@@ -1627,14 +1641,14 @@ public final class MasterNavigationAndIndexGenerator {
       <div class="preview-dock-header">
         <div>
           <span style="font-family:Consolas,monospace;font-size:0.75rem;color:#38BDF8;">LIVE EMBEDDED PORTAL WORKSPACE (CONTINUALLY UPDATED)</span>
-          <strong id="dockTitle" style="margin-left:0.6rem;color:#FDE68A;">islamic-compass-caliphate-maps-and-flags-every-age-every-country.html — #65 / %d: The Islamic Compass, Map of the Caliphates &amp; Every Flag for Every Age, Caliphate &amp; 57 Islamic Countries</strong>
+          <strong id="dockTitle" style="margin-left:0.6rem;color:#FDE68A;">islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html — #66 / %d: Alchemical Wares, Douching &amp; Hygiene, Caravan Archetypes, Caliphate Organization &amp; Islamic Suffrage</strong>
         </div>
         <div style="display:flex;gap:0.45rem;">
-          <a id="dockFullLink" class="card-btn primary" href="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html">Open Standalone Page ↗</a>
+          <a id="dockFullLink" class="card-btn primary" href="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html">Open Standalone Page ↗</a>
           <button type="button" class="card-btn" onclick="toggleDockHeight()">↕ Expand/Collapse Height</button>
         </div>
       </div>
-      <iframe id="dockIframe" class="preview-iframe" style="height:740px;" src="islamic-compass-caliphate-maps-and-flags-every-age-every-country.html" title="Embedded Portal Preview"></iframe>
+      <iframe id="dockIframe" class="preview-iframe" style="height:740px;" src="islamic-alchemical-hygiene-caravan-governance-and-suffrage-thesis.html" title="Embedded Portal Preview"></iframe>
     </section>
 
     <section class="control-panel">
