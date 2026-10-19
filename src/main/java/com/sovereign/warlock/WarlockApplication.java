@@ -6,6 +6,7 @@ import com.sovereign.warlock.domain.ConjoinedWorldsRealmsPrinciplesGrid;
 import com.sovereign.warlock.domain.GrecoRomanPantheonIslamicJudgmentAndWholeness;
 import com.sovereign.warlock.domain.IslamicCaliphatesSultansShahsAndPromiseOfReturn;
 import com.sovereign.warlock.domain.IslamicCaravansBattlesAndConquestChronicle;
+import com.sovereign.warlock.domain.IslamicCompassCaliphateMapsAndFlagsAtlas;
 import com.sovereign.warlock.domain.IslamicCountriesHistoryAndCanonicalEmbrace;
 import com.sovereign.warlock.domain.IslamicDisneyAnimalismMicrocosm;
 import com.sovereign.warlock.domain.IslamicHusbandrySovereignCharter;
@@ -91,6 +92,7 @@ public class WarlockApplication {
         printQuranicTimelinePropertiesKingdomsAndBeautyThesis();
         printIslamThroughAgesReceptionPhilosophyAndScience();
         printIslamicMaritimeBoatingPiracyMercantilismAndOmanYemen();
+        printIslamicCompassCaliphateMapsAndFlagsAtlas();
         printGeneratedHtmlArtifacts(htmlArtifacts);
         printOpticalSpectrumSort(warlocksByColor7);
         printPillarGrouping(engine.groupByMysticalPillar(warlocksByColor7));
@@ -706,8 +708,28 @@ public class WarlockApplication {
         System.out.println("----------------------------------------------------------------------------------------------------------");
     }
 
+    private static void printIslamicCompassCaliphateMapsAndFlagsAtlas() {
+        System.out.println("\n[24] THE FULL ISLAMIC COMPASS (32-POINT STAR & QIBLAH), CALIPHATE MAPS & EVERY FLAG FOR EVERY AGE, CALIPHATE & 57 ISLAMIC COUNTRIES:");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicCompassCaliphateMapsAndFlagsAtlas.CompassInstrumentLayer l :
+                IslamicCompassCaliphateMapsAndFlagsAtlas.allSixCompassLayers()) {
+            System.out.printf("  * COMPASS LAYER #%d: %s [%s]%n",
+                    l.layerIndex(), l.englishTitle(), l.arabicName());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicCompassCaliphateMapsAndFlagsAtlas.CaliphateAgeFlagAndMapDossier a :
+                IslamicCompassCaliphateMapsAndFlagsAtlas.allFourteenCaliphateAgesMapsAndFlags()) {
+            System.out.printf("  * CALIPHATE AGE & FLAG #%02d (%s): %s -> %s [%s]%n",
+                    a.ageIndex(), a.eraCode(), a.caliphateOrEmpireTitle(), a.flagNameArabicAndEnglish(), a.peakAreaKm2());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.printf("  * SOVEREIGN OIC COUNTRY FLAGS & QIBLAH BEARINGS CATALOGED: %d Countries Across 7 Civilizational Zones%n",
+                IslamicCompassCaliphateMapsAndFlagsAtlas.allFiftySevenIslamicCountries().size());
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+    }
+
     private static void printGeneratedHtmlArtifacts(List<WarlockHtmlPortalService.GeneratedHtmlArtifact> artifacts) {
-        System.out.println("\n[24] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
+        System.out.println("\n[25] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
         for (WarlockHtmlPortalService.GeneratedHtmlArtifact a : artifacts) {
             System.out.printf("  * %-26s | %6d bytes | SHA-256: %s... | %s%n",
                     a.fileName(), a.byteSize(), a.sha256Hash().substring(0, 16), a.description());

@@ -334,6 +334,10 @@ public final class WarlockHtmlPortalService {
             IslamicMaritimeOmanYemenPortalGenerator maritimeGenerator = new IslamicMaritimeOmanYemenPortalGenerator();
             artifacts.add(maritimeGenerator.generateMaritimeOmanYemenPortal(outputDir));
 
+            IslamicCompassCaliphateMapsAndFlagsPortalGenerator compassMapsFlagsGenerator =
+                    new IslamicCompassCaliphateMapsAndFlagsPortalGenerator();
+            artifacts.add(compassMapsFlagsGenerator.generatePortal(outputDir));
+
             MasterNavigationAndIndexGenerator masterNavGenerator = new MasterNavigationAndIndexGenerator();
             return masterNavGenerator.integrateAllPortalsAndGenerateMasterIndex(outputDir, artifacts);
         } catch (IOException e) {
