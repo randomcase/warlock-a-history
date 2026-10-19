@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: zalim-6-jibt
+
+zalim:
+  zalimIndex: 6
+  profileId: "zalim-6-jibt"
+  arabicPrinciple: "Al-Jibt wa At-Taghut wa Asnam Azar (الجبت والطاغوت وأصنام آزر — Sorcerous Idolatry & Temple Polytheism)"
+  hexCode: "#1E4D3B"
+  rgbRed: 30
+  rgbGreen: 77
+  rgbBlue: 59
+  warlockName: "Kahin Al-Jibt"
+  arabicArchetypeTitle: "Sadin Asnam Azar (High Carver of Azar's Idol-Syndicate)"
+  quranicAnchor: "Qur'an 4:51, 6:74, 21:52-58, 29:17 ('They believe in Al-Jibt [sorcery/idols] and At-Taghut... And when Abraham said to his father Azar: Do you take idols as gods? Indeed, I see you and your people in manifest error')"
+  abrahamicChallenge: "Embodies the entrenched temple-guild of Azar and Ur that fought Abraham's iconoclasm (Qur'an 21:57-58) to preserve the economic and political hegemony of carved idols, divining arrows (Azlam, Qur'an 5:90), and ancestral superstition."
+  wrongdoerCategory: "SORCEROUS_IDOL_HEGEMONY"
+  rawEntropyBits: 0.940
+  uncorrectedCp: 0.70
+  uncorrectedSigma: 3.75
+  correctedCp: 1.39
+  prioryContainmentCell: "Quarantine Ward VI: The Iconoclastic Axe of Khalil-Allah (Qur'an 21:58, 2:256)"

@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: zalim-5-hawa
+
+zalim:
+  zalimIndex: 5
+  profileId: "zalim-5-hawa"
+  arabicPrinciple: "Ittiba' Al-Hawa wa Al-Iftira' (اتباع الهوى والافتراء — Deification of Caprice & Forging Lies Against Allah)"
+  hexCode: "#7A5901"
+  rgbRed: 122
+  rgbGreen: 89
+  rgbBlue: 1
+  warlockName: "'Abid Al-Hawa"
+  arabicArchetypeTitle: "Muftari Al-Kadhib (Idolater of Sovereign Caprice & Fabricated Law)"
+  quranicAnchor: "Qur'an 6:140-144, 7:33, 25:43, 45:23 ('Have you seen he who takes his own desire [Hawa] as his god?... And who is more of a wrongdoer [azlamu] than one who invents a lie against Allah to mislead people without knowledge?')"
+  abrahamicChallenge: "Corrupts Abraham's pure submission (Aslamtu li-Rabbi al-'Alamin, Qur'an 2:131) by inventing counterfeit sacred taboos (Bahirah, Sa'ibah, Wasilah, and Ham, Qur'an 5:103) and elevating subjective lust (Hawa) above revealed criterion."
+  wrongdoerCategory: "CAPRICIOUS_LAW_FABRICATION"
+  rawEntropyBits: 0.905
+  uncorrectedCp: 0.73
+  uncorrectedSigma: 3.55
+  correctedCp: 1.40
+  prioryContainmentCell: "Quarantine Ward V: The Criterion Filter of Verified Knowledge (Qur'an 6:144, 17:36)"

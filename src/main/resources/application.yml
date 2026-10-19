@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: abrahamic-warlock-seven-colors
+  threads:
+    virtual:
+      enabled: true
+  profiles:
+    active:
+      - warlock-1-white
+      - warlock-2-black
+      - warlock-3-sapphire
+      - warlock-4-gold
+      - warlock-5-crimson
+      - warlock-6-brass
+      - warlock-7-emerald
+      - zalim-1-fasad
+      - zalim-2-fahishah
+      - zalim-3-baghy
+      - zalim-4-fitnah
+      - zalim-5-hawa
+      - zalim-6-jibt
+      - zalim-7-zulm
+    group:
+      all-seven-colors:
+        - warlock-1-white
+        - warlock-2-black
+        - warlock-3-sapphire
+        - warlock-4-gold
+        - warlock-5-crimson
+        - warlock-6-brass
+        - warlock-7-emerald
+      seven-zalim-archetypes:
+        - zalim-1-fasad
+        - zalim-2-fahishah
+        - zalim-3-baghy
+        - zalim-4-fitnah
+        - zalim-5-hawa
+        - zalim-6-jibt
+        - zalim-7-zulm
+
+warlock:
+  covenant:
+    epoch: "Pre-Prophetic / Pre-Adamic / Yawm Al-Alast"
+    ironProhibition: true
+    spcTargetCapability: 1.33

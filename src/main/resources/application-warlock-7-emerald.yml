@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: warlock-7-emerald
+
+warlock:
+  orderIndex: 7
+  profileId: "warlock-7-emerald"
+  colorName: "Emerald Shamir Twilight (Bein HaShemashot)"
+  hexCode: "#006B54"
+  rgbRed: 0
+  rgbGreen: 107
+  rgbBlue: 84
+  wavelengthNm: 520
+  warlockName: "Wali Al-Ghaib"
+  hebrewTitle: "Shomer Ha-Shamir"
+  arabicTitle: "Qutb 'Alam Al-Ghaib"
+  prePropheticStratum: "OMEGA_6_SIXTH_TWILIGHT_BEIN_HASHEMASHOT"
+  primaryPillar: "SUFI_ESOTERIC_DESERT_ASCETICISM"
+  patronEntity: "The Sixth Twilight (Bein HaShemashot) & Guardians of Al-Ghaib"
+  sacredImplement: "Crystallized Light-Stone of the Shamir & 99-Bead Olive Misbahah"
+  signatureInvocation: "Silent Cleaving of the Shamir & Walk of the Unseen Realm"
+  recitationMode: "Sirr Al-Asrar (Sub-Audible Heart-Beat Dhikr of the Unseen)"
+  processCapabilityCp: 1.45
+  varianceSigma: 0.49

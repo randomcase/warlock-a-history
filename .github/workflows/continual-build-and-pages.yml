@@ -1,0 +1,51 @@
+name: Continual Build, Portal Sync & GitHub Pages Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout warlock-a-history
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Compile & Continually Regenerate All 63 Sovereign HTML Portals
+        shell: bash
+        run: |
+          mkdir -p target/classes
+          javac -Xlint:all -Werror -d target/classes $(find src/main/java -name "*.java")
+          java -cp target/classes com.sovereign.warlock.WarlockApplication
+
+      - name: Upload 63-Portal Static Suite for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'src/main/resources/static'
+
+  deploy-pages:
+    needs: build-and-verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: zalim-1-fasad
+
+zalim:
+  zalimIndex: 1
+  profileId: "zalim-1-fasad"
+  arabicPrinciple: "Al-Fasad fi Al-Ard (الفساد في الأرض — Systemic Disorder & Corruption)"
+  hexCode: "#4A1C1C"
+  rgbRed: 74
+  rgbGreen: 28
+  rgbBlue: 28
+  warlockName: "Mufsid Al-Ard"
+  arabicArchetypeTitle: "Ra's Al-Mufsidin (Architect of Entropic Ruin)"
+  quranicAnchor: "Qur'an 2:11-12, 2:205, 30:41 ('When he turns away, he strives throughout the land to cause Fasad therein and destroy crops and progeny; and Allah loves not Fasad')"
+  abrahamicChallenge: "Subverts Abraham's prayer for the Secure Sanctuary (Al-Balad Al-Amin, Qur'an 2:126, 14:35) by seeding ecological, economic, and ritual disorder while claiming to be a reformer (Innama nahnu muslihun)."
+  wrongdoerCategory: "DISORDER_CORRUPTION_OF_EARTH"
+  rawEntropyBits: 0.780
+  uncorrectedCp: 0.88
+  uncorrectedSigma: 2.85
+  correctedCp: 1.44
+  prioryContainmentCell: "Quarantine Ward I: The Mizan Equilibrium Lock (Qur'an 55:7-9)"

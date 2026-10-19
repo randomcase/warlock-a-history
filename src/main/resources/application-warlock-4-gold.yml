@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: warlock-4-gold
+
+warlock:
+  orderIndex: 4
+  profileId: "warlock-4-gold"
+  colorName: "Smokeless Hashmal Electrum Gold (Hashmal)"
+  hexCode: "#D4AF37"
+  rgbRed: 212
+  rgbGreen: 175
+  rgbBlue: 55
+  wavelengthNm: 580
+  warlockName: "Shahid Al-Alast"
+  hebrewTitle: "Natzir Choshen Ha-Shemot"
+  arabicTitle: "Mustashhid Yawm Al-Mithaq"
+  prePropheticStratum: "OMEGA_4_YAWM_AL_ALAST_OATH"
+  primaryPillar: "PROPHETIC_APOCALYPTIC_COVENANT"
+  patronEntity: "The Assembly of Alast & Hashmal Amber-Fire of the Chariot"
+  sacredImplement: "72-Faceted Electrum Breastplate of the Shem HaMephorash"
+  signatureInvocation: "Voice of Alast (Alastu bi-Rabbikum) & 72-Triplet Resonance"
+  recitationMode: "Qol Demamah Daqah (The Still, Small Voice after Thunder)"
+  processCapabilityCp: 1.46
+  varianceSigma: 0.47

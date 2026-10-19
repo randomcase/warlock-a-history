@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: zalim-4-fitnah
+
+zalim:
+  zalimIndex: 4
+  profileId: "zalim-4-fitnah"
+  arabicPrinciple: "Al-Fitnah wa Tafriqat Ad-Din (الفتنة وتفرقة الدين — Sedition, Schism & Fracturing the Abrahamic Ummah)"
+  hexCode: "#8C4A08"
+  rgbRed: 140
+  rgbGreen: 74
+  rgbBlue: 8
+  warlockName: "Nafikh Al-Fitnah"
+  arabicArchetypeTitle: "Mufarriq Al-Millah (Bellows-Blower of Sectarian Fracture)"
+  quranicAnchor: "Qur'an 2:191, 6:159, 30:31-32, 42:13 ('He has ordained for you of religion what He enjoined upon Noah and Abraham... Establish the religion and do not be divided therein [wa la tatafarraqu fihi]')"
+  abrahamicChallenge: "Prevents the consolidation of Abraham's unified monotheistic hegemony (Ummah Wahidah, Qur'an 21:92) by splintering the covenant into warring, self-satisfied factions (kullu hizbin bima ladayhim farihun) through sedition and tribal fanaticism (Hamiyyat Al-Jahiliyyah, Qur'an 48:26)."
+  wrongdoerCategory: "SCHISMATIC_SEDITION_AGAINST_UMMAH"
+  rawEntropyBits: 0.875
+  uncorrectedCp: 0.76
+  uncorrectedSigma: 3.40
+  correctedCp: 1.41
+  prioryContainmentCell: "Quarantine Ward IV: The Habl-Allah Unification Clamp (Qur'an 3:103, 42:13)"

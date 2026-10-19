@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canonical Islamic Caravans, Battles for Trade, Founding of Conquest &amp; Recording of Conquest</title>
+  <style>
+    :root {
+      --bg-deep: #070A10;
+      --bg-panel: #0F1521;
+      --bg-card: #141C2B;
+      --gold: #D4AF37;
+      --emerald: #10B981;
+      --sapphire: #38BDF8;
+      --crimson: #F43F5E;
+      --brass: #B87333;
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --border: rgba(212, 175, 55, 0.24);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(212,175,55,0.14), transparent 45%),
+                  radial-gradient(circle at 85% 15%, rgba(16,185,129,0.12), transparent 45%),
+                  var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding-bottom: 5rem;
+    }
+    .hero {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 1.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(212,175,55,0.14);
+      border: 1px solid var(--gold);
+      color: #FDE68A;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+    h1 {
+      font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+      color: #FFF;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+    .arabic-hero {
+      font-size: 1.35rem;
+      color: var(--gold);
+      font-family: 'Traditional Arabic', 'Amiri', serif;
+      margin-bottom: 1rem;
+    }
+    .lead {
+      color: #CBD5E1;
+      max-width: 1080px;
+      font-size: 1.02rem;
+      margin-bottom: 1.4rem;
+    }
+    .pillar-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    .pillar-box {
+      background: rgba(15, 21, 33, 0.88);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+    }
+    .pillar-box h4 {
+      color: #FDE68A;
+      font-size: 0.92rem;
+      margin-bottom: 0.35rem;
+    }
+    .pillar-box p {
+      color: var(--text-muted);
+      font-size: 0.84rem;
+    }
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .section-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      margin: 2.2rem 0 1.25rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .section-title h2 {
+      font-size: 1.5rem;
+      color: #FFF;
+    }
+    .section-title span {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-family: monospace;
+    }
+    /* Interactive 2.5D Caravan & Battle Map */
+    .map-shell {
+      display: grid;
+      grid-template-columns: 1fr 390px;
+      gap: 1.25rem;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.55);
+    }
+    @media (max-width: 1080px) {
+      .map-shell { grid-template-columns: 1fr; }
+    }
+    .canvas-wrap {
+      position: relative;
+      background: #06090F;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    #caravanConquestCanvas {
+      width: 100%;
+      height: 560px;
+      display: block;
+      cursor: grab;
+    }
+    #caravanConquestCanvas:active { cursor: grabbing; }
+    .canvas-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      padding: 0.75rem;
+      background: rgba(10, 14, 23, 0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .mode-btn {
+      padding: 0.38rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid rgba(212,175,55,0.35);
+      background: rgba(20, 28, 43, 0.9);
+      color: #E2E8F0;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+    .mode-btn:hover, .mode-btn.active {
+      background: var(--gold);
+      color: #070A10;
+      border-color: #FFF;
+    }
+    .hud-panel {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .hud-tag {
+      display: inline-block;
+      padding: 0.22rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(212,175,55,0.2);
+      color: #FDE68A;
+      width: fit-content;
+    }
+    .hud-title {
+      font-size: 1.15rem;
+      color: #FFF;
+      font-weight: 700;
+    }
+    .hud-arabic {
+      font-size: 1.05rem;
+      color: var(--gold);
+      font-family: 'Traditional Arabic', serif;
+    }
+    .hud-box {
+      background: rgba(7, 10, 16, 0.65);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 0.65rem 0.8rem;
+      font-size: 0.82rem;
+    }
+    .hud-box strong {
+      display: block;
+      color: #93C5FD;
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.2rem;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 1.25rem;
+    }
+    @media (max-width: 700px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+    .stage-card, .codex-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .stage-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .stage-badge {
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .stage-date {
+      font-size: 0.78rem;
+      color: #94A3B8;
+      font-family: monospace;
+    }
+    .stage-card h3, .codex-card h3 {
+      font-size: 1.15rem;
+      color: #FFF;
+    }
+    .arabic-sub {
+      color: var(--gold);
+      font-size: 1.05rem;
+      font-family: 'Traditional Arabic', serif;
+    }
+    .chronicler-line {
+      font-size: 0.85rem;
+      color: #A7F3D0;
+    }
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    @media (max-width: 640px) {
+      .field-grid { grid-template-columns: 1fr; }
+    }
+    .field-box {
+      background: rgba(8, 11, 18, 0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      padding: 0.75rem;
+    }
+    .field-box.highlight {
+      border-color: rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.07);
+    }
+    .field-box .lbl {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #FDE68A;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.04em;
+    }
+    .field-box p {
+      font-size: 0.84rem;
+      color: #E2E8F0;
+    }
+    .quran-footer {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      border-top: 1px dashed rgba(255,255,255,0.14);
+      font-size: 0.8rem;
+      color: #93C5FD;
+    }
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-top: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.83rem;
+    }
+    th, td {
+      padding: 0.85rem 0.9rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      vertical-align: top;
+    }
+    th {
+      background: rgba(212, 175, 55, 0.14);
+      color: #FDE68A;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    tr:hover td {
+      background: rgba(255,255,255,0.025);
+    }
+    .mono-sm {
+      font-family: monospace;
+      font-size: 0.72rem;
+      color: #94A3B8;
+    }
+    .arabic-inline {
+      color: var(--gold);
+      font-family: 'Traditional Arabic', serif;
+      font-size: 0.95rem;
+    }
+    .cite-pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #7DD3FC;
+      font-size: 0.74rem;
+    }
+  </style>
+<!-- SOV_CHROME_CSS_START -->
+<style id="sovereign-universal-nav-css">
+  .sov-global-wrap {
+    background: linear-gradient(90deg, #04060C 0%, #0C1324 50%, #04060C 100%);
+    border-bottom: 2px solid #D4AF37;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.65);
+  }
+  .sov-global-bar {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0.55rem 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+  .sov-wing-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .sov-pill:hover, .sov-pill.sov-active {
+    color: #FFFFFF;
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.22);
+  }
+  .sov-pill-master {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(16, 185, 129, 0.22));
+    border-color: #D4AF37;
+    color: #FDE68A;
+    font-weight: 700;
+  }
+  .sov-pill-omnibus {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.22));
+    border-color: #38BDF8;
+    color: #E0F2FE;
+    font-weight: 700;
+  }
+  .sov-pill-drawer {
+    background: #1E293B;
+    border-color: #F43F5E;
+    color: #FDA4AF;
+    font-weight: 700;
+  }
+  .sov-pill-counter {
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.18);
+    color: #FDE68A;
+    font-family: 'Consolas', monospace;
+    font-weight: 700;
+  }
+  .sov-pill-sync {
+    border-color: #10B981;
+    background: rgba(16, 185, 129, 0.14);
+    color: #6EE7B7;
+    font-family: 'Consolas', monospace;
+    font-size: 0.71rem;
+  }
+  .sov-sister-ribbon {
+    background: rgba(10, 15, 28, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.45rem 1.2rem;
+  }
+  .sov-sister-inner {
+    max-width: 1560px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .sov-sister-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-sister-label {
+    font-family: 'Consolas', monospace;
+    color: #FDE68A;
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .sov-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 5, 10, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 100000;
+    overflow-y: auto;
+    padding: 2rem 1.2rem;
+  }
+  .sov-modal-backdrop.open {
+    display: block;
+  }
+  .sov-modal-box {
+    max-width: 1380px;
+    margin: 0 auto;
+    background: #0B101D;
+    border: 2px solid #D4AF37;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.85);
+  }
+  .sov-modal-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .sov-search-input {
+    flex: 1;
+    min-width: 260px;
+    background: #050811;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.86rem;
+  }
+  .sov-drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 0.65rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.3rem;
+  }
+  .sov-drawer-item {
+    display: block;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #D4AF37;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    text-decoration: none;
+    color: #E2E8F0;
+    transition: all 0.14s ease;
+  }
+  .sov-drawer-item:hover, .sov-drawer-item.current {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: #D4AF37;
+    transform: translateY(-1px);
+  }
+  .sov-footer-wrap {
+    max-width: 1480px;
+    margin: 3rem auto 1rem auto;
+    padding: 1.5rem;
+    background: rgba(8, 12, 22, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-top: 3px solid #D4AF37;
+    border-radius: 14px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .sov-footer-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .sov-footer-cat h4 {
+    font-size: 0.78rem;
+    color: #FDE68A;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.25rem;
+  }
+  .sov-footer-cat a {
+    display: block;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.76rem;
+    padding: 0.14rem 0;
+  }
+  .sov-footer-cat a:hover, .sov-footer-cat a.active-link {
+    color: #38BDF8;
+    font-weight: 600;
+  }
+</style>
+<!-- SOV_CHROME_CSS_END -->
+</head>
+<body>
+<!-- SOV_CHROME_TOP_START -->
+<div id="sovereign-universal-nav" class="sov-global-wrap" data-portal-seq="51" data-portal-total="63">
+  <div class="sov-global-bar">
+    <div class="sov-wing-links">
+      <a class="sov-pill sov-pill-master " href="index.html">🏠 Master Index (<span data-sov-total>63</span>)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
+      <a class="sov-pill sov-pill-omnibus " href="quranic-timeline-expansion-vol1-chronology.html">🎓 Collegiate Thesis (#58–#60)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caliphates-sultans-shahs-dynasties-return.html">👑 Caliphates &amp; Return (#57)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-countries-history-canonical-embrace-atlas.html">🌍 57 OIC Countries (#56)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">🚰 Naming &amp; Sewer (#55)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-modesty-evolution-western-frontier-men-women.html">🧕 Western Modesty (#54)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">⚗️ Philosophy &amp; Alchemy (#53)</a>
+      <a class="sov-pill sov-pill-omnibus " href="greco-roman-gods-titans-daimones-islamic-judgment.html">⚖️ Greco-Roman &amp; Titans (#52)</a>
+      <a class="sov-pill sov-pill-omnibus sov-active" href="islamic-caravans-battles-conquest-chronicle.html">🐪 Caravans &amp; Fatḥ (#51)</a>
+      <a class="sov-pill sov-pill-omnibus " href="conjoined-worlds-realms-principles-node-grid.html">⛰️ 3D Node-Art Grid (#50)</a>
+      <a class="sov-pill sov-pill-omnibus " href="master-combined-omnibus.html?portal=islamic-caravans-battles-conquest-chronicle.html">🧭 Combined Omnibus View</a>
+      <button type="button" class="sov-pill sov-pill-drawer" onclick="toggleSovDrawer()">⚡ All <span data-sov-total>63</span> Portals (Ctrl+K)</button>
+      <a class="sov-pill " href="order-1-white.html">🎨 7 Orders</a>
+      <a class="sov-pill " href="warlock-3d-sanctum.html">🏛️ 3D Sanctum &amp; Realms</a>
+      <a class="sov-pill " href="priory-negentropy-order.html">📐 Priory &amp; Planes</a>
+      <a class="sov-pill " href="zalim-1-fasad.html">⚠️ 7 Zalim</a>
+      <a class="sov-pill " href="worlds-hegemon-disorder.html">🌍 7 Worlds</a>
+      <a class="sov-pill " href="warlock-formation-dissolution-jafar-aladdin.html">🏺 Ja'far/Aladdin</a>
+      <a class="sov-pill " href="sequester-between-worlds.html">🧱 7 Sequesters</a>
+      <a class="sov-pill " href="interlocker-egg-binder-islam.html">🥚 Egg Binder</a>
+      <a class="sov-pill " href="warlock-apocrypha-islamic-theorems.html">📜 Apocrypha</a>
+      <a class="sov-pill " href="islamic-husbandry-sovereign-estate.html">🛡️ Husbandry</a>
+      <a class="sov-pill " href="way-of-the-flower-rose-garden-islam.html">🌹 Rose Garden</a>
+      <a class="sov-pill " href="disney-daffy-donald-islamic-microcosm.html">🦆 Disney/Daffy</a>
+      <a class="sov-pill " href="warlock-islamic-visual-eras-history.html">🕌 7 Visual Eras</a>
+      <a class="sov-pill " href="dependencies-report.html">📦 Dependencies</a>
+    </div>
+    <div class="sov-wing-links">
+      <a class="sov-pill" href="conjoined-worlds-realms-principles-node-grid.html" title="Conjoined Worlds, Realms &amp; Principles: 3D/2.5D Islamic Node-Art Terrain Grid &amp; Color Guard of the Meridian">← Prev: 3D Node-Art Terrain Grid (Meridian Guard)</a>
+      <span id="sovPortalCounterBadge" class="sov-pill sov-pill-counter" title="Continually Synchronized Portal Index (#51 of 63)">#51 / 63</span>
+      <button type="button" id="sovContinualCycleBtn" class="sov-pill sov-pill-sync" onclick="toggleSovContinualCycle()" title="Click to toggle Continual Auto-Advance across all 63 portals">🔄 Continual Sync: #51/63</button>
+      <a class="sov-pill" href="greco-roman-gods-titans-daimones-islamic-judgment.html" title="Greco-Roman Gods, Titans (Titanomachy), 12 Olympians, Morpheus/Oneiroi, 7 Erotes &amp; 150+ Minor Spirits: Islamic Reception, Judgment &amp; Wholeness">Next: Greco-Roman Gods &amp; Titans Made Whole →</a>
+    </div>
+  </div>
+  <div class="sov-sister-ribbon">
+  <div class="sov-sister-inner">
+    <div class="sov-sister-group">
+      <span class="sov-sister-label">7-FOLD SERIES QUICK JUMP:</span>
+      <a class="sov-pill" href="order-1-white.html"><span style="width:8px;height:8px;border-radius:50%;background:#F8F5E6;display:inline-block;"></span>Row #1: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-2-black.html"><span style="width:8px;height:8px;border-radius:50%;background:#A78BFA;display:inline-block;"></span>Row #2: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-3-sapphire.html"><span style="width:8px;height:8px;border-radius:50%;background:#38BDF8;display:inline-block;"></span>Row #3: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-4-gold.html"><span style="width:8px;height:8px;border-radius:50%;background:#D4AF37;display:inline-block;"></span>Row #4: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-5-crimson.html"><span style="width:8px;height:8px;border-radius:50%;background:#F43F5E;display:inline-block;"></span>Row #5: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-6-brass.html"><span style="width:8px;height:8px;border-radius:50%;background:#B87333;display:inline-block;"></span>Row #6: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-7-emerald.html"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;"></span>Row #7: Order/Realm/Plane/Zalim/World</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="sovMegaDrawer" class="sov-modal-backdrop" onclick="if(event.target===this)toggleSovDrawer()">
+  <div class="sov-modal-box">
+    <div class="sov-modal-header">
+      <div>
+        <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">SOVEREIGN MASTER ATLAS • ALL <span data-sov-total>63</span> HTML PORTALS CONTINUALLY INTEGRATED</div>
+        <h2 style="font-size:1.25rem;color:#FFF;margin:0.15rem 0;">Instant Portal Switcher &amp; Cross-Wing Navigator (#51 / 63)</h2>
+      </div>
+      <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all 63 portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+        <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="quranic-timeline-expansion-vol1-chronology.html">Collegiate Thesis (#58–#60)</a>
+        <a class="sov-pill sov-pill-omnibus" href="conjoined-worlds-realms-principles-node-grid.html">3D Node-Art Grid (#50)</a>
+        <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-caravans-battles-conquest-chronicle.html">Open in Split Omnibus</a>
+        <button type="button" class="sov-pill" onclick="toggleSovDrawer()">✕ Close (Esc)</button>
+      </div>
+    </div>
+    <div id="sovDrawerGrid" class="sov-drawer-grid">
+      <a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="index.html" data-search="master index hub sovereign master index, search &amp; 7-row cross-wing relational matrix 01. master hubs &amp; architecture al-fihris al-jāmi&#39; • all 63 portals continually integrated index.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#01 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">index.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Master Index Hub</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Fihris Al-Jāmi' • All 63 Portals Continually Integrated</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="master-combined-omnibus.html" data-search="combined omnibus reader combined multi-portal omnibus workspace &amp; split-screen comparator 01. master hubs &amp; architecture al-majmū&#39; al-muwahhad • all 63 portals side-by-side &amp; sequential reader master-combined-omnibus.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#02 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">master-combined-omnibus.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Combined Omnibus Reader</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Majmū' Al-Muwahhad • All 63 Portals Side-by-Side &amp; Sequential Reader</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="dependencies-report.html" data-search="dependencies &amp; java 21+ audit master spring boot 3.4 &amp; java 21+/26 essentials dependency usage report 01. master hubs &amp; architecture spc state s0 • sha-256 artifact ledger (all 63 portals) dependencies-report.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#03 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">dependencies-report.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Dependencies &amp; Java 21+ Audit</div><div style="font-size:0.72rem;color:#CBD5E1;">SPC State S0 • SHA-256 Artifact Ledger (All 63 Portals)</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="order-1-white.html" data-search="order #1: white order #1 (warlock-1-white) — malakh-azal (sephirotic white #f8f5e6) 02. seven pre-prophetic color orders malakh-azal • qur&#39;an 2:102 &amp; 53:19-23 order-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#04 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #1: White</div><div style="font-size:0.72rem;color:#CBD5E1;">Malakh-Azal • Qur'an 2:102 &amp; 53:19-23</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="order-2-black.html" data-search="order #2: black order #2 (warlock-2-black) — katib al-qalam (abbasid black #141416) 02. seven pre-prophetic color orders kātib al-qalam • qur&#39;an 68:1 &amp; 24:22 order-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#05 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #2: Black</div><div style="font-size:0.72rem;color:#CBD5E1;">Kātib Al-Qalam • Qur'an 68:1 &amp; 24:22</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="order-3-sapphire.html" data-search="order #3: sapphire order #3 (warlock-3-sapphire) — yored ha-merkabah (babylonian sapphire #0f2c59) 02. seven pre-prophetic color orders yored ha-merkabah • qur&#39;an 6:75-79 &amp; 53:1-18 order-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#06 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #3: Sapphire</div><div style="font-size:0.72rem;color:#CBD5E1;">Yored Ha-Merkabah • Qur'an 6:75-79 &amp; 53:1-18</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="order-4-gold.html" data-search="order #4: gold order #4 (warlock-4-gold) — shahid al-alast (covenant gold #d4af37) 02. seven pre-prophetic color orders shāhid al-alast • qur&#39;an 7:172 &amp; 3:67 order-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#07 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #4: Gold</div><div style="font-size:0.72rem;color:#CBD5E1;">Shāhid Al-Alast • Qur'an 7:172 &amp; 3:67</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="order-5-crimson.html" data-search="order #5: crimson order #5 (warlock-5-crimson) — saraph ha-ritzpah (seraphic crimson #8b0000) 02. seven pre-prophetic color orders saraph ha-ritzpah • qur&#39;an 72:8-9 &amp; 25:1 order-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#08 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #5: Crimson</div><div style="font-size:0.72rem;color:#CBD5E1;">Saraph Ha-Ritzpah • Qur'an 72:8-9 &amp; 25:1</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="order-6-brass.html" data-search="order #6: brass order #6 (warlock-6-brass) — ba&#39;al ha-nechoshet (solomonic brass #b87333) 02. seven pre-prophetic color orders ba&#39;al ha-nechoshet • qur&#39;an 2:102 &amp; 34:12 order-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#09 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #6: Brass</div><div style="font-size:0.72rem;color:#CBD5E1;">Ba'al Ha-Nechoshet • Qur'an 2:102 &amp; 34:12</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="order-7-emerald.html" data-search="order #7: emerald order #7 (warlock-7-emerald) — wali al-ghaib (khidrian emerald #006b54) 02. seven pre-prophetic color orders walī al-ghaib • qur&#39;an 18:65 &amp; 9:108 order-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#10 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #7: Emerald</div><div style="font-size:0.72rem;color:#CBD5E1;">Walī Al-Ghaib • Qur'an 18:65 &amp; 9:108</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="warlock-3d-sanctum.html" data-search="3d sanctum master interactive 3d seven-realm warlock sanctum &amp; celestial geometry 03. 3d sanctum &amp; seven realms al-haykal al-handasī • interactive webgl/canvas 3d warlock-3d-sanctum.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#11 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">warlock-3d-sanctum.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Sanctum Master</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Haykal Al-Handasī • Interactive WebGL/Canvas 3D</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="realm-1-white.html" data-search="realm #1: &#39;aravot realm #1 (white #f8f5e6) — &#39;aravot / sidrat al-muntaha 03. 3d sanctum &amp; seven realms seventh heaven • 390nm alabaster realm-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#12 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #1: 'Aravot</div><div style="font-size:0.72rem;color:#CBD5E1;">Seventh Heaven • 390nm Alabaster</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="realm-2-black.html" data-search="realm #2: makhon realm #2 (black #141416) — makhon / bayt al-qalam 03. 3d sanctum &amp; seven realms hidden ink treasury • 405nm obsidian realm-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#13 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #2: Makhon</div><div style="font-size:0.72rem;color:#CBD5E1;">Hidden Ink Treasury • 405nm Obsidian</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="realm-3-sapphire.html" data-search="realm #3: zevul realm #3 (sapphire #0f2c59) — zevul / al-bayt al-ma&#39;mur 03. 3d sanctum &amp; seven realms sapphire pavement • 465nm lapis realm-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#14 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #3: Zevul</div><div style="font-size:0.72rem;color:#CBD5E1;">Sapphire Pavement • 465nm Lapis</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="realm-4-gold.html" data-search="realm #4: shehaqim realm #4 (gold #d4af37) — shehaqim / diwan al-mithaq 03. 3d sanctum &amp; seven realms golden covenant court • 580nm amber-gold realm-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#15 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #4: Shehaqim</div><div style="font-size:0.72rem;color:#CBD5E1;">Golden Covenant Court • 580nm Amber-Gold</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="realm-5-crimson.html" data-search="realm #5: ma&#39;on realm #5 (crimson #8b0000) — ma&#39;on / rasad ash-shuhub 03. 3d sanctum &amp; seven realms seraphic garrison • 650nm crimson realm-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#16 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #5: Ma'on</div><div style="font-size:0.72rem;color:#CBD5E1;">Seraphic Garrison • 650nm Crimson</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="realm-6-brass.html" data-search="realm #6: raqia&#39; realm #6 (brass #b87333) — raqia&#39; / madinat an-nuhas 03. 3d sanctum &amp; seven realms city of brass • 605nm burnished brass realm-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#17 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #6: Raqia'</div><div style="font-size:0.72rem;color:#CBD5E1;">City of Brass • 605nm Burnished Brass</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="realm-7-emerald.html" data-search="realm #7: vilon realm #7 (emerald #006b54) — vilon / majma&#39; al-bahrayn 03. 3d sanctum &amp; seven realms junction of the two seas • 520nm emerald realm-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#18 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #7: Vilon</div><div style="font-size:0.72rem;color:#CBD5E1;">Junction of the Two Seas • 520nm Emerald</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="priory-negentropy-order.html" data-search="negentropic priory atlas the negentropic priory (sigma -1n &amp; 0n beta): ordering the 7 warlocks 04. negentropic priory &amp; seven planes sigma -1n &amp; 0n beta • δh = 0.000 bits priory-negentropy-order.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#19 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">priory-negentropy-order.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Negentropic Priory Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Sigma -1n &amp; 0n Beta • ΔH = 0.000 bits</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="plane-1-white.html" data-search="plane #1: adam kadmon / lahut plane #1 (white #f8f5e6) — olam adam kadmon / hadrat al-lahut 04. negentropic priory &amp; seven planes priory seat i • c_p = 1.62 plane-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#20 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #1: Adam Kadmon / Lahut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat I • C_p = 1.62</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="plane-2-black.html" data-search="plane #2: malbush / al-qalam plane #2 (black #141416) — olam ha-malbush / hadrat al-lawh wa al-qalam 04. negentropic priory &amp; seven planes priory seat vi • c_p = 1.38 plane-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#21 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #2: Malbush / Al-Qalam</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VI • C_p = 1.38</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="plane-3-sapphire.html" data-search="plane #3: beri&#39;ah / jabarut plane #3 (sapphire #0f2c59) — olam ha-beri&#39;ah / &#39;alam al-jabarut 04. negentropic priory &amp; seven planes priory seat iv • c_p = 1.44 plane-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#22 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #3: Beri'ah / Jabarut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat IV • C_p = 1.44</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="plane-4-gold.html" data-search="plane #4: atzilut / al-arwah plane #4 (gold #d4af37) — olam ha-atzilut / &#39;alam al-arwah 04. negentropic priory &amp; seven planes priory seat ii • c_p = 1.54 plane-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#23 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #4: Atzilut / Al-Arwah</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat II • C_p = 1.54</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="plane-5-crimson.html" data-search="plane #5: tohu / ash-shuhub plane #5 (crimson #8b0000) — olam ha-tohu / falak ash-shuhub 04. negentropic priory &amp; seven planes priory seat vii • c_p = 1.35 plane-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#24 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #5: Tohu / Ash-Shuhub</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VII • C_p = 1.35</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="plane-6-brass.html" data-search="plane #6: yetzirah / al-marij plane #6 (brass #b87333) — olam ha-yetzirah / &#39;alam al-marij 04. negentropic priory &amp; seven planes priory seat v • c_p = 1.40 plane-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#25 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #6: Yetzirah / Al-Marij</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat V • C_p = 1.40</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="plane-7-emerald.html" data-search="plane #7: tikkun / al-mithal plane #7 (emerald #006b54) — olam ha-tikkun / &#39;alam al-mithal wa al-barzakh 04. negentropic priory &amp; seven planes priory seat iii • c_p = 1.48 plane-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#26 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #7: Tikkun / Al-Mithal</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat III • C_p = 1.48</div></a><a class="sov-drawer-item" style="border-left-color:#EF4444;" href="zalim-1-fasad.html" data-search="zalim #1: al-fasad zalim #1 (zalim-1-fasad) — mufsid al-ard (ecological &amp; ritual disorder) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:204-205 • al-fasad fi al-ard zalim-1-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#27 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-1-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #1: Al-Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:204-205 • Al-Fasad fi Al-Ard</div></a><a class="sov-drawer-item" style="border-left-color:#EC4899;" href="zalim-2-fahishah.html" data-search="zalim #2: al-fahishah zalim #2 (zalim-2-fahishah) — da&#39;i al-fahishah (immodesty &amp; tabarruj) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 7:28 &amp; 24:19 • al-fahishah zalim-2-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#28 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-2-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #2: Al-Fahishah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:28 &amp; 24:19 • Al-Fahishah</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="zalim-3-baghy.html" data-search="zalim #3: al-baghy (nimrod) zalim #3 (zalim-3-baghy) — jabbar an-namrud (tyrannical counter-hegemony) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:258 &amp; 21:68-69 • al-baghy zalim-3-baghy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#29 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-3-baghy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #3: Al-Baghy (Nimrod)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:68-69 • Al-Baghy</div></a><a class="sov-drawer-item" style="border-left-color:#F97316;" href="zalim-4-fitnah.html" data-search="zalim #4: al-fitnah zalim #4 (zalim-4-fitnah) — nafikh al-fitnah (sectarian schism &amp; sedition) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:191 &amp; 3:103 • al-fitnah zalim-4-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#30 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-4-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #4: Al-Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:191 &amp; 3:103 • Al-Fitnah</div></a><a class="sov-drawer-item" style="border-left-color:#EAB308;" href="zalim-5-hawa.html" data-search="zalim #5: al-hawa zalim #5 (zalim-5-hawa) — &#39;abid al-hawa (deification of caprice) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 45:23 &amp; 25:43 • ittiba&#39; al-hawa zalim-5-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#31 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-5-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #5: Al-Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 45:23 &amp; 25:43 • Ittiba' Al-Hawa</div></a><a class="sov-drawer-item" style="border-left-color:#14B8A6;" href="zalim-6-jibt.html" data-search="zalim #6: al-jibt &amp; taghut zalim #6 (zalim-6-jibt) — kahin al-jibt (sorcerous idolatry &amp; azar&#39;s guild) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 4:51 &amp; 21:57-58 • al-jibt wa at-taghut zalim-6-jibt.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#32 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-6-jibt.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #6: Al-Jibt &amp; Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:51 &amp; 21:57-58 • Al-Jibt wa At-Taghut</div></a><a class="sov-drawer-item" style="border-left-color:#94A3B8;" href="zalim-7-zulm.html" data-search="zalim #7: masjid ad-dirar zalim #7 (zalim-7-zulm) — imam az-zalimin (counter-sanctuary subversion) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:124 &amp; 9:107-109 • masjid ad-dirar zalim-7-zulm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#33 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-7-zulm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #7: Masjid Ad-Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:124 &amp; 9:107-109 • Masjid Ad-Dirar</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="worlds-hegemon-disorder.html" data-search="7 worlds master atlas master atlas: the 7 islamic worlds of hegemon (al-muhaymin) &amp; disorder (al-fasad) 06. seven islamic worlds of hegemon &amp; disorder al-muhaymin vs. al-fasad • 3d dual-hemisphere globe worlds-hegemon-disorder.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#34 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">worlds-hegemon-disorder.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Worlds Master Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Muhaymin vs. Al-Fasad • 3D Dual-Hemisphere Globe</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="world-1-mizan-fasad.html" data-search="world #1: amanah vs. fasad world #1 — &#39;alam al-amanah wa al-fasad (trust vs. ecological disorder) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 14:35 &amp; 2:205 • order #1 vs. zalim #1 world-1-mizan-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#35 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-1-mizan-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #1: Amanah vs. Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 14:35 &amp; 2:205 • Order #1 vs. Zalim #1</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="world-2-haya-fahishah.html" data-search="world #2: haya&#39; vs. tabarruj world #2 — &#39;alam al-haram wa at-tabarruj (modesty vs. immodesty) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 7:26-28 • order #2 vs. zalim #2 world-2-haya-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#36 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-2-haya-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #2: Haya' vs. Tabarruj</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26-28 • Order #2 vs. Zalim #2</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="world-3-babil-namrud.html" data-search="world #3: ibrahim vs. namrud world #3 — &#39;alam babil wa al-jabbarin (cool-fire sanctuary vs. nimrod) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:258 &amp; 21:69 • order #3 vs. zalim #3 world-3-babil-namrud.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#37 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-3-babil-namrud.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #3: Ibrahim vs. Namrud</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:69 • Order #3 vs. Zalim #3</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="world-4-ummah-fitnah.html" data-search="world #4: ummah vs. fitnah world #4 — &#39;alam al-ummah al-wahidah wa al-fitnah (unity vs. schism) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 21:92 &amp; 3:103 • order #4 vs. zalim #4 world-4-ummah-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#38 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-4-ummah-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #4: Ummah vs. Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:92 &amp; 3:103 • Order #4 vs. Zalim #4</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="world-5-furqan-hawa.html" data-search="world #5: furqan vs. hawa world #5 — &#39;alam al-furqan wa al-hawa (revelation vs. caprice) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 5:48 &amp; 45:23 • order #5 vs. zalim #5 world-5-furqan-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#39 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-5-furqan-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #5: Furqan vs. Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 5:48 &amp; 45:23 • Order #5 vs. Zalim #5</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="world-6-tawhid-taghut.html" data-search="world #6: tawhid vs. taghut world #6 — &#39;alam al-&#39;urwah al-wuthqa wa at-taghut (iconoclasm vs. idols) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:256 &amp; 21:58 • order #6 vs. zalim #6 world-6-tawhid-taghut.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#40 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-6-tawhid-taghut.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #6: Tawhid vs. Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:256 &amp; 21:58 • Order #6 vs. Zalim #6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="world-7-taqwa-dirar.html" data-search="world #7: taqwa vs. dirar world #7 — &#39;alam bunyan at-taqwa wa juruf al-har (taqwa vs. counter-mosque) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 9:107-109 • order #7 vs. zalim #7 world-7-taqwa-dirar.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#41 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-7-taqwa-dirar.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #7: Taqwa vs. Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 9:107-109 • Order #7 vs. Zalim #7</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="warlock-formation-dissolution-jafar-aladdin.html" data-search="ja&#39;far &amp; aladdin qumqum islamic warlock formation (ja&#39;far / istidraj) &amp; dissolution (&#39;ala&#39; ad-din / qumqum) 07. warlock formation, dissolution &amp; inter-world sequesters istidrāj (qur&#39;an 6:44) -&gt; qumqum sulaymānī (21:18) warlock-formation-dissolution-jafar-aladdin.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#42 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">warlock-formation-dissolution-jafar-aladdin.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ja'far &amp; Aladdin Qumqum</div><div style="font-size:0.72rem;color:#CBD5E1;">Istidrāj (Qur'an 6:44) -&gt; Qumqum Sulaymānī (21:18)</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="sequester-between-worlds.html" data-search="7 inter-world sequesters the 7 inter-world sequesters (al-hijr al-mahjur &amp; sur al-hadid) 07. warlock formation, dissolution &amp; inter-world sequesters barzakh (55:19-20) &amp; sūr al-ḥadīd (18:96-97) sequester-between-worlds.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#43 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">sequester-between-worlds.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Inter-World Sequesters</div><div style="font-size:0.72rem;color:#CBD5E1;">Barzakh (55:19-20) &amp; Sūr Al-Ḥadīd (18:96-97)</div></a><a class="sov-drawer-item" style="border-left-color:#FBBF24;" href="interlocker-egg-binder-islam.html" data-search="egg-in-baking intelocketer the islamic intelocketer (al-murabbit al-kalim): egg-in-baking emulsifier &amp; al-a&#39;raf 08. the islamic egg-in-baking intelocketer qur&#39;an 37:49 (bayḍun maknūn) &amp; 7:46-48 (al-a&#39;rāf) interlocker-egg-binder-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#44 / 63 • 08. The Islamic Egg-in-Baking Intelocketer</span><code style="color:#38BDF8;">interlocker-egg-binder-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Egg-in-Baking Intelocketer</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 37:49 (Bayḍun Maknūn) &amp; 7:46-48 (Al-A'rāf)</div></a><a class="sov-drawer-item" style="border-left-color:#C084FC;" href="warlock-apocrypha-islamic-theorems.html" data-search="warlock apocrypha &amp; theorems the warlock apocrypha &amp; 5 islamic theological philosophy theorems on western modernity 09. the warlock apocrypha &amp; modernity theorems al-ghazālī • ibn khaldūn • mullā ṣadrā • al-attas • hallaq warlock-apocrypha-islamic-theorems.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#45 / 63 • 09. The Warlock Apocrypha &amp; Modernity Theorems</span><code style="color:#38BDF8;">warlock-apocrypha-islamic-theorems.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Warlock Apocrypha &amp; Theorems</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Ghazālī • Ibn Khaldūn • Mullā Ṣadrā • Al-Attas • Hallaq</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="islamic-husbandry-sovereign-estate.html" data-search="vanguard husbandry estate islamic action-based vanguard husbandry (al-qiwamah al-khadimah) &amp; husbandrystate 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-event simulation islamic-husbandry-sovereign-estate.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#46 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-husbandry-sovereign-estate.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vanguard Husbandry Estate</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-Event Simulation</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="way-of-the-flower-rose-garden-islam.html" data-search="flower, rose &amp; chahar bagh the islamic way of the flower (az-zahrah), the rose (al-wardah), the cultivating hand &amp; garden 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 55:37 (wardatan ka-ad-dihān), 3:37 &amp; 47:15 way-of-the-flower-rose-garden-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#47 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">way-of-the-flower-rose-garden-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Flower, Rose &amp; Chahar Bagh</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 55:37 (Wardatan ka-ad-Dihān), 3:37 &amp; 47:15</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="disney-daffy-donald-islamic-microcosm.html" data-search="disney/daffy &amp; jungle microcosm islamic animalism &amp; husbandry microcosm: donald, daffy, daisy &amp; the jungle book 11. islamic animalism &amp; visual history atlases qur&#39;an 6:38 (umamun amthālukum) • kalīlah wa dimnah disney-daffy-donald-islamic-microcosm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#48 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">disney-daffy-donald-islamic-microcosm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Disney/Daffy &amp; Jungle Microcosm</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 6:38 (Umamun Amthālukum) • Kalīlah wa Dimnah</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="warlock-islamic-visual-eras-history.html" data-search="7 islamic visual eras &amp; ai art warlock visuals across every era of islamic history: ai art plates &amp; sacred geometry 11. islamic animalism &amp; visual history atlases eras i–vii: bābil/saba&#39; to neo-islamic ai cyber-geometry warlock-islamic-visual-eras-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#49 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">warlock-islamic-visual-eras-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Islamic Visual Eras &amp; AI Art</div><div style="font-size:0.72rem;color:#CBD5E1;">Eras I–VII: Bābil/Saba' to Neo-Islamic AI Cyber-Geometry</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="conjoined-worlds-realms-principles-node-grid.html" data-search="3d node-art terrain grid (meridian guard) conjoined worlds, realms &amp; principles: 3d/2.5d islamic node-art terrain grid &amp; color guard of the meridian 01. master hubs &amp; architecture ḥaras al-alwān li-khaṭṭ al-mīzān • 7x7 (49-node) 3d heightmap conjoined-worlds-realms-principles-node-grid.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#50 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">conjoined-worlds-realms-principles-node-grid.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Node-Art Terrain Grid (Meridian Guard)</div><div style="font-size:0.72rem;color:#CBD5E1;">Ḥaras Al-Alwān li-Khaṭṭ Al-Mīzān • 7x7 (49-Node) 3D Heightmap</div></a><a class="sov-drawer-item current" style="border-left-color:#D4AF37;" href="islamic-caravans-battles-conquest-chronicle.html" data-search="caravans, trade battles, fatḥ &amp; tadwīn canonical islamic caravans (ilaf), battles for trade (badr/qaradah), founding of conquest (al-fath) &amp; recording of conquest (tadwin al-maghazi / futuh al-buldan) 01. master hubs &amp; architecture qur&#39;an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • al-&#39;īr, al-maghāzī, al-fatḥ &amp; dīwān islamic-caravans-battles-conquest-chronicle.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#51 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caravans-battles-conquest-chronicle.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caravans, Trade Battles, Fatḥ &amp; Tadwīn</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • Al-'Īr, Al-Maghāzī, Al-Fatḥ &amp; Dīwān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="greco-roman-gods-titans-daimones-islamic-judgment.html" data-search="greco-roman gods &amp; titans made whole greco-roman gods, titans (titanomachy), 12 olympians, morpheus/oneiroi, 7 erotes &amp; 150+ minor spirits: islamic reception, judgment &amp; wholeness 01. master hubs &amp; architecture al-furqān (21:22, 12:39-40, 39:42) &amp; at-takmīl • titans, oneiroi, erotes &amp; daimones greco-roman-gods-titans-daimones-islamic-judgment.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#52 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">greco-roman-gods-titans-daimones-islamic-judgment.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Greco-Roman Gods &amp; Titans Made Whole</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Furqān (21:22, 12:39-40, 39:42) &amp; At-Takmīl • Titans, Oneiroi, Erotes &amp; Daimones</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html" data-search="philosophy, alchemy, theocracies &amp; socrates philosophy &amp; alchemy in islam: canonical adjustment to 7 theocracies &amp; theocrats, 5 socratic critiques &amp; 7 stages of message meaning shift 01. master hubs &amp; architecture al-falsafah, al-kīmiyā&#39; (55:7-9), lā kahanūta (9:31), suqrāṭ &amp; lafẓ maḥfūẓ (15:9) islamic-philosophy-alchemy-theocracies-socratic-messages.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#53 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-philosophy-alchemy-theocracies-socratic-messages.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Philosophy, Alchemy, Theocracies &amp; Socrates</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Falsafah, Al-Kīmiyā' (55:7-9), Lā Kahanūta (9:31), Suqrāṭ &amp; Lafẓ Maḥfūẓ (15:9)</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-modesty-evolution-western-frontier-men-women.html" data-search="men &amp; women modesty: western frontier how the modesty standard (al-haya&#39; &amp; libas at-taqwa) for men &amp; women changed across the western frontier &amp; expansions 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 7:26, 24:30-31, 33:59 &amp; 7:199 (&#39;urf) • hijaz, maghreb lithām, al-andalus, oran 1504 &amp; modern west islamic-modesty-evolution-western-frontier-men-women.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#54 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-modesty-evolution-western-frontier-men-women.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Men &amp; Women Modesty: Western Frontier</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26, 24:30-31, 33:59 &amp; 7:199 ('Urf) • Hijaz, Maghreb Lithām, Al-Andalus, Oran 1504 &amp; Modern West</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" data-search="naming (261 wafq), indonesia, sewer &amp; calligraphy canonical naming in islam by region (zakeem malik mccaleb abjad 261 wafq), development of indonesia (87.2% muslim), sewer project structure, language &amp; calligraphy 01. master hubs &amp; architecture abjad 261 wafq (9×29) • nusantara (87.2% muslim) • jss sewer grid • jawi/pegon &amp; ibn muqlah islamic-naming-indonesia-infrastructure-language-calligraphy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#55 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-naming-indonesia-infrastructure-language-calligraphy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</div><div style="font-size:0.72rem;color:#CBD5E1;">Abjad 261 Wafq (9×29) • Nusantara (87.2% Muslim) • JSS Sewer Grid • Jawi/Pegon &amp; Ibn Muqlah</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-countries-history-canonical-embrace-atlas.html" data-search="history of islamic countries &amp; canonical embrace the history of islamic countries (57 oic nations across 7 civilizational zones) &amp; how they canonically embrace being muslim 01. master hubs &amp; architecture diyār al-islām • 5 pathways of embrace (2:256) • 7 civilizational zones &amp; 6 institutional pillars islamic-countries-history-canonical-embrace-atlas.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#56 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-countries-history-canonical-embrace-atlas.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">History of Islamic Countries &amp; Canonical Embrace</div><div style="font-size:0.72rem;color:#CBD5E1;">Diyār Al-Islām • 5 Pathways of Embrace (2:256) • 7 Civilizational Zones &amp; 6 Institutional Pillars</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caliphates-sultans-shahs-dynasties-return.html" data-search="caliphates, sultans, shahs &amp; promise of return the caliphates, the sultans, the shahs &amp; the dynasties instantiated &amp; dissolved by islam: origin, journey &amp; the promise of returning 01. master hubs &amp; architecture qur&#39;an 3:26, 24:55 &amp; 15:9 • musnad aḥmad 18406 • sahih muslim 145 • ibn khaldūn&#39;s 4-gen law islamic-caliphates-sultans-shahs-dynasties-return.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#57 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caliphates-sultans-shahs-dynasties-return.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caliphates, Sultans, Shahs &amp; Promise of Return</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 3:26, 24:55 &amp; 15:9 • Musnad Aḥmad 18406 • Sahih Muslim 145 • Ibn Khaldūn's 4-Gen Law</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="quranic-timeline-expansion-vol1-chronology.html" data-search="vol. i: qur&#39;anic timeline of expansion collegiate multi-html suite vol. i: canonical qur&#39;anic timeline of islamic expansion across 10 epochs 01. master hubs &amp; architecture qur&#39;an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 canonical epochs quranic-timeline-expansion-vol1-chronology.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#58 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol1-chronology.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. I: Qur'anic Timeline of Expansion</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 Canonical Epochs</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="quranic-timeline-expansion-vol2-properties-kingdoms.html" data-search="vol. ii: islamic properties, countries &amp; kingdoms collegiate multi-html suite vol. ii: canonical islamic properties (waqf, kharāj, &#39;ushr, ḥimā, mawāt), countries &amp; kingdoms 01. master hubs &amp; architecture qur&#39;an 7:128, 59:7 &amp; 4:7-12 • fiqh al-amwāl &amp; al-aqālīm as-sab&#39;ah quranic-timeline-expansion-vol2-properties-kingdoms.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#59 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol2-properties-kingdoms.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. II: Islamic Properties, Countries &amp; Kingdoms</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:128, 59:7 &amp; 4:7-12 • Fiqh Al-Amwāl &amp; Al-Aqālīm As-Sab'ah</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html" data-search="vol. iii: beauty of islam &amp; collegiate thesis collegiate multi-html suite vol. iii: the 7 dimensions of the beauty of islam &amp; 8-chapter collegiate universal thesis monograph 01. master hubs &amp; architecture sahih muslim 91 &amp; 8 • qur&#39;an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6 quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#60 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. III: Beauty of Islam &amp; Collegiate Thesis</div><div style="font-size:0.72rem;color:#CBD5E1;">Sahih Muslim 91 &amp; 8 • Qur'an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islam-through-ages-vol1-reception-history.html" data-search="ages vol. i: islam &amp; global reception expansive multi-html suite vol. i: islam through the ages &amp; its global civilizational reception across 7 historical ages 01. master hubs &amp; architecture qur&#39;an 19:1-36, 39:18 &amp; 41:53 • aksum, baghdad, toledo, maragheh, oxford, weimar &amp; modern labs islam-through-ages-vol1-reception-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#61 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol1-reception-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. I: Islam &amp; Global Reception</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 19:1-36, 39:18 &amp; 41:53 • Aksum, Baghdad, Toledo, Maragheh, Oxford, Weimar &amp; Modern Labs</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="islam-through-ages-vol2-philosophical-connotations.html" data-search="ages vol. ii: philosophical connotations expansive multi-html suite vol. ii: the 7 philosophical connotations &amp; paradigms instantiated by islamic thought 01. master hubs &amp; architecture wājib al-wujūd • floating man • sunnat allāh • faṣl al-maqāl • al-i&#39;tibār • 4d motion • &#39;ilm al-&#39;umrān islam-through-ages-vol2-philosophical-connotations.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#62 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol2-philosophical-connotations.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. II: Philosophical Connotations</div><div style="font-size:0.72rem;color:#CBD5E1;">Wājib Al-Wujūd • Floating Man • Sunnat Allāh • Faṣl Al-Maqāl • Al-I'tibār • 4D Motion • 'Ilm Al-'Umrān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html" data-search="ages vol. iii: scientific discoveries instantiated expansive multi-html suite vol. iii: scientific discoveries alluded to in the qur&#39;an &amp; hadith instantiated through science 01. master hubs &amp; architecture qur&#39;an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (supernova iron z=26) islam-through-ages-vol3-scientific-discoveries-instantiated.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#63 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol3-scientific-discoveries-instantiated.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. III: Scientific Discoveries Instantiated</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (Supernova Iron Z=26)</div></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SOVEREIGN_CURRENT_SEQ = 51;
+  const SOVEREIGN_TOTAL_PORTALS = 63;
+  const SOVEREIGN_NEXT_FILE = "greco-roman-gods-titans-daimones-islamic-judgment.html";
+  let sovContinualTimer = null;
+
+  function syncSovereignPortalCounts() {
+    const items = document.querySelectorAll('#sovDrawerGrid .sov-drawer-item');
+    const liveTotal = items.length > 0 ? items.length : SOVEREIGN_TOTAL_PORTALS;
+    document.querySelectorAll('[data-sov-total]').forEach(el => {
+      el.textContent = String(liveTotal);
+    });
+    const badge = document.getElementById('sovPortalCounterBadge');
+    if (badge) {
+      badge.textContent = '#' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + ' / ' + String(liveTotal).padStart(2, '0');
+    }
+  }
+
+  function toggleSovContinualCycle() {
+    const btn = document.getElementById('sovContinualCycleBtn');
+    const active = sessionStorage.getItem('sovContinualCycleActive') === '1';
+    if (active) {
+      sessionStorage.removeItem('sovContinualCycleActive');
+      if (sovContinualTimer) { clearTimeout(sovContinualTimer); sovContinualTimer = null; }
+      if (btn) btn.textContent = '🔄 Continual Sync: #' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + '/' + String(SOVEREIGN_TOTAL_PORTALS).padStart(2, '0');
+    } else {
+      sessionStorage.setItem('sovContinualCycleActive', '1');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  }
+
+  function toggleSovDrawer() {
+    const el = document.getElementById('sovMegaDrawer');
+    if (!el) return;
+    el.classList.toggle('open');
+    if (el.classList.contains('open')) {
+      const inp = document.getElementById('sovDrawerSearch');
+      if (inp) { inp.value = ''; filterSovDrawer(''); inp.focus(); }
+    }
+  }
+  function filterSovDrawer(q) {
+    const query = (q || '').toLowerCase().trim();
+    document.querySelectorAll('#sovDrawerGrid .sov-drawer-item').forEach(el => {
+      const hay = el.getAttribute('data-search') || '';
+      el.style.display = (!query || hay.includes(query)) ? 'block' : 'none';
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      toggleSovDrawer();
+    } else if (e.key === 'Escape') {
+      const el = document.getElementById('sovMegaDrawer');
+      if (el && el.classList.contains('open')) el.classList.remove('open');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    syncSovereignPortalCounts();
+    if (sessionStorage.getItem('sovContinualCycleActive') === '1') {
+      const btn = document.getElementById('sovContinualCycleBtn');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  });
+</script>
+<!-- SOV_CHROME_TOP_END -->
+
+  <section class="hero">
+    <div class="eyebrow">Portal #51 • Al-'Īr, Al-Maghāzī, Al-Fatḥ &amp; At-Tadwīn</div>
+    <h1>Canonical Islamic Caravans, Battles for Trade, Founding of Conquest &amp; Recording of Conquest</h1>
+    <div class="arabic-hero">القوافل القرآنية (رحلة الشتاء والصيف) • سرايا وغزوات التجارة • تأسيس الفتح المبين • تدوين المغازي وفتوح البلدان وديوان الخراج</div>
+    <p class="lead">
+      In canonical Islamic history and jurisprudence, <strong>Conquest (<em>Al-Fatḥ</em> — "The Opening")</strong> did not emerge from arbitrary territorial ambition.
+      It followed a strict, four-stage theological, economic, and historiographical progression rooted in the Qur'an and Prophetic <em>Sīrah</em>:
+      from the <strong>Winter and Summer Caravans of Quraysh (<em>Surah Quraysh</em> 106:1–4)</strong>, through the <strong>Battles for Trade (<em>Nakhlah, Badr's Al-'Īr vs. An-Nafīr, and Al-Qaradah</em>)</strong>
+      that reclaimed confiscated <em>Muhājirūn</em> wealth and broke Meccan oligarchic blockades, to the <strong>Founding of Conquest (<em>Ṣulḥ Al-Ḥudaybiyyah, Fatḥ Makkah, Tabūk's Aylah Charter, and the Ribāṭ-Caravanserai Commonwealth</em>)</strong>,
+      culminating in the <strong>Canonical Recording of Conquest (<em>Tadwīn Al-Maghāzī, 'Umar's Dīwān Al-Jund &amp; Sawād Waqf Survey, Al-Wāqidī, Al-Balādhurī's Futūḥ Al-Buldān, and Ottoman Tapu Tahrir Defters</em>)</strong>.
+    </p>
+    <div class="pillar-strip">
+      <div class="pillar-box">
+        <h4>1. Canonical Caravans (Al-'Īr &amp; Īlāf)</h4>
+        <p>Hāshim's <em>Īlāf</em> safe-conduct treaties (Qur'an 106:1–4) linked Yemen's winter frankincense/spice route to Syria's summer grain/olive-oil route—until Quraysh forfeited their covenant by expelling the believers and weaponizing caravan capital.</p>
+      </div>
+      <div class="pillar-box">
+        <h4>2. Battles for Trade (Al-'Īr vs. An-Nafīr)</h4>
+        <p>Medina projected sovereignty across the Red Sea coast (<em>Sarāyā</em> &amp; <em>Nakhlah</em>, Qur'an 2:217), met Abu Sufyan's 1,000-camel caravan and Abu Jahl's army at <em>Badr</em> (Qur'an 8:7), and sealed the Iraqi silver route at <em>Al-Qaradah</em>.</p>
+      </div>
+      <div class="pillar-box">
+        <h4>3. Founding of Conquest (Ta'sīs Al-Fatḥ)</h4>
+        <p><em>Al-Ḥudaybiyyah</em> (Qur'an 48:1) and <em>Fatḥ Makkah</em> replaced pagan toll-extortion and <em>Ribā</em> with bloodless amnesty (<em>At-Ṭulaqā'</em>), while <em>Tabūk</em>'s Aylah treaty guaranteed safe-conduct for ships at sea and caravans on land.</p>
+      </div>
+      <div class="pillar-box">
+        <h4>4. Recording of Conquest (At-Tadwīn &amp; Dīwān)</h4>
+        <p>Prophetic silver-sealed leather charters, Caliph 'Umar's 36M-<em>Jarīb</em> <em>Sawād Waqf</em> cadastre (Qur'an 59:7–10), Al-Wāqidī's field topography, and Al-Balādhurī's <em>Ṣulḥan</em> vs. <em>'Anwatan</em> constitutional ledger.</p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="section-title">
+      <h2>I. Interactive 2.5D Caravan Trade Arteries, Battle Interceptions &amp; Tadwīn Chancery Map</h2>
+      <span>CLICK ANY NODE OR FILTER LAYER • ANIMATE WINTER/SUMMER CARAVANS &amp; MEDINAN VECTORS</span>
+    </div>
+
+    <div class="map-shell">
+      <div class="canvas-wrap">
+        <div class="canvas-toolbar">
+          <button class="mode-btn active" onclick="setCaravanFilter('all', this)">All 7 Stages &amp; Routes</button>
+          <button class="mode-btn" onclick="setCaravanFilter('ilaf', this)">Stage I–II: Īlāf &amp; Red Sea Sarāyā</button>
+          <button class="mode-btn" onclick="setCaravanFilter('badr', this)">Stage III–IV: Badr ('Īr vs Nafīr) &amp; Al-Qaradah Silver</button>
+          <button class="mode-btn" onclick="setCaravanFilter('fath', this)">Stage V–VII: Fatḥ Makkah, Tabūk &amp; Ribāṭ Network</button>
+          <button class="mode-btn" onclick="setCaravanFilter('tadwin', this)">Tadwīn Layer: 7 Recording Codices &amp; Dīwān Hubs</button>
+        </div>
+        <canvas id="caravanConquestCanvas" width="920" height="560"></canvas>
+      </div>
+      <aside class="hud-panel" id="caravanHud">
+        <span class="hud-tag" id="hudTag">STAGE #3 • YAWM AL-FURQĀN (17 RAMADAN 2 AH)</span>
+        <div class="hud-title" id="hudTitle">Wells of Badr: The Great Caravan (Al-'Īr) vs. The War-Host (An-Nafīr)</div>
+        <div class="hud-arabic" id="hudArabic">يوم الفرقان ببدر: العير والنفير (سورة الأنفال ٨:٧)</div>
+        <div class="hud-box">
+          <strong>Caravan Route &amp; Cargo</strong>
+          <span id="hudCargo">Abu Sufyan's 1,000-camel Gaza-to-Mecca joint-stock caravan carrying 50,000 gold Dinars along the Red Sea coastal artery.</span>
+        </div>
+        <div class="hud-box">
+          <strong>Battle for Trade &amp; Strategic Interception</strong>
+          <span id="hudBattle">313 believers marched from Medina; Abu Sufyan diverted the caravan along the coastal salt-flats while Abu Jahl's 950 armored warriors were defeated at the water-wells of Badr.</span>
+        </div>
+        <div class="hud-box">
+          <strong>Founding &amp; Recording of Conquest (Al-Fatḥ &amp; Tadwīn)</strong>
+          <span id="hudRecording">Qur'an 8:7 &amp; 8:41 established the sovereign Fifth (Khums) and the precedence of Ahl Badr as the #1 tier in Caliph 'Umar's Diwan Al-Jund.</span>
+        </div>
+        <div class="hud-box">
+          <strong>Cross-Linked Sovereign Portals</strong>
+          <span id="hudLinks">
+            <a href="conjoined-worlds-realms-principles-node-grid.html" style="color:#34D399;">3D Meridian Node Grid</a> •
+            <a href="order-3-sapphire.html" style="color:#38BDF8;">Order #3 Sapphire</a> •
+            <a href="world-5-furqan-hawa.html" style="color:#F43F5E;">World #5 Al-Furqan</a>
+          </span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="section-title">
+      <h2>II. The 7 Canonical Caravans &amp; Battles for Trade Leading to the Founding of Conquest</h2>
+      <span>SURAH QURAYSH (106:1–4) → NAKHLAH (2:217) → BADR (8:7) → AL-QARADAH → FATḤ MAKKAH (48:1) → TABŪK → RIBĀṬ</span>
+    </div>
+    <div class="cards-grid">
+      <article class="stage-card" style="border-top: 4px solid #F8F5E6;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#F8F5E6;color:#080B11;">STAGE #1 • CARAVAN_1_ILAF_QURAYSH_WINTER_SUMMER</span>
+    <span class="stage-date">Pre-Hijrah – 1 AH (c. 480–622 CE)</span>
+  </div>
+  <h3>Stage I: The Covenant of the Winter &amp; Summer Caravans vs. Oligarchic Confiscation</h3>
+  <div class="arabic-sub">Īlāf Quraysh: Riḥlat Ash-Shitā'i wa Aṣ-Ṣayf (إيلاف قريش: رحلة الشتاء والصيف)</div>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Caravan Route &amp; Commodities (Al-'Īr / Al-Biḍā'ah)</span>
+      <p>Southern Winter Route (Yemen / Saba' &amp; Abyssinia: frankincense, myrrh, Yemeni leather, Suhuli textiles, gold dust) and Northern Summer Route (Gaza, Busra &amp; Damascus in Ash-Sham: olive oil, wheat, Byzantine silk, weaponry).</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Commanders &amp; Standards (Al-Liwā' wa Ar-Rāyah)</span>
+      <p>Hashim ibn 'Abd Manaf (Founder of the Ilaf Safe-Conduct Charters) -&gt; Later usurped by Abu Sufyan &amp; Abu Jahl</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Battle for Trade Dynamics (Sarāyā wa Ghazawāt At-Tijārah)</span>
+      <p>Under the Ilaf treaties, Quraysh enjoyed safe passage across Arabia because they were custodians of Abraham's Sanctuary (Al-Haram). Yet when they persecuted the believers and confiscated the homes and capital of the Muhajirun (Qur'an 59:8), they weaponized the Syrian trade caravan (Al-'Ir) to finance war against Tawhid.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Founding of Conquest Outcome (Ta'sīs Al-Fatḥ)</span>
+      <p>Establishes the theological-economic law of Surah Quraysh (106:1-4): commercial security and caravan prosperity are contingent upon worshipping the Lord of the House ('Fal-ya'budu Rabba hadha al-Bayt'), forfeiting oligarchic immunity when turned into Zulm.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Qur'anic &amp; Sīrah Proof:</strong> Qur'an 106:1-4 (Surah Quraysh), Qur'an 59:8 &amp;Qur'an 28:57
+  </div>
+</article>
+<article class="stage-card" style="border-top: 4px solid #A78BFA;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#A78BFA;color:#080B11;">STAGE #2 • CARAVAN_2_SARAYA_RED_SEA_AND_NAKHLAH</span>
+    <span class="stage-date">Ramadan 1 AH – Rajab 2 AH (623–624 CE)</span>
+  </div>
+  <h3>Stage II: The Early Caravan Interceptions (Sif Al-Bahr, Rabigh, Al-Kharrar, Buwat, Al-'Ushayrah &amp; Nakhlah)</h3>
+  <div class="arabic-sub">Sarāyā الساحل وسرية نخلة (Interception of the Coastal Red Sea &amp; Nakhlah Caravans)</div>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Caravan Route &amp; Commodities (Al-'Īr / Al-Biḍā'ah)</span>
+      <p>The Western Red Sea Coastal Artery (Tariq As-Sahil via Al-'Is, Yanbu', Waddan, and Badr) &amp; the Ta'if-to-Mecca inland caravan carrying raisins, tanned hides, wine-skins, and silver bullion.</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Commanders &amp; Standards (Al-Liwā' wa Ar-Rāyah)</span>
+      <p>Hamzah ibn 'Abd al-Muttalib (White Banner / Liwa' Abyad), 'Ubaydah ibn al-Harith, Sa'd ibn Abi Waqqas, and 'Abdullah ibn Jahsh (at Nakhlah)</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Battle for Trade Dynamics (Sarāyā wa Ghazawāt At-Tijārah)</span>
+      <p>Seven reconnaissance and interception expeditions projected Medinan jurisdiction across the Red Sea trade bottleneck and forged non-aggression pacts with Banu Damrah and Banu Mudlij. At Nakhlah (Rajab 2 AH), 'Abdullah ibn Jahsh captured the Quraysh trade caravan led by 'Amr ibn al-Hadrami—the first caravan prize taken in Islam.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Founding of Conquest Outcome (Ta'sīs Al-Fatḥ)</span>
+      <p>Qur'an 2:217 was revealed over the Nakhlah caravan, establishing that Quraysh's economic expulsion of believers from Al-Masjid Al-Haram and Fitnah are graver before Allah than their hypocritical appeal to sacred-month trade immunity.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Qur'anic &amp; Sīrah Proof:</strong> Qur'an 2:217, Qur'an 22:39-40 (Permission to Fight the Wronged) &amp; Al-Waqidi's Maghazi 1/10-19
+  </div>
+</article>
+<article class="stage-card" style="border-top: 4px solid #38BDF8;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#38BDF8;color:#080B11;">STAGE #3 • CARAVAN_3_BADR_AL_IR_VS_AN_NAFIR</span>
+    <span class="stage-date">17 Ramadan 2 AH (13 March 624 CE)</span>
+  </div>
+  <h3>Stage III: The Great Syrian Caravan (Al-'Ir) vs. The Meccan War-Host (An-Nafir) at the Wells of Badr</h3>
+  <div class="arabic-sub">Yawm Al-Furqān: Al-'Īr wa An-Nafīr bi-Badr (يوم الفرقان: العير والنفير ببدر)</div>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Caravan Route &amp; Commodities (Al-'Īr / Al-Biḍā'ah)</span>
+      <p>Abu Sufyan's Great Gaza-to-Mecca Joint-Stock Caravan (Al-'Ir Al-Kubra): 1,000 camels carrying 50,000 gold Mithqal/Dinars of merchandise owned by every Meccan clan.</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Commanders &amp; Standards (Al-Liwā' wa Ar-Rāyah)</span>
+      <p>Prophet Muhammad ﷺ with Al-'Uqab Black Standard (borne by 'Ali ibn Abi Talib) and White Banner (borne by Mus'ab ibn 'Umayr) — 313 believers</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Battle for Trade Dynamics (Sarāyā wa Ghazawāt At-Tijārah)</span>
+      <p>Seeking restitution for confiscated Muhajirun property, Medina marched to intercept Abu Sufyan's 1,000-camel caravan at the caravan-station of Badr. Abu Sufyan diverted the caravan along the coastal salt-flats while Abu Jahl marched north with 950 armored warriors (An-Nafir) to crush Medina forever.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Founding of Conquest Outcome (Ta'sīs Al-Fatḥ)</span>
+      <p>As Qur'an 8:7 declares, the believers desired the unarmed trade caravan ('ghayr dhat ash-shawkah'), but Allah ordained the clash with the armed hegemon to 'establish the Truth by His Words.' By seizing the strategic water-wells of Badr, Medina shattered the Meccan oligarchy and founded sovereign Islamic statehood.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Qur'anic &amp; Sīrah Proof:</strong> Qur'an 8:7, 8:41-42 (Surah Al-Anfal), Qur'an 3:123 &amp; Ibn Hisham 1/606-640
+  </div>
+</article>
+<article class="stage-card" style="border-top: 4px solid #D4AF37;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#D4AF37;color:#080B11;">STAGE #4 • CARAVAN_4_AL_QARADAH_IRAQI_SILVER_ROUTE</span>
+    <span class="stage-date">Jumada II, 3 AH – Jumada I, 6 AH (624–627 CE)</span>
+  </div>
+  <h3>Stage IV: The Najd-Iraqi Silver Caravan Interception at Al-Qaradah &amp; The Final Blockade at Al-'Is</h3>
+  <div class="arabic-sub">Sariyyat Al-Qaradah wa Al-'Īṣ (سرية القردة والعيس: قطع طريق الفضة العراقي)</div>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Caravan Route &amp; Commodities (Al-'Īr / Al-Biḍā'ah)</span>
+      <p>The Eastern Najd-to-Mesopotamia Desert Bypass (Al-Qaradah water-spring): Safwan ibn Umayyah's caravan laden with 100,000 dirhams of silver ingots, goblets, and bullion; followed by Abu al-'As ibn ar-Rabi's 170-man Syrian silver caravan at Al-'Is (6 AH).</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Commanders &amp; Standards (Al-Liwā' wa Ar-Rāyah)</span>
+      <p>Zayd ibn Harithah (Commander at Al-Qaradah with 100 horsemen &amp; at Al-'Is with 170 riders)</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Battle for Trade Dynamics (Sarāyā wa Ghazawāt At-Tijārah)</span>
+      <p>Because Badr rendered the Western Red Sea route impassable, Quraysh attempted to reroute their winter/summer trade eastward through Najd toward Iraq, hiring the guide Furat ibn Hayyan. Zayd ibn Harithah ambushed the caravan at Al-Qaradah, capturing the entire 100,000-dirham silver cargo and its guide (who embraced Islam).</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Founding of Conquest Outcome (Ta'sīs Al-Fatḥ)</span>
+      <p>Sealed both the Eastern Iraqi silver corridor and the Western coastal corridor. When Abu al-'As's caravan was captured at Al-'Is (and magnanimously returned to him upon his entry into Islam), Quraysh realized their commercial lifeline existed solely at Medina's mercy—directly compelling the truce of Al-Hudaybiyyah.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Qur'anic &amp; Sīrah Proof:</strong> Sahih al-Bukhari 4023, Al-Waqidi 1/197-199 (Sariyyat Al-Qaradah) &amp; Ibn Sa'd Tabaqat 2/36
+  </div>
+</article>
+<article class="stage-card" style="border-top: 4px solid #F43F5E;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#F43F5E;color:#080B11;">STAGE #5 • CARAVAN_5_HUDAYBIYYAH_KHAYBAR_FATH_MAKKAH</span>
+    <span class="stage-date">Dhu al-Qa'dah 6 AH – Ramadan 8 AH (628–630 CE)</span>
+  </div>
+  <h3>Stage V: From the Trade-Road Truce of Al-Hudaybiyyah to the Founding of Conquest (Fath Makkah)</h3>
+  <div class="arabic-sub">Al-Fatḥ Al-Mubīn: Min Ṣulḥ Al-Ḥudaybiyyah ilā Fatḥ Makkah (الفتح المبين: من الحديبية إلى فتح مكة)</div>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Caravan Route &amp; Commodities (Al-'Īr / Al-Biḍā'ah)</span>
+      <p>Reopened Pan-Arabian Caravan Networks (Hijaz, Najd, Yamamah grain supply of Thumamah ibn Uthal, and the fertile date-palm oases of Khaybar, Fadak, and Wadi al-Qura).</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Commanders &amp; Standards (Al-Liwā' wa Ar-Rāyah)</span>
+      <p>Prophet Muhammad ﷺ leading 1,400 Pledge-Companions of Ar-Ridwan (6 AH) -&gt; 10,000 Vanguard Troops at Fath Makkah (8 AH)</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Battle for Trade Dynamics (Sarāyā wa Ghazawāt At-Tijārah)</span>
+      <p>Al-Hudaybiyyah (Qur'an 48:1) transformed former caravan battlegrounds into safe corridors of open preaching and commerce, while Thumamah ibn Uthal's Yamamah wheat embargo demonstrated Islamic sovereignty over Arabian food supply. When Quraysh violated the treaty against Banu Khuza'ah, the 10,000-strong army entered Mecca from four cardinal directions.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Founding of Conquest Outcome (Ta'sīs Al-Fatḥ)</span>
+      <p>Founded the supreme archetype of Islamic Conquest (Al-Fath): bloodless liberation of Abraham's Sanctuary, general amnesty ('Go, for you are the freed ones — Antum at-Tulaqa''), abolition of usury (Riba) and pagan toll-extortion, and divine replacement of idol-trade revenue (Qur'an 9:28).</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Qur'anic &amp; Sīrah Proof:</strong> Qur'an 48:1, 48:18-27 (Surah Al-Fath), Qur'an 9:28, Qur'an 110:1-3 (Surah An-Nasr) &amp; Bukhari 4372 (Thumamah's Grain Caravan)
+  </div>
+</article>
+<article class="stage-card" style="border-top: 4px solid #B87333;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#B87333;color:#080B11;">STAGE #6 • CARAVAN_6_TABUK_AND_FUTUHAT_SILK_SPICE_ROADS</span>
+    <span class="stage-date">Rajab 9 AH – 96 AH (630–715 CE)</span>
+  </div>
+  <h3>Stage VI: Frontier Trade Treaties of Tabuk &amp; The Great Conquests (Syria, Iraq, Egypt &amp; Silk Road)</h3>
+  <div class="arabic-sub">Ghazwat Tabūk wa Al-Futūḥāt Al-Kubrā (غزوة تبوك والفتوحات الكبرى لطرق الحرير والتوابل)</div>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Caravan Route &amp; Commodities (Al-'Īr / Al-Biḍā'ah)</span>
+      <p>The Red Sea Port of Aylah (Aqaba), the Nabataean/Syrian Olive-Oil &amp; Grain Caravans, the Persian Gulf Maritime Ports (Al-Ubullah / Basra), the Nile Grain Fleet ('Amr ibn al-'As's Khalij Amir al-Mu'minin canal), and the Sogdian Silk Road (Merv, Bukhara, Samarkand).</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Commanders &amp; Standards (Al-Liwā' wa Ar-Rāyah)</span>
+      <p>Prophet Muhammad ﷺ (at Tabuk, 30,000 strong) -&gt; Khalid ibn al-Walid, Abu 'Ubaydah ibn al-Jarrah, Sa'd ibn Abi Waqqas, 'Amr ibn al-'As &amp; Qutaybah ibn Muslim</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Battle for Trade Dynamics (Sarāyā wa Ghazawāt At-Tijārah)</span>
+      <p>At Tabuk (9 AH), the Prophet ﷺ signed the foundational trade-and-protection charters (Sulh) with John ibn Ru'bah of Aylah (guaranteeing safety for their ships at sea and their caravans on land: 'li-sufunihim wa sayyaratihim fi al-barr wa al-bahr'). This charter became the exact template for the Rashidun and Umayyad Futuhat from Damascus and Alexandria to Samarkand.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Founding of Conquest Outcome (Ta'sīs Al-Fatḥ)</span>
+      <p>Unified the Indian Ocean spice routes, Red Sea/Mediterranean ports, and Central Asian Silk Road into a single customs-integrated commonwealth, reopening Trajan's Canal between the Nile and the Red Sea (642 CE) to ship Egyptian grain caravans directly to Hijaz in 20 days.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Qur'anic &amp; Sīrah Proof:</strong> Qur'an 9:29-30, Treaty of Aylah (Ibn Hisham 2/525: 'Safe-Conduct on Land and Sea') &amp; Al-Baladhuri's Futuh Al-Buldan
+  </div>
+</article>
+<article class="stage-card" style="border-top: 4px solid #10B981;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#10B981;color:#080B11;">STAGE #7 • CARAVAN_7_RIBAT_CARAVANSERAI_HISBAH_COMMONWEALTH</span>
+    <span class="stage-date">2nd – 13th Century AH (750–1900 CE)</span>
+  </div>
+  <h3>Stage VII: The Ribat-Caravanserai Network, Monetary Sikka Standardization &amp; Maritime Aman</h3>
+  <div class="arabic-sub">Shabakat Ar-Ribāṭ wa Al-Khānāt wa السكة الإسلامية (شبكة الرباط والخانات والسكة)</div>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Caravan Route &amp; Commodities (Al-'Īr / Al-Biḍā'ah)</span>
+      <p>Trans-Eurasian &amp; Saharan Caravan Arteries: Seljuk/Ottoman Sultan Han caravanserais spaced every 30 km (1 Marhalah / day's journey), Darb Zubaydah water-cistern stations from Baghdad to Mecca, and Trans-Saharan gold-and-salt caravans (Sijilmasa to Timbuktu).</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Commanders &amp; Standards (Al-Liwā' wa Ar-Rāyah)</span>
+      <p>Caliph 'Abd al-Malik (696 CE Epigraphic Gold Dinar Reform), Seljuk/Ottoman Waqf Endowers, and Muhtasib Market Inspectors</p>
+    </div>
+    <div class="field-box">
+      <span class="lbl">Battle for Trade Dynamics (Sarāyā wa Ghazawāt At-Tijārah)</span>
+      <p>Conquest was consolidated not by pillage, but by building fortified Caravanserais (Khan / Kervansaray) funded by perpetual Waqf endowments—providing every merchant caravan (Muslim or Dhimmi/Musta'min) 3 days of free lodging, veterinary care, mosque, bathhouse, and armed escort against highway brigandage (Hirabah, Qur'an 5:33).</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Founding of Conquest Outcome (Ta'sīs Al-Fatḥ)</span>
+      <p>Transformed military frontier forts (Ribat) into permanent hubs of global commerce, scholarship, and Sufi hospitality, governed by standardized epigraphic Gold Dinars (4.25g) and Silver Dirhams (2.97g) inscribed with Surah Al-Ikhlas.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Qur'anic &amp; Sīrah Proof:</strong> Qur'an 5:33, Qur'an 9:6 (Aman / Safe-Conduct for Envoy &amp; Merchant), Ibn Khaldun's Muqaddimah &amp; Ottoman Vakfiye Charters
+  </div>
+</article>
+
+    </div>
+
+    <div class="section-title">
+      <h2>III. Master Comparative Matrix: Caravans, Trade Battles &amp; Founding of Conquest</h2>
+      <span>COMPLETE 7-STAGE TELEMETRY</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Title &amp; Chronology</th>
+            <th>Caravan Route &amp; Commodities</th>
+            <th>Battle for Trade Dynamics</th>
+            <th>Founding of Conquest Outcome</th>
+            <th>Qur'anic &amp; Sīrah Anchor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td><strong style="color:#F8F5E6;">#1</strong><br><span class="mono-sm">CARAVAN_1_ILAF_QURAYSH_WINTER_SUMMER</span></td>
+  <td><strong>Stage I: The Covenant of the Winter &amp; Summer Caravans vs. Oligarchic Confiscation</strong><br><span class="arabic-inline">Īlāf Quraysh: Riḥlat Ash-Shitā'i wa Aṣ-Ṣayf (إيلاف قريش: رحلة الشتاء والصيف)</span><br><span class="mono-sm">Pre-Hijrah – 1 AH (c. 480–622 CE)</span></td>
+  <td>Southern Winter Route (Yemen / Saba' &amp; Abyssinia: frankincense, myrrh, Yemeni leather, Suhuli textiles, gold dust) and Northern Summer Route (Gaza, Busra &amp; Damascus in Ash-Sham: olive oil, wheat, Byzantine silk, weaponry).</td>
+  <td>Under the Ilaf treaties, Quraysh enjoyed safe passage across Arabia because they were custodians of Abraham's Sanctuary (Al-Haram). Yet when they persecuted the believers and confiscated the homes and capital of the Muhajirun (Qur'an 59:8), they weaponized the Syrian trade caravan (Al-'Ir) to finance war against Tawhid.</td>
+  <td>Establishes the theological-economic law of Surah Quraysh (106:1-4): commercial security and caravan prosperity are contingent upon worshipping the Lord of the House ('Fal-ya'budu Rabba hadha al-Bayt'), forfeiting oligarchic immunity when turned into Zulm.</td>
+  <td><span class="cite-pill">Qur'an 106:1-4 (Surah Quraysh), Qur'an 59:8 &amp;Qur'an 28:57</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#A78BFA;">#2</strong><br><span class="mono-sm">CARAVAN_2_SARAYA_RED_SEA_AND_NAKHLAH</span></td>
+  <td><strong>Stage II: The Early Caravan Interceptions (Sif Al-Bahr, Rabigh, Al-Kharrar, Buwat, Al-'Ushayrah &amp; Nakhlah)</strong><br><span class="arabic-inline">Sarāyā الساحل وسرية نخلة (Interception of the Coastal Red Sea &amp; Nakhlah Caravans)</span><br><span class="mono-sm">Ramadan 1 AH – Rajab 2 AH (623–624 CE)</span></td>
+  <td>The Western Red Sea Coastal Artery (Tariq As-Sahil via Al-'Is, Yanbu', Waddan, and Badr) &amp; the Ta'if-to-Mecca inland caravan carrying raisins, tanned hides, wine-skins, and silver bullion.</td>
+  <td>Seven reconnaissance and interception expeditions projected Medinan jurisdiction across the Red Sea trade bottleneck and forged non-aggression pacts with Banu Damrah and Banu Mudlij. At Nakhlah (Rajab 2 AH), 'Abdullah ibn Jahsh captured the Quraysh trade caravan led by 'Amr ibn al-Hadrami—the first caravan prize taken in Islam.</td>
+  <td>Qur'an 2:217 was revealed over the Nakhlah caravan, establishing that Quraysh's economic expulsion of believers from Al-Masjid Al-Haram and Fitnah are graver before Allah than their hypocritical appeal to sacred-month trade immunity.</td>
+  <td><span class="cite-pill">Qur'an 2:217, Qur'an 22:39-40 (Permission to Fight the Wronged) &amp; Al-Waqidi's Maghazi 1/10-19</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#38BDF8;">#3</strong><br><span class="mono-sm">CARAVAN_3_BADR_AL_IR_VS_AN_NAFIR</span></td>
+  <td><strong>Stage III: The Great Syrian Caravan (Al-'Ir) vs. The Meccan War-Host (An-Nafir) at the Wells of Badr</strong><br><span class="arabic-inline">Yawm Al-Furqān: Al-'Īr wa An-Nafīr bi-Badr (يوم الفرقان: العير والنفير ببدر)</span><br><span class="mono-sm">17 Ramadan 2 AH (13 March 624 CE)</span></td>
+  <td>Abu Sufyan's Great Gaza-to-Mecca Joint-Stock Caravan (Al-'Ir Al-Kubra): 1,000 camels carrying 50,000 gold Mithqal/Dinars of merchandise owned by every Meccan clan.</td>
+  <td>Seeking restitution for confiscated Muhajirun property, Medina marched to intercept Abu Sufyan's 1,000-camel caravan at the caravan-station of Badr. Abu Sufyan diverted the caravan along the coastal salt-flats while Abu Jahl marched north with 950 armored warriors (An-Nafir) to crush Medina forever.</td>
+  <td>As Qur'an 8:7 declares, the believers desired the unarmed trade caravan ('ghayr dhat ash-shawkah'), but Allah ordained the clash with the armed hegemon to 'establish the Truth by His Words.' By seizing the strategic water-wells of Badr, Medina shattered the Meccan oligarchy and founded sovereign Islamic statehood.</td>
+  <td><span class="cite-pill">Qur'an 8:7, 8:41-42 (Surah Al-Anfal), Qur'an 3:123 &amp; Ibn Hisham 1/606-640</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#D4AF37;">#4</strong><br><span class="mono-sm">CARAVAN_4_AL_QARADAH_IRAQI_SILVER_ROUTE</span></td>
+  <td><strong>Stage IV: The Najd-Iraqi Silver Caravan Interception at Al-Qaradah &amp; The Final Blockade at Al-'Is</strong><br><span class="arabic-inline">Sariyyat Al-Qaradah wa Al-'Īṣ (سرية القردة والعيس: قطع طريق الفضة العراقي)</span><br><span class="mono-sm">Jumada II, 3 AH – Jumada I, 6 AH (624–627 CE)</span></td>
+  <td>The Eastern Najd-to-Mesopotamia Desert Bypass (Al-Qaradah water-spring): Safwan ibn Umayyah's caravan laden with 100,000 dirhams of silver ingots, goblets, and bullion; followed by Abu al-'As ibn ar-Rabi's 170-man Syrian silver caravan at Al-'Is (6 AH).</td>
+  <td>Because Badr rendered the Western Red Sea route impassable, Quraysh attempted to reroute their winter/summer trade eastward through Najd toward Iraq, hiring the guide Furat ibn Hayyan. Zayd ibn Harithah ambushed the caravan at Al-Qaradah, capturing the entire 100,000-dirham silver cargo and its guide (who embraced Islam).</td>
+  <td>Sealed both the Eastern Iraqi silver corridor and the Western coastal corridor. When Abu al-'As's caravan was captured at Al-'Is (and magnanimously returned to him upon his entry into Islam), Quraysh realized their commercial lifeline existed solely at Medina's mercy—directly compelling the truce of Al-Hudaybiyyah.</td>
+  <td><span class="cite-pill">Sahih al-Bukhari 4023, Al-Waqidi 1/197-199 (Sariyyat Al-Qaradah) &amp; Ibn Sa'd Tabaqat 2/36</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#F43F5E;">#5</strong><br><span class="mono-sm">CARAVAN_5_HUDAYBIYYAH_KHAYBAR_FATH_MAKKAH</span></td>
+  <td><strong>Stage V: From the Trade-Road Truce of Al-Hudaybiyyah to the Founding of Conquest (Fath Makkah)</strong><br><span class="arabic-inline">Al-Fatḥ Al-Mubīn: Min Ṣulḥ Al-Ḥudaybiyyah ilā Fatḥ Makkah (الفتح المبين: من الحديبية إلى فتح مكة)</span><br><span class="mono-sm">Dhu al-Qa'dah 6 AH – Ramadan 8 AH (628–630 CE)</span></td>
+  <td>Reopened Pan-Arabian Caravan Networks (Hijaz, Najd, Yamamah grain supply of Thumamah ibn Uthal, and the fertile date-palm oases of Khaybar, Fadak, and Wadi al-Qura).</td>
+  <td>Al-Hudaybiyyah (Qur'an 48:1) transformed former caravan battlegrounds into safe corridors of open preaching and commerce, while Thumamah ibn Uthal's Yamamah wheat embargo demonstrated Islamic sovereignty over Arabian food supply. When Quraysh violated the treaty against Banu Khuza'ah, the 10,000-strong army entered Mecca from four cardinal directions.</td>
+  <td>Founded the supreme archetype of Islamic Conquest (Al-Fath): bloodless liberation of Abraham's Sanctuary, general amnesty ('Go, for you are the freed ones — Antum at-Tulaqa''), abolition of usury (Riba) and pagan toll-extortion, and divine replacement of idol-trade revenue (Qur'an 9:28).</td>
+  <td><span class="cite-pill">Qur'an 48:1, 48:18-27 (Surah Al-Fath), Qur'an 9:28, Qur'an 110:1-3 (Surah An-Nasr) &amp; Bukhari 4372 (Thumamah's Grain Caravan)</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#B87333;">#6</strong><br><span class="mono-sm">CARAVAN_6_TABUK_AND_FUTUHAT_SILK_SPICE_ROADS</span></td>
+  <td><strong>Stage VI: Frontier Trade Treaties of Tabuk &amp; The Great Conquests (Syria, Iraq, Egypt &amp; Silk Road)</strong><br><span class="arabic-inline">Ghazwat Tabūk wa Al-Futūḥāt Al-Kubrā (غزوة تبوك والفتوحات الكبرى لطرق الحرير والتوابل)</span><br><span class="mono-sm">Rajab 9 AH – 96 AH (630–715 CE)</span></td>
+  <td>The Red Sea Port of Aylah (Aqaba), the Nabataean/Syrian Olive-Oil &amp; Grain Caravans, the Persian Gulf Maritime Ports (Al-Ubullah / Basra), the Nile Grain Fleet ('Amr ibn al-'As's Khalij Amir al-Mu'minin canal), and the Sogdian Silk Road (Merv, Bukhara, Samarkand).</td>
+  <td>At Tabuk (9 AH), the Prophet ﷺ signed the foundational trade-and-protection charters (Sulh) with John ibn Ru'bah of Aylah (guaranteeing safety for their ships at sea and their caravans on land: 'li-sufunihim wa sayyaratihim fi al-barr wa al-bahr'). This charter became the exact template for the Rashidun and Umayyad Futuhat from Damascus and Alexandria to Samarkand.</td>
+  <td>Unified the Indian Ocean spice routes, Red Sea/Mediterranean ports, and Central Asian Silk Road into a single customs-integrated commonwealth, reopening Trajan's Canal between the Nile and the Red Sea (642 CE) to ship Egyptian grain caravans directly to Hijaz in 20 days.</td>
+  <td><span class="cite-pill">Qur'an 9:29-30, Treaty of Aylah (Ibn Hisham 2/525: 'Safe-Conduct on Land and Sea') &amp; Al-Baladhuri's Futuh Al-Buldan</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#10B981;">#7</strong><br><span class="mono-sm">CARAVAN_7_RIBAT_CARAVANSERAI_HISBAH_COMMONWEALTH</span></td>
+  <td><strong>Stage VII: The Ribat-Caravanserai Network, Monetary Sikka Standardization &amp; Maritime Aman</strong><br><span class="arabic-inline">Shabakat Ar-Ribāṭ wa Al-Khānāt wa السكة الإسلامية (شبكة الرباط والخانات والسكة)</span><br><span class="mono-sm">2nd – 13th Century AH (750–1900 CE)</span></td>
+  <td>Trans-Eurasian &amp; Saharan Caravan Arteries: Seljuk/Ottoman Sultan Han caravanserais spaced every 30 km (1 Marhalah / day's journey), Darb Zubaydah water-cistern stations from Baghdad to Mecca, and Trans-Saharan gold-and-salt caravans (Sijilmasa to Timbuktu).</td>
+  <td>Conquest was consolidated not by pillage, but by building fortified Caravanserais (Khan / Kervansaray) funded by perpetual Waqf endowments—providing every merchant caravan (Muslim or Dhimmi/Musta'min) 3 days of free lodging, veterinary care, mosque, bathhouse, and armed escort against highway brigandage (Hirabah, Qur'an 5:33).</td>
+  <td>Transformed military frontier forts (Ribat) into permanent hubs of global commerce, scholarship, and Sufi hospitality, governed by standardized epigraphic Gold Dinars (4.25g) and Silver Dirhams (2.97g) inscribed with Surah Al-Ikhlas.</td>
+  <td><span class="cite-pill">Qur'an 5:33, Qur'an 9:6 (Aman / Safe-Conduct for Envoy &amp; Merchant), Ibn Khaldun's Muqaddimah &amp; Ottoman Vakfiye Charters</span></td>
+</tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-title">
+      <h2>IV. The 7 Canonical Codices &amp; Institutions for the Recording of Conquest (Tadwīn Al-Maghāzī wa Al-Futūḥ)</h2>
+      <span>PROPHETIC SILVER SEAL → 'UMAR'S DĪWĀN &amp; SAWĀD WAQF → SĪRAH/MAGHĀZĪ → WĀQIDĪ → BALĀDHURĪ → MASĀLIK/SIKKA → TAPU TAHRIR</span>
+    </div>
+    <div class="cards-grid">
+      <article class="codex-card" style="border-left: 4px solid #F8F5E6;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#F8F5E6;color:#080B11;">CODEX #1 • CODEX_1_SAHIFAT_MADINAH_AND_SULH_CHARTERS</span>
+    <span class="stage-date">1–10 AH (622–632 CE) — Prophetic Chancery of Medina</span>
+  </div>
+  <h3>Codex I: The Prophetic Treaty Scrolls, Safe-Conduct Charters &amp; Silver Seal Ring</h3>
+  <div class="arabic-sub">Ṣaḥīfat Al-Madīnah wa Kutub Al-Amān wa Aṣ-Ṣulḥ (صحيفة المدينة وكتب الأمان والصلح)</div>
+  <p class="chronicler-line"><strong>Chronicler / Chancery Institution:</strong> Scribes of the Prophet ﷺ (Kuttab Al-Wahy wa Al-Rasail): 'Ali ibn Abi Talib, Zayd ibn Thabit, Mu'awiyah ibn Abi Sufyan, and Ubayy ibn Ka'b</p>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Recording Methodology, Archival Medium &amp; Topography</span>
+      <p>Written on tanned leather (Adim) and parchment, authenticated with the Prophet's three-line silver signet ring ('Muhammad / Rasul / Allah', Bukhari 5872). Every caravan truce (Hudaybiyyah) and frontier conquest charter (Khaybar, Aylah, Najran, Bahrain) was recorded in duplicate—one copy held by the local community, one archived in Medina.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Constitutional, Fiscal &amp; Legal Governance Rule (Ṣulḥ vs. 'Anwah / Waqf)</span>
+      <p>Bound all future Muslim rulers to honor the exact tax ceilings, religious autonomy, and caravan safe-conducts ('la yuhdath 'alayhim hadath') stipulated in the original Prophetic treaty scroll.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Canonical Source &amp; Proof:</strong> Qur'an 2:282 (Al-Mudayanah: 'Write it down in justice'), Sahih al-Bukhari 3179 &amp; Abu 'Ubayd's Kitab Al-Amwal
+  </div>
+</article>
+<article class="codex-card" style="border-left: 4px solid #D4AF37;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#D4AF37;color:#080B11;">CODEX #2 • CODEX_2_DIWAN_UMAR_JUND_AND_KHARAJ</span>
+    <span class="stage-date">15–20 AH (636–641 CE) — Caliphate of 'Umar ibn al-Khattab</span>
+  </div>
+  <h3>Codex II: 'Umar's Supreme State Register (Diwan Al-Jund) &amp; The Sawad Cadastral Survey</h3>
+  <div class="arabic-sub">Tadwīn الديوان: دِيوان الجُند وديوان الخَراج (تدوين الدواوين في عهد عمر بن الخطاب)</div>
+  <p class="chronicler-line"><strong>Chronicler / Chancery Institution:</strong> Caliph 'Umar ibn al-Khattab with genealogists 'Aqil ibn Abi Talib, Makhramah ibn Nawfal, Jubayr ibn Mut'im, and surveyor 'Uthman ibn Hunayf</p>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Recording Methodology, Archival Medium &amp; Topography</span>
+      <p>Comprehensive state census and land-survey (Misahah) recording every companion by precedence (Sabiqah: Ahl Badr first, then Hudaybiyyah, then Qadisiyyah/Yarmuk) and surveying the 36,000,000 Jarib of conquered Iraqi alluvial farmland (Arḍ As-Sawād) by crop type and irrigation access.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Constitutional, Fiscal &amp; Legal Governance Rule (Ṣulḥ vs. 'Anwah / Waqf)</span>
+      <p>Refused to divide conquered lands as private feudal booty among soldiers; instead, citing Qur'an 59:7-10 ('And those who come after them...'), 'Umar immobilized conquered land as perpetual public Waqf for all future generations, paying soldiers fixed stipends ('Ata') from the Diwan.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Canonical Source &amp; Proof:</strong> Qur'an 59:7-10 (Surah Al-Hashr), Abu Yusuf's Kitab Al-Kharaj 24-45 &amp; Al-Mawardi's Al-Ahkam As-Sultaniyyah
+  </div>
+</article>
+<article class="codex-card" style="border-left: 4px solid #38BDF8;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#38BDF8;color:#080B11;">CODEX #3 • CODEX_3_MAGHAZI_SIRAH_URWAH_ZUHRI_IBN_ISHAQ</span>
+    <span class="stage-date">60–218 AH (680–833 CE) — Medinan &amp; Baghdadi Maghazi School</span>
+  </div>
+  <h3>Codex III: The Canonical Maghazi Chronicles (Recording Every Caravan, Banner &amp; Participant)</h3>
+  <div class="arabic-sub">Tadwīn المغازي والسير: عروة والزهري وابن إسحاق وابن هشام</div>
+  <p class="chronicler-line"><strong>Chronicler / Chancery Institution:</strong> 'Urwah ibn az-Zubayr (d. 94 AH), Ibn Shihab az-Zuhri (d. 124 AH), Muhammad ibn Ishaq (d. 151 AH), and 'Abd al-Malik ibn Hisham (d. 218 AH)</p>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Recording Methodology, Archival Medium &amp; Topography</span>
+      <p>Isnad-verified oral and written transmission compiled into multi-volume codices on Khurasani paper (Kaghad). Records the exact chronology, lunar dates, banners (Al-Liwa' vs. Ar-Rayah), watchwords ('Ya Mansur Amit!'), camel counts, martyr rosters, and revealed Qur'anic verses for all 27 Ghazawat and 38+ Saraya.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Constitutional, Fiscal &amp; Legal Governance Rule (Ṣulḥ vs. 'Anwah / Waqf)</span>
+      <p>Framed Islamic military history not as royal boasting, but as sacred legal precedent (Sunnah) governing rules of engagement, protection of non-combatants, prisoner ransom (as at Badr via teaching literacy), and treaty fidelity.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Canonical Source &amp; Proof:</strong> Qur'an 3:123, 8:41, 9:100 &amp; Ibn Hisham's As-Sirah An-Nabawiyyah
+  </div>
+</article>
+<article class="codex-card" style="border-left: 4px solid #A78BFA;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#A78BFA;color:#080B11;">CODEX #4 • CODEX_4_WAQIDI_KITAB_AL_MAGHAZI_TOPOGRAPHY</span>
+    <span class="stage-date">130–207 AH (747–823 CE) — Empirical Topographical Archive</span>
+  </div>
+  <h3>Codex IV: Al-Waqidi's Topographical Field-Ledger &amp; Ibn Sa'd's Biographical Tabaqat</h3>
+  <div class="arabic-sub">Kitāb المغازي للواقدي والطبقات الكبرى لابن سعد</div>
+  <p class="chronicler-line"><strong>Chronicler / Chancery Institution:</strong> Muhammad ibn 'Umar al-Waqidi (d. 207 AH) &amp; his scribe Muhammad ibn Sa'd (d. 230 AH, Kitab At-Tabaqat Al-Kubra)</p>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Recording Methodology, Archival Medium &amp; Topography</span>
+      <p>Al-Waqidi personally visited every caravan watering-hole, mountain pass, and battlefield in the Hijaz to measure distances in miles (Mil), interview descendants holding family treaty parchments, and cross-tabulate every caravan interception against the seasonal agricultural calendar.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Constitutional, Fiscal &amp; Legal Governance Rule (Ṣulḥ vs. 'Anwah / Waqf)</span>
+      <p>Established empirical historical geography and prosopography (Ilm Ar-Rijal), ensuring that every participant's name, lineage, weapon, and station on the battlefield grid was permanently preserved.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Canonical Source &amp; Proof:</strong> Al-Waqidi's Kitab Al-Maghazi (3 vols.) &amp; Ibn Sa'd's Tabaqat (8 vols.)
+  </div>
+</article>
+<article class="codex-card" style="border-left: 4px solid #10B981;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#10B981;color:#080B11;">CODEX #5 • CODEX_5_BALADHURI_FUTUH_AL_BULDAN</span>
+    <span class="stage-date">200–279 AH (815–892 CE) — Abbasid Imperial Chancery Synthesis</span>
+  </div>
+  <h3>Codex V: Al-Baladhuri's 'Futuh Al-Buldan' — The Master Legal &amp; Geographic Atlas of Conquest</h3>
+  <div class="arabic-sub">Futūḥ البُلدان للبلاذري (فتوح البلدان وتصنيف الصلح والعنوة)</div>
+  <p class="chronicler-line"><strong>Chronicler / Chancery Institution:</strong> Ahmad ibn Yahya al-Baladhuri (d. 279 AH / 892 CE), together with Ibn 'Abd al-Hakam (Futuh Misr) and Khalifah ibn Khayyat</p>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Recording Methodology, Archival Medium &amp; Topography</span>
+      <p>Organized geographically province-by-province (Arabia, Syria, Cyprus, Armenia, Egypt, Maghrib, Andalusia, Iraq, Persia, Khorasan, Sind), recording how every single town and fortress was opened—whether Sulhan (by negotiated peace treaty) or 'Anwatan (by force)—along with appendix chapters on the Arabic script, Diwan translation, and coinage.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Constitutional, Fiscal &amp; Legal Governance Rule (Ṣulḥ vs. 'Anwah / Waqf)</span>
+      <p>Served as the binding constitutional reference for Qadis and Viziers across the Abbasid Empire: a city opened Sulhan could never have its treaty tax arbitrarily raised or its churches/synagogues confiscated.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Canonical Source &amp; Proof:</strong> Al-Baladhuri's Futuh Al-Buldan (Brill ed., pp. 1-480) &amp; Yahya ibn Adam's Kitab Al-Kharaj
+  </div>
+</article>
+<article class="codex-card" style="border-left: 4px solid #B87333;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#B87333;color:#080B11;">CODEX #6 • CODEX_6_MASALIK_GEOGRAPHY_AND_SIKKA_NUMISMATICS</span>
+    <span class="stage-date">3rd–6th Century AH (850–1160 CE) — Postal, Caravan &amp; Mint Archives</span>
+  </div>
+  <h3>Codex VI: Al-Masalik wa Al-Mamalik (Caravan Itinerary Atlases) &amp; Epigraphic Sikka Mint Ledgers</h3>
+  <div class="arabic-sub">Kutub المسالك والممالك وسجلات دار الضرب والسكة</div>
+  <p class="chronicler-line"><strong>Chronicler / Chancery Institution:</strong> Ibn Khordadbeh (Postmaster General), Al-Istakhri, Ibn Hawqal, Al-Muqaddasi, and Ash-Sharif al-Idrisi (Nuzhat Al-Mushtaq)</p>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Recording Methodology, Archival Medium &amp; Topography</span>
+      <p>Mapped every caravan stage (Marhalah), postal relay station (Barid), water cistern, customs toll, regional commodity specialty, and mint-city (Dar Ad-Darb) stamping the year and city of conquest directly onto gold Dinars and silver Dirhams.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Constitutional, Fiscal &amp; Legal Governance Rule (Ṣulḥ vs. 'Anwah / Waqf)</span>
+      <p>Made every Islamic coin an indestructible bronze/silver/gold historical record of sovereignty (Sikka &amp; Khutbah), while Al-Masalik manuals provided merchants and administrators exact topological coordinates across the known world.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Canonical Source &amp; Proof:</strong> Ibn Khordadbeh's Kitab Al-Masalik wa Al-Mamalik &amp; Al-Idrisi's Tabula Rogeriana (1154 CE)
+  </div>
+</article>
+<article class="codex-card" style="border-left: 4px solid #F43F5E;">
+  <div class="stage-head">
+    <span class="stage-badge" style="background:#F43F5E;color:#080B11;">CODEX #7 • CODEX_7_OTTOMAN_FETIHNAME_AND_TAPU_TAHRIR</span>
+    <span class="stage-date">8th–13th Century AH (1300–1900 CE) — Ottoman Defterhane &amp; Nakkashane</span>
+  </div>
+  <h3>Codex VII: Ottoman Imperial Fetihnâme Proclamations, Tapu Tahrir Cadastral Defters &amp; Matrakçı Miniatures</h3>
+  <div class="arabic-sub">Fetihnâme-i Hümâyûn ve Tapu Tahrir Defterleri (الفتحنامة العثمانية ودفاتر الطابو التحرير)</div>
+  <p class="chronicler-line"><strong>Chronicler / Chancery Institution:</strong> Reisü'l-Küttab (Grand Chancery), Defter-i Hakani (Imperial Registry), and Matrakçı Nasuh (Beyan-i Menazil-i Sefer-i 'Irakeyn, 1537 CE)</p>
+  <div class="field-grid">
+    <div class="field-box">
+      <span class="lbl">Recording Methodology, Archival Medium &amp; Topography</span>
+      <p>Immediately upon a conquest, Ottoman scribes conducted an exhaustive household-by-household and parcel-by-parcel survey (Tapu Tahrir Defteri) in Siyaqat cryptographic script, recording every village, caravanserai, market toll (Bac-i Bazar), and Kanunname charter, while Matrakçı Nasuh painted every caravan/campaign stage in 2.5D isometric elevation.</p>
+    </div>
+    <div class="field-box highlight">
+      <span class="lbl">Constitutional, Fiscal &amp; Legal Governance Rule (Ṣulḥ vs. 'Anwah / Waqf)</span>
+      <p>Institutionalized the Pax Ottomanica ('Adalet Dairesi — Circle of Justice): no tax could be levied without a written Kanunname entry in the Defterhane, and every trade route was endowed with Waqf caravanserais.</p>
+    </div>
+  </div>
+  <div class="quran-footer">
+    <strong>Canonical Source &amp; Proof:</strong> Ottoman Tapu Tahrir Defterleri (Başbakanlık Archives) &amp; Matrakçı Nasuh's Menazilname (Istanbul Univ. Library T. 5964)
+  </div>
+</article>
+
+    </div>
+
+    <div class="section-title">
+      <h2>V. Cadastral &amp; Historiographical Ledger of Conquest Recording (At-Tadwīn)</h2>
+      <span>CONSTITUTIONAL DISTINCTION BETWEEN ṢULḤAN (TREATY) &amp; 'ANWATAN (FORCE) + PUBLIC WAQF IMMOBILIZATION</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Codex</th>
+            <th>Title &amp; Era</th>
+            <th>Chronicler / Chancery</th>
+            <th>Archival Medium &amp; Survey Methodology</th>
+            <th>Constitutional &amp; Fiscal Governance Rule</th>
+            <th>Primary Proof</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td><strong style="color:#F8F5E6;">Codex #1</strong><br><span class="mono-sm">CODEX_1_SAHIFAT_MADINAH_AND_SULH_CHARTERS</span></td>
+  <td><strong>Codex I: The Prophetic Treaty Scrolls, Safe-Conduct Charters &amp; Silver Seal Ring</strong><br><span class="arabic-inline">Ṣaḥīfat Al-Madīnah wa Kutub Al-Amān wa Aṣ-Ṣulḥ (صحيفة المدينة وكتب الأمان والصلح)</span><br><span class="mono-sm">1–10 AH (622–632 CE) — Prophetic Chancery of Medina</span></td>
+  <td>Scribes of the Prophet ﷺ (Kuttab Al-Wahy wa Al-Rasail): 'Ali ibn Abi Talib, Zayd ibn Thabit, Mu'awiyah ibn Abi Sufyan, and Ubayy ibn Ka'b</td>
+  <td>Written on tanned leather (Adim) and parchment, authenticated with the Prophet's three-line silver signet ring ('Muhammad / Rasul / Allah', Bukhari 5872). Every caravan truce (Hudaybiyyah) and frontier conquest charter (Khaybar, Aylah, Najran, Bahrain) was recorded in duplicate—one copy held by the local community, one archived in Medina.</td>
+  <td>Bound all future Muslim rulers to honor the exact tax ceilings, religious autonomy, and caravan safe-conducts ('la yuhdath 'alayhim hadath') stipulated in the original Prophetic treaty scroll.</td>
+  <td><span class="cite-pill">Qur'an 2:282 (Al-Mudayanah: 'Write it down in justice'), Sahih al-Bukhari 3179 &amp; Abu 'Ubayd's Kitab Al-Amwal</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#D4AF37;">Codex #2</strong><br><span class="mono-sm">CODEX_2_DIWAN_UMAR_JUND_AND_KHARAJ</span></td>
+  <td><strong>Codex II: 'Umar's Supreme State Register (Diwan Al-Jund) &amp; The Sawad Cadastral Survey</strong><br><span class="arabic-inline">Tadwīn الديوان: دِيوان الجُند وديوان الخَراج (تدوين الدواوين في عهد عمر بن الخطاب)</span><br><span class="mono-sm">15–20 AH (636–641 CE) — Caliphate of 'Umar ibn al-Khattab</span></td>
+  <td>Caliph 'Umar ibn al-Khattab with genealogists 'Aqil ibn Abi Talib, Makhramah ibn Nawfal, Jubayr ibn Mut'im, and surveyor 'Uthman ibn Hunayf</td>
+  <td>Comprehensive state census and land-survey (Misahah) recording every companion by precedence (Sabiqah: Ahl Badr first, then Hudaybiyyah, then Qadisiyyah/Yarmuk) and surveying the 36,000,000 Jarib of conquered Iraqi alluvial farmland (Arḍ As-Sawād) by crop type and irrigation access.</td>
+  <td>Refused to divide conquered lands as private feudal booty among soldiers; instead, citing Qur'an 59:7-10 ('And those who come after them...'), 'Umar immobilized conquered land as perpetual public Waqf for all future generations, paying soldiers fixed stipends ('Ata') from the Diwan.</td>
+  <td><span class="cite-pill">Qur'an 59:7-10 (Surah Al-Hashr), Abu Yusuf's Kitab Al-Kharaj 24-45 &amp; Al-Mawardi's Al-Ahkam As-Sultaniyyah</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#38BDF8;">Codex #3</strong><br><span class="mono-sm">CODEX_3_MAGHAZI_SIRAH_URWAH_ZUHRI_IBN_ISHAQ</span></td>
+  <td><strong>Codex III: The Canonical Maghazi Chronicles (Recording Every Caravan, Banner &amp; Participant)</strong><br><span class="arabic-inline">Tadwīn المغازي والسير: عروة والزهري وابن إسحاق وابن هشام</span><br><span class="mono-sm">60–218 AH (680–833 CE) — Medinan &amp; Baghdadi Maghazi School</span></td>
+  <td>'Urwah ibn az-Zubayr (d. 94 AH), Ibn Shihab az-Zuhri (d. 124 AH), Muhammad ibn Ishaq (d. 151 AH), and 'Abd al-Malik ibn Hisham (d. 218 AH)</td>
+  <td>Isnad-verified oral and written transmission compiled into multi-volume codices on Khurasani paper (Kaghad). Records the exact chronology, lunar dates, banners (Al-Liwa' vs. Ar-Rayah), watchwords ('Ya Mansur Amit!'), camel counts, martyr rosters, and revealed Qur'anic verses for all 27 Ghazawat and 38+ Saraya.</td>
+  <td>Framed Islamic military history not as royal boasting, but as sacred legal precedent (Sunnah) governing rules of engagement, protection of non-combatants, prisoner ransom (as at Badr via teaching literacy), and treaty fidelity.</td>
+  <td><span class="cite-pill">Qur'an 3:123, 8:41, 9:100 &amp; Ibn Hisham's As-Sirah An-Nabawiyyah</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#A78BFA;">Codex #4</strong><br><span class="mono-sm">CODEX_4_WAQIDI_KITAB_AL_MAGHAZI_TOPOGRAPHY</span></td>
+  <td><strong>Codex IV: Al-Waqidi's Topographical Field-Ledger &amp; Ibn Sa'd's Biographical Tabaqat</strong><br><span class="arabic-inline">Kitāb المغازي للواقدي والطبقات الكبرى لابن سعد</span><br><span class="mono-sm">130–207 AH (747–823 CE) — Empirical Topographical Archive</span></td>
+  <td>Muhammad ibn 'Umar al-Waqidi (d. 207 AH) &amp; his scribe Muhammad ibn Sa'd (d. 230 AH, Kitab At-Tabaqat Al-Kubra)</td>
+  <td>Al-Waqidi personally visited every caravan watering-hole, mountain pass, and battlefield in the Hijaz to measure distances in miles (Mil), interview descendants holding family treaty parchments, and cross-tabulate every caravan interception against the seasonal agricultural calendar.</td>
+  <td>Established empirical historical geography and prosopography (Ilm Ar-Rijal), ensuring that every participant's name, lineage, weapon, and station on the battlefield grid was permanently preserved.</td>
+  <td><span class="cite-pill">Al-Waqidi's Kitab Al-Maghazi (3 vols.) &amp; Ibn Sa'd's Tabaqat (8 vols.)</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#10B981;">Codex #5</strong><br><span class="mono-sm">CODEX_5_BALADHURI_FUTUH_AL_BULDAN</span></td>
+  <td><strong>Codex V: Al-Baladhuri's 'Futuh Al-Buldan' — The Master Legal &amp; Geographic Atlas of Conquest</strong><br><span class="arabic-inline">Futūḥ البُلدان للبلاذري (فتوح البلدان وتصنيف الصلح والعنوة)</span><br><span class="mono-sm">200–279 AH (815–892 CE) — Abbasid Imperial Chancery Synthesis</span></td>
+  <td>Ahmad ibn Yahya al-Baladhuri (d. 279 AH / 892 CE), together with Ibn 'Abd al-Hakam (Futuh Misr) and Khalifah ibn Khayyat</td>
+  <td>Organized geographically province-by-province (Arabia, Syria, Cyprus, Armenia, Egypt, Maghrib, Andalusia, Iraq, Persia, Khorasan, Sind), recording how every single town and fortress was opened—whether Sulhan (by negotiated peace treaty) or 'Anwatan (by force)—along with appendix chapters on the Arabic script, Diwan translation, and coinage.</td>
+  <td>Served as the binding constitutional reference for Qadis and Viziers across the Abbasid Empire: a city opened Sulhan could never have its treaty tax arbitrarily raised or its churches/synagogues confiscated.</td>
+  <td><span class="cite-pill">Al-Baladhuri's Futuh Al-Buldan (Brill ed., pp. 1-480) &amp; Yahya ibn Adam's Kitab Al-Kharaj</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#B87333;">Codex #6</strong><br><span class="mono-sm">CODEX_6_MASALIK_GEOGRAPHY_AND_SIKKA_NUMISMATICS</span></td>
+  <td><strong>Codex VI: Al-Masalik wa Al-Mamalik (Caravan Itinerary Atlases) &amp; Epigraphic Sikka Mint Ledgers</strong><br><span class="arabic-inline">Kutub المسالك والممالك وسجلات دار الضرب والسكة</span><br><span class="mono-sm">3rd–6th Century AH (850–1160 CE) — Postal, Caravan &amp; Mint Archives</span></td>
+  <td>Ibn Khordadbeh (Postmaster General), Al-Istakhri, Ibn Hawqal, Al-Muqaddasi, and Ash-Sharif al-Idrisi (Nuzhat Al-Mushtaq)</td>
+  <td>Mapped every caravan stage (Marhalah), postal relay station (Barid), water cistern, customs toll, regional commodity specialty, and mint-city (Dar Ad-Darb) stamping the year and city of conquest directly onto gold Dinars and silver Dirhams.</td>
+  <td>Made every Islamic coin an indestructible bronze/silver/gold historical record of sovereignty (Sikka &amp; Khutbah), while Al-Masalik manuals provided merchants and administrators exact topological coordinates across the known world.</td>
+  <td><span class="cite-pill">Ibn Khordadbeh's Kitab Al-Masalik wa Al-Mamalik &amp; Al-Idrisi's Tabula Rogeriana (1154 CE)</span></td>
+</tr>
+<tr>
+  <td><strong style="color:#F43F5E;">Codex #7</strong><br><span class="mono-sm">CODEX_7_OTTOMAN_FETIHNAME_AND_TAPU_TAHRIR</span></td>
+  <td><strong>Codex VII: Ottoman Imperial Fetihnâme Proclamations, Tapu Tahrir Cadastral Defters &amp; Matrakçı Miniatures</strong><br><span class="arabic-inline">Fetihnâme-i Hümâyûn ve Tapu Tahrir Defterleri (الفتحنامة العثمانية ودفاتر الطابو التحرير)</span><br><span class="mono-sm">8th–13th Century AH (1300–1900 CE) — Ottoman Defterhane &amp; Nakkashane</span></td>
+  <td>Reisü'l-Küttab (Grand Chancery), Defter-i Hakani (Imperial Registry), and Matrakçı Nasuh (Beyan-i Menazil-i Sefer-i 'Irakeyn, 1537 CE)</td>
+  <td>Immediately upon a conquest, Ottoman scribes conducted an exhaustive household-by-household and parcel-by-parcel survey (Tapu Tahrir Defteri) in Siyaqat cryptographic script, recording every village, caravanserai, market toll (Bac-i Bazar), and Kanunname charter, while Matrakçı Nasuh painted every caravan/campaign stage in 2.5D isometric elevation.</td>
+  <td>Institutionalized the Pax Ottomanica ('Adalet Dairesi — Circle of Justice): no tax could be levied without a written Kanunname entry in the Defterhane, and every trade route was endowed with Waqf caravanserais.</td>
+  <td><span class="cite-pill">Ottoman Tapu Tahrir Defterleri (Başbakanlık Archives) &amp; Matrakçı Nasuh's Menazilname (Istanbul Univ. Library T. 5964)</span></td>
+</tr>
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script>
+    const MAP_NODES = [
+      {
+        id: "SANAA_YEMEN", x: 520, y: 495, color: "#F8F5E6", group: "ilaf",
+        tag: "STAGE #1 • WINTER CARAVAN TERMINUS (RIḤLAT ASH-SHITĀ')",
+        title: "Ṣan'ā' & Aden (Yemen / Saba'): The Southern Winter Spice & Incense Hub",
+        arabic: "رحلة الشتاء إلى اليمن: مأرب وصنعاء وعدن (إيلاف قريش ١٠٦:١-٤)",
+        cargo: "Frankincense (Luban), myrrh, Yemeni leather (Adim), Suhuli white cotton textiles, Indian Ocean spices, and Abyssinian gold dust.",
+        battle: "Hashim ibn 'Abd Manaf secured the Ilaf safe-conduct treaty with the Himyarite/Abyssinian rulers so Quraysh caravans travelled unmolested.",
+        recording: "Later recorded as the first provincial fiscal treaty in Medina's chancery (Mu'adh ibn Jabal & the leather/textile Jizyah/Zakat scrolls of Yemen)."
+      },
+      {
+        id: "MAKKAH_HARAM", x: 430, y: 365, color: "#F43F5E", group: "fath",
+        tag: "STAGE #1 & #5 • UMM AL-QURĀ & FATḤ MAKKAH (RAMADAN 8 AH)",
+        title: "Makkah Al-Mukarramah: Sanctuary of Abraham & The Clear Conquest (Al-Fatḥ Al-Mubīn)",
+        arabic: "مكة المكرمة: البيت الحرام والفتح المبين (سورة الفتح ٤٨:١، التوبة ٩:٢٨)",
+        cargo: "Central clearinghouse joining the Winter Yemeni caravan to the Summer Syrian caravan; purified in 8 AH of pagan idol-tolls and Riba.",
+        battle: "After Quraysh broke the Hudaybiyyah truce, the Prophet ﷺ entered Mecca from four cardinal directions with 10,000 troops in a bloodless conquest.",
+        recording: "Proclaimed 'Antum at-Tulaqa'' (general amnesty) and abolished pre-Islamic usury in the Khutbat al-Fath, recorded in Bukhari and Muslim."
+      },
+      {
+        id: "NAKHLAH_PASS", x: 455, y: 340, color: "#A78BFA", group: "ilaf",
+        tag: "STAGE #2 • SARIYYAT NAKHLAH (RAJAB 2 AH / 624 CE)",
+        title: "Wādī Nakhlah: First Caravan Prize & Revelation of Qur'an 2:217",
+        arabic: "سرية بطن نخلة: أول غنيمة وخمس في الإسلام (البقرة ٢:٢١٧)",
+        cargo: "Quraysh caravan from Ta'if carrying raisins, tanned leather hides, and merchandise led by 'Amr ibn al-Hadrami.",
+        battle: "'Abdullah ibn Jahsh's 8-12 Muhajirun scouts intercepted the caravan on the last day of Rajab, seizing the caravan and bringing it to Medina.",
+        recording: "Qur'an 2:217 ruled that expelling believers from Al-Masjid Al-Haram is graver than Quraysh's pretext; here the first 1/5 Khums division was recorded."
+      },
+      {
+        id: "HUDAYBIYYAH", x: 405, y: 360, color: "#F43F5E", group: "fath",
+        tag: "STAGE #5 & CODEX #1 • ṢULḤ AL-ḤUDAYBIYYAH (6 AH / 628 CE)",
+        title: "Al-Ḥudaybiyyah: The Trade-Road Peace Treaty Naming Peace 'The Clear Conquest'",
+        arabic: "صلح الحديبية وبيعة الرضوان: إِنَّا فَتَحْنَا لَكَ فَتْحًا مُبِينًا (٤٨:١)",
+        cargo: "Reopened all Hijazi trade roads to safe passage between Medina, Mecca, and allied tribes for 10 years.",
+        battle: "1,400 Companions pledged Bay'at Ar-Ridwan under the tree; Quraysh envoy Suhayl ibn 'Amr signed the truce recognizing Medina as an equal sovereign.",
+        recording: "Written by 'Ali ibn Abi Talib in duplicate leather scrolls and sealed with the Prophet's three-line silver ring ('Muhammad / Rasul / Allah')."
+      },
+      {
+        id: "MADINAH_DIWAN", x: 405, y: 270, color: "#10B981", group: "tadwin",
+        tag: "CHANCERY CAPITAL • CODEX #1, #2, #3 & #4 (1–207 AH)",
+        title: "Al-Madīnah Al-Munawwarah: Prophetic Chancery, 'Umar's Dīwān & Maghāzī Archive",
+        arabic: "المدينة المنورة: دار الهجرة وصحيفة المدينة وديوان عمر وتدوين المغازي",
+        cargo: "Sovereign sanctuary governing the Red Sea & Najd trade corridors; grain imports via Jar port and Yamamah.",
+        battle: "Base of all 27 Ghazawat and 38+ Saraya; defended at Uhud and Al-Khandaq (the Trench).",
+        recording: "Seat of Sahifat Al-Madinah, Caliph 'Umar's Diwan Al-Jund (15-20 AH), 'Urwah ibn az-Zubayr, Az-Zuhri, Ibn Ishaq, and Al-Waqidi's empirical Maghazi surveys."
+      },
+      {
+        id: "BADR_WELLS", x: 365, y: 285, color: "#38BDF8", group: "badr",
+        tag: "STAGE #3 • YAWM AL-FURQĀN (17 RAMADAN 2 AH / 624 CE)",
+        title: "Wells of Badr: The Great Syrian Caravan (Al-'Īr) vs. The Meccan War-Host (An-Nafīr)",
+        arabic: "بدر الكبرى: يوم الفرقان بين العير والنفير (سورة الأنفال ٨:٧، ٨:٤١)",
+        cargo: "Abu Sufyan's 1,000-camel Syrian caravan carrying 50,000 gold Dinars of Meccan joint-stock capital.",
+        battle: "Medina's 313 believers seized the Badr water-wells; while the caravan escaped along the coast, Abu Jahl's 950-man oligarchic army was decisively shattered.",
+        recording: "Qur'an 8:41 codified the distribution of spoils, captives were ransomed by teaching Medinan children to read and write, and Ahl Badr headed 'Umar's Diwan."
+      },
+      {
+        id: "AL_IS_COAST", x: 355, y: 235, color: "#A78BFA", group: "badr",
+        tag: "STAGE #2 & #4 • SARIYYAT AL-'ĪṢ & SĪF AL-BAḤR (1–6 AH)",
+        title: "Al-'Īṣ & Red Sea Coast: Western Caravan Bottleneck & Final Blockade",
+        arabic: "العيس وسيف البحر: ممر القوافل الساحلي إلى الشام",
+        cargo: "Syrian silver and olive-oil caravans passing between Yanbu', Al-'Is, and Wadi al-Qura.",
+        battle: "Early patrols of Hamzah and 'Ubaydah projected Medinan presence here; in Jumada I, 6 AH, Zayd ibn Harithah captured Abu al-'As's Syrian silver caravan at Al-'Is.",
+        recording: "The caravan property was returned intact to Abu al-'As upon his embrace of Islam, proving Islamic caravan interception was legal restitution, not brigandage."
+      },
+      {
+        id: "AL_QARADAH_NAJD", x: 505, y: 265, color: "#D4AF37", group: "badr",
+        tag: "STAGE #4 • SARIYYAT AL-QARADAH (JUMADA II, 3 AH / Nov 624 CE)",
+        title: "Al-Qaradah (Najd Water-Spring): Interception of the Eastern Iraqi Silver Caravan",
+        arabic: "سرية القردة بنجد: اعتراض قافلة فضة قريش على طريق العراق",
+        cargo: "Safwan ibn Umayyah's caravan carrying 100,000 Dirhams of silver vessels, ingots, and bullion via the eastern Najd desert bypass.",
+        battle: "When Badr closed the Red Sea route, Quraysh tried the Iraqi route guided by Furat ibn Hayyan; Zayd ibn Harithah ambushed and captured the entire silver caravan.",
+        recording: "Recorded by Al-Waqidi (1/197) and Bukhari (4023): sealed Quraysh's last trade bypass and brought guide Furat ibn Hayyan into Islam."
+      },
+      {
+        id: "KHAYBAR_OASIS", x: 400, y: 215, color: "#F43F5E", group: "fath",
+        tag: "STAGE #5 & CODEX #1 • FATḤ KHAYBAR & FADAK (MUHARRAM 7 AH)",
+        title: "Khaybar & Wādī Al-Qurā: Agricultural Muzāra'ah Sharecropping Charter",
+        arabic: "خيبر ووادي القرى: عقد المساقاة والمزارعة النبوي",
+        cargo: "Northern Hijaz date-palm and grain oases along the Syrian trade road.",
+        battle: "Opened in 7 AH after the confederates of Al-Ahzab were neutralized, securing the northern trade road.",
+        recording: "Established the canonical Musaqat/Muzara'ah contract (50% harvest share) audited annually by 'Abdullah ibn Rawahah's just appraisal."
+      },
+      {
+        id: "TABUK_AYLAH", x: 325, y: 155, color: "#B87333", group: "fath",
+        tag: "STAGE #6 & CODEX #1 • GHAZWAT TABŪK & TREATY OF AYLAH (9 AH / 630 CE)",
+        title: "Tabūk & Port of Aylah (Aqaba): Charter of Safe-Conduct on Land and Sea",
+        arabic: "تبوك وأيلة: كتاب الأمان النبوي للسفن في البحر والسيارة في البر",
+        cargo: "Maritime Red Sea shipping at Aylah and Nabataean/Syrian olive-oil and grain caravans.",
+        battle: "The Prophet ﷺ marched with 30,000 companions to Tabuk; Byzantine frontier towns (Aylah, Adhruh, Jarba, Maqna, Dumat al-Jandal) entered peaceful Sulh treaties.",
+        recording: "The Treaty of Aylah ('Safe-conduct for their ships at sea and their caravans on land') became the constitutional template recorded in Al-Baladhuri's Futuh Al-Buldan."
+      },
+      {
+        id: "GAZA_DAMASCUS_SHAM", x: 330, y: 85, color: "#10B981", group: "tadwin",
+        tag: "STAGE #1, #6 & CODEX #5–#7 • GAZA, BUSRA, DAMASCUS & ISTANBUL",
+        title: "Gaza, Busra & Damascus (Ash-Shām): Summer Caravan Terminus, Gold Dinar Mint & Ottoman Defterhane",
+        arabic: "غزة وبصرى ودمشق: رحلة الصيف، دار ضرب الدينار الذهبي، ودفاتر الطابو",
+        cargo: "Mediterranean olive oil, Hauran wheat, Syrian glass, silk brocades, and Caliph 'Abd al-Malik's 4.25g epigraphic Gold Dinars.",
+        battle: "Hashim's tomb at Gaza anchored the Summer Caravan; opened in 13-15 AH (Ajnadayn, Damascus Sulh treaty, Yarmuk) under Khalid and Abu 'Ubaydah.",
+        recording: "Damascus minted the first purely epigraphic Islamic Gold Dinar (77 AH / 696 CE); later Ottoman Tapu Tahrir and Matrakci Nasuh's 2.5D miniatures mapped every Sultan Han caravanserai."
+      },
+      {
+        id: "SAWAD_BAGHDAD_IRAQ", x: 565, y: 125, color: "#D4AF37", group: "tadwin",
+        tag: "STAGE #6–#7 & CODEX #2–#6 • SAWĀD AL-'IRĀQ, KŪFAH, BASRA & BAGHDAD",
+        title: "Arḍ As-Sawād & Baghdad: 36-Million-Jarīb Waqf Cadastre, Futūḥ Al-Buldān & Darb Zubaydah",
+        arabic: "سواد العراق وبغداد: مسح عمر بن الخطاب (٣٦ مليون جريب وقفاً) وفتوح البلدان للبلاذري",
+        cargo: "Mesopotamian grain, textiles, paper (Kaghad), Persian Gulf pearl/spice maritime trade via Basra, and Darb Zubaydah pilgrim/merchant caravans.",
+        battle: "Opened under Sa'd ibn Abi Waqqas (Al-Qadisiyyah & Al-Mada'in, 15-16 AH) and connected to Central Asian Silk Road (Merv, Bukhara, Samarkand).",
+        recording: "Caliph 'Umar surveyed 36,000,000 Jarib as perpetual public Waqf (Qur'an 59:7-10); Al-Baladhuri composed Futuh Al-Buldan and Ibn Khordadbeh mapped Al-Masalik in Baghdad."
+      }
+    ];
+
+    const ROUTES = [
+      { from: "MAKKAH_HARAM", to: "SANAA_YEMEN", color: "#F8F5E6", label: "Winter Caravan (Riḥlat Ash-Shitā')", group: "ilaf", dashed: false },
+      { from: "MAKKAH_HARAM", to: "NAKHLAH_PASS", color: "#A78BFA", label: "Ta'if / Nakhlah Route", group: "ilaf", dashed: false },
+      { from: "MAKKAH_HARAM", to: "HUDAYBIYYAH", color: "#F43F5E", label: "Ḥudaybiyyah / Fatḥ Corridor", group: "fath", dashed: false },
+      { from: "MAKKAH_HARAM", to: "BADR_WELLS", color: "#38BDF8", label: "Coastal Caravan Artery (Al-'Īr)", group: "badr", dashed: false },
+      { from: "BADR_WELLS", to: "AL_IS_COAST", color: "#38BDF8", label: "Red Sea Trade Route", group: "badr", dashed: false },
+      { from: "AL_IS_COAST", to: "TABUK_AYLAH", color: "#B87333", label: "Summer Caravan to Aylah", group: "fath", dashed: false },
+      { from: "TABUK_AYLAH", to: "GAZA_DAMASCUS_SHAM", color: "#10B981", label: "Summer Caravan (Riḥlat Aṣ-Ṣayf)", group: "ilaf", dashed: false },
+      { from: "MAKKAH_HARAM", to: "AL_QARADAH_NAJD", color: "#D4AF37", label: "Eastern Iraqi Silver Bypass", group: "badr", dashed: true },
+      { from: "AL_QARADAH_NAJD", to: "SAWAD_BAGHDAD_IRAQ", color: "#D4AF37", label: "Najd–Sawād Silver & Darb Zubaydah", group: "tadwin", dashed: true },
+      { from: "MADINAH_DIWAN", to: "BADR_WELLS", color: "#38BDF8", label: "Badr Interception Vector (2 AH)", group: "badr", dashed: false },
+      { from: "MADINAH_DIWAN", to: "AL_IS_COAST", color: "#A78BFA", label: "Al-'Īṣ Patrol Vector", group: "badr", dashed: false },
+      { from: "MADINAH_DIWAN", to: "AL_QARADAH_NAJD", color: "#D4AF37", label: "Zayd's Al-Qaradah Vector (3 AH)", group: "badr", dashed: false },
+      { from: "MADINAH_DIWAN", to: "MAKKAH_HARAM", color: "#F43F5E", label: "Hijrah & Fatḥ Makkah Axis (8 AH)", group: "fath", dashed: false },
+      { from: "MADINAH_DIWAN", to: "KHAYBAR_OASIS", color: "#F43F5E", label: "Khaybar Vector (7 AH)", group: "fath", dashed: false },
+      { from: "KHAYBAR_OASIS", to: "TABUK_AYLAH", color: "#B87333", label: "Tabūk Expedition Axis (9 AH)", group: "fath", dashed: false },
+      { from: "GAZA_DAMASCUS_SHAM", to: "SAWAD_BAGHDAD_IRAQ", color: "#10B981", label: "Fertile Crescent Ribāṭ / Barīd Highway", group: "tadwin", dashed: false }
+    ];
+
+    let activeFilter = 'all';
+    let selectedNode = MAP_NODES[5]; // Default to Badr
+    let animTick = 0;
+
+    function setCaravanFilter(filter, btn) {
+      activeFilter = filter;
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function updateHud(node) {
+      selectedNode = node;
+      document.getElementById('hudTag').textContent = node.tag;
+      document.getElementById('hudTag').style.color = node.color;
+      document.getElementById('hudTitle').textContent = node.title;
+      document.getElementById('hudArabic').textContent = node.arabic;
+      document.getElementById('hudCargo').textContent = node.cargo;
+      document.getElementById('hudBattle').textContent = node.battle;
+      document.getElementById('hudRecording').textContent = node.recording;
+    }
+
+    const canvas = document.getElementById('caravanConquestCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.addEventListener('click', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const mx = (e.clientX - rect.left) * scaleX;
+      const my = (e.clientY - rect.top) * scaleY;
+      for (const n of MAP_NODES) {
+        const dx = mx - n.x;
+        const dy = my - n.y;
+        if (Math.sqrt(dx * dx + dy * dy) <= 18) {
+          updateHud(n);
+          break;
+        }
+      }
+    });
+
+    function drawMap() {
+      animTick += 0.008;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Subtle isometric coordinate grid
+      ctx.strokeStyle = 'rgba(212, 175, 55, 0.07)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < canvas.width; x += 45) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y < canvas.height; y += 45) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+
+      // Draw Red Sea (Bahr Al-Qulzum) & Persian Gulf water contours
+      ctx.fillStyle = 'rgba(14, 116, 144, 0.22)';
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.moveTo(230, 140);
+      ctx.lineTo(315, 155);
+      ctx.lineTo(345, 290);
+      ctx.lineTo(415, 440);
+      ctx.lineTo(460, 535);
+      ctx.lineTo(335, 545);
+      ctx.lineTo(220, 320);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = 'rgba(56, 189, 248, 0.45)';
+      ctx.font = 'italic 12px Georgia, serif';
+      ctx.fillText('Baḥr Al-Qulzum (Red Sea)', 235, 360);
+
+      // Persian Gulf
+      ctx.fillStyle = 'rgba(14, 116, 144, 0.20)';
+      ctx.beginPath();
+      ctx.moveTo(615, 165);
+      ctx.lineTo(750, 255);
+      ctx.lineTo(790, 320);
+      ctx.lineTo(680, 340);
+      ctx.lineTo(590, 210);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(56, 189, 248, 0.45)';
+      ctx.fillText('Al-Khalīj / Sea of Basra', 645, 285);
+
+      // Draw Routes & Animated Caravan Packets
+      const nodeMap = {};
+      MAP_NODES.forEach(n => nodeMap[n.id] = n);
+
+      ROUTES.forEach((r, idx) => {
+        const n1 = nodeMap[r.from];
+        const n2 = nodeMap[r.to];
+        const visible = (activeFilter === 'all' || activeFilter === r.group);
+        ctx.save();
+        ctx.strokeStyle = r.color;
+        ctx.globalAlpha = visible ? 0.82 : 0.16;
+        ctx.lineWidth = visible ? 2.6 : 1.2;
+        if (r.dashed) ctx.setLineDash([6, 5]);
+        ctx.beginPath();
+        ctx.moveTo(n1.x, n1.y);
+        ctx.lineTo(n2.x, n2.y);
+        ctx.stroke();
+
+        if (visible) {
+          const t = (animTick + idx * 0.17) % 1;
+          const cx = n1.x + (n2.x - n1.x) * t;
+          const cy = n1.y + (n2.y - n1.y) * t;
+          ctx.fillStyle = '#FFF';
+          ctx.shadowColor = r.color;
+          ctx.shadowBlur = 10;
+          ctx.beginPath();
+          ctx.arc(cx, cy, 4.2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      });
+
+      // Draw Nodes
+      MAP_NODES.forEach(n => {
+        const visible = (activeFilter === 'all' || activeFilter === n.group || n.id === 'MADINAH_DIWAN' || n.id === 'MAKKAH_HARAM');
+        const isSelected = (selectedNode && selectedNode.id === n.id);
+        ctx.save();
+        ctx.globalAlpha = visible ? 1.0 : 0.28;
+
+        if (isSelected) {
+          ctx.strokeStyle = '#FFF';
+          ctx.lineWidth = 2.5;
+          ctx.beginPath();
+          ctx.arc(n.x, n.y, 17 + Math.sin(animTick * 8) * 2.5, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+
+        ctx.fillStyle = '#0B101B';
+        ctx.strokeStyle = n.color;
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 11, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = n.color;
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, 4.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#F8FAFC';
+        ctx.font = 'bold 11.5px Segoe UI, sans-serif';
+        ctx.fillText(n.title.split(':')[0], n.x + 15, n.y + 4);
+        ctx.restore();
+      });
+
+      // Compass / Legend overlay
+      ctx.fillStyle = 'rgba(15, 21, 33, 0.88)';
+      ctx.strokeStyle = 'rgba(212, 175, 55, 0.35)';
+      ctx.lineWidth = 1;
+      ctx.fillRect(16, 16, 255, 92);
+      ctx.strokeRect(16, 16, 255, 92);
+      ctx.fillStyle = '#FDE68A';
+      ctx.font = 'bold 11px monospace';
+      ctx.fillText('2.5D CARAVAN & MAGHĀZĪ ATLAS', 28, 36);
+      ctx.fillStyle = '#CBD5E1';
+      ctx.font = '11px Segoe UI, sans-serif';
+      ctx.fillText('• Click any station to inspect Tadwīn record', 28, 56);
+      ctx.fillText('• Solid lines: Coastal & Syrian/Yemeni Ilāf', 28, 74);
+      ctx.fillText('• Dashed lines: Najd–Iraqi Silver Bypass', 28, 92);
+
+      requestAnimationFrame(drawMap);
+    }
+    drawMap();
+  </script>
+
+<!-- SOV_CHROME_FOOTER_START -->
+<footer class="sov-footer-wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;padding-bottom:0.9rem;border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div>
+      <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">COMPLETE <span data-sov-total>63</span>-PORTAL CONTINUALLY UPDATED SITEMAP • CURRENT: #51 / 63 — Caravans, Trade Battles, Fatḥ &amp; Tadwīn (islamic-caravans-battles-conquest-chronicle.html)</div>
+      <div style="font-size:0.84rem;color:#CBD5E1;">Every HTML portal is directly cross-linked and continually synchronized across all 11 Architectural Wings and all 7 Chromatic/Theological Rows.</div>
+    </div>
+    <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+      <a class="sov-pill" href="conjoined-worlds-realms-principles-node-grid.html">← Prev: 3D Node-Art Terrain Grid (Meridian Guard)</a>
+      <span class="sov-pill sov-pill-counter">#51 / 63</span>
+      <a class="sov-pill sov-pill-master" href="index.html">🏠 Master Index (63)</a>
+      <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-caravans-battles-conquest-chronicle.html">🧭 Combined Omnibus</a>
+      <a class="sov-pill" href="greco-roman-gods-titans-daimones-islamic-judgment.html">Next: Greco-Roman Gods &amp; Titans Made Whole →</a>
+    </div>
+  </div>
+  <div class="sov-footer-cols">
+    <div class="sov-footer-cat"><h4>01. Master Hubs &amp; Architecture</h4><a class="" href="index.html">#01/63 Master Index Hub</a><a class="" href="master-combined-omnibus.html">#02/63 Combined Omnibus Reader</a><a class="" href="dependencies-report.html">#03/63 Dependencies &amp; Java 21+ Audit</a><a class="" href="conjoined-worlds-realms-principles-node-grid.html">#50/63 3D Node-Art Terrain Grid (Meridian Guard)</a><a class="active-link" href="islamic-caravans-battles-conquest-chronicle.html">#51/63 Caravans, Trade Battles, Fatḥ &amp; Tadwīn</a><a class="" href="greco-roman-gods-titans-daimones-islamic-judgment.html">#52/63 Greco-Roman Gods &amp; Titans Made Whole</a><a class="" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">#53/63 Philosophy, Alchemy, Theocracies &amp; Socrates</a><a class="" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">#55/63 Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a><a class="" href="islamic-countries-history-canonical-embrace-atlas.html">#56/63 History of Islamic Countries &amp; Canonical Embrace</a><a class="" href="islamic-caliphates-sultans-shahs-dynasties-return.html">#57/63 Caliphates, Sultans, Shahs &amp; Promise of Return</a><a class="" href="quranic-timeline-expansion-vol1-chronology.html">#58/63 Vol. I: Qur'anic Timeline of Expansion</a><a class="" href="quranic-timeline-expansion-vol2-properties-kingdoms.html">#59/63 Vol. II: Islamic Properties, Countries &amp; Kingdoms</a><a class="" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html">#60/63 Vol. III: Beauty of Islam &amp; Collegiate Thesis</a><a class="" href="islam-through-ages-vol1-reception-history.html">#61/63 Ages Vol. I: Islam &amp; Global Reception</a><a class="" href="islam-through-ages-vol2-philosophical-connotations.html">#62/63 Ages Vol. II: Philosophical Connotations</a><a class="" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">#63/63 Ages Vol. III: Scientific Discoveries Instantiated</a></div><div class="sov-footer-cat"><h4>02. Seven Pre-Prophetic Color Orders</h4><a class="" href="order-1-white.html">#04/63 Order #1: White</a><a class="" href="order-2-black.html">#05/63 Order #2: Black</a><a class="" href="order-3-sapphire.html">#06/63 Order #3: Sapphire</a><a class="" href="order-4-gold.html">#07/63 Order #4: Gold</a><a class="" href="order-5-crimson.html">#08/63 Order #5: Crimson</a><a class="" href="order-6-brass.html">#09/63 Order #6: Brass</a><a class="" href="order-7-emerald.html">#10/63 Order #7: Emerald</a></div><div class="sov-footer-cat"><h4>03. 3D Sanctum &amp; Seven Realms</h4><a class="" href="warlock-3d-sanctum.html">#11/63 3D Sanctum Master</a><a class="" href="realm-1-white.html">#12/63 Realm #1: 'Aravot</a><a class="" href="realm-2-black.html">#13/63 Realm #2: Makhon</a><a class="" href="realm-3-sapphire.html">#14/63 Realm #3: Zevul</a><a class="" href="realm-4-gold.html">#15/63 Realm #4: Shehaqim</a><a class="" href="realm-5-crimson.html">#16/63 Realm #5: Ma'on</a><a class="" href="realm-6-brass.html">#17/63 Realm #6: Raqia'</a><a class="" href="realm-7-emerald.html">#18/63 Realm #7: Vilon</a></div><div class="sov-footer-cat"><h4>04. Negentropic Priory &amp; Seven Planes</h4><a class="" href="priory-negentropy-order.html">#19/63 Negentropic Priory Atlas</a><a class="" href="plane-1-white.html">#20/63 Plane #1: Adam Kadmon / Lahut</a><a class="" href="plane-2-black.html">#21/63 Plane #2: Malbush / Al-Qalam</a><a class="" href="plane-3-sapphire.html">#22/63 Plane #3: Beri'ah / Jabarut</a><a class="" href="plane-4-gold.html">#23/63 Plane #4: Atzilut / Al-Arwah</a><a class="" href="plane-5-crimson.html">#24/63 Plane #5: Tohu / Ash-Shuhub</a><a class="" href="plane-6-brass.html">#25/63 Plane #6: Yetzirah / Al-Marij</a><a class="" href="plane-7-emerald.html">#26/63 Plane #7: Tikkun / Al-Mithal</a></div><div class="sov-footer-cat"><h4>05. Seven Wrongdoer (Az-Zalimun) Profiles</h4><a class="" href="zalim-1-fasad.html">#27/63 Zalim #1: Al-Fasad</a><a class="" href="zalim-2-fahishah.html">#28/63 Zalim #2: Al-Fahishah</a><a class="" href="zalim-3-baghy.html">#29/63 Zalim #3: Al-Baghy (Nimrod)</a><a class="" href="zalim-4-fitnah.html">#30/63 Zalim #4: Al-Fitnah</a><a class="" href="zalim-5-hawa.html">#31/63 Zalim #5: Al-Hawa</a><a class="" href="zalim-6-jibt.html">#32/63 Zalim #6: Al-Jibt &amp; Taghut</a><a class="" href="zalim-7-zulm.html">#33/63 Zalim #7: Masjid Ad-Dirar</a></div><div class="sov-footer-cat"><h4>06. Seven Islamic Worlds of Hegemon &amp; Disorder</h4><a class="" href="worlds-hegemon-disorder.html">#34/63 7 Worlds Master Atlas</a><a class="" href="world-1-mizan-fasad.html">#35/63 World #1: Amanah vs. Fasad</a><a class="" href="world-2-haya-fahishah.html">#36/63 World #2: Haya' vs. Tabarruj</a><a class="" href="world-3-babil-namrud.html">#37/63 World #3: Ibrahim vs. Namrud</a><a class="" href="world-4-ummah-fitnah.html">#38/63 World #4: Ummah vs. Fitnah</a><a class="" href="world-5-furqan-hawa.html">#39/63 World #5: Furqan vs. Hawa</a><a class="" href="world-6-tawhid-taghut.html">#40/63 World #6: Tawhid vs. Taghut</a><a class="" href="world-7-taqwa-dirar.html">#41/63 World #7: Taqwa vs. Dirar</a></div><div class="sov-footer-cat"><h4>07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</h4><a class="" href="warlock-formation-dissolution-jafar-aladdin.html">#42/63 Ja'far &amp; Aladdin Qumqum</a><a class="" href="sequester-between-worlds.html">#43/63 7 Inter-World Sequesters</a></div><div class="sov-footer-cat"><h4>08. The Islamic Egg-in-Baking Intelocketer</h4><a class="" href="interlocker-egg-binder-islam.html">#44/63 Egg-in-Baking Intelocketer</a></div><div class="sov-footer-cat"><h4>09. The Warlock Apocrypha &amp; Modernity Theorems</h4><a class="" href="warlock-apocrypha-islamic-theorems.html">#45/63 Warlock Apocrypha &amp; Theorems</a></div><div class="sov-footer-cat"><h4>10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</h4><a class="" href="islamic-husbandry-sovereign-estate.html">#46/63 Vanguard Husbandry Estate</a><a class="" href="way-of-the-flower-rose-garden-islam.html">#47/63 Flower, Rose &amp; Chahar Bagh</a><a class="" href="islamic-modesty-evolution-western-frontier-men-women.html">#54/63 Men &amp; Women Modesty: Western Frontier</a></div><div class="sov-footer-cat"><h4>11. Islamic Animalism &amp; Visual History Atlases</h4><a class="" href="disney-daffy-donald-islamic-microcosm.html">#48/63 Disney/Daffy &amp; Jungle Microcosm</a><a class="" href="warlock-islamic-visual-eras-history.html">#49/63 7 Islamic Visual Eras &amp; AI Art</a></div>
+  </div>
+</footer>
+<!-- SOV_CHROME_FOOTER_END -->
+</body>
+</html>

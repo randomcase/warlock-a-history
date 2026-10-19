@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: warlock-6-brass
+
+warlock:
+  orderIndex: 6
+  profileId: "warlock-6-brass"
+  colorName: "Burnished Goetic Brass (Nechoshet Qalal)"
+  hexCode: "#B87333"
+  rgbRed: 184
+  rgbGreen: 115
+  rgbBlue: 51
+  wavelengthNm: 605
+  warlockName: "Ba'al Ha-Nechoshet"
+  hebrewTitle: "Chotem Tehom Rabah"
+  arabicTitle: "Hakim Qumqum Al-Marij"
+  prePropheticStratum: "OMEGA_3_EVEN_HASHETIYAH_AND_OMEGA_5_MARIJ"
+  primaryPillar: "SOLOMONIC_GOETIC_BINDING"
+  patronEntity: "Foundation Stone (Even HaShetiyah) & Wardens of Smokeless Fire"
+  sacredImplement: "Lead-Stoppered Damascene Brass Amphora & Proto-Signet Ring"
+  signatureInvocation: "Great Seal of the Foundation Stone & 72-Vessel Arraignment"
+  recitationMode: "Metallic Basso-Profundo Oath-Binding Recitative"
+  processCapabilityCp: 1.42
+  varianceSigma: 0.54

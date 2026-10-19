@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: zalim-2-fahishah
+
+zalim:
+  zalimIndex: 2
+  profileId: "zalim-2-fahishah"
+  arabicPrinciple: "Al-Fahishah wa At-Tabarruj (الفاحشة والتبرج — Gross Immodesty & Naked Circumambulation)"
+  hexCode: "#9E1B32"
+  rgbRed: 158
+  rgbGreen: 27
+  rgbBlue: 50
+  warlockName: "Da'i Al-Fahishah"
+  arabicArchetypeTitle: "Khadim At-Tabarruj Al-Jahili (Herald of Unclothed Transgression)"
+  quranicAnchor: "Qur'an 7:28, 7:33, 8:35, 24:19 ('When they commit a Fahishah, they say: We found our fathers doing it... Say: Indeed, Allah never commands Al-Fahishah!')"
+  abrahamicChallenge: "Desecrates the Abrahamic Sanctuary (Al-Bayt Al-Haram) through the Jahiliyyah rite of naked circumambulation (Tawaf al-'Urah) with whistling and clapping (muka'an wa tasdiyatan), stripping away the Garment of Taqwa (Libas at-Taqwa, Qur'an 7:26)."
+  wrongdoerCategory: "IMMODESTY_DESECRATION_OF_SANCTUARY"
+  rawEntropyBits: 0.810
+  uncorrectedCp: 0.84
+  uncorrectedSigma: 3.05
+  correctedCp: 1.43
+  prioryContainmentCell: "Quarantine Ward II: Cloister of Libas At-Taqwa & Modesty Seal (Qur'an 7:26-28)"

@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Islamic Modesty (Al-&#x1E24;ay&#x101;' &amp; Lib&#x101;s At-Taqw&#x101;) for Men &amp; Women Across the Western Frontier &amp; Expansions</title>
+  <style>
+    :root {
+      --bg-deep: #060913;
+      --bg-panel: #0d1424;
+      --bg-card: #121c31;
+      --gold: #f59e0b;
+      --gold-soft: rgba(245, 158, 11, 0.16);
+      --emerald: #10b981;
+      --emerald-soft: rgba(16, 185, 129, 0.15);
+      --cyan: #38bdf8;
+      --cyan-soft: rgba(56, 189, 248, 0.15);
+      --rose: #f43f5e;
+      --rose-soft: rgba(244, 63, 94, 0.15);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-subtle: rgba(245, 158, 11, 0.28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 0%, #13203c 0%, var(--bg-deep) 65%);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding-bottom: 4rem;
+    }
+    .hero-header {
+      padding: 3rem 2rem 2.2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.08) 0%, rgba(245, 158, 11, 0.05) 100%);
+    }
+    .hero-kicker {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero-header h1 {
+      font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+      color: #fff;
+      max-width: 1140px;
+      margin: 0 auto 0.9rem;
+      line-height: 1.25;
+    }
+    .hero-header p {
+      max-width: 980px;
+      margin: 0 auto 1.4rem;
+      color: var(--text-muted);
+      font-size: 1.03rem;
+    }
+    .pillar-banner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.9rem;
+      max-width: 1280px;
+      margin: 1.5rem auto 0;
+    }
+    .pillar-stat {
+      background: rgba(18, 28, 49, 0.88);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.95rem 1.1rem;
+      text-align: left;
+    }
+    .pillar-stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    .pillar-stat span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .canvas-panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+    }
+    .canvas-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .canvas-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .mode-btn {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .mode-btn.active, .mode-btn:hover {
+      background: var(--gold);
+      color: #060913;
+      border-color: var(--gold);
+    }
+    #modestyFrontierCanvas {
+      width: 100%;
+      height: 390px;
+      display: block;
+      background: radial-gradient(circle at 50% 50%, #101b33 0%, #050811 100%);
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.24);
+    }
+    .toolbar-search {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      margin-bottom: 2.2rem;
+    }
+    .toolbar-search input {
+      flex: 1;
+      min-width: 260px;
+      background: var(--bg-deep);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.65rem 1rem;
+      font-size: 0.95rem;
+    }
+    .section-block {
+      margin-bottom: 3rem;
+    }
+    .section-title {
+      border-left: 4px solid var(--gold);
+      padding-left: 1rem;
+      margin-bottom: 1.4rem;
+    }
+    .section-title h2 {
+      font-size: 1.55rem;
+      color: #fff;
+    }
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+      gap: 1.25rem;
+    }
+    .modesty-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(245, 158, 11, 0.22);
+      border-radius: 14px;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .modesty-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.22rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .badge-gold {
+      background: var(--gold-soft);
+      color: var(--gold);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .badge-emerald {
+      background: var(--emerald-soft);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .badge-cyan {
+      background: var(--cyan-soft);
+      color: var(--cyan);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+    .modesty-card h3 {
+      font-size: 1.15rem;
+      color: #fff;
+    }
+    .encounter-line {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+    .split-gender {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    .gender-box {
+      background: rgba(6, 9, 19, 0.65);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      border-left: 3px solid var(--cyan);
+    }
+    .gender-box.box-women {
+      border-left-color: var(--rose);
+    }
+    .gender-box h4 {
+      font-size: 0.84rem;
+      color: var(--cyan);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .gender-box.box-women h4 {
+      color: var(--rose);
+    }
+    .gender-box p {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+    }
+    .invariant-box {
+      background: rgba(16, 185, 129, 0.09);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 9px;
+      padding: 0.75rem 0.95rem;
+      font-size: 0.85rem;
+      color: #d1fae5;
+    }
+    .anchor-footer {
+      margin-top: auto;
+      padding-top: 0.65rem;
+      border-top: 1px dashed rgba(148, 163, 184, 0.25);
+      font-size: 0.82rem;
+      color: var(--gold);
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+    }
+    th, td {
+      padding: 0.95rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+      vertical-align: top;
+      font-size: 0.88rem;
+    }
+    th {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+  </style>
+<!-- SOV_CHROME_CSS_START -->
+<style id="sovereign-universal-nav-css">
+  .sov-global-wrap {
+    background: linear-gradient(90deg, #04060C 0%, #0C1324 50%, #04060C 100%);
+    border-bottom: 2px solid #D4AF37;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.65);
+  }
+  .sov-global-bar {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0.55rem 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+  .sov-wing-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .sov-pill:hover, .sov-pill.sov-active {
+    color: #FFFFFF;
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.22);
+  }
+  .sov-pill-master {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(16, 185, 129, 0.22));
+    border-color: #D4AF37;
+    color: #FDE68A;
+    font-weight: 700;
+  }
+  .sov-pill-omnibus {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.22));
+    border-color: #38BDF8;
+    color: #E0F2FE;
+    font-weight: 700;
+  }
+  .sov-pill-drawer {
+    background: #1E293B;
+    border-color: #F43F5E;
+    color: #FDA4AF;
+    font-weight: 700;
+  }
+  .sov-pill-counter {
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.18);
+    color: #FDE68A;
+    font-family: 'Consolas', monospace;
+    font-weight: 700;
+  }
+  .sov-pill-sync {
+    border-color: #10B981;
+    background: rgba(16, 185, 129, 0.14);
+    color: #6EE7B7;
+    font-family: 'Consolas', monospace;
+    font-size: 0.71rem;
+  }
+  .sov-sister-ribbon {
+    background: rgba(10, 15, 28, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.45rem 1.2rem;
+  }
+  .sov-sister-inner {
+    max-width: 1560px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .sov-sister-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-sister-label {
+    font-family: 'Consolas', monospace;
+    color: #FDE68A;
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .sov-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 5, 10, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 100000;
+    overflow-y: auto;
+    padding: 2rem 1.2rem;
+  }
+  .sov-modal-backdrop.open {
+    display: block;
+  }
+  .sov-modal-box {
+    max-width: 1380px;
+    margin: 0 auto;
+    background: #0B101D;
+    border: 2px solid #D4AF37;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.85);
+  }
+  .sov-modal-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .sov-search-input {
+    flex: 1;
+    min-width: 260px;
+    background: #050811;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.86rem;
+  }
+  .sov-drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 0.65rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.3rem;
+  }
+  .sov-drawer-item {
+    display: block;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #D4AF37;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    text-decoration: none;
+    color: #E2E8F0;
+    transition: all 0.14s ease;
+  }
+  .sov-drawer-item:hover, .sov-drawer-item.current {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: #D4AF37;
+    transform: translateY(-1px);
+  }
+  .sov-footer-wrap {
+    max-width: 1480px;
+    margin: 3rem auto 1rem auto;
+    padding: 1.5rem;
+    background: rgba(8, 12, 22, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-top: 3px solid #D4AF37;
+    border-radius: 14px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .sov-footer-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .sov-footer-cat h4 {
+    font-size: 0.78rem;
+    color: #FDE68A;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.25rem;
+  }
+  .sov-footer-cat a {
+    display: block;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.76rem;
+    padding: 0.14rem 0;
+  }
+  .sov-footer-cat a:hover, .sov-footer-cat a.active-link {
+    color: #38BDF8;
+    font-weight: 600;
+  }
+</style>
+<!-- SOV_CHROME_CSS_END -->
+</head>
+<body>
+<!-- SOV_CHROME_TOP_START -->
+<div id="sovereign-universal-nav" class="sov-global-wrap" data-portal-seq="54" data-portal-total="63">
+  <div class="sov-global-bar">
+    <div class="sov-wing-links">
+      <a class="sov-pill sov-pill-master " href="index.html">🏠 Master Index (<span data-sov-total>63</span>)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
+      <a class="sov-pill sov-pill-omnibus " href="quranic-timeline-expansion-vol1-chronology.html">🎓 Collegiate Thesis (#58–#60)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caliphates-sultans-shahs-dynasties-return.html">👑 Caliphates &amp; Return (#57)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-countries-history-canonical-embrace-atlas.html">🌍 57 OIC Countries (#56)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">🚰 Naming &amp; Sewer (#55)</a>
+      <a class="sov-pill sov-pill-omnibus sov-active" href="islamic-modesty-evolution-western-frontier-men-women.html">🧕 Western Modesty (#54)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">⚗️ Philosophy &amp; Alchemy (#53)</a>
+      <a class="sov-pill sov-pill-omnibus " href="greco-roman-gods-titans-daimones-islamic-judgment.html">⚖️ Greco-Roman &amp; Titans (#52)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caravans-battles-conquest-chronicle.html">🐪 Caravans &amp; Fatḥ (#51)</a>
+      <a class="sov-pill sov-pill-omnibus " href="conjoined-worlds-realms-principles-node-grid.html">⛰️ 3D Node-Art Grid (#50)</a>
+      <a class="sov-pill sov-pill-omnibus " href="master-combined-omnibus.html?portal=islamic-modesty-evolution-western-frontier-men-women.html">🧭 Combined Omnibus View</a>
+      <button type="button" class="sov-pill sov-pill-drawer" onclick="toggleSovDrawer()">⚡ All <span data-sov-total>63</span> Portals (Ctrl+K)</button>
+      <a class="sov-pill " href="order-1-white.html">🎨 7 Orders</a>
+      <a class="sov-pill " href="warlock-3d-sanctum.html">🏛️ 3D Sanctum &amp; Realms</a>
+      <a class="sov-pill " href="priory-negentropy-order.html">📐 Priory &amp; Planes</a>
+      <a class="sov-pill " href="zalim-1-fasad.html">⚠️ 7 Zalim</a>
+      <a class="sov-pill " href="worlds-hegemon-disorder.html">🌍 7 Worlds</a>
+      <a class="sov-pill " href="warlock-formation-dissolution-jafar-aladdin.html">🏺 Ja'far/Aladdin</a>
+      <a class="sov-pill " href="sequester-between-worlds.html">🧱 7 Sequesters</a>
+      <a class="sov-pill " href="interlocker-egg-binder-islam.html">🥚 Egg Binder</a>
+      <a class="sov-pill " href="warlock-apocrypha-islamic-theorems.html">📜 Apocrypha</a>
+      <a class="sov-pill " href="islamic-husbandry-sovereign-estate.html">🛡️ Husbandry</a>
+      <a class="sov-pill " href="way-of-the-flower-rose-garden-islam.html">🌹 Rose Garden</a>
+      <a class="sov-pill " href="disney-daffy-donald-islamic-microcosm.html">🦆 Disney/Daffy</a>
+      <a class="sov-pill " href="warlock-islamic-visual-eras-history.html">🕌 7 Visual Eras</a>
+      <a class="sov-pill " href="dependencies-report.html">📦 Dependencies</a>
+    </div>
+    <div class="sov-wing-links">
+      <a class="sov-pill" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html" title="Philosophy &amp; Alchemy in Islam: Canonical Adjustment to 7 Theocracies &amp; Theocrats, 5 Socratic Critiques &amp; 7 Stages of Message Meaning Shift">← Prev: Philosophy, Alchemy, Theocracies &amp; Socrates</a>
+      <span id="sovPortalCounterBadge" class="sov-pill sov-pill-counter" title="Continually Synchronized Portal Index (#54 of 63)">#54 / 63</span>
+      <button type="button" id="sovContinualCycleBtn" class="sov-pill sov-pill-sync" onclick="toggleSovContinualCycle()" title="Click to toggle Continual Auto-Advance across all 63 portals">🔄 Continual Sync: #54/63</button>
+      <a class="sov-pill" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" title="Canonical Naming in Islam by Region (Zakeem Malik McCaleb Abjad 261 Wafq), Development of Indonesia (87.2% Muslim), Sewer Project Structure, Language &amp; Calligraphy">Next: Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy →</a>
+    </div>
+  </div>
+  <div class="sov-sister-ribbon">
+  <div class="sov-sister-inner">
+    <div class="sov-sister-group">
+      <span class="sov-sister-label">7-FOLD SERIES QUICK JUMP:</span>
+      <a class="sov-pill" href="order-1-white.html"><span style="width:8px;height:8px;border-radius:50%;background:#F8F5E6;display:inline-block;"></span>Row #1: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-2-black.html"><span style="width:8px;height:8px;border-radius:50%;background:#A78BFA;display:inline-block;"></span>Row #2: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-3-sapphire.html"><span style="width:8px;height:8px;border-radius:50%;background:#38BDF8;display:inline-block;"></span>Row #3: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-4-gold.html"><span style="width:8px;height:8px;border-radius:50%;background:#D4AF37;display:inline-block;"></span>Row #4: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-5-crimson.html"><span style="width:8px;height:8px;border-radius:50%;background:#F43F5E;display:inline-block;"></span>Row #5: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-6-brass.html"><span style="width:8px;height:8px;border-radius:50%;background:#B87333;display:inline-block;"></span>Row #6: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-7-emerald.html"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;"></span>Row #7: Order/Realm/Plane/Zalim/World</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="sovMegaDrawer" class="sov-modal-backdrop" onclick="if(event.target===this)toggleSovDrawer()">
+  <div class="sov-modal-box">
+    <div class="sov-modal-header">
+      <div>
+        <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">SOVEREIGN MASTER ATLAS • ALL <span data-sov-total>63</span> HTML PORTALS CONTINUALLY INTEGRATED</div>
+        <h2 style="font-size:1.25rem;color:#FFF;margin:0.15rem 0;">Instant Portal Switcher &amp; Cross-Wing Navigator (#54 / 63)</h2>
+      </div>
+      <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all 63 portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+        <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="quranic-timeline-expansion-vol1-chronology.html">Collegiate Thesis (#58–#60)</a>
+        <a class="sov-pill sov-pill-omnibus" href="conjoined-worlds-realms-principles-node-grid.html">3D Node-Art Grid (#50)</a>
+        <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-modesty-evolution-western-frontier-men-women.html">Open in Split Omnibus</a>
+        <button type="button" class="sov-pill" onclick="toggleSovDrawer()">✕ Close (Esc)</button>
+      </div>
+    </div>
+    <div id="sovDrawerGrid" class="sov-drawer-grid">
+      <a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="index.html" data-search="master index hub sovereign master index, search &amp; 7-row cross-wing relational matrix 01. master hubs &amp; architecture al-fihris al-jāmi&#39; • all 63 portals continually integrated index.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#01 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">index.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Master Index Hub</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Fihris Al-Jāmi' • All 63 Portals Continually Integrated</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="master-combined-omnibus.html" data-search="combined omnibus reader combined multi-portal omnibus workspace &amp; split-screen comparator 01. master hubs &amp; architecture al-majmū&#39; al-muwahhad • all 63 portals side-by-side &amp; sequential reader master-combined-omnibus.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#02 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">master-combined-omnibus.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Combined Omnibus Reader</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Majmū' Al-Muwahhad • All 63 Portals Side-by-Side &amp; Sequential Reader</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="dependencies-report.html" data-search="dependencies &amp; java 21+ audit master spring boot 3.4 &amp; java 21+/26 essentials dependency usage report 01. master hubs &amp; architecture spc state s0 • sha-256 artifact ledger (all 63 portals) dependencies-report.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#03 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">dependencies-report.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Dependencies &amp; Java 21+ Audit</div><div style="font-size:0.72rem;color:#CBD5E1;">SPC State S0 • SHA-256 Artifact Ledger (All 63 Portals)</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="order-1-white.html" data-search="order #1: white order #1 (warlock-1-white) — malakh-azal (sephirotic white #f8f5e6) 02. seven pre-prophetic color orders malakh-azal • qur&#39;an 2:102 &amp; 53:19-23 order-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#04 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #1: White</div><div style="font-size:0.72rem;color:#CBD5E1;">Malakh-Azal • Qur'an 2:102 &amp; 53:19-23</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="order-2-black.html" data-search="order #2: black order #2 (warlock-2-black) — katib al-qalam (abbasid black #141416) 02. seven pre-prophetic color orders kātib al-qalam • qur&#39;an 68:1 &amp; 24:22 order-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#05 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #2: Black</div><div style="font-size:0.72rem;color:#CBD5E1;">Kātib Al-Qalam • Qur'an 68:1 &amp; 24:22</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="order-3-sapphire.html" data-search="order #3: sapphire order #3 (warlock-3-sapphire) — yored ha-merkabah (babylonian sapphire #0f2c59) 02. seven pre-prophetic color orders yored ha-merkabah • qur&#39;an 6:75-79 &amp; 53:1-18 order-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#06 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #3: Sapphire</div><div style="font-size:0.72rem;color:#CBD5E1;">Yored Ha-Merkabah • Qur'an 6:75-79 &amp; 53:1-18</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="order-4-gold.html" data-search="order #4: gold order #4 (warlock-4-gold) — shahid al-alast (covenant gold #d4af37) 02. seven pre-prophetic color orders shāhid al-alast • qur&#39;an 7:172 &amp; 3:67 order-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#07 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #4: Gold</div><div style="font-size:0.72rem;color:#CBD5E1;">Shāhid Al-Alast • Qur'an 7:172 &amp; 3:67</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="order-5-crimson.html" data-search="order #5: crimson order #5 (warlock-5-crimson) — saraph ha-ritzpah (seraphic crimson #8b0000) 02. seven pre-prophetic color orders saraph ha-ritzpah • qur&#39;an 72:8-9 &amp; 25:1 order-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#08 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #5: Crimson</div><div style="font-size:0.72rem;color:#CBD5E1;">Saraph Ha-Ritzpah • Qur'an 72:8-9 &amp; 25:1</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="order-6-brass.html" data-search="order #6: brass order #6 (warlock-6-brass) — ba&#39;al ha-nechoshet (solomonic brass #b87333) 02. seven pre-prophetic color orders ba&#39;al ha-nechoshet • qur&#39;an 2:102 &amp; 34:12 order-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#09 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #6: Brass</div><div style="font-size:0.72rem;color:#CBD5E1;">Ba'al Ha-Nechoshet • Qur'an 2:102 &amp; 34:12</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="order-7-emerald.html" data-search="order #7: emerald order #7 (warlock-7-emerald) — wali al-ghaib (khidrian emerald #006b54) 02. seven pre-prophetic color orders walī al-ghaib • qur&#39;an 18:65 &amp; 9:108 order-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#10 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #7: Emerald</div><div style="font-size:0.72rem;color:#CBD5E1;">Walī Al-Ghaib • Qur'an 18:65 &amp; 9:108</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="warlock-3d-sanctum.html" data-search="3d sanctum master interactive 3d seven-realm warlock sanctum &amp; celestial geometry 03. 3d sanctum &amp; seven realms al-haykal al-handasī • interactive webgl/canvas 3d warlock-3d-sanctum.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#11 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">warlock-3d-sanctum.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Sanctum Master</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Haykal Al-Handasī • Interactive WebGL/Canvas 3D</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="realm-1-white.html" data-search="realm #1: &#39;aravot realm #1 (white #f8f5e6) — &#39;aravot / sidrat al-muntaha 03. 3d sanctum &amp; seven realms seventh heaven • 390nm alabaster realm-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#12 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #1: 'Aravot</div><div style="font-size:0.72rem;color:#CBD5E1;">Seventh Heaven • 390nm Alabaster</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="realm-2-black.html" data-search="realm #2: makhon realm #2 (black #141416) — makhon / bayt al-qalam 03. 3d sanctum &amp; seven realms hidden ink treasury • 405nm obsidian realm-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#13 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #2: Makhon</div><div style="font-size:0.72rem;color:#CBD5E1;">Hidden Ink Treasury • 405nm Obsidian</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="realm-3-sapphire.html" data-search="realm #3: zevul realm #3 (sapphire #0f2c59) — zevul / al-bayt al-ma&#39;mur 03. 3d sanctum &amp; seven realms sapphire pavement • 465nm lapis realm-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#14 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #3: Zevul</div><div style="font-size:0.72rem;color:#CBD5E1;">Sapphire Pavement • 465nm Lapis</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="realm-4-gold.html" data-search="realm #4: shehaqim realm #4 (gold #d4af37) — shehaqim / diwan al-mithaq 03. 3d sanctum &amp; seven realms golden covenant court • 580nm amber-gold realm-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#15 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #4: Shehaqim</div><div style="font-size:0.72rem;color:#CBD5E1;">Golden Covenant Court • 580nm Amber-Gold</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="realm-5-crimson.html" data-search="realm #5: ma&#39;on realm #5 (crimson #8b0000) — ma&#39;on / rasad ash-shuhub 03. 3d sanctum &amp; seven realms seraphic garrison • 650nm crimson realm-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#16 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #5: Ma'on</div><div style="font-size:0.72rem;color:#CBD5E1;">Seraphic Garrison • 650nm Crimson</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="realm-6-brass.html" data-search="realm #6: raqia&#39; realm #6 (brass #b87333) — raqia&#39; / madinat an-nuhas 03. 3d sanctum &amp; seven realms city of brass • 605nm burnished brass realm-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#17 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #6: Raqia'</div><div style="font-size:0.72rem;color:#CBD5E1;">City of Brass • 605nm Burnished Brass</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="realm-7-emerald.html" data-search="realm #7: vilon realm #7 (emerald #006b54) — vilon / majma&#39; al-bahrayn 03. 3d sanctum &amp; seven realms junction of the two seas • 520nm emerald realm-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#18 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #7: Vilon</div><div style="font-size:0.72rem;color:#CBD5E1;">Junction of the Two Seas • 520nm Emerald</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="priory-negentropy-order.html" data-search="negentropic priory atlas the negentropic priory (sigma -1n &amp; 0n beta): ordering the 7 warlocks 04. negentropic priory &amp; seven planes sigma -1n &amp; 0n beta • δh = 0.000 bits priory-negentropy-order.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#19 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">priory-negentropy-order.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Negentropic Priory Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Sigma -1n &amp; 0n Beta • ΔH = 0.000 bits</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="plane-1-white.html" data-search="plane #1: adam kadmon / lahut plane #1 (white #f8f5e6) — olam adam kadmon / hadrat al-lahut 04. negentropic priory &amp; seven planes priory seat i • c_p = 1.62 plane-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#20 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #1: Adam Kadmon / Lahut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat I • C_p = 1.62</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="plane-2-black.html" data-search="plane #2: malbush / al-qalam plane #2 (black #141416) — olam ha-malbush / hadrat al-lawh wa al-qalam 04. negentropic priory &amp; seven planes priory seat vi • c_p = 1.38 plane-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#21 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #2: Malbush / Al-Qalam</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VI • C_p = 1.38</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="plane-3-sapphire.html" data-search="plane #3: beri&#39;ah / jabarut plane #3 (sapphire #0f2c59) — olam ha-beri&#39;ah / &#39;alam al-jabarut 04. negentropic priory &amp; seven planes priory seat iv • c_p = 1.44 plane-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#22 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #3: Beri'ah / Jabarut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat IV • C_p = 1.44</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="plane-4-gold.html" data-search="plane #4: atzilut / al-arwah plane #4 (gold #d4af37) — olam ha-atzilut / &#39;alam al-arwah 04. negentropic priory &amp; seven planes priory seat ii • c_p = 1.54 plane-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#23 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #4: Atzilut / Al-Arwah</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat II • C_p = 1.54</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="plane-5-crimson.html" data-search="plane #5: tohu / ash-shuhub plane #5 (crimson #8b0000) — olam ha-tohu / falak ash-shuhub 04. negentropic priory &amp; seven planes priory seat vii • c_p = 1.35 plane-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#24 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #5: Tohu / Ash-Shuhub</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VII • C_p = 1.35</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="plane-6-brass.html" data-search="plane #6: yetzirah / al-marij plane #6 (brass #b87333) — olam ha-yetzirah / &#39;alam al-marij 04. negentropic priory &amp; seven planes priory seat v • c_p = 1.40 plane-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#25 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #6: Yetzirah / Al-Marij</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat V • C_p = 1.40</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="plane-7-emerald.html" data-search="plane #7: tikkun / al-mithal plane #7 (emerald #006b54) — olam ha-tikkun / &#39;alam al-mithal wa al-barzakh 04. negentropic priory &amp; seven planes priory seat iii • c_p = 1.48 plane-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#26 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #7: Tikkun / Al-Mithal</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat III • C_p = 1.48</div></a><a class="sov-drawer-item" style="border-left-color:#EF4444;" href="zalim-1-fasad.html" data-search="zalim #1: al-fasad zalim #1 (zalim-1-fasad) — mufsid al-ard (ecological &amp; ritual disorder) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:204-205 • al-fasad fi al-ard zalim-1-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#27 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-1-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #1: Al-Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:204-205 • Al-Fasad fi Al-Ard</div></a><a class="sov-drawer-item" style="border-left-color:#EC4899;" href="zalim-2-fahishah.html" data-search="zalim #2: al-fahishah zalim #2 (zalim-2-fahishah) — da&#39;i al-fahishah (immodesty &amp; tabarruj) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 7:28 &amp; 24:19 • al-fahishah zalim-2-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#28 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-2-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #2: Al-Fahishah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:28 &amp; 24:19 • Al-Fahishah</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="zalim-3-baghy.html" data-search="zalim #3: al-baghy (nimrod) zalim #3 (zalim-3-baghy) — jabbar an-namrud (tyrannical counter-hegemony) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:258 &amp; 21:68-69 • al-baghy zalim-3-baghy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#29 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-3-baghy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #3: Al-Baghy (Nimrod)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:68-69 • Al-Baghy</div></a><a class="sov-drawer-item" style="border-left-color:#F97316;" href="zalim-4-fitnah.html" data-search="zalim #4: al-fitnah zalim #4 (zalim-4-fitnah) — nafikh al-fitnah (sectarian schism &amp; sedition) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:191 &amp; 3:103 • al-fitnah zalim-4-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#30 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-4-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #4: Al-Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:191 &amp; 3:103 • Al-Fitnah</div></a><a class="sov-drawer-item" style="border-left-color:#EAB308;" href="zalim-5-hawa.html" data-search="zalim #5: al-hawa zalim #5 (zalim-5-hawa) — &#39;abid al-hawa (deification of caprice) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 45:23 &amp; 25:43 • ittiba&#39; al-hawa zalim-5-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#31 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-5-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #5: Al-Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 45:23 &amp; 25:43 • Ittiba' Al-Hawa</div></a><a class="sov-drawer-item" style="border-left-color:#14B8A6;" href="zalim-6-jibt.html" data-search="zalim #6: al-jibt &amp; taghut zalim #6 (zalim-6-jibt) — kahin al-jibt (sorcerous idolatry &amp; azar&#39;s guild) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 4:51 &amp; 21:57-58 • al-jibt wa at-taghut zalim-6-jibt.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#32 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-6-jibt.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #6: Al-Jibt &amp; Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:51 &amp; 21:57-58 • Al-Jibt wa At-Taghut</div></a><a class="sov-drawer-item" style="border-left-color:#94A3B8;" href="zalim-7-zulm.html" data-search="zalim #7: masjid ad-dirar zalim #7 (zalim-7-zulm) — imam az-zalimin (counter-sanctuary subversion) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:124 &amp; 9:107-109 • masjid ad-dirar zalim-7-zulm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#33 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-7-zulm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #7: Masjid Ad-Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:124 &amp; 9:107-109 • Masjid Ad-Dirar</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="worlds-hegemon-disorder.html" data-search="7 worlds master atlas master atlas: the 7 islamic worlds of hegemon (al-muhaymin) &amp; disorder (al-fasad) 06. seven islamic worlds of hegemon &amp; disorder al-muhaymin vs. al-fasad • 3d dual-hemisphere globe worlds-hegemon-disorder.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#34 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">worlds-hegemon-disorder.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Worlds Master Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Muhaymin vs. Al-Fasad • 3D Dual-Hemisphere Globe</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="world-1-mizan-fasad.html" data-search="world #1: amanah vs. fasad world #1 — &#39;alam al-amanah wa al-fasad (trust vs. ecological disorder) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 14:35 &amp; 2:205 • order #1 vs. zalim #1 world-1-mizan-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#35 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-1-mizan-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #1: Amanah vs. Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 14:35 &amp; 2:205 • Order #1 vs. Zalim #1</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="world-2-haya-fahishah.html" data-search="world #2: haya&#39; vs. tabarruj world #2 — &#39;alam al-haram wa at-tabarruj (modesty vs. immodesty) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 7:26-28 • order #2 vs. zalim #2 world-2-haya-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#36 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-2-haya-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #2: Haya' vs. Tabarruj</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26-28 • Order #2 vs. Zalim #2</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="world-3-babil-namrud.html" data-search="world #3: ibrahim vs. namrud world #3 — &#39;alam babil wa al-jabbarin (cool-fire sanctuary vs. nimrod) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:258 &amp; 21:69 • order #3 vs. zalim #3 world-3-babil-namrud.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#37 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-3-babil-namrud.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #3: Ibrahim vs. Namrud</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:69 • Order #3 vs. Zalim #3</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="world-4-ummah-fitnah.html" data-search="world #4: ummah vs. fitnah world #4 — &#39;alam al-ummah al-wahidah wa al-fitnah (unity vs. schism) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 21:92 &amp; 3:103 • order #4 vs. zalim #4 world-4-ummah-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#38 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-4-ummah-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #4: Ummah vs. Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:92 &amp; 3:103 • Order #4 vs. Zalim #4</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="world-5-furqan-hawa.html" data-search="world #5: furqan vs. hawa world #5 — &#39;alam al-furqan wa al-hawa (revelation vs. caprice) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 5:48 &amp; 45:23 • order #5 vs. zalim #5 world-5-furqan-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#39 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-5-furqan-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #5: Furqan vs. Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 5:48 &amp; 45:23 • Order #5 vs. Zalim #5</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="world-6-tawhid-taghut.html" data-search="world #6: tawhid vs. taghut world #6 — &#39;alam al-&#39;urwah al-wuthqa wa at-taghut (iconoclasm vs. idols) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:256 &amp; 21:58 • order #6 vs. zalim #6 world-6-tawhid-taghut.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#40 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-6-tawhid-taghut.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #6: Tawhid vs. Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:256 &amp; 21:58 • Order #6 vs. Zalim #6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="world-7-taqwa-dirar.html" data-search="world #7: taqwa vs. dirar world #7 — &#39;alam bunyan at-taqwa wa juruf al-har (taqwa vs. counter-mosque) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 9:107-109 • order #7 vs. zalim #7 world-7-taqwa-dirar.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#41 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-7-taqwa-dirar.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #7: Taqwa vs. Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 9:107-109 • Order #7 vs. Zalim #7</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="warlock-formation-dissolution-jafar-aladdin.html" data-search="ja&#39;far &amp; aladdin qumqum islamic warlock formation (ja&#39;far / istidraj) &amp; dissolution (&#39;ala&#39; ad-din / qumqum) 07. warlock formation, dissolution &amp; inter-world sequesters istidrāj (qur&#39;an 6:44) -&gt; qumqum sulaymānī (21:18) warlock-formation-dissolution-jafar-aladdin.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#42 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">warlock-formation-dissolution-jafar-aladdin.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ja'far &amp; Aladdin Qumqum</div><div style="font-size:0.72rem;color:#CBD5E1;">Istidrāj (Qur'an 6:44) -&gt; Qumqum Sulaymānī (21:18)</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="sequester-between-worlds.html" data-search="7 inter-world sequesters the 7 inter-world sequesters (al-hijr al-mahjur &amp; sur al-hadid) 07. warlock formation, dissolution &amp; inter-world sequesters barzakh (55:19-20) &amp; sūr al-ḥadīd (18:96-97) sequester-between-worlds.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#43 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">sequester-between-worlds.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Inter-World Sequesters</div><div style="font-size:0.72rem;color:#CBD5E1;">Barzakh (55:19-20) &amp; Sūr Al-Ḥadīd (18:96-97)</div></a><a class="sov-drawer-item" style="border-left-color:#FBBF24;" href="interlocker-egg-binder-islam.html" data-search="egg-in-baking intelocketer the islamic intelocketer (al-murabbit al-kalim): egg-in-baking emulsifier &amp; al-a&#39;raf 08. the islamic egg-in-baking intelocketer qur&#39;an 37:49 (bayḍun maknūn) &amp; 7:46-48 (al-a&#39;rāf) interlocker-egg-binder-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#44 / 63 • 08. The Islamic Egg-in-Baking Intelocketer</span><code style="color:#38BDF8;">interlocker-egg-binder-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Egg-in-Baking Intelocketer</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 37:49 (Bayḍun Maknūn) &amp; 7:46-48 (Al-A'rāf)</div></a><a class="sov-drawer-item" style="border-left-color:#C084FC;" href="warlock-apocrypha-islamic-theorems.html" data-search="warlock apocrypha &amp; theorems the warlock apocrypha &amp; 5 islamic theological philosophy theorems on western modernity 09. the warlock apocrypha &amp; modernity theorems al-ghazālī • ibn khaldūn • mullā ṣadrā • al-attas • hallaq warlock-apocrypha-islamic-theorems.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#45 / 63 • 09. The Warlock Apocrypha &amp; Modernity Theorems</span><code style="color:#38BDF8;">warlock-apocrypha-islamic-theorems.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Warlock Apocrypha &amp; Theorems</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Ghazālī • Ibn Khaldūn • Mullā Ṣadrā • Al-Attas • Hallaq</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="islamic-husbandry-sovereign-estate.html" data-search="vanguard husbandry estate islamic action-based vanguard husbandry (al-qiwamah al-khadimah) &amp; husbandrystate 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-event simulation islamic-husbandry-sovereign-estate.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#46 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-husbandry-sovereign-estate.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vanguard Husbandry Estate</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-Event Simulation</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="way-of-the-flower-rose-garden-islam.html" data-search="flower, rose &amp; chahar bagh the islamic way of the flower (az-zahrah), the rose (al-wardah), the cultivating hand &amp; garden 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 55:37 (wardatan ka-ad-dihān), 3:37 &amp; 47:15 way-of-the-flower-rose-garden-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#47 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">way-of-the-flower-rose-garden-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Flower, Rose &amp; Chahar Bagh</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 55:37 (Wardatan ka-ad-Dihān), 3:37 &amp; 47:15</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="disney-daffy-donald-islamic-microcosm.html" data-search="disney/daffy &amp; jungle microcosm islamic animalism &amp; husbandry microcosm: donald, daffy, daisy &amp; the jungle book 11. islamic animalism &amp; visual history atlases qur&#39;an 6:38 (umamun amthālukum) • kalīlah wa dimnah disney-daffy-donald-islamic-microcosm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#48 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">disney-daffy-donald-islamic-microcosm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Disney/Daffy &amp; Jungle Microcosm</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 6:38 (Umamun Amthālukum) • Kalīlah wa Dimnah</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="warlock-islamic-visual-eras-history.html" data-search="7 islamic visual eras &amp; ai art warlock visuals across every era of islamic history: ai art plates &amp; sacred geometry 11. islamic animalism &amp; visual history atlases eras i–vii: bābil/saba&#39; to neo-islamic ai cyber-geometry warlock-islamic-visual-eras-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#49 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">warlock-islamic-visual-eras-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Islamic Visual Eras &amp; AI Art</div><div style="font-size:0.72rem;color:#CBD5E1;">Eras I–VII: Bābil/Saba' to Neo-Islamic AI Cyber-Geometry</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="conjoined-worlds-realms-principles-node-grid.html" data-search="3d node-art terrain grid (meridian guard) conjoined worlds, realms &amp; principles: 3d/2.5d islamic node-art terrain grid &amp; color guard of the meridian 01. master hubs &amp; architecture ḥaras al-alwān li-khaṭṭ al-mīzān • 7x7 (49-node) 3d heightmap conjoined-worlds-realms-principles-node-grid.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#50 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">conjoined-worlds-realms-principles-node-grid.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Node-Art Terrain Grid (Meridian Guard)</div><div style="font-size:0.72rem;color:#CBD5E1;">Ḥaras Al-Alwān li-Khaṭṭ Al-Mīzān • 7x7 (49-Node) 3D Heightmap</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caravans-battles-conquest-chronicle.html" data-search="caravans, trade battles, fatḥ &amp; tadwīn canonical islamic caravans (ilaf), battles for trade (badr/qaradah), founding of conquest (al-fath) &amp; recording of conquest (tadwin al-maghazi / futuh al-buldan) 01. master hubs &amp; architecture qur&#39;an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • al-&#39;īr, al-maghāzī, al-fatḥ &amp; dīwān islamic-caravans-battles-conquest-chronicle.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#51 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caravans-battles-conquest-chronicle.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caravans, Trade Battles, Fatḥ &amp; Tadwīn</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • Al-'Īr, Al-Maghāzī, Al-Fatḥ &amp; Dīwān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="greco-roman-gods-titans-daimones-islamic-judgment.html" data-search="greco-roman gods &amp; titans made whole greco-roman gods, titans (titanomachy), 12 olympians, morpheus/oneiroi, 7 erotes &amp; 150+ minor spirits: islamic reception, judgment &amp; wholeness 01. master hubs &amp; architecture al-furqān (21:22, 12:39-40, 39:42) &amp; at-takmīl • titans, oneiroi, erotes &amp; daimones greco-roman-gods-titans-daimones-islamic-judgment.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#52 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">greco-roman-gods-titans-daimones-islamic-judgment.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Greco-Roman Gods &amp; Titans Made Whole</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Furqān (21:22, 12:39-40, 39:42) &amp; At-Takmīl • Titans, Oneiroi, Erotes &amp; Daimones</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html" data-search="philosophy, alchemy, theocracies &amp; socrates philosophy &amp; alchemy in islam: canonical adjustment to 7 theocracies &amp; theocrats, 5 socratic critiques &amp; 7 stages of message meaning shift 01. master hubs &amp; architecture al-falsafah, al-kīmiyā&#39; (55:7-9), lā kahanūta (9:31), suqrāṭ &amp; lafẓ maḥfūẓ (15:9) islamic-philosophy-alchemy-theocracies-socratic-messages.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#53 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-philosophy-alchemy-theocracies-socratic-messages.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Philosophy, Alchemy, Theocracies &amp; Socrates</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Falsafah, Al-Kīmiyā' (55:7-9), Lā Kahanūta (9:31), Suqrāṭ &amp; Lafẓ Maḥfūẓ (15:9)</div></a><a class="sov-drawer-item current" style="border-left-color:#10B981;" href="islamic-modesty-evolution-western-frontier-men-women.html" data-search="men &amp; women modesty: western frontier how the modesty standard (al-haya&#39; &amp; libas at-taqwa) for men &amp; women changed across the western frontier &amp; expansions 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 7:26, 24:30-31, 33:59 &amp; 7:199 (&#39;urf) • hijaz, maghreb lithām, al-andalus, oran 1504 &amp; modern west islamic-modesty-evolution-western-frontier-men-women.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#54 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-modesty-evolution-western-frontier-men-women.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Men &amp; Women Modesty: Western Frontier</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26, 24:30-31, 33:59 &amp; 7:199 ('Urf) • Hijaz, Maghreb Lithām, Al-Andalus, Oran 1504 &amp; Modern West</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" data-search="naming (261 wafq), indonesia, sewer &amp; calligraphy canonical naming in islam by region (zakeem malik mccaleb abjad 261 wafq), development of indonesia (87.2% muslim), sewer project structure, language &amp; calligraphy 01. master hubs &amp; architecture abjad 261 wafq (9×29) • nusantara (87.2% muslim) • jss sewer grid • jawi/pegon &amp; ibn muqlah islamic-naming-indonesia-infrastructure-language-calligraphy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#55 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-naming-indonesia-infrastructure-language-calligraphy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</div><div style="font-size:0.72rem;color:#CBD5E1;">Abjad 261 Wafq (9×29) • Nusantara (87.2% Muslim) • JSS Sewer Grid • Jawi/Pegon &amp; Ibn Muqlah</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-countries-history-canonical-embrace-atlas.html" data-search="history of islamic countries &amp; canonical embrace the history of islamic countries (57 oic nations across 7 civilizational zones) &amp; how they canonically embrace being muslim 01. master hubs &amp; architecture diyār al-islām • 5 pathways of embrace (2:256) • 7 civilizational zones &amp; 6 institutional pillars islamic-countries-history-canonical-embrace-atlas.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#56 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-countries-history-canonical-embrace-atlas.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">History of Islamic Countries &amp; Canonical Embrace</div><div style="font-size:0.72rem;color:#CBD5E1;">Diyār Al-Islām • 5 Pathways of Embrace (2:256) • 7 Civilizational Zones &amp; 6 Institutional Pillars</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caliphates-sultans-shahs-dynasties-return.html" data-search="caliphates, sultans, shahs &amp; promise of return the caliphates, the sultans, the shahs &amp; the dynasties instantiated &amp; dissolved by islam: origin, journey &amp; the promise of returning 01. master hubs &amp; architecture qur&#39;an 3:26, 24:55 &amp; 15:9 • musnad aḥmad 18406 • sahih muslim 145 • ibn khaldūn&#39;s 4-gen law islamic-caliphates-sultans-shahs-dynasties-return.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#57 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caliphates-sultans-shahs-dynasties-return.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caliphates, Sultans, Shahs &amp; Promise of Return</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 3:26, 24:55 &amp; 15:9 • Musnad Aḥmad 18406 • Sahih Muslim 145 • Ibn Khaldūn's 4-Gen Law</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="quranic-timeline-expansion-vol1-chronology.html" data-search="vol. i: qur&#39;anic timeline of expansion collegiate multi-html suite vol. i: canonical qur&#39;anic timeline of islamic expansion across 10 epochs 01. master hubs &amp; architecture qur&#39;an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 canonical epochs quranic-timeline-expansion-vol1-chronology.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#58 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol1-chronology.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. I: Qur'anic Timeline of Expansion</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 Canonical Epochs</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="quranic-timeline-expansion-vol2-properties-kingdoms.html" data-search="vol. ii: islamic properties, countries &amp; kingdoms collegiate multi-html suite vol. ii: canonical islamic properties (waqf, kharāj, &#39;ushr, ḥimā, mawāt), countries &amp; kingdoms 01. master hubs &amp; architecture qur&#39;an 7:128, 59:7 &amp; 4:7-12 • fiqh al-amwāl &amp; al-aqālīm as-sab&#39;ah quranic-timeline-expansion-vol2-properties-kingdoms.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#59 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol2-properties-kingdoms.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. II: Islamic Properties, Countries &amp; Kingdoms</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:128, 59:7 &amp; 4:7-12 • Fiqh Al-Amwāl &amp; Al-Aqālīm As-Sab'ah</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html" data-search="vol. iii: beauty of islam &amp; collegiate thesis collegiate multi-html suite vol. iii: the 7 dimensions of the beauty of islam &amp; 8-chapter collegiate universal thesis monograph 01. master hubs &amp; architecture sahih muslim 91 &amp; 8 • qur&#39;an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6 quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#60 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. III: Beauty of Islam &amp; Collegiate Thesis</div><div style="font-size:0.72rem;color:#CBD5E1;">Sahih Muslim 91 &amp; 8 • Qur'an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islam-through-ages-vol1-reception-history.html" data-search="ages vol. i: islam &amp; global reception expansive multi-html suite vol. i: islam through the ages &amp; its global civilizational reception across 7 historical ages 01. master hubs &amp; architecture qur&#39;an 19:1-36, 39:18 &amp; 41:53 • aksum, baghdad, toledo, maragheh, oxford, weimar &amp; modern labs islam-through-ages-vol1-reception-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#61 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol1-reception-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. I: Islam &amp; Global Reception</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 19:1-36, 39:18 &amp; 41:53 • Aksum, Baghdad, Toledo, Maragheh, Oxford, Weimar &amp; Modern Labs</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="islam-through-ages-vol2-philosophical-connotations.html" data-search="ages vol. ii: philosophical connotations expansive multi-html suite vol. ii: the 7 philosophical connotations &amp; paradigms instantiated by islamic thought 01. master hubs &amp; architecture wājib al-wujūd • floating man • sunnat allāh • faṣl al-maqāl • al-i&#39;tibār • 4d motion • &#39;ilm al-&#39;umrān islam-through-ages-vol2-philosophical-connotations.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#62 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol2-philosophical-connotations.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. II: Philosophical Connotations</div><div style="font-size:0.72rem;color:#CBD5E1;">Wājib Al-Wujūd • Floating Man • Sunnat Allāh • Faṣl Al-Maqāl • Al-I'tibār • 4D Motion • 'Ilm Al-'Umrān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html" data-search="ages vol. iii: scientific discoveries instantiated expansive multi-html suite vol. iii: scientific discoveries alluded to in the qur&#39;an &amp; hadith instantiated through science 01. master hubs &amp; architecture qur&#39;an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (supernova iron z=26) islam-through-ages-vol3-scientific-discoveries-instantiated.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#63 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol3-scientific-discoveries-instantiated.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. III: Scientific Discoveries Instantiated</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (Supernova Iron Z=26)</div></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SOVEREIGN_CURRENT_SEQ = 54;
+  const SOVEREIGN_TOTAL_PORTALS = 63;
+  const SOVEREIGN_NEXT_FILE = "islamic-naming-indonesia-infrastructure-language-calligraphy.html";
+  let sovContinualTimer = null;
+
+  function syncSovereignPortalCounts() {
+    const items = document.querySelectorAll('#sovDrawerGrid .sov-drawer-item');
+    const liveTotal = items.length > 0 ? items.length : SOVEREIGN_TOTAL_PORTALS;
+    document.querySelectorAll('[data-sov-total]').forEach(el => {
+      el.textContent = String(liveTotal);
+    });
+    const badge = document.getElementById('sovPortalCounterBadge');
+    if (badge) {
+      badge.textContent = '#' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + ' / ' + String(liveTotal).padStart(2, '0');
+    }
+  }
+
+  function toggleSovContinualCycle() {
+    const btn = document.getElementById('sovContinualCycleBtn');
+    const active = sessionStorage.getItem('sovContinualCycleActive') === '1';
+    if (active) {
+      sessionStorage.removeItem('sovContinualCycleActive');
+      if (sovContinualTimer) { clearTimeout(sovContinualTimer); sovContinualTimer = null; }
+      if (btn) btn.textContent = '🔄 Continual Sync: #' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + '/' + String(SOVEREIGN_TOTAL_PORTALS).padStart(2, '0');
+    } else {
+      sessionStorage.setItem('sovContinualCycleActive', '1');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  }
+
+  function toggleSovDrawer() {
+    const el = document.getElementById('sovMegaDrawer');
+    if (!el) return;
+    el.classList.toggle('open');
+    if (el.classList.contains('open')) {
+      const inp = document.getElementById('sovDrawerSearch');
+      if (inp) { inp.value = ''; filterSovDrawer(''); inp.focus(); }
+    }
+  }
+  function filterSovDrawer(q) {
+    const query = (q || '').toLowerCase().trim();
+    document.querySelectorAll('#sovDrawerGrid .sov-drawer-item').forEach(el => {
+      const hay = el.getAttribute('data-search') || '';
+      el.style.display = (!query || hay.includes(query)) ? 'block' : 'none';
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      toggleSovDrawer();
+    } else if (e.key === 'Escape') {
+      const el = document.getElementById('sovMegaDrawer');
+      if (el && el.classList.contains('open')) el.classList.remove('open');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    syncSovereignPortalCounts();
+    if (sessionStorage.getItem('sovContinualCycleActive') === '1') {
+      const btn = document.getElementById('sovContinualCycleBtn');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  });
+</script>
+<!-- SOV_CHROME_TOP_END -->
+
+  <header class="hero-header">
+    <span class="hero-kicker">Portal #54 &bull; Al-&#x1E24;ay&#x101;', Lib&#x101;s At-Taqw&#x101; &amp; Thugh&#x16B;r Al-Gharb</span>
+    <h1>How the Modesty Standard for Men &amp; Women in Islam Changed Across the Western Frontier &amp; Expansions</h1>
+    <p>
+      Tracing the interplay between the <strong>Invariant Qur'anic Core</strong> (<em>Lib&#x101;s At-Taqw&#x101;</em> 7:26, symmetric lowering of the gaze 24:30&ndash;31,
+      male anti-arrogance &amp; female honor-recognition 33:59) and the <strong>Adaptive Customary Envelope (<em>Lib&#x101;s Al-'Urf</em>, 7:199)</strong>
+      from Hijaz and Byzantine Syria to the Almoravid Saharan <em>Lith&#x101;m</em> Inversion, Cordoban <em>Celos&#x12B;as</em>, the 1504 Oran Fatw&#x101;, Ottoman Rumelia, and the Modern Digital West.
+    </p>
+    <div class="pillar-banner">
+      <div class="pillar-stat">
+        <strong>I. Symmetric Gaze First (24:30&ndash;31)</strong>
+        <span>Men are commanded FIRST to lower their gaze (24:30) and renounce silk, gold, and prideful <em>Isb&#x101;l</em> before women's <em>Khim&#x101;r</em> is addressed (24:31)</span>
+      </div>
+      <div class="pillar-stat">
+        <strong>II. The Saharan <em>Lith&#x101;m</em> Inversion</strong>
+        <span>On the Berber Almoravid frontier, MEN wore the full face-veil (<em>Al-Lith&#x101;m</em>) while women went face-unveiled—validated under Maliki <em>'Urf</em></span>
+      </div>
+      <div class="pillar-stat">
+        <strong>III. Al-Andalus &amp; The 1504 Oran Fatw&#x101;</strong>
+        <span>From Ziry&#x101;b's linen <em>Aljubbas</em>, <em>Almalafas</em> &amp; 170+ female scholars to the Morisco coercion fatw&#x101; where inner <em>Taqw&#x101;</em> superseded banned fabric</span>
+      </div>
+      <div class="pillar-stat">
+        <strong>IV. Ottoman Suits to Digital Frontier</strong>
+        <span>From Mahmud II's 1829 tailored trousers &amp; Bosnian <em>Dimije</em> to modern Western tailored modesty and digital <em>Gha&#x1E0D;&#x1E0D; Al-Ba&#x1E63;ar</em></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="canvas-panel">
+      <div class="canvas-header">
+        <div>
+          <h2 style="font-size:1.25rem;color:#fff;">Interactive 2.5D Western Frontier Modesty Trajectory, Mashrabiyyah/Celos&#x12B;a Lattice &amp; 'Urf Synthesizer</h2>
+          <p style="font-size:0.86rem;color:var(--text-muted);">
+            Left: 3 Concentric Layers of Dress (7:26) &bull; Center: 7 Western Frontier Nodes (Hijaz &rarr; Levant &rarr; Maghreb Lith&#x101;m &rarr; Al-Andalus &rarr; Oran 1504 &rarr; Rumelia &rarr; Modern West) &bull; Right: Mashrabiyyah Privacy Lattice
+          </p>
+        </div>
+        <div class="canvas-controls">
+          <button class="mode-btn active" onclick="setModestyMode('ALL')">All Modesty Layers</button>
+          <button class="mode-btn" onclick="setModestyMode('MEN')">Masculine Standard (24:30)</button>
+          <button class="mode-btn" onclick="setModestyMode('WOMEN')">Feminine Standard (24:31)</button>
+          <button class="mode-btn" onclick="setModestyMode('FRONTIER')">7 Western Frontier Epochs</button>
+        </div>
+      </div>
+      <canvas id="modestyFrontierCanvas" width="1280" height="390"></canvas>
+    </section>
+
+    <div class="toolbar-search">
+      <input type="text" id="modestySearchInput" placeholder="Search across Litham, Almoravid, Al-Andalus, Ziryab, Almalafa, Oran Fatwa, Mahmud II, Ferace, Ghadd Al-Basar, Isbal, Shafi'i..." oninput="filterModestyPortal()" />
+      <span id="modestyCountBadge" class="badge badge-gold">Showing All 20 Canonical Modesty Nodes</span>
+    </div>
+
+    <section class="section-block">
+      <div class="section-title">
+        <h2>I. The 7 Canonical Foundational Principles: Invariant Core (Ath-Th&#x101;bit) vs. Customary Dress (Al-'Urf)</h2>
+        <p>Why Islam commands men first in ocular modesty (Qur'an 24:30), forbids male silk/gold/arrogance, protects female public dignity (33:59), and validates every indigenous frontier garment that is loose and opaque.</p>
+      </div>
+      <div class="card-grid">
+        <article class="modesty-card principle-card" data-search="PRINCIPLE_1_LIBAS_AT_TAQWA_THREE_TIERS_OF_DRESS 1. Libas At-Taqwa (The Garment of God-Consciousness — Qur'an 7:26) A man's outward garment is meaningless if his heart, tongue, and eyes betray trust; the Prophet (peace be upon him) was 'more modest than a maiden in her private chamber' (Bukhari 3562). A woman's outward garment is an honor-shield and act of worship, never a substitute for inner Taqwa, dignity, and intellectual/spiritual agency. Qur'an 7:26, 7:31-32, Sahih al-Bukhari 9 &amp; Bukhari 3562">
+  <div class="card-header">
+    <span class="badge badge-gold">PRINCIPLE 1 &bull; PRINCIPLE_1_LIBAS_AT_TAQWA_THREE_TIERS_OF_DRESS</span>
+    <span class="badge badge-emerald">Ath-Th&#x101;bit wa Al-Mutaghayyir</span>
+  </div>
+  <h3>1. Libas At-Taqwa (The Garment of God-Consciousness — Qur'an 7:26)</h3>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F6E1; Masculine Standard (Ar-Rij&#x101;l)</h4>
+      <p>A man's outward garment is meaningless if his heart, tongue, and eyes betray trust; the Prophet (peace be upon him) was 'more modest than a maiden in her private chamber' (Bukhari 3562).</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F339; Feminine Standard (An-Nis&#x101;')</h4>
+      <p>A woman's outward garment is an honor-shield and act of worship, never a substitute for inner Taqwa, dignity, and intellectual/spiritual agency.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2696; Invariant Core vs. Adaptive Custom ('Urf):</strong> INVARIANT: The 3 Qur'anic functions of dress—(1) Wariy as-Saw'at (covering nakedness), (2) Rish (dignified beauty), and (3) Libas At-Taqwa (inner righteousness). ADAPTIVE: The cut, dye, fiber, and regional tailoring.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Qur'anic &amp; Hadith Proof:</strong> Qur'an 7:26, 7:31-32, Sahih al-Bukhari 9 &amp; Bukhari 3562</span>
+  </div>
+</article>
+<article class="modesty-card principle-card" data-search="PRINCIPLE_2_GHADD_AL_BASAR_MASCULINE_FIRST_DUTY 2. Ghadd Al-Basar (Symmetric Lowering of the Gaze — Men Addressed First in Qur'an 24:30-31) Qur'an 24:30 commands believing MEN FIRST to lower their gaze (Yaghuddu min Absarihim) and guard their chastity before a single word is spoken about women's dress—placing the primary burden of public modesty on male self-mastery. Qur'an 24:31 then commands believing WOMEN with the exact same verbs—to lower their gaze and guard their chastity—establishing symmetric moral accountability before addressing the Khimar. Qur'an 24:30-31, Sahih Muslim 2159 (Jarir's hadith on turning away the sudden glance)">
+  <div class="card-header">
+    <span class="badge badge-gold">PRINCIPLE 2 &bull; PRINCIPLE_2_GHADD_AL_BASAR_MASCULINE_FIRST_DUTY</span>
+    <span class="badge badge-emerald">Ath-Th&#x101;bit wa Al-Mutaghayyir</span>
+  </div>
+  <h3>2. Ghadd Al-Basar (Symmetric Lowering of the Gaze — Men Addressed First in Qur'an 24:30-31)</h3>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F6E1; Masculine Standard (Ar-Rij&#x101;l)</h4>
+      <p>Qur'an 24:30 commands believing MEN FIRST to lower their gaze (Yaghuddu min Absarihim) and guard their chastity before a single word is spoken about women's dress—placing the primary burden of public modesty on male self-mastery.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F339; Feminine Standard (An-Nis&#x101;')</h4>
+      <p>Qur'an 24:31 then commands believing WOMEN with the exact same verbs—to lower their gaze and guard their chastity—establishing symmetric moral accountability before addressing the Khimar.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2696; Invariant Core vs. Adaptive Custom ('Urf):</strong> INVARIANT: Ocular discipline and refusal to objectify others in streets, markets, or digital screens. ADAPTIVE: How mixed civic spaces (markets, courts, universities) are organized.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Qur'anic &amp; Hadith Proof:</strong> Qur'an 24:30-31, Sahih Muslim 2159 (Jarir's hadith on turning away the sudden glance)</span>
+  </div>
+</article>
+<article class="modesty-card principle-card" data-search="PRINCIPLE_3_MASCULINE_ANTI_ARROGANCE_SILK_GOLD_ISBAL 3. Masculine Anti-Arrogance Code (Prohibition of Silk, Gold &amp; Isbal Khuyala') To prevent Muslim men on imperial frontiers from imitating the effeminate luxury and tyrannical pride of Byzantine and Sasanian emperors, Islam forbade men from wearing pure silk (Harir), gold jewelry, and dragging robes in arrogance (Isbal Khuyala'). Permitted silk and gold adornment for women (Tirmidhi 1720) as natural feminine beauty, while prohibiting boastful extravagance (Israf) and sensual exhibitionism (Tabarruj) before strangers. Sahih al-Bukhari 5783 (Isbal), Bukhari 5837 &amp; Sunan at-Tirmidhi 1720">
+  <div class="card-header">
+    <span class="badge badge-gold">PRINCIPLE 3 &bull; PRINCIPLE_3_MASCULINE_ANTI_ARROGANCE_SILK_GOLD_ISBAL</span>
+    <span class="badge badge-emerald">Ath-Th&#x101;bit wa Al-Mutaghayyir</span>
+  </div>
+  <h3>3. Masculine Anti-Arrogance Code (Prohibition of Silk, Gold &amp; Isbal Khuyala')</h3>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F6E1; Masculine Standard (Ar-Rij&#x101;l)</h4>
+      <p>To prevent Muslim men on imperial frontiers from imitating the effeminate luxury and tyrannical pride of Byzantine and Sasanian emperors, Islam forbade men from wearing pure silk (Harir), gold jewelry, and dragging robes in arrogance (Isbal Khuyala').</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F339; Feminine Standard (An-Nis&#x101;')</h4>
+      <p>Permitted silk and gold adornment for women (Tirmidhi 1720) as natural feminine beauty, while prohibiting boastful extravagance (Israf) and sensual exhibitionism (Tabarruj) before strangers.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2696; Invariant Core vs. Adaptive Custom ('Urf):</strong> INVARIANT: Male sobriety, humility, and covering at minimum naval-to-knee + shoulders in prayer + public Muru'ah. ADAPTIVE: Transition from unstitched Izar/Rida' to Syrian Jubbah, Berber Burnous, Ottoman Kaftan, and tailored Western suits.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Qur'anic &amp; Hadith Proof:</strong> Sahih al-Bukhari 5783 (Isbal), Bukhari 5837 &amp; Sunan at-Tirmidhi 1720</span>
+  </div>
+</article>
+<article class="modesty-card principle-card" data-search="PRINCIPLE_4_FEMININE_JILBAB_KHIMAR_AND_ILLA_MA_ZAHARA 4. Feminine Dignity &amp; Recognition (Khimar, Jilbab &amp; 'Illa Ma Zahara Minha') Men are legally and morally bound to respect women's public presence and never harass, stalk, or exclude them from mosques or civic life ('Do not prevent the female servants of Allah from the mosques of Allah,' Bukhari 900). Qur'an 24:31 (drawing the Khimar over the bosom/Juyub) and 33:59 (the outer Jilbab 'so they may be recognized as honorable and not harassed'), with the explicit exception 'except what naturally appears thereof' (illa ma zahara minha). Qur'an 24:31, 33:59, Sahih al-Bukhari 900 &amp; Sunan Abi Dawud 4104">
+  <div class="card-header">
+    <span class="badge badge-gold">PRINCIPLE 4 &bull; PRINCIPLE_4_FEMININE_JILBAB_KHIMAR_AND_ILLA_MA_ZAHARA</span>
+    <span class="badge badge-emerald">Ath-Th&#x101;bit wa Al-Mutaghayyir</span>
+  </div>
+  <h3>4. Feminine Dignity &amp; Recognition (Khimar, Jilbab &amp; 'Illa Ma Zahara Minha')</h3>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F6E1; Masculine Standard (Ar-Rij&#x101;l)</h4>
+      <p>Men are legally and morally bound to respect women's public presence and never harass, stalk, or exclude them from mosques or civic life ('Do not prevent the female servants of Allah from the mosques of Allah,' Bukhari 900).</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F339; Feminine Standard (An-Nis&#x101;')</h4>
+      <p>Qur'an 24:31 (drawing the Khimar over the bosom/Juyub) and 33:59 (the outer Jilbab 'so they may be recognized as honorable and not harassed'), with the explicit exception 'except what naturally appears thereof' (illa ma zahara minha).</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2696; Invariant Core vs. Adaptive Custom ('Urf):</strong> INVARIANT: Loose, opaque covering of the body and hair before non-Mahram men. ADAPTIVE: The majority of Hanafi, Maliki, and Shafi'i jurists (following Ibn 'Abbas) ruled that 'what naturally appears' is the face and hands needed for commerce, witness, and work, while regional dress varied from the Andalusian Almalafa to the Bosnian Samija and modern Hijab.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Qur'anic &amp; Hadith Proof:</strong> Qur'an 24:31, 33:59, Sahih al-Bukhari 900 &amp; Sunan Abi Dawud 4104</span>
+  </div>
+</article>
+<article class="modesty-card principle-card" data-search="PRINCIPLE_5_AL_ADAH_MUHAKKAMAH_CUSTOMARY_GARMENTS 5. Al-'Adah Muhakkamah (Permissibility of Indigenous Frontier Clothing — Qur'an 7:199) Islam never canonized 7th-century Arabian tribal dress as a religious uniform; the Prophet himself wore a Roman/Byzantine cloak (Jubbah Rumiyyah), a Syrian cloak (Jubbah Shamiyyah), and Yemenite Hibrah fabric. Whenever Islam entered a new frontier, indigenous women's garments that were opaque and loose were immediately accepted as Shar'i dress without requiring Arabization. Qur'an 7:199 ('Al-'Urf), Sahih al-Bukhari 363 (Jubbah Shamiyyah) &amp; Muslim 274">
+  <div class="card-header">
+    <span class="badge badge-gold">PRINCIPLE 5 &bull; PRINCIPLE_5_AL_ADAH_MUHAKKAMAH_CUSTOMARY_GARMENTS</span>
+    <span class="badge badge-emerald">Ath-Th&#x101;bit wa Al-Mutaghayyir</span>
+  </div>
+  <h3>5. Al-'Adah Muhakkamah (Permissibility of Indigenous Frontier Clothing — Qur'an 7:199)</h3>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F6E1; Masculine Standard (Ar-Rij&#x101;l)</h4>
+      <p>Islam never canonized 7th-century Arabian tribal dress as a religious uniform; the Prophet himself wore a Roman/Byzantine cloak (Jubbah Rumiyyah), a Syrian cloak (Jubbah Shamiyyah), and Yemenite Hibrah fabric.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F339; Feminine Standard (An-Nis&#x101;')</h4>
+      <p>Whenever Islam entered a new frontier, indigenous women's garments that were opaque and loose were immediately accepted as Shar'i dress without requiring Arabization.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2696; Invariant Core vs. Adaptive Custom ('Urf):</strong> INVARIANT: Opacity (La Yasiff), looseness (La Yasif), and avoidance of Libas Ash-Shuhrah (garments of vain spectacle). ADAPTIVE: Every frontier's climate-suited wool, linen, cotton, coat, trousers, or cloak.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Qur'anic &amp; Hadith Proof:</strong> Qur'an 7:199 ('Al-'Urf), Sahih al-Bukhari 363 (Jubbah Shamiyyah) &amp; Muslim 274</span>
+  </div>
+</article>
+<article class="modesty-card principle-card" data-search="PRINCIPLE_6_ISTI_DHAN_ARCHITECTURAL_AND_SPATIAL_PRIVACY 6. Isti'dhan &amp; Architectural Modesty (Sanctity of Domestic Privacy — Qur'an 24:27-28, 24:58) Forbids men from entering any home unannounced, peering through doors/windows (Bukhari 6241), or building structures that overlook a neighbor's private family courtyard (Darar Fahish). Guarantees women and families an unmonitored domestic sanctuary (Haram Al-Bayt) where outer wraps are laid aside in total comfort, breeze, and sunlight. Qur'an 24:27-28, 24:58-60 &amp; Sahih al-Bukhari 6241">
+  <div class="card-header">
+    <span class="badge badge-gold">PRINCIPLE 6 &bull; PRINCIPLE_6_ISTI_DHAN_ARCHITECTURAL_AND_SPATIAL_PRIVACY</span>
+    <span class="badge badge-emerald">Ath-Th&#x101;bit wa Al-Mutaghayyir</span>
+  </div>
+  <h3>6. Isti'dhan &amp; Architectural Modesty (Sanctity of Domestic Privacy — Qur'an 24:27-28, 24:58)</h3>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F6E1; Masculine Standard (Ar-Rij&#x101;l)</h4>
+      <p>Forbids men from entering any home unannounced, peering through doors/windows (Bukhari 6241), or building structures that overlook a neighbor's private family courtyard (Darar Fahish).</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F339; Feminine Standard (An-Nis&#x101;')</h4>
+      <p>Guarantees women and families an unmonitored domestic sanctuary (Haram Al-Bayt) where outer wraps are laid aside in total comfort, breeze, and sunlight.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2696; Invariant Core vs. Adaptive Custom ('Urf):</strong> INVARIANT: Three domestic permission times (Qur'an 24:58) and inviolability of the home. ADAPTIVE: Evolved from Medinan curtain-screens (Hijab) to Andalusian courtyard Riyads, Mashrabiyyah/Celosia wooden lattices, and modern digital privacy.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Qur'anic &amp; Hadith Proof:</strong> Qur'an 24:27-28, 24:58-60 &amp; Sahih al-Bukhari 6241</span>
+  </div>
+</article>
+<article class="modesty-card principle-card" data-search="PRINCIPLE_7_DARURAH_AND_IKRAH_EMERGENCY_CONCESSIONS 7. Darurah, Ikrah &amp; Taqiyyah (Medical, Frontier &amp; Persecution Concessions — Qur'an 2:185, 16:106) Permits silk for men suffering skin ailments (Bukhari 5839) or against lice/shrapnel on military frontiers, and permits surgical/medical exposure for both sexes. Under state persecution (such as the 1504 Oran Fatwa for Spanish Moriscos or modern coercive bans), outward dress concessions are legally excused while inner faith remains whole. Qur'an 2:185 ('Allah intends for you ease'), 16:106 &amp; The Oran Fatwa (910 AH / 1504 CE)">
+  <div class="card-header">
+    <span class="badge badge-gold">PRINCIPLE 7 &bull; PRINCIPLE_7_DARURAH_AND_IKRAH_EMERGENCY_CONCESSIONS</span>
+    <span class="badge badge-emerald">Ath-Th&#x101;bit wa Al-Mutaghayyir</span>
+  </div>
+  <h3>7. Darurah, Ikrah &amp; Taqiyyah (Medical, Frontier &amp; Persecution Concessions — Qur'an 2:185, 16:106)</h3>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F6E1; Masculine Standard (Ar-Rij&#x101;l)</h4>
+      <p>Permits silk for men suffering skin ailments (Bukhari 5839) or against lice/shrapnel on military frontiers, and permits surgical/medical exposure for both sexes.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F339; Feminine Standard (An-Nis&#x101;')</h4>
+      <p>Under state persecution (such as the 1504 Oran Fatwa for Spanish Moriscos or modern coercive bans), outward dress concessions are legally excused while inner faith remains whole.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2696; Invariant Core vs. Adaptive Custom ('Urf):</strong> INVARIANT: Preservation of life, faith, and dignity (Hifz Ad-Din wa An-Nafs). ADAPTIVE: Legal dispensations (Rukhsah) during war, medical treatment, extreme climate, or forced assimilation.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Qur'anic &amp; Hadith Proof:</strong> Qur'an 2:185 ('Allah intends for you ease'), 16:106 &amp; The Oran Fatwa (910 AH / 1504 CE)</span>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <h2>II. The 7 Historical Epochs Along the Islamic Western Frontier (Thugh&#x16B;r Al-Gharb) &amp; Expansions</h2>
+        <p>How men's and women's modesty evolved from 7th-century Medina through Byzantine Syria, Berber North Africa, Moorish Spain, the Morisco Underground, Ottoman Europe, and the 21st-century Western Diaspora.</p>
+      </div>
+      <div class="card-grid">
+        <article class="modesty-card frontier-card" data-search="FRONTIER_1_HIJAZI_BASELINE_LIBERATION_FROM_JAHILIYYAH Epoch I: The Hijazi Baseline (Mecca &amp; Medina, 1–11 AH / 610–632 CE) Men wore the unstitched Izar (lower wrap) and Rida' (upper mantle), the sewn Qamis (tunic), and on frontier marches the tight-sleeved Syrian cloak (Jubbah Shamiyyah, Bukhari 363). Men were commanded to lower their gaze first (24:30), raise hems above the ankles against pride, and renounce gold and silk. Women transitioned from open-necked Jahiliyyah wraps to the Khimar (covering hair, neck, and bosom, 24:31) and outer Jilbab (33:59) as a badge of free, honorable status—while praying in the mosque, trading in the market (Ash-Shifa' bint 'Abdillah as market inspector), and tending wounded soldiers on battlefields. Qur'an 7:26-32, 24:30-31, 33:59, Sahih al-Bukhari 363, 372 &amp; Sahih Muslim 3028">
+  <div class="card-header">
+    <span class="badge badge-cyan">WESTERN FRONTIER EPOCH 1 &bull; FRONTIER_1_HIJAZI_BASELINE_LIBERATION_FROM_JAHILIYYAH</span>
+    <span class="badge badge-gold">Thugh&#x16B;r Al-Gharb</span>
+  </div>
+  <h3>Epoch I: The Hijazi Baseline (Mecca &amp; Medina, 1–11 AH / 610–632 CE)</h3>
+  <p class="encounter-line"><strong>&#x1F30D; Frontier Encounter &amp; Cultural Challenge:</strong> Pre-Islamic Quraysh forced non-Meccan pilgrims to circumambulate the Ka'bah stark naked unless they rented Hums clothes (Muslim 3028), while elites dragged robes in tribal pride (Isbal) and practiced Tabarruj.</p>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F9D4; Men's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Men wore the unstitched Izar (lower wrap) and Rida' (upper mantle), the sewn Qamis (tunic), and on frontier marches the tight-sleeved Syrian cloak (Jubbah Shamiyyah, Bukhari 363). Men were commanded to lower their gaze first (24:30), raise hems above the ankles against pride, and renounce gold and silk.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F9D5; Women's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Women transitioned from open-necked Jahiliyyah wraps to the Khimar (covering hair, neck, and bosom, 24:31) and outer Jilbab (33:59) as a badge of free, honorable status—while praying in the mosque, trading in the market (Ash-Shifa' bint 'Abdillah as market inspector), and tending wounded soldiers on battlefields.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x1F3DB; Architectural, Spatial &amp; Legal Adaptation:</strong> Replaced Jahiliyyah forced ritual nudity with universal clothed dignity at the Ka'bah (Qur'an 7:31: 'Take your adornment at every masjid') and instituted domestic Isti'dhan (24:27).
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4DC; <strong>Primary Canonical &amp; Historical Sources:</strong> Qur'an 7:26-32, 24:30-31, 33:59, Sahih al-Bukhari 363, 372 &amp; Sahih Muslim 3028</span>
+  </div>
+</article>
+<article class="modesty-card frontier-card" data-search="FRONTIER_2_BYZANTINE_LEVANT_AND_EGYPT_THUGHUR Epoch II: The First Western Frontier — Byzantine Syria (Bilad Ash-Sham) &amp; Egypt (12–132 AH / 633–750 CE) Caliph 'Umar ibn al-Khattab entered Jerusalem in a patched tunic, rebuking commanders in Damascus who imitated Byzantine silk pomp, while approving practical frontier garments for cold/wet climates: tailored trousers (Sarawil), wool Jubbahs, and leather boots (Khuffayn). In Roman bathhouses, jurists mandated the male waist-wrap (Mi'zar). While urban prosperity in Damascus and Fustat led elite families to adopt stricter courtyard seclusion, early Syrian and Egyptian jurists (Al-Awza'i, Al-Layth ibn Sa'd, and Ash-Shafi'i in Cairo) maintained that a woman's face and hands remain uncovered in prayer and civic transactions. Sunan at-Tirmidhi 2801, Abu Dawud 4011, Al-Baladhuri &amp; Ash-Shafi'i's Kitab Al-Umm">
+  <div class="card-header">
+    <span class="badge badge-cyan">WESTERN FRONTIER EPOCH 2 &bull; FRONTIER_2_BYZANTINE_LEVANT_AND_EGYPT_THUGHUR</span>
+    <span class="badge badge-gold">Thugh&#x16B;r Al-Gharb</span>
+  </div>
+  <h3>Epoch II: The First Western Frontier — Byzantine Syria (Bilad Ash-Sham) &amp; Egypt (12–132 AH / 633–750 CE)</h3>
+  <p class="encounter-line"><strong>&#x1F30D; Frontier Encounter &amp; Cultural Challenge:</strong> Muslim armies entered Greco-Roman cities featuring two cultural extremes: (1) Byzantine imperial silk-and-gold aristocratic pageantry and noblewomen's Gynaeceum seclusion, and (2) Roman public bathhouses (Thermae / Hammamat) where bathing had been completely nude.</p>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F9D4; Men's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Caliph 'Umar ibn al-Khattab entered Jerusalem in a patched tunic, rebuking commanders in Damascus who imitated Byzantine silk pomp, while approving practical frontier garments for cold/wet climates: tailored trousers (Sarawil), wool Jubbahs, and leather boots (Khuffayn). In Roman bathhouses, jurists mandated the male waist-wrap (Mi'zar).</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F9D5; Women's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>While urban prosperity in Damascus and Fustat led elite families to adopt stricter courtyard seclusion, early Syrian and Egyptian jurists (Al-Awza'i, Al-Layth ibn Sa'd, and Ash-Shafi'i in Cairo) maintained that a woman's face and hands remain uncovered in prayer and civic transactions.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x1F3DB; Architectural, Spatial &amp; Legal Adaptation:</strong> Islamized the Greco-Roman Thermae into the canonical Islamic Hammam: abolishing communal nudity via mandatory Mi'zar wraps and strict gender scheduling/partitioning (Sunan at-Tirmidhi 2801).
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4DC; <strong>Primary Canonical &amp; Historical Sources:</strong> Sunan at-Tirmidhi 2801, Abu Dawud 4011, Al-Baladhuri &amp; Ash-Shafi'i's Kitab Al-Umm</span>
+  </div>
+</article>
+<article class="modesty-card frontier-card" data-search="FRONTIER_3_MAGHREB_BERBER_SAHARA_LITHAM_INVERSION Epoch III: The Maghreb, Berber North Africa &amp; Saharan Frontier — The Litham Gender Inversion (50–540 AH / 670–1147 CE) THE GREAT FRONTIER INVERSION: Among the Sanhaja Almoravid men who ruled from Senegal to Spain, it was the MEN who wore the full face-veil (Al-Litham / Tagelmust) covering everything below the eyes at all times, because exposing a man's mouth was deemed shameful in their desert custom, alongside the hooded wool Burnous and Djellaba. Conversely, Amazigh and Almoravid women—such as Zaynab an-Nafzawiyyah (co-founder of Marrakesh)—customarily went with their faces uncovered while wearing loose draped woolen Ha'iks, participating openly in governance and scholarship until the later Almohad reaction under Ibn Tumart. Qadi 'Iyad's Tartib Al-Madarik, Ibn Khaldun's Kitab Al-'Ibar &amp; Al-Marrakushi's Al-Mu'jib">
+  <div class="card-header">
+    <span class="badge badge-cyan">WESTERN FRONTIER EPOCH 3 &bull; FRONTIER_3_MAGHREB_BERBER_SAHARA_LITHAM_INVERSION</span>
+    <span class="badge badge-gold">Thugh&#x16B;r Al-Gharb</span>
+  </div>
+  <h3>Epoch III: The Maghreb, Berber North Africa &amp; Saharan Frontier — The Litham Gender Inversion (50–540 AH / 670–1147 CE)</h3>
+  <p class="encounter-line"><strong>&#x1F30D; Frontier Encounter &amp; Cultural Challenge:</strong> Expanding across Tunisia, the Atlas Mountains, and the Western Sahara to the Atlantic Ocean, Islam integrated the Amazigh (Berber) confederations—including the Sanhaja Almoravids (Al-Murabitun / 'Al-Mulaththamun', 'The Veiled Men').</p>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F9D4; Men's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>THE GREAT FRONTIER INVERSION: Among the Sanhaja Almoravid men who ruled from Senegal to Spain, it was the MEN who wore the full face-veil (Al-Litham / Tagelmust) covering everything below the eyes at all times, because exposing a man's mouth was deemed shameful in their desert custom, alongside the hooded wool Burnous and Djellaba.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F9D5; Women's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Conversely, Amazigh and Almoravid women—such as Zaynab an-Nafzawiyyah (co-founder of Marrakesh)—customarily went with their faces uncovered while wearing loose draped woolen Ha'iks, participating openly in governance and scholarship until the later Almohad reaction under Ibn Tumart.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x1F3DB; Architectural, Spatial &amp; Legal Adaptation:</strong> Maliki jurists (Abu 'Imran al-Fasi, Qadi 'Iyad) ruled that although men covering their faces in prayer is normally disliked, the Almoravid male Litham was valid under indigenous desert custom ('Urf), demonstrating Islam's remarkable flexibility toward frontier dress.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4DC; <strong>Primary Canonical &amp; Historical Sources:</strong> Qadi 'Iyad's Tartib Al-Madarik, Ibn Khaldun's Kitab Al-'Ibar &amp; Al-Marrakushi's Al-Mu'jib</span>
+  </div>
+</article>
+<article class="modesty-card frontier-card" data-search="FRONTIER_4_AL_ANDALUS_AND_SICILY_URBAN_REFINEMENT Epoch IV: Al-Andalus (Iberian Peninsula) &amp; Sicily — Cordoban Refinement, Celosias &amp; 170+ Female Scholars (92–897 AH / 711–1492 CE) In 9th-century Cordoba, Ziryab instituted a refined seasonal dress code for men: crisp white linen Aljubbas (Jubbahs) from spring to autumn, quilted cloaks and furs in winter, clean hygiene, and short hair. Meanwhile, Hisbah manuals (Ibn 'Abdun of Seville) policed MEN'S behavior—banning men from loitering near women's riverside laundry zones or church doors. Andalusian women wore the graceful white or indigo linen Al-Malhafah (Spanish: Almalafa) and Qina' head-wrap, while enjoying extraordinary intellectual prominence: over 170 documented female scholars, mathematicians, and physicians (such as Lubna of Cordoba and Hafsah bint al-Hajj), with Ibn Rushd (Averroes) championing women's full intellectual and civic capacity. Ibn 'Abdun's Risalah fi Al-Qada' wa Al-Hisbah, Ibn Rushd's Commentary on Plato's Republic &amp; Al-Maqqari's Nafh At-Tib">
+  <div class="card-header">
+    <span class="badge badge-cyan">WESTERN FRONTIER EPOCH 4 &bull; FRONTIER_4_AL_ANDALUS_AND_SICILY_URBAN_REFINEMENT</span>
+    <span class="badge badge-gold">Thugh&#x16B;r Al-Gharb</span>
+  </div>
+  <h3>Epoch IV: Al-Andalus (Iberian Peninsula) &amp; Sicily — Cordoban Refinement, Celosias &amp; 170+ Female Scholars (92–897 AH / 711–1492 CE)</h3>
+  <p class="encounter-line"><strong>&#x1F30D; Frontier Encounter &amp; Cultural Challenge:</strong> On the European Western Frontier (Cordoba, Seville, Granada, Palermo), Muslims lived in high-density multi-religious cities alongside Christians and Jews, requiring clear civic, spatial, and market modesty ordinances.</p>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F9D4; Men's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>In 9th-century Cordoba, Ziryab instituted a refined seasonal dress code for men: crisp white linen Aljubbas (Jubbahs) from spring to autumn, quilted cloaks and furs in winter, clean hygiene, and short hair. Meanwhile, Hisbah manuals (Ibn 'Abdun of Seville) policed MEN'S behavior—banning men from loitering near women's riverside laundry zones or church doors.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F9D5; Women's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Andalusian women wore the graceful white or indigo linen Al-Malhafah (Spanish: Almalafa) and Qina' head-wrap, while enjoying extraordinary intellectual prominence: over 170 documented female scholars, mathematicians, and physicians (such as Lubna of Cordoba and Hafsah bint al-Hajj), with Ibn Rushd (Averroes) championing women's full intellectual and civic capacity.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x1F3DB; Architectural, Spatial &amp; Legal Adaptation:</strong> Perfected Architectural Modesty: the inward-facing Riyad courtyard garden and carved wooden Mashrabiyyah (Spanish: Celosia) window screens allowed women to see the street and enjoy sunlight and breeze without being seen.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4DC; <strong>Primary Canonical &amp; Historical Sources:</strong> Ibn 'Abdun's Risalah fi Al-Qada' wa Al-Hisbah, Ibn Rushd's Commentary on Plato's Republic &amp; Al-Maqqari's Nafh At-Tib</span>
+  </div>
+</article>
+<article class="modesty-card frontier-card" data-search="FRONTIER_5_MUDEJAR_MORISCO_ORAN_FATWA_UNDER_COERCION Epoch V: The Mudejar &amp; Morisco Iberian Frontier — Modesty Under Coercion &amp; The 1504 Oran Fatwa (897–1018 AH / 1492–1609 CE) Morisco men were forced to abandon turbans and Aljubbas for Castilian hats, doublets, and hose under threat of the Inquisition. Morisco women were legally forbidden from wearing the Almalafa veil; yet ironically, Christian Spanish women adopted the Moorish veil as the iconic Spanish 'Tapada' (covering the face except one eye with the Manto in Seville, Madrid, and Lima) and the lace Mantilla. Qur'an 16:106, The Oran Fatwa of Ahmad ibn Abi Jum'ah (1504 CE) &amp; L.P. Harvey's Muslims in Spain">
+  <div class="card-header">
+    <span class="badge badge-cyan">WESTERN FRONTIER EPOCH 5 &bull; FRONTIER_5_MUDEJAR_MORISCO_ORAN_FATWA_UNDER_COERCION</span>
+    <span class="badge badge-gold">Thugh&#x16B;r Al-Gharb</span>
+  </div>
+  <h3>Epoch V: The Mudejar &amp; Morisco Iberian Frontier — Modesty Under Coercion &amp; The 1504 Oran Fatwa (897–1018 AH / 1492–1609 CE)</h3>
+  <p class="encounter-line"><strong>&#x1F30D; Frontier Encounter &amp; Cultural Challenge:</strong> Following the fall of Granada (1492 CE), Spanish royal Pragmatica decrees outlawed the Arabic language, demolished Islamic bathhouses (Hammams), banned the women's Almalafa wrap, and ordered Morisco house doors kept open to strip away Islamic privacy.</p>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F9D4; Men's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Morisco men were forced to abandon turbans and Aljubbas for Castilian hats, doublets, and hose under threat of the Inquisition.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F9D5; Women's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Morisco women were legally forbidden from wearing the Almalafa veil; yet ironically, Christian Spanish women adopted the Moorish veil as the iconic Spanish 'Tapada' (covering the face except one eye with the Manto in Seville, Madrid, and Lima) and the lace Mantilla.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x1F3DB; Architectural, Spatial &amp; Legal Adaptation:</strong> THE ORAN FATWA (910 AH / 1504 CE): Mufti Ahmad ibn Abi Jum'ah al-Maghrawi ruled that under coercion (Ikrah, Qur'an 16:106), Morisco men and women were fully excused for wearing Christian Castilian dress and omitting outward rituals, because inward Libas At-Taqwa in the heart supersedes external fabric when life and survival are threatened.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4DC; <strong>Primary Canonical &amp; Historical Sources:</strong> Qur'an 16:106, The Oran Fatwa of Ahmad ibn Abi Jum'ah (1504 CE) &amp; L.P. Harvey's Muslims in Spain</span>
+  </div>
+</article>
+<article class="modesty-card frontier-card" data-search="FRONTIER_6_OTTOMAN_RUMELIA_BALKANS_AND_TANZIMAT Epoch VI: The Ottoman European Frontier (Rumelia, Bosnia, Balkans) &amp; 19th-Century Dress Reforms (750–1342 AH / 1350–1924 CE) In 1826–1829, Sultan Mahmud II replaced the traditional Ottoman Kaftan, Şalvar, and status turbans of state officials with the Fez (Tarbush), tailored Stambouline frock-coat, and trousers. Ottoman Hanafi jurists approved this shift, establishing dark, sober tailored suits and trousers as canonical masculine modesty in the West. Urban Ottoman women wore the tailored long-sleeved coat (Ferace) and light Yaşmak veil, while Bosnian and Balkan rural Muslim women wore billowy embroidered trousers (Dimije) and headscarves (Šamija)—enabling full mobility in mountain farming while preserving Hijab. Ottoman Mecelle-i Ahkam-i 'Adliyye (Arts. 1201–1202) &amp; 1829 Ottoman Clothing Regulations (Nizamname)">
+  <div class="card-header">
+    <span class="badge badge-cyan">WESTERN FRONTIER EPOCH 6 &bull; FRONTIER_6_OTTOMAN_RUMELIA_BALKANS_AND_TANZIMAT</span>
+    <span class="badge badge-gold">Thugh&#x16B;r Al-Gharb</span>
+  </div>
+  <h3>Epoch VI: The Ottoman European Frontier (Rumelia, Bosnia, Balkans) &amp; 19th-Century Dress Reforms (750–1342 AH / 1350–1924 CE)</h3>
+  <p class="encounter-line"><strong>&#x1F30D; Frontier Encounter &amp; Cultural Challenge:</strong> Expanding into Southeastern and Central Europe (Istanbul, Sarajevo, Mostar, Belgrade), Islam adapted to cold Alpine-Balkan winters, rural mountain agrarian work, and 19th-century European industrial modernity.</p>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F9D4; Men's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>In 1826–1829, Sultan Mahmud II replaced the traditional Ottoman Kaftan, Şalvar, and status turbans of state officials with the Fez (Tarbush), tailored Stambouline frock-coat, and trousers. Ottoman Hanafi jurists approved this shift, establishing dark, sober tailored suits and trousers as canonical masculine modesty in the West.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F9D5; Women's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Urban Ottoman women wore the tailored long-sleeved coat (Ferace) and light Yaşmak veil, while Bosnian and Balkan rural Muslim women wore billowy embroidered trousers (Dimije) and headscarves (Šamija)—enabling full mobility in mountain farming while preserving Hijab.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x1F3DB; Architectural, Spatial &amp; Legal Adaptation:</strong> The Ottoman Mecelle (Articles 1201–1202) codified visual modesty into civil property law: any new window or terrace overlooking a neighbor's family courtyard was ruled a 'Grave Harm' (Darar Fahish) and legally blocked.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4DC; <strong>Primary Canonical &amp; Historical Sources:</strong> Ottoman Mecelle-i Ahkam-i 'Adliyye (Arts. 1201–1202) &amp; 1829 Ottoman Clothing Regulations (Nizamname)</span>
+  </div>
+</article>
+<article class="modesty-card frontier-card" data-search="FRONTIER_7_MODERN_WESTERN_DIASPORA_AND_DIGITAL_FRONTIER Epoch VII: The Modern Western Diaspora (Europe &amp; Americas) &amp; The 21st-Century Digital Frontier Following Muhammad 'Abduh's Transvaal Fatwa (1903) and contemporary Fiqh Al-Aqalliyyat (Al-Qaradawi, Bin Bayyah), Western tailored suits, shirts, and trousers are universally recognized as valid masculine Libas Al-'Urf. The decisive modern frontier test for men is DIGITAL Ghadd Al-Basar (lowering the gaze online, 24:30), rejecting gym/wealth exhibitionism (digital Isbal), and practicing protective chivalry without hypocrisy. For women in the West, the Hijab shifted from passive village custom to a conscious, self-chosen assertion of spiritual identity, intellectual dignity, and refusal of commercial objectification—expressed through tailored coats, professional attire, and athletic Hijabs, while guarding against fast-fashion commodification. Qur'an 7:26, 24:30-31, Transvaal Fatwa (1903 CE) &amp; Contemporary Fiqh Al-Aqalliyyat">
+  <div class="card-header">
+    <span class="badge badge-cyan">WESTERN FRONTIER EPOCH 7 &bull; FRONTIER_7_MODERN_WESTERN_DIASPORA_AND_DIGITAL_FRONTIER</span>
+    <span class="badge badge-gold">Thugh&#x16B;r Al-Gharb</span>
+  </div>
+  <h3>Epoch VII: The Modern Western Diaspora (Europe &amp; Americas) &amp; The 21st-Century Digital Frontier</h3>
+  <p class="encounter-line"><strong>&#x1F30D; Frontier Encounter &amp; Cultural Challenge:</strong> Muslims living as citizens across Western Europe and North America navigate secular legal systems, hyper-commercialized fast fashion, and algorithmic social media exhibitionism.</p>
+  <div class="split-gender">
+    <div class="gender-box box-men">
+      <h4>&#x1F9D4; Men's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>Following Muhammad 'Abduh's Transvaal Fatwa (1903) and contemporary Fiqh Al-Aqalliyyat (Al-Qaradawi, Bin Bayyah), Western tailored suits, shirts, and trousers are universally recognized as valid masculine Libas Al-'Urf. The decisive modern frontier test for men is DIGITAL Ghadd Al-Basar (lowering the gaze online, 24:30), rejecting gym/wealth exhibitionism (digital Isbal), and practicing protective chivalry without hypocrisy.</p>
+    </div>
+    <div class="gender-box box-women">
+      <h4>&#x1F9D5; Women's Modesty Evolution &amp; Frontier Garments</h4>
+      <p>For women in the West, the Hijab shifted from passive village custom to a conscious, self-chosen assertion of spiritual identity, intellectual dignity, and refusal of commercial objectification—expressed through tailored coats, professional attire, and athletic Hijabs, while guarding against fast-fashion commodification.</p>
+    </div>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x1F3DB; Architectural, Spatial &amp; Legal Adaptation:</strong> Re-anchoring modesty in its symmetric Qur'anic root (Qur'an 7:26 &amp; 24:30-31): outward dress is a dignified boundary, while inward Taqwa, ocular discipline, and mutual respect between men and women form the true sanctuary.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4DC; <strong>Primary Canonical &amp; Historical Sources:</strong> Qur'an 7:26, 24:30-31, Transvaal Fatwa (1903 CE) &amp; Contemporary Fiqh Al-Aqalliyyat</span>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <h2>III. Comparative Global Synthesis: 6 Civilizational Zones of Islamic Masculine &amp; Feminine Attire</h2>
+        <p>How one invariant moral standard generated six distinct, climate-adapted sartorial traditions across the Muslim world and the Western frontier.</p>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Zone &amp; Code</th>
+              <th>Civilizational &amp; Frontier Sphere</th>
+              <th>Canonical Masculine Attire (Ar-Rij&#x101;l)</th>
+              <th>Canonical Feminine Attire (An-Nis&#x101;')</th>
+              <th>Spatial, Architectural &amp; Social Modesty Norm</th>
+              <th>Juristic School &amp; Legal Maxim</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-search="ZONE_1_HIJAZ_AND_ARABIAN_PENINSULA Hijaz, Yemen &amp; Arabian Peninsula Qamis / Thawb (loose ankle-length tunic), Bisht / 'Aba'ah (outer cloak), Ghutrah / 'Imamah (headcloth/turban), and unstitched White Ihram during Hajj. Loose 'Abayah, Khimar / Shaylah headscarf, and optional Niqab in conservative tribal custom. Hanbali / Shafi'i / Maliki baseline; Hadith of the Qamis (Tirmidhi 1762)">
+  <td><span class="badge badge-gold">ZONE 1</span><br><small>ZONE_1_HIJAZ_AND_ARABIAN_PENINSULA</small></td>
+  <td><strong>Hijaz, Yemen &amp; Arabian Peninsula</strong></td>
+  <td>Qamis / Thawb (loose ankle-length tunic), Bisht / 'Aba'ah (outer cloak), Ghutrah / 'Imamah (headcloth/turban), and unstitched White Ihram during Hajj.</td>
+  <td>Loose 'Abayah, Khimar / Shaylah headscarf, and optional Niqab in conservative tribal custom.</td>
+  <td>High solar reflectance, maximal airflow in desert heat, and total erasure of class hierarchy during the White Ihram of Hajj.</td>
+  <td><span class="badge badge-emerald">Hanbali / Shafi'i / Maliki baseline; Hadith of the Qamis (Tirmidhi 1762)</span></td>
+</tr>
+<tr data-search="ZONE_2_MAGHREB_AND_AL_ANDALUS Maghreb (Morocco, Algeria, Tunisia), Sahara &amp; Historical Al-Andalus Djellaba (hooded wool/cotton robe), Burnous / Selham (heavy hooded cloak), Jabador tunic-and-trousers, and the historical Sanhaja male Litham face-veil. Ha'ik / Almalafa (draped white or indigo wrap), Kaftan / Takchita for festive gatherings, and tailored hooded Djellaba. Maliki School: Customary desert and urban garments ('Urf) validated under Qur'an 7:199">
+  <td><span class="badge badge-gold">ZONE 2</span><br><small>ZONE_2_MAGHREB_AND_AL_ANDALUS</small></td>
+  <td><strong>Maghreb (Morocco, Algeria, Tunisia), Sahara &amp; Historical Al-Andalus</strong></td>
+  <td>Djellaba (hooded wool/cotton robe), Burnous / Selham (heavy hooded cloak), Jabador tunic-and-trousers, and the historical Sanhaja male Litham face-veil.</td>
+  <td>Ha'ik / Almalafa (draped white or indigo wrap), Kaftan / Takchita for festive gatherings, and tailored hooded Djellaba.</td>
+  <td>Inward-facing Riyad courtyard architecture + carved Mashrabiyyah / Celosia window screens protecting family privacy.</td>
+  <td><span class="badge badge-emerald">Maliki School: Customary desert and urban garments ('Urf) validated under Qur'an 7:199</span></td>
+</tr>
+<tr data-search="ZONE_3_OTTOMAN_ANATOLIA_AND_BALKANS Anatolia, Bosnia, Albania &amp; Ottoman Rumelia Historically Kaftan, Cepken, Şalvar trousers, and Sarık turban; from 1829 onward, the Fez and tailored wool frock-coat/suit and trousers. Urban Ferace (tailored long overcoat) and Yaşmak; rural Balkan Dimije (loose billowy trousers), Entari, and Šamija headscarf. Hanafi School: Istihsan (Juristic Preference) &amp; Al-'Adah Muhakkamah">
+  <td><span class="badge badge-gold">ZONE 3</span><br><small>ZONE_3_OTTOMAN_ANATOLIA_AND_BALKANS</small></td>
+  <td><strong>Anatolia, Bosnia, Albania &amp; Ottoman Rumelia</strong></td>
+  <td>Historically Kaftan, Cepken, Şalvar trousers, and Sarık turban; from 1829 onward, the Fez and tailored wool frock-coat/suit and trousers.</td>
+  <td>Urban Ferace (tailored long overcoat) and Yaşmak; rural Balkan Dimije (loose billowy trousers), Entari, and Šamija headscarf.</td>
+  <td>Strict neighborhood visual-privacy law (Mecelle Arts. 1201–1202) combined with high female mobility in Balkan mountain agriculture.</td>
+  <td><span class="badge badge-emerald">Hanafi School: Istihsan (Juristic Preference) &amp; Al-'Adah Muhakkamah</span></td>
+</tr>
+<tr data-search="ZONE_4_PERSIANATE_CENTRAL_AND_SOUTH_ASIA Iran, Khorasan, Transoxiana (Uzbekistan) &amp; Indian Subcontinent Qaba' coat, Chapan quilted robe (Central Asia), and Shalwar Kameez / Sherwani (loose tunic over drawstring trousers, originally adopted from horsemen). Chador (full semicircular cloak) or Manteau/Rusari in Iran; Shalwar Kameez with Dupatta / Chadar scarf across South Asia. Hanafi / Shafi'i / Ja'fari traditions: Horsemen's trousers (Sarawil) praised for maximal coverage">
+  <td><span class="badge badge-gold">ZONE 4</span><br><small>ZONE_4_PERSIANATE_CENTRAL_AND_SOUTH_ASIA</small></td>
+  <td><strong>Iran, Khorasan, Transoxiana (Uzbekistan) &amp; Indian Subcontinent</strong></td>
+  <td>Qaba' coat, Chapan quilted robe (Central Asia), and Shalwar Kameez / Sherwani (loose tunic over drawstring trousers, originally adopted from horsemen).</td>
+  <td>Chador (full semicircular cloak) or Manteau/Rusari in Iran; Shalwar Kameez with Dupatta / Chadar scarf across South Asia.</td>
+  <td>Chahar Bagh walled gardens, Hasht-Bihisht pavilions, and Jali perforated stone screens (Mughal architecture).</td>
+  <td><span class="badge badge-emerald">Hanafi / Shafi'i / Ja'fari traditions: Horsemen's trousers (Sarawil) praised for maximal coverage</span></td>
+</tr>
+<tr data-search="ZONE_5_SWAHILI_WEST_AFRICA_AND_MALAY_ARCHIPELAGO West Africa (Hausa/Fulani/Wolof), Swahili Coast &amp; Malay-Indonesian Archipelago West African Babban Riga / Grand Boubou; Swahili Kanzu and Kofia; Malay-Indonesian Baju Melayu, Sarong, Batik shirt, and Songkok/Peci. West African Boubou and wrapper with head-tie; Swahili Buibui and Kangas; Malay-Indonesian Baju Kurung, Kebaya Labuh, and Tudung/Jilbab. Shafi'i (East Africa &amp; Southeast Asia) and Maliki (West Africa) integration of indigenous textiles">
+  <td><span class="badge badge-gold">ZONE 5</span><br><small>ZONE_5_SWAHILI_WEST_AFRICA_AND_MALAY_ARCHIPELAGO</small></td>
+  <td><strong>West Africa (Hausa/Fulani/Wolof), Swahili Coast &amp; Malay-Indonesian Archipelago</strong></td>
+  <td>West African Babban Riga / Grand Boubou; Swahili Kanzu and Kofia; Malay-Indonesian Baju Melayu, Sarong, Batik shirt, and Songkok/Peci.</td>
+  <td>West African Boubou and wrapper with head-tie; Swahili Buibui and Kangas; Malay-Indonesian Baju Kurung, Kebaya Labuh, and Tudung/Jilbab.</td>
+  <td>Tropical humidity adaptation using breathable cottons/batiks and elevated timber house verandas (Serambi) separating public reception from family rooms.</td>
+  <td><span class="badge badge-emerald">Shafi'i (East Africa &amp; Southeast Asia) and Maliki (West Africa) integration of indigenous textiles</span></td>
+</tr>
+<tr data-search="ZONE_6_MODERN_EUROPE_AMERICAS_AND_DIGITAL_SPHERE Western Europe, North America &amp; Global Digital Frontier Tailored trousers, dress shirts, blazers/suits, coats, and loose athletic wear; coupled with digital lowering of the gaze (Ghadd Al-Basar) and dignified speech. Tailored long coats, trench coats, loose trousers/maxi skirts, breathable woven/jersey Hijabs, and high-performance modest sportswear. Fiqh Al-Aqalliyyat &amp; Maqasid Ash-Shari'ah (Qur'an 7:26 &amp; 24:30-31)">
+  <td><span class="badge badge-gold">ZONE 6</span><br><small>ZONE_6_MODERN_EUROPE_AMERICAS_AND_DIGITAL_SPHERE</small></td>
+  <td><strong>Western Europe, North America &amp; Global Digital Frontier</strong></td>
+  <td>Tailored trousers, dress shirts, blazers/suits, coats, and loose athletic wear; coupled with digital lowering of the gaze (Ghadd Al-Basar) and dignified speech.</td>
+  <td>Tailored long coats, trench coats, loose trousers/maxi skirts, breathable woven/jersey Hijabs, and high-performance modest sportswear.</td>
+  <td>Replacement of physical courtyard walls with conscious personal boundaries, professional ethics, and digital/social-media modesty.</td>
+  <td><span class="badge badge-emerald">Fiqh Al-Aqalliyyat &amp; Maqasid Ash-Shari'ah (Qur'an 7:26 &amp; 24:30-31)</span></td>
+</tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let currentModestyMode = 'ALL';
+    let modestyTick = 0;
+
+    function setModestyMode(mode) {
+      currentModestyMode = mode;
+      document.querySelectorAll('.mode-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes("'" + mode + "'"));
+      });
+    }
+
+    function filterModestyPortal() {
+      const q = (document.getElementById('modestySearchInput').value || '').toLowerCase().trim();
+      let visible = 0;
+      document.querySelectorAll('.modesty-card, tbody tr').forEach(el => {
+        const hay = (el.getAttribute('data-search') || el.innerText || '').toLowerCase();
+        const match = !q || hay.includes(q);
+        el.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      const badge = document.getElementById('modestyCountBadge');
+      if (badge) badge.textContent = 'Showing ' + visible + ' of 20 Canonical Modesty Nodes';
+    }
+
+    (function initModestyCanvas() {
+      const canvas = document.getElementById('modestyFrontierCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      const frontierNodes = [
+        { x: 350, y: 275, title: '1. Hijaz (610 CE)', sub: 'Izar/Rida & Khimar/Jilbab' },
+        { x: 455, y: 210, title: '2. Levant/Egypt', sub: 'Sarawil & Hammam Mi\'zar' },
+        { x: 560, y: 265, title: '3. Maghreb Sahara', sub: 'Male Litham Veil Inversion' },
+        { x: 665, y: 155, title: '4. Al-Andalus', sub: 'Aljubba, Almalafa & Celosia' },
+        { x: 770, y: 245, title: '5. Oran Fatwa (1504)', sub: 'Heart Taqwa Under Coercion' },
+        { x: 875, y: 150, title: '6. Ottoman Balkans', sub: '1829 Suits, Ferace & Dimije' },
+        { x: 980, y: 215, title: '7. Modern West', sub: 'Digital Gaze & Conscious Hijab' }
+      ];
+
+      function render() {
+        modestyTick += 0.025;
+        const w = canvas.width;
+        const h = canvas.height;
+        ctx.clearRect(0, 0, w, h);
+
+        // 1. LEFT: 3 Concentric Rings of Qur'an 7:26 (Libas At-Taqwa Core -> Haya/Gaze -> Regional 'Urf)
+        const cx = 155, cy = 198;
+        const rings = [
+          { r: 96, color: '#38bdf8', label: "Outer: Libas Al-'Urf (Frontier Cut)" },
+          { r: 64, color: '#10b981', label: 'Middle: Ghadd Al-Basar (24:30-31)' },
+          { r: 32, color: '#f59e0b', label: 'Core: Libas At-Taqwa (7:26)' }
+        ];
+        rings.forEach((ring, idx) => {
+          ctx.beginPath();
+          ctx.arc(cx, cy, ring.r + Math.sin(modestyTick * 2 + idx) * 2, 0, Math.PI * 2);
+          ctx.strokeStyle = ring.color;
+          ctx.lineWidth = idx === 2 ? 3 : 1.8;
+          ctx.stroke();
+        });
+        ctx.fillStyle = '#f59e0b';
+        ctx.font = 'bold 12.5px Segoe UI, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('I. 3 TIERS OF DRESS (QUR\'AN 7:26)', cx, 36);
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '11px Segoe UI, sans-serif';
+        ctx.fillText('Core: Libas At-Taqwa (Invariant)', cx, 338);
+        ctx.fillText("Envelope: Libas Al-'Urf (Adaptive)", cx, 356);
+
+        // 2. CENTER: 7 Western Frontier Trajectory Nodes (Hijaz -> Modern West)
+        ctx.save();
+        ctx.beginPath();
+        frontierNodes.forEach((n, idx) => {
+          if (idx === 0) ctx.moveTo(n.x, n.y);
+          else ctx.lineTo(n.x, n.y);
+        });
+        ctx.strokeStyle = 'rgba(245, 158, 11, 0.45)';
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+
+        frontierNodes.forEach((n, idx) => {
+          const pulse = Math.sin(modestyTick * 2.5 + idx) * 2.5;
+          // Men vector (cyan upper)
+          if (currentModestyMode === 'ALL' || currentModestyMode === 'MEN' || currentModestyMode === 'FRONTIER') {
+            ctx.beginPath();
+            ctx.arc(n.x - 8, n.y - 8, 7 + pulse * 0.3, 0, Math.PI * 2);
+            ctx.fillStyle = '#38bdf8';
+            ctx.fill();
+          }
+          // Women vector (rose lower)
+          if (currentModestyMode === 'ALL' || currentModestyMode === 'WOMEN' || currentModestyMode === 'FRONTIER') {
+            ctx.beginPath();
+            ctx.arc(n.x + 8, n.y + 8, 7 - pulse * 0.3, 0, Math.PI * 2);
+            ctx.fillStyle = '#f43f5e';
+            ctx.fill();
+          }
+
+          ctx.fillStyle = '#ffffff';
+          ctx.font = 'bold 11.5px Segoe UI, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText(n.title, n.x, n.y - 24);
+          ctx.fillStyle = '#cbd5e1';
+          ctx.font = '10.5px Segoe UI, sans-serif';
+          ctx.fillText(n.sub, n.x, n.y + 30);
+        });
+
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 13px Segoe UI, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('II. 7 EPOCHS OF THE ISLAMIC WESTERN FRONTIER (THUGHUR AL-GHARB)', 665, 36);
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '11.5px Segoe UI, sans-serif';
+        ctx.fillText('Cyan Nodes: Masculine Standard (24:30)  |  Rose Nodes: Feminine Standard (24:31 & 33:59)', 665, 356);
+        ctx.restore();
+
+        // 3. RIGHT: Mashrabiyyah / Celosia Architectural Privacy Lattice
+        const rx = 1145, ry = 195;
+        ctx.save();
+        ctx.strokeStyle = 'rgba(16, 185, 129, 0.45)';
+        ctx.lineWidth = 1.4;
+        for (let gx = rx - 65; gx <= rx + 65; gx += 26) {
+          for (let gy = ry - 85; gy <= ry + 85; gy += 26) {
+            ctx.strokeRect(gx - 10, gy - 10, 20, 20);
+            ctx.beginPath();
+            ctx.moveTo(gx, gy - 10);
+            ctx.lineTo(gx + 10, gy);
+            ctx.lineTo(gx, gy + 10);
+            ctx.lineTo(gx - 10, gy);
+            ctx.closePath();
+            ctx.stroke();
+          }
+        }
+        ctx.fillStyle = '#10b981';
+        ctx.font = 'bold 12.5px Segoe UI, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('III. MASHRABIYYAH / CELOSIA', rx, 36);
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '11px Segoe UI, sans-serif';
+        ctx.fillText('Architectural Privacy (24:27)', rx, 338);
+        ctx.fillText('& Digital Gaze Shield', rx, 356);
+        ctx.restore();
+
+        requestAnimationFrame(render);
+      }
+      render();
+    })();
+  </script>
+
+<!-- SOV_CHROME_FOOTER_START -->
+<footer class="sov-footer-wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;padding-bottom:0.9rem;border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div>
+      <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">COMPLETE <span data-sov-total>63</span>-PORTAL CONTINUALLY UPDATED SITEMAP • CURRENT: #54 / 63 — Men &amp; Women Modesty: Western Frontier (islamic-modesty-evolution-western-frontier-men-women.html)</div>
+      <div style="font-size:0.84rem;color:#CBD5E1;">Every HTML portal is directly cross-linked and continually synchronized across all 11 Architectural Wings and all 7 Chromatic/Theological Rows.</div>
+    </div>
+    <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+      <a class="sov-pill" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">← Prev: Philosophy, Alchemy, Theocracies &amp; Socrates</a>
+      <span class="sov-pill sov-pill-counter">#54 / 63</span>
+      <a class="sov-pill sov-pill-master" href="index.html">🏠 Master Index (63)</a>
+      <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-modesty-evolution-western-frontier-men-women.html">🧭 Combined Omnibus</a>
+      <a class="sov-pill" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">Next: Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy →</a>
+    </div>
+  </div>
+  <div class="sov-footer-cols">
+    <div class="sov-footer-cat"><h4>01. Master Hubs &amp; Architecture</h4><a class="" href="index.html">#01/63 Master Index Hub</a><a class="" href="master-combined-omnibus.html">#02/63 Combined Omnibus Reader</a><a class="" href="dependencies-report.html">#03/63 Dependencies &amp; Java 21+ Audit</a><a class="" href="conjoined-worlds-realms-principles-node-grid.html">#50/63 3D Node-Art Terrain Grid (Meridian Guard)</a><a class="" href="islamic-caravans-battles-conquest-chronicle.html">#51/63 Caravans, Trade Battles, Fatḥ &amp; Tadwīn</a><a class="" href="greco-roman-gods-titans-daimones-islamic-judgment.html">#52/63 Greco-Roman Gods &amp; Titans Made Whole</a><a class="" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">#53/63 Philosophy, Alchemy, Theocracies &amp; Socrates</a><a class="" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">#55/63 Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a><a class="" href="islamic-countries-history-canonical-embrace-atlas.html">#56/63 History of Islamic Countries &amp; Canonical Embrace</a><a class="" href="islamic-caliphates-sultans-shahs-dynasties-return.html">#57/63 Caliphates, Sultans, Shahs &amp; Promise of Return</a><a class="" href="quranic-timeline-expansion-vol1-chronology.html">#58/63 Vol. I: Qur'anic Timeline of Expansion</a><a class="" href="quranic-timeline-expansion-vol2-properties-kingdoms.html">#59/63 Vol. II: Islamic Properties, Countries &amp; Kingdoms</a><a class="" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html">#60/63 Vol. III: Beauty of Islam &amp; Collegiate Thesis</a><a class="" href="islam-through-ages-vol1-reception-history.html">#61/63 Ages Vol. I: Islam &amp; Global Reception</a><a class="" href="islam-through-ages-vol2-philosophical-connotations.html">#62/63 Ages Vol. II: Philosophical Connotations</a><a class="" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">#63/63 Ages Vol. III: Scientific Discoveries Instantiated</a></div><div class="sov-footer-cat"><h4>02. Seven Pre-Prophetic Color Orders</h4><a class="" href="order-1-white.html">#04/63 Order #1: White</a><a class="" href="order-2-black.html">#05/63 Order #2: Black</a><a class="" href="order-3-sapphire.html">#06/63 Order #3: Sapphire</a><a class="" href="order-4-gold.html">#07/63 Order #4: Gold</a><a class="" href="order-5-crimson.html">#08/63 Order #5: Crimson</a><a class="" href="order-6-brass.html">#09/63 Order #6: Brass</a><a class="" href="order-7-emerald.html">#10/63 Order #7: Emerald</a></div><div class="sov-footer-cat"><h4>03. 3D Sanctum &amp; Seven Realms</h4><a class="" href="warlock-3d-sanctum.html">#11/63 3D Sanctum Master</a><a class="" href="realm-1-white.html">#12/63 Realm #1: 'Aravot</a><a class="" href="realm-2-black.html">#13/63 Realm #2: Makhon</a><a class="" href="realm-3-sapphire.html">#14/63 Realm #3: Zevul</a><a class="" href="realm-4-gold.html">#15/63 Realm #4: Shehaqim</a><a class="" href="realm-5-crimson.html">#16/63 Realm #5: Ma'on</a><a class="" href="realm-6-brass.html">#17/63 Realm #6: Raqia'</a><a class="" href="realm-7-emerald.html">#18/63 Realm #7: Vilon</a></div><div class="sov-footer-cat"><h4>04. Negentropic Priory &amp; Seven Planes</h4><a class="" href="priory-negentropy-order.html">#19/63 Negentropic Priory Atlas</a><a class="" href="plane-1-white.html">#20/63 Plane #1: Adam Kadmon / Lahut</a><a class="" href="plane-2-black.html">#21/63 Plane #2: Malbush / Al-Qalam</a><a class="" href="plane-3-sapphire.html">#22/63 Plane #3: Beri'ah / Jabarut</a><a class="" href="plane-4-gold.html">#23/63 Plane #4: Atzilut / Al-Arwah</a><a class="" href="plane-5-crimson.html">#24/63 Plane #5: Tohu / Ash-Shuhub</a><a class="" href="plane-6-brass.html">#25/63 Plane #6: Yetzirah / Al-Marij</a><a class="" href="plane-7-emerald.html">#26/63 Plane #7: Tikkun / Al-Mithal</a></div><div class="sov-footer-cat"><h4>05. Seven Wrongdoer (Az-Zalimun) Profiles</h4><a class="" href="zalim-1-fasad.html">#27/63 Zalim #1: Al-Fasad</a><a class="" href="zalim-2-fahishah.html">#28/63 Zalim #2: Al-Fahishah</a><a class="" href="zalim-3-baghy.html">#29/63 Zalim #3: Al-Baghy (Nimrod)</a><a class="" href="zalim-4-fitnah.html">#30/63 Zalim #4: Al-Fitnah</a><a class="" href="zalim-5-hawa.html">#31/63 Zalim #5: Al-Hawa</a><a class="" href="zalim-6-jibt.html">#32/63 Zalim #6: Al-Jibt &amp; Taghut</a><a class="" href="zalim-7-zulm.html">#33/63 Zalim #7: Masjid Ad-Dirar</a></div><div class="sov-footer-cat"><h4>06. Seven Islamic Worlds of Hegemon &amp; Disorder</h4><a class="" href="worlds-hegemon-disorder.html">#34/63 7 Worlds Master Atlas</a><a class="" href="world-1-mizan-fasad.html">#35/63 World #1: Amanah vs. Fasad</a><a class="" href="world-2-haya-fahishah.html">#36/63 World #2: Haya' vs. Tabarruj</a><a class="" href="world-3-babil-namrud.html">#37/63 World #3: Ibrahim vs. Namrud</a><a class="" href="world-4-ummah-fitnah.html">#38/63 World #4: Ummah vs. Fitnah</a><a class="" href="world-5-furqan-hawa.html">#39/63 World #5: Furqan vs. Hawa</a><a class="" href="world-6-tawhid-taghut.html">#40/63 World #6: Tawhid vs. Taghut</a><a class="" href="world-7-taqwa-dirar.html">#41/63 World #7: Taqwa vs. Dirar</a></div><div class="sov-footer-cat"><h4>07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</h4><a class="" href="warlock-formation-dissolution-jafar-aladdin.html">#42/63 Ja'far &amp; Aladdin Qumqum</a><a class="" href="sequester-between-worlds.html">#43/63 7 Inter-World Sequesters</a></div><div class="sov-footer-cat"><h4>08. The Islamic Egg-in-Baking Intelocketer</h4><a class="" href="interlocker-egg-binder-islam.html">#44/63 Egg-in-Baking Intelocketer</a></div><div class="sov-footer-cat"><h4>09. The Warlock Apocrypha &amp; Modernity Theorems</h4><a class="" href="warlock-apocrypha-islamic-theorems.html">#45/63 Warlock Apocrypha &amp; Theorems</a></div><div class="sov-footer-cat"><h4>10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</h4><a class="" href="islamic-husbandry-sovereign-estate.html">#46/63 Vanguard Husbandry Estate</a><a class="" href="way-of-the-flower-rose-garden-islam.html">#47/63 Flower, Rose &amp; Chahar Bagh</a><a class="active-link" href="islamic-modesty-evolution-western-frontier-men-women.html">#54/63 Men &amp; Women Modesty: Western Frontier</a></div><div class="sov-footer-cat"><h4>11. Islamic Animalism &amp; Visual History Atlases</h4><a class="" href="disney-daffy-donald-islamic-microcosm.html">#48/63 Disney/Daffy &amp; Jungle Microcosm</a><a class="" href="warlock-islamic-visual-eras-history.html">#49/63 7 Islamic Visual Eras &amp; AI Art</a></div>
+  </div>
+</footer>
+<!-- SOV_CHROME_FOOTER_END -->
+</body>
+</html>

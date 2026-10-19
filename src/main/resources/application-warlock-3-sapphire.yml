@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: warlock-3-sapphire
+
+warlock:
+  orderIndex: 3
+  profileId: "warlock-3-sapphire"
+  colorName: "Tekhelet Throne Sapphire (Livnat Ha-Sapir)"
+  hexCode: "#0F2C59"
+  rgbRed: 15
+  rgbGreen: 44
+  rgbBlue: 89
+  wavelengthNm: 465
+  warlockName: "Yored Ha-Merkabah"
+  hebrewTitle: "Ro'eh Pargod Ha-Kisse"
+  arabicTitle: "Sahib Hamalat Al-'Arsh"
+  prePropheticStratum: "OMEGA_2_MERKABAH_AND_PARGOD"
+  primaryPillar: "MERKABAH_KABBALISTIC_MYSTICISM"
+  patronEntity: "Eye-Studded Ophanim & The Sapphire Pavement of the Throne"
+  sacredImplement: "Seven-Fold Tekhelet Turban & Sapphire Tablet of Raziel"
+  signatureInvocation: "Descent of the Seven Heikhalot & Gaze of the Ophanim"
+  recitationMode: "Polyphonic Chariot-Wheel Cantillation (Ta'amei Ha-Merkabah)"
+  processCapabilityCp: 1.41
+  varianceSigma: 0.58

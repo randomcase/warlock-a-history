@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: zalim-3-baghy
+
+zalim:
+  zalimIndex: 3
+  profileId: "zalim-3-baghy"
+  arabicPrinciple: "Al-Baghy wa Al-Istikbar Al-Namrudi (البغي والاستكبار النمرودي — Tyrannical Insolence & Counter-Hegemony)"
+  hexCode: "#3B0944"
+  rgbRed: 59
+  rgbGreen: 9
+  rgbBlue: 68
+  warlockName: "Jabbar Al-Namrud"
+  arabicArchetypeTitle: "Taghut Babil (The Nimrodic Usurper Against Abraham)"
+  quranicAnchor: "Qur'an 2:258, 7:33, 21:68-69 ('Have you not considered the one who disputed with Abraham about his Lord because Allah had given him kingship? When Abraham said: My Lord gives life and causes death, he said: I give life and cause death... And Allah guides not the Zalimin')"
+  abrahamicChallenge: "Directly challenges the formation of monotheistic hegemony under Abraham by asserting absolute mortal sovereignty over life and death and casting Abraham into the Furnace (Al-Jahim) to crush Millat Ibrahim at its inception."
+  wrongdoerCategory: "TYRANNICAL_HEGEMONY_AGAINST_ABRAHAM"
+  rawEntropyBits: 0.845
+  uncorrectedCp: 0.79
+  uncorrectedSigma: 3.25
+  correctedCp: 1.42
+  prioryContainmentCell: "Quarantine Ward III: The Western Horizon Solar Proof & Cool-Fire Vault (Qur'an 2:258, 21:69)"

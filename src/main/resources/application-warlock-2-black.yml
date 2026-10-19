@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: warlock-2-black
+
+warlock:
+  orderIndex: 2
+  profileId: "warlock-2-black"
+  colorName: "Ascetic Qedar Black Fire (Esh Shechorah)"
+  hexCode: "#141416"
+  rgbRed: 20
+  rgbGreen: 20
+  rgbBlue: 22
+  wavelengthNm: 405
+  warlockName: "Katib Al-Qalam"
+  hebrewTitle: "Sofer Torah Kedumah"
+  arabicTitle: "Amin Al-Lawh Al-Mahfuz"
+  prePropheticStratum: "OMEGA_1_FIRST_INSCRIPTION_50000_YEARS"
+  primaryPillar: "SUFI_ESOTERIC_DESERT_ASCETICISM"
+  patronEntity: "Al-Qalam (The Primordial Pen) & Black Fire upon White Fire"
+  sacredImplement: "Qedar Goat-Hair Mantle & Reed Stylus of Pre-Eternity"
+  signatureInvocation: "231 Gates of Sefer Yetzirah Consonantal Permutation"
+  recitationMode: "Whispered Hams & Deep Pharyngeal 'Ayn Cadence"
+  processCapabilityCp: 1.44
+  varianceSigma: 0.51

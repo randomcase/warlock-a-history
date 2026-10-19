@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The History of Islamic Countries &amp; How They Canonically Embrace Being Muslim</title>
+  <style>
+    :root {
+      --bg-deep: #060913;
+      --bg-panel: #0d1424;
+      --bg-card: #121c31;
+      --gold: #f59e0b;
+      --gold-soft: rgba(245, 158, 11, 0.16);
+      --emerald: #10b981;
+      --emerald-soft: rgba(16, 185, 129, 0.15);
+      --cyan: #38bdf8;
+      --cyan-soft: rgba(56, 189, 248, 0.15);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-subtle: rgba(245, 158, 11, 0.28);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 0%, #10213d 0%, var(--bg-deep) 65%);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding-bottom: 4rem;
+    }
+    .hero-header {
+      padding: 3rem 2rem 2.2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border-subtle);
+      background: linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, rgba(245, 158, 11, 0.05) 100%);
+    }
+    .hero-kicker {
+      display: inline-block;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+      background: var(--gold-soft);
+      color: var(--gold);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero-header h1 {
+      font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+      color: #fff;
+      max-width: 1140px;
+      margin: 0 auto 0.9rem;
+      line-height: 1.25;
+    }
+    .hero-header p {
+      max-width: 980px;
+      margin: 0 auto 1.4rem;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+    .pillar-banner {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 0.9rem;
+      max-width: 1280px;
+      margin: 1.5rem auto 0;
+    }
+    .pillar-stat {
+      background: rgba(18, 28, 49, 0.88);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.95rem 1.1rem;
+      text-align: left;
+    }
+    .pillar-stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: 0.95rem;
+      margin-bottom: 0.25rem;
+    }
+    .pillar-stat span {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .canvas-panel {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+    }
+    .canvas-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .canvas-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .mode-btn {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .mode-btn.active, .mode-btn:hover {
+      background: var(--gold);
+      color: #060913;
+      border-color: var(--gold);
+    }
+    #islamicCountriesCanvas {
+      width: 100%;
+      height: 390px;
+      display: block;
+      background: radial-gradient(circle at 50% 50%, #101b33 0%, #050811 100%);
+      border-radius: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.24);
+    }
+    .toolbar-search {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      margin-bottom: 2.2rem;
+    }
+    .toolbar-search input {
+      flex: 1;
+      min-width: 260px;
+      background: var(--bg-deep);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.65rem 1rem;
+      font-size: 0.95rem;
+    }
+    .section-block {
+      margin-bottom: 3rem;
+    }
+    .section-title {
+      border-left: 4px solid var(--gold);
+      padding-left: 1rem;
+      margin-bottom: 1.4rem;
+    }
+    .section-title h2 {
+      font-size: 1.55rem;
+      color: #fff;
+    }
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+      gap: 1.25rem;
+    }
+    .matrix-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(245, 158, 11, 0.22);
+      border-radius: 14px;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .matrix-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.22rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    .badge-gold {
+      background: var(--gold-soft);
+      color: var(--gold);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+    }
+    .badge-emerald {
+      background: var(--emerald-soft);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+    .badge-cyan {
+      background: var(--cyan-soft);
+      color: var(--cyan);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+    .matrix-card h3 {
+      font-size: 1.15rem;
+      color: #fff;
+    }
+    .countries-line {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+    .detail-box {
+      background: rgba(6, 9, 19, 0.65);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      border-left: 3px solid var(--gold);
+    }
+    .detail-box.box-countries {
+      border-left-color: var(--cyan);
+    }
+    .detail-box h4 {
+      font-size: 0.84rem;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .detail-box.box-countries h4 {
+      color: var(--cyan);
+    }
+    .detail-box p {
+      font-size: 0.88rem;
+      color: #e2e8f0;
+    }
+    .invariant-box {
+      background: rgba(16, 185, 129, 0.09);
+      border: 1px solid rgba(16, 185, 129, 0.28);
+      border-radius: 9px;
+      padding: 0.75rem 0.95rem;
+      font-size: 0.85rem;
+      color: #d1fae5;
+    }
+    .anchor-footer {
+      margin-top: auto;
+      padding-top: 0.65rem;
+      border-top: 1px dashed rgba(148, 163, 184, 0.25);
+      font-size: 0.82rem;
+      color: var(--gold);
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+    }
+    th, td {
+      padding: 0.95rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+      vertical-align: top;
+      font-size: 0.88rem;
+    }
+    th {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+  </style>
+<!-- SOV_CHROME_CSS_START -->
+<style id="sovereign-universal-nav-css">
+  .sov-global-wrap {
+    background: linear-gradient(90deg, #04060C 0%, #0C1324 50%, #04060C 100%);
+    border-bottom: 2px solid #D4AF37;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.65);
+  }
+  .sov-global-bar {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0.55rem 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+  .sov-wing-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .sov-pill:hover, .sov-pill.sov-active {
+    color: #FFFFFF;
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.22);
+  }
+  .sov-pill-master {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(16, 185, 129, 0.22));
+    border-color: #D4AF37;
+    color: #FDE68A;
+    font-weight: 700;
+  }
+  .sov-pill-omnibus {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.22));
+    border-color: #38BDF8;
+    color: #E0F2FE;
+    font-weight: 700;
+  }
+  .sov-pill-drawer {
+    background: #1E293B;
+    border-color: #F43F5E;
+    color: #FDA4AF;
+    font-weight: 700;
+  }
+  .sov-pill-counter {
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.18);
+    color: #FDE68A;
+    font-family: 'Consolas', monospace;
+    font-weight: 700;
+  }
+  .sov-pill-sync {
+    border-color: #10B981;
+    background: rgba(16, 185, 129, 0.14);
+    color: #6EE7B7;
+    font-family: 'Consolas', monospace;
+    font-size: 0.71rem;
+  }
+  .sov-sister-ribbon {
+    background: rgba(10, 15, 28, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.45rem 1.2rem;
+  }
+  .sov-sister-inner {
+    max-width: 1560px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .sov-sister-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-sister-label {
+    font-family: 'Consolas', monospace;
+    color: #FDE68A;
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .sov-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 5, 10, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 100000;
+    overflow-y: auto;
+    padding: 2rem 1.2rem;
+  }
+  .sov-modal-backdrop.open {
+    display: block;
+  }
+  .sov-modal-box {
+    max-width: 1380px;
+    margin: 0 auto;
+    background: #0B101D;
+    border: 2px solid #D4AF37;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.85);
+  }
+  .sov-modal-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .sov-search-input {
+    flex: 1;
+    min-width: 260px;
+    background: #050811;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.86rem;
+  }
+  .sov-drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 0.65rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.3rem;
+  }
+  .sov-drawer-item {
+    display: block;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #D4AF37;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    text-decoration: none;
+    color: #E2E8F0;
+    transition: all 0.14s ease;
+  }
+  .sov-drawer-item:hover, .sov-drawer-item.current {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: #D4AF37;
+    transform: translateY(-1px);
+  }
+  .sov-footer-wrap {
+    max-width: 1480px;
+    margin: 3rem auto 1rem auto;
+    padding: 1.5rem;
+    background: rgba(8, 12, 22, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-top: 3px solid #D4AF37;
+    border-radius: 14px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .sov-footer-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .sov-footer-cat h4 {
+    font-size: 0.78rem;
+    color: #FDE68A;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.25rem;
+  }
+  .sov-footer-cat a {
+    display: block;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.76rem;
+    padding: 0.14rem 0;
+  }
+  .sov-footer-cat a:hover, .sov-footer-cat a.active-link {
+    color: #38BDF8;
+    font-weight: 600;
+  }
+</style>
+<!-- SOV_CHROME_CSS_END -->
+</head>
+<body>
+<!-- SOV_CHROME_TOP_START -->
+<div id="sovereign-universal-nav" class="sov-global-wrap" data-portal-seq="56" data-portal-total="63">
+  <div class="sov-global-bar">
+    <div class="sov-wing-links">
+      <a class="sov-pill sov-pill-master " href="index.html">🏠 Master Index (<span data-sov-total>63</span>)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
+      <a class="sov-pill sov-pill-omnibus " href="quranic-timeline-expansion-vol1-chronology.html">🎓 Collegiate Thesis (#58–#60)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caliphates-sultans-shahs-dynasties-return.html">👑 Caliphates &amp; Return (#57)</a>
+      <a class="sov-pill sov-pill-omnibus sov-active" href="islamic-countries-history-canonical-embrace-atlas.html">🌍 57 OIC Countries (#56)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">🚰 Naming &amp; Sewer (#55)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-modesty-evolution-western-frontier-men-women.html">🧕 Western Modesty (#54)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">⚗️ Philosophy &amp; Alchemy (#53)</a>
+      <a class="sov-pill sov-pill-omnibus " href="greco-roman-gods-titans-daimones-islamic-judgment.html">⚖️ Greco-Roman &amp; Titans (#52)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caravans-battles-conquest-chronicle.html">🐪 Caravans &amp; Fatḥ (#51)</a>
+      <a class="sov-pill sov-pill-omnibus " href="conjoined-worlds-realms-principles-node-grid.html">⛰️ 3D Node-Art Grid (#50)</a>
+      <a class="sov-pill sov-pill-omnibus " href="master-combined-omnibus.html?portal=islamic-countries-history-canonical-embrace-atlas.html">🧭 Combined Omnibus View</a>
+      <button type="button" class="sov-pill sov-pill-drawer" onclick="toggleSovDrawer()">⚡ All <span data-sov-total>63</span> Portals (Ctrl+K)</button>
+      <a class="sov-pill " href="order-1-white.html">🎨 7 Orders</a>
+      <a class="sov-pill " href="warlock-3d-sanctum.html">🏛️ 3D Sanctum &amp; Realms</a>
+      <a class="sov-pill " href="priory-negentropy-order.html">📐 Priory &amp; Planes</a>
+      <a class="sov-pill " href="zalim-1-fasad.html">⚠️ 7 Zalim</a>
+      <a class="sov-pill " href="worlds-hegemon-disorder.html">🌍 7 Worlds</a>
+      <a class="sov-pill " href="warlock-formation-dissolution-jafar-aladdin.html">🏺 Ja'far/Aladdin</a>
+      <a class="sov-pill " href="sequester-between-worlds.html">🧱 7 Sequesters</a>
+      <a class="sov-pill " href="interlocker-egg-binder-islam.html">🥚 Egg Binder</a>
+      <a class="sov-pill " href="warlock-apocrypha-islamic-theorems.html">📜 Apocrypha</a>
+      <a class="sov-pill " href="islamic-husbandry-sovereign-estate.html">🛡️ Husbandry</a>
+      <a class="sov-pill " href="way-of-the-flower-rose-garden-islam.html">🌹 Rose Garden</a>
+      <a class="sov-pill " href="disney-daffy-donald-islamic-microcosm.html">🦆 Disney/Daffy</a>
+      <a class="sov-pill " href="warlock-islamic-visual-eras-history.html">🕌 7 Visual Eras</a>
+      <a class="sov-pill " href="dependencies-report.html">📦 Dependencies</a>
+    </div>
+    <div class="sov-wing-links">
+      <a class="sov-pill" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" title="Canonical Naming in Islam by Region (Zakeem Malik McCaleb Abjad 261 Wafq), Development of Indonesia (87.2% Muslim), Sewer Project Structure, Language &amp; Calligraphy">← Prev: Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a>
+      <span id="sovPortalCounterBadge" class="sov-pill sov-pill-counter" title="Continually Synchronized Portal Index (#56 of 63)">#56 / 63</span>
+      <button type="button" id="sovContinualCycleBtn" class="sov-pill sov-pill-sync" onclick="toggleSovContinualCycle()" title="Click to toggle Continual Auto-Advance across all 63 portals">🔄 Continual Sync: #56/63</button>
+      <a class="sov-pill" href="islamic-caliphates-sultans-shahs-dynasties-return.html" title="The Caliphates, the Sultans, the Shahs &amp; the Dynasties Instantiated &amp; Dissolved by Islam: Origin, Journey &amp; The Promise of Returning">Next: Caliphates, Sultans, Shahs &amp; Promise of Return →</a>
+    </div>
+  </div>
+  <div class="sov-sister-ribbon">
+  <div class="sov-sister-inner">
+    <div class="sov-sister-group">
+      <span class="sov-sister-label">7-FOLD SERIES QUICK JUMP:</span>
+      <a class="sov-pill" href="order-1-white.html"><span style="width:8px;height:8px;border-radius:50%;background:#F8F5E6;display:inline-block;"></span>Row #1: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-2-black.html"><span style="width:8px;height:8px;border-radius:50%;background:#A78BFA;display:inline-block;"></span>Row #2: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-3-sapphire.html"><span style="width:8px;height:8px;border-radius:50%;background:#38BDF8;display:inline-block;"></span>Row #3: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-4-gold.html"><span style="width:8px;height:8px;border-radius:50%;background:#D4AF37;display:inline-block;"></span>Row #4: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-5-crimson.html"><span style="width:8px;height:8px;border-radius:50%;background:#F43F5E;display:inline-block;"></span>Row #5: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-6-brass.html"><span style="width:8px;height:8px;border-radius:50%;background:#B87333;display:inline-block;"></span>Row #6: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-7-emerald.html"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;"></span>Row #7: Order/Realm/Plane/Zalim/World</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="sovMegaDrawer" class="sov-modal-backdrop" onclick="if(event.target===this)toggleSovDrawer()">
+  <div class="sov-modal-box">
+    <div class="sov-modal-header">
+      <div>
+        <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">SOVEREIGN MASTER ATLAS • ALL <span data-sov-total>63</span> HTML PORTALS CONTINUALLY INTEGRATED</div>
+        <h2 style="font-size:1.25rem;color:#FFF;margin:0.15rem 0;">Instant Portal Switcher &amp; Cross-Wing Navigator (#56 / 63)</h2>
+      </div>
+      <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all 63 portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+        <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="quranic-timeline-expansion-vol1-chronology.html">Collegiate Thesis (#58–#60)</a>
+        <a class="sov-pill sov-pill-omnibus" href="conjoined-worlds-realms-principles-node-grid.html">3D Node-Art Grid (#50)</a>
+        <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-countries-history-canonical-embrace-atlas.html">Open in Split Omnibus</a>
+        <button type="button" class="sov-pill" onclick="toggleSovDrawer()">✕ Close (Esc)</button>
+      </div>
+    </div>
+    <div id="sovDrawerGrid" class="sov-drawer-grid">
+      <a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="index.html" data-search="master index hub sovereign master index, search &amp; 7-row cross-wing relational matrix 01. master hubs &amp; architecture al-fihris al-jāmi&#39; • all 63 portals continually integrated index.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#01 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">index.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Master Index Hub</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Fihris Al-Jāmi' • All 63 Portals Continually Integrated</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="master-combined-omnibus.html" data-search="combined omnibus reader combined multi-portal omnibus workspace &amp; split-screen comparator 01. master hubs &amp; architecture al-majmū&#39; al-muwahhad • all 63 portals side-by-side &amp; sequential reader master-combined-omnibus.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#02 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">master-combined-omnibus.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Combined Omnibus Reader</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Majmū' Al-Muwahhad • All 63 Portals Side-by-Side &amp; Sequential Reader</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="dependencies-report.html" data-search="dependencies &amp; java 21+ audit master spring boot 3.4 &amp; java 21+/26 essentials dependency usage report 01. master hubs &amp; architecture spc state s0 • sha-256 artifact ledger (all 63 portals) dependencies-report.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#03 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">dependencies-report.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Dependencies &amp; Java 21+ Audit</div><div style="font-size:0.72rem;color:#CBD5E1;">SPC State S0 • SHA-256 Artifact Ledger (All 63 Portals)</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="order-1-white.html" data-search="order #1: white order #1 (warlock-1-white) — malakh-azal (sephirotic white #f8f5e6) 02. seven pre-prophetic color orders malakh-azal • qur&#39;an 2:102 &amp; 53:19-23 order-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#04 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #1: White</div><div style="font-size:0.72rem;color:#CBD5E1;">Malakh-Azal • Qur'an 2:102 &amp; 53:19-23</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="order-2-black.html" data-search="order #2: black order #2 (warlock-2-black) — katib al-qalam (abbasid black #141416) 02. seven pre-prophetic color orders kātib al-qalam • qur&#39;an 68:1 &amp; 24:22 order-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#05 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #2: Black</div><div style="font-size:0.72rem;color:#CBD5E1;">Kātib Al-Qalam • Qur'an 68:1 &amp; 24:22</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="order-3-sapphire.html" data-search="order #3: sapphire order #3 (warlock-3-sapphire) — yored ha-merkabah (babylonian sapphire #0f2c59) 02. seven pre-prophetic color orders yored ha-merkabah • qur&#39;an 6:75-79 &amp; 53:1-18 order-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#06 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #3: Sapphire</div><div style="font-size:0.72rem;color:#CBD5E1;">Yored Ha-Merkabah • Qur'an 6:75-79 &amp; 53:1-18</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="order-4-gold.html" data-search="order #4: gold order #4 (warlock-4-gold) — shahid al-alast (covenant gold #d4af37) 02. seven pre-prophetic color orders shāhid al-alast • qur&#39;an 7:172 &amp; 3:67 order-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#07 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #4: Gold</div><div style="font-size:0.72rem;color:#CBD5E1;">Shāhid Al-Alast • Qur'an 7:172 &amp; 3:67</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="order-5-crimson.html" data-search="order #5: crimson order #5 (warlock-5-crimson) — saraph ha-ritzpah (seraphic crimson #8b0000) 02. seven pre-prophetic color orders saraph ha-ritzpah • qur&#39;an 72:8-9 &amp; 25:1 order-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#08 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #5: Crimson</div><div style="font-size:0.72rem;color:#CBD5E1;">Saraph Ha-Ritzpah • Qur'an 72:8-9 &amp; 25:1</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="order-6-brass.html" data-search="order #6: brass order #6 (warlock-6-brass) — ba&#39;al ha-nechoshet (solomonic brass #b87333) 02. seven pre-prophetic color orders ba&#39;al ha-nechoshet • qur&#39;an 2:102 &amp; 34:12 order-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#09 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #6: Brass</div><div style="font-size:0.72rem;color:#CBD5E1;">Ba'al Ha-Nechoshet • Qur'an 2:102 &amp; 34:12</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="order-7-emerald.html" data-search="order #7: emerald order #7 (warlock-7-emerald) — wali al-ghaib (khidrian emerald #006b54) 02. seven pre-prophetic color orders walī al-ghaib • qur&#39;an 18:65 &amp; 9:108 order-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#10 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #7: Emerald</div><div style="font-size:0.72rem;color:#CBD5E1;">Walī Al-Ghaib • Qur'an 18:65 &amp; 9:108</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="warlock-3d-sanctum.html" data-search="3d sanctum master interactive 3d seven-realm warlock sanctum &amp; celestial geometry 03. 3d sanctum &amp; seven realms al-haykal al-handasī • interactive webgl/canvas 3d warlock-3d-sanctum.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#11 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">warlock-3d-sanctum.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Sanctum Master</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Haykal Al-Handasī • Interactive WebGL/Canvas 3D</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="realm-1-white.html" data-search="realm #1: &#39;aravot realm #1 (white #f8f5e6) — &#39;aravot / sidrat al-muntaha 03. 3d sanctum &amp; seven realms seventh heaven • 390nm alabaster realm-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#12 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #1: 'Aravot</div><div style="font-size:0.72rem;color:#CBD5E1;">Seventh Heaven • 390nm Alabaster</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="realm-2-black.html" data-search="realm #2: makhon realm #2 (black #141416) — makhon / bayt al-qalam 03. 3d sanctum &amp; seven realms hidden ink treasury • 405nm obsidian realm-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#13 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #2: Makhon</div><div style="font-size:0.72rem;color:#CBD5E1;">Hidden Ink Treasury • 405nm Obsidian</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="realm-3-sapphire.html" data-search="realm #3: zevul realm #3 (sapphire #0f2c59) — zevul / al-bayt al-ma&#39;mur 03. 3d sanctum &amp; seven realms sapphire pavement • 465nm lapis realm-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#14 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #3: Zevul</div><div style="font-size:0.72rem;color:#CBD5E1;">Sapphire Pavement • 465nm Lapis</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="realm-4-gold.html" data-search="realm #4: shehaqim realm #4 (gold #d4af37) — shehaqim / diwan al-mithaq 03. 3d sanctum &amp; seven realms golden covenant court • 580nm amber-gold realm-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#15 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #4: Shehaqim</div><div style="font-size:0.72rem;color:#CBD5E1;">Golden Covenant Court • 580nm Amber-Gold</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="realm-5-crimson.html" data-search="realm #5: ma&#39;on realm #5 (crimson #8b0000) — ma&#39;on / rasad ash-shuhub 03. 3d sanctum &amp; seven realms seraphic garrison • 650nm crimson realm-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#16 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #5: Ma'on</div><div style="font-size:0.72rem;color:#CBD5E1;">Seraphic Garrison • 650nm Crimson</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="realm-6-brass.html" data-search="realm #6: raqia&#39; realm #6 (brass #b87333) — raqia&#39; / madinat an-nuhas 03. 3d sanctum &amp; seven realms city of brass • 605nm burnished brass realm-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#17 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #6: Raqia'</div><div style="font-size:0.72rem;color:#CBD5E1;">City of Brass • 605nm Burnished Brass</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="realm-7-emerald.html" data-search="realm #7: vilon realm #7 (emerald #006b54) — vilon / majma&#39; al-bahrayn 03. 3d sanctum &amp; seven realms junction of the two seas • 520nm emerald realm-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#18 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #7: Vilon</div><div style="font-size:0.72rem;color:#CBD5E1;">Junction of the Two Seas • 520nm Emerald</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="priory-negentropy-order.html" data-search="negentropic priory atlas the negentropic priory (sigma -1n &amp; 0n beta): ordering the 7 warlocks 04. negentropic priory &amp; seven planes sigma -1n &amp; 0n beta • δh = 0.000 bits priory-negentropy-order.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#19 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">priory-negentropy-order.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Negentropic Priory Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Sigma -1n &amp; 0n Beta • ΔH = 0.000 bits</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="plane-1-white.html" data-search="plane #1: adam kadmon / lahut plane #1 (white #f8f5e6) — olam adam kadmon / hadrat al-lahut 04. negentropic priory &amp; seven planes priory seat i • c_p = 1.62 plane-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#20 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #1: Adam Kadmon / Lahut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat I • C_p = 1.62</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="plane-2-black.html" data-search="plane #2: malbush / al-qalam plane #2 (black #141416) — olam ha-malbush / hadrat al-lawh wa al-qalam 04. negentropic priory &amp; seven planes priory seat vi • c_p = 1.38 plane-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#21 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #2: Malbush / Al-Qalam</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VI • C_p = 1.38</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="plane-3-sapphire.html" data-search="plane #3: beri&#39;ah / jabarut plane #3 (sapphire #0f2c59) — olam ha-beri&#39;ah / &#39;alam al-jabarut 04. negentropic priory &amp; seven planes priory seat iv • c_p = 1.44 plane-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#22 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #3: Beri'ah / Jabarut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat IV • C_p = 1.44</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="plane-4-gold.html" data-search="plane #4: atzilut / al-arwah plane #4 (gold #d4af37) — olam ha-atzilut / &#39;alam al-arwah 04. negentropic priory &amp; seven planes priory seat ii • c_p = 1.54 plane-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#23 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #4: Atzilut / Al-Arwah</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat II • C_p = 1.54</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="plane-5-crimson.html" data-search="plane #5: tohu / ash-shuhub plane #5 (crimson #8b0000) — olam ha-tohu / falak ash-shuhub 04. negentropic priory &amp; seven planes priory seat vii • c_p = 1.35 plane-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#24 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #5: Tohu / Ash-Shuhub</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VII • C_p = 1.35</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="plane-6-brass.html" data-search="plane #6: yetzirah / al-marij plane #6 (brass #b87333) — olam ha-yetzirah / &#39;alam al-marij 04. negentropic priory &amp; seven planes priory seat v • c_p = 1.40 plane-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#25 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #6: Yetzirah / Al-Marij</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat V • C_p = 1.40</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="plane-7-emerald.html" data-search="plane #7: tikkun / al-mithal plane #7 (emerald #006b54) — olam ha-tikkun / &#39;alam al-mithal wa al-barzakh 04. negentropic priory &amp; seven planes priory seat iii • c_p = 1.48 plane-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#26 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #7: Tikkun / Al-Mithal</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat III • C_p = 1.48</div></a><a class="sov-drawer-item" style="border-left-color:#EF4444;" href="zalim-1-fasad.html" data-search="zalim #1: al-fasad zalim #1 (zalim-1-fasad) — mufsid al-ard (ecological &amp; ritual disorder) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:204-205 • al-fasad fi al-ard zalim-1-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#27 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-1-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #1: Al-Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:204-205 • Al-Fasad fi Al-Ard</div></a><a class="sov-drawer-item" style="border-left-color:#EC4899;" href="zalim-2-fahishah.html" data-search="zalim #2: al-fahishah zalim #2 (zalim-2-fahishah) — da&#39;i al-fahishah (immodesty &amp; tabarruj) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 7:28 &amp; 24:19 • al-fahishah zalim-2-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#28 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-2-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #2: Al-Fahishah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:28 &amp; 24:19 • Al-Fahishah</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="zalim-3-baghy.html" data-search="zalim #3: al-baghy (nimrod) zalim #3 (zalim-3-baghy) — jabbar an-namrud (tyrannical counter-hegemony) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:258 &amp; 21:68-69 • al-baghy zalim-3-baghy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#29 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-3-baghy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #3: Al-Baghy (Nimrod)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:68-69 • Al-Baghy</div></a><a class="sov-drawer-item" style="border-left-color:#F97316;" href="zalim-4-fitnah.html" data-search="zalim #4: al-fitnah zalim #4 (zalim-4-fitnah) — nafikh al-fitnah (sectarian schism &amp; sedition) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:191 &amp; 3:103 • al-fitnah zalim-4-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#30 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-4-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #4: Al-Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:191 &amp; 3:103 • Al-Fitnah</div></a><a class="sov-drawer-item" style="border-left-color:#EAB308;" href="zalim-5-hawa.html" data-search="zalim #5: al-hawa zalim #5 (zalim-5-hawa) — &#39;abid al-hawa (deification of caprice) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 45:23 &amp; 25:43 • ittiba&#39; al-hawa zalim-5-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#31 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-5-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #5: Al-Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 45:23 &amp; 25:43 • Ittiba' Al-Hawa</div></a><a class="sov-drawer-item" style="border-left-color:#14B8A6;" href="zalim-6-jibt.html" data-search="zalim #6: al-jibt &amp; taghut zalim #6 (zalim-6-jibt) — kahin al-jibt (sorcerous idolatry &amp; azar&#39;s guild) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 4:51 &amp; 21:57-58 • al-jibt wa at-taghut zalim-6-jibt.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#32 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-6-jibt.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #6: Al-Jibt &amp; Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:51 &amp; 21:57-58 • Al-Jibt wa At-Taghut</div></a><a class="sov-drawer-item" style="border-left-color:#94A3B8;" href="zalim-7-zulm.html" data-search="zalim #7: masjid ad-dirar zalim #7 (zalim-7-zulm) — imam az-zalimin (counter-sanctuary subversion) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:124 &amp; 9:107-109 • masjid ad-dirar zalim-7-zulm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#33 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-7-zulm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #7: Masjid Ad-Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:124 &amp; 9:107-109 • Masjid Ad-Dirar</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="worlds-hegemon-disorder.html" data-search="7 worlds master atlas master atlas: the 7 islamic worlds of hegemon (al-muhaymin) &amp; disorder (al-fasad) 06. seven islamic worlds of hegemon &amp; disorder al-muhaymin vs. al-fasad • 3d dual-hemisphere globe worlds-hegemon-disorder.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#34 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">worlds-hegemon-disorder.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Worlds Master Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Muhaymin vs. Al-Fasad • 3D Dual-Hemisphere Globe</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="world-1-mizan-fasad.html" data-search="world #1: amanah vs. fasad world #1 — &#39;alam al-amanah wa al-fasad (trust vs. ecological disorder) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 14:35 &amp; 2:205 • order #1 vs. zalim #1 world-1-mizan-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#35 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-1-mizan-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #1: Amanah vs. Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 14:35 &amp; 2:205 • Order #1 vs. Zalim #1</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="world-2-haya-fahishah.html" data-search="world #2: haya&#39; vs. tabarruj world #2 — &#39;alam al-haram wa at-tabarruj (modesty vs. immodesty) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 7:26-28 • order #2 vs. zalim #2 world-2-haya-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#36 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-2-haya-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #2: Haya' vs. Tabarruj</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26-28 • Order #2 vs. Zalim #2</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="world-3-babil-namrud.html" data-search="world #3: ibrahim vs. namrud world #3 — &#39;alam babil wa al-jabbarin (cool-fire sanctuary vs. nimrod) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:258 &amp; 21:69 • order #3 vs. zalim #3 world-3-babil-namrud.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#37 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-3-babil-namrud.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #3: Ibrahim vs. Namrud</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:69 • Order #3 vs. Zalim #3</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="world-4-ummah-fitnah.html" data-search="world #4: ummah vs. fitnah world #4 — &#39;alam al-ummah al-wahidah wa al-fitnah (unity vs. schism) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 21:92 &amp; 3:103 • order #4 vs. zalim #4 world-4-ummah-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#38 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-4-ummah-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #4: Ummah vs. Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:92 &amp; 3:103 • Order #4 vs. Zalim #4</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="world-5-furqan-hawa.html" data-search="world #5: furqan vs. hawa world #5 — &#39;alam al-furqan wa al-hawa (revelation vs. caprice) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 5:48 &amp; 45:23 • order #5 vs. zalim #5 world-5-furqan-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#39 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-5-furqan-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #5: Furqan vs. Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 5:48 &amp; 45:23 • Order #5 vs. Zalim #5</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="world-6-tawhid-taghut.html" data-search="world #6: tawhid vs. taghut world #6 — &#39;alam al-&#39;urwah al-wuthqa wa at-taghut (iconoclasm vs. idols) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:256 &amp; 21:58 • order #6 vs. zalim #6 world-6-tawhid-taghut.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#40 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-6-tawhid-taghut.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #6: Tawhid vs. Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:256 &amp; 21:58 • Order #6 vs. Zalim #6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="world-7-taqwa-dirar.html" data-search="world #7: taqwa vs. dirar world #7 — &#39;alam bunyan at-taqwa wa juruf al-har (taqwa vs. counter-mosque) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 9:107-109 • order #7 vs. zalim #7 world-7-taqwa-dirar.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#41 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-7-taqwa-dirar.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #7: Taqwa vs. Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 9:107-109 • Order #7 vs. Zalim #7</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="warlock-formation-dissolution-jafar-aladdin.html" data-search="ja&#39;far &amp; aladdin qumqum islamic warlock formation (ja&#39;far / istidraj) &amp; dissolution (&#39;ala&#39; ad-din / qumqum) 07. warlock formation, dissolution &amp; inter-world sequesters istidrāj (qur&#39;an 6:44) -&gt; qumqum sulaymānī (21:18) warlock-formation-dissolution-jafar-aladdin.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#42 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">warlock-formation-dissolution-jafar-aladdin.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ja'far &amp; Aladdin Qumqum</div><div style="font-size:0.72rem;color:#CBD5E1;">Istidrāj (Qur'an 6:44) -&gt; Qumqum Sulaymānī (21:18)</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="sequester-between-worlds.html" data-search="7 inter-world sequesters the 7 inter-world sequesters (al-hijr al-mahjur &amp; sur al-hadid) 07. warlock formation, dissolution &amp; inter-world sequesters barzakh (55:19-20) &amp; sūr al-ḥadīd (18:96-97) sequester-between-worlds.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#43 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">sequester-between-worlds.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Inter-World Sequesters</div><div style="font-size:0.72rem;color:#CBD5E1;">Barzakh (55:19-20) &amp; Sūr Al-Ḥadīd (18:96-97)</div></a><a class="sov-drawer-item" style="border-left-color:#FBBF24;" href="interlocker-egg-binder-islam.html" data-search="egg-in-baking intelocketer the islamic intelocketer (al-murabbit al-kalim): egg-in-baking emulsifier &amp; al-a&#39;raf 08. the islamic egg-in-baking intelocketer qur&#39;an 37:49 (bayḍun maknūn) &amp; 7:46-48 (al-a&#39;rāf) interlocker-egg-binder-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#44 / 63 • 08. The Islamic Egg-in-Baking Intelocketer</span><code style="color:#38BDF8;">interlocker-egg-binder-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Egg-in-Baking Intelocketer</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 37:49 (Bayḍun Maknūn) &amp; 7:46-48 (Al-A'rāf)</div></a><a class="sov-drawer-item" style="border-left-color:#C084FC;" href="warlock-apocrypha-islamic-theorems.html" data-search="warlock apocrypha &amp; theorems the warlock apocrypha &amp; 5 islamic theological philosophy theorems on western modernity 09. the warlock apocrypha &amp; modernity theorems al-ghazālī • ibn khaldūn • mullā ṣadrā • al-attas • hallaq warlock-apocrypha-islamic-theorems.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#45 / 63 • 09. The Warlock Apocrypha &amp; Modernity Theorems</span><code style="color:#38BDF8;">warlock-apocrypha-islamic-theorems.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Warlock Apocrypha &amp; Theorems</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Ghazālī • Ibn Khaldūn • Mullā Ṣadrā • Al-Attas • Hallaq</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="islamic-husbandry-sovereign-estate.html" data-search="vanguard husbandry estate islamic action-based vanguard husbandry (al-qiwamah al-khadimah) &amp; husbandrystate 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-event simulation islamic-husbandry-sovereign-estate.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#46 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-husbandry-sovereign-estate.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vanguard Husbandry Estate</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-Event Simulation</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="way-of-the-flower-rose-garden-islam.html" data-search="flower, rose &amp; chahar bagh the islamic way of the flower (az-zahrah), the rose (al-wardah), the cultivating hand &amp; garden 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 55:37 (wardatan ka-ad-dihān), 3:37 &amp; 47:15 way-of-the-flower-rose-garden-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#47 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">way-of-the-flower-rose-garden-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Flower, Rose &amp; Chahar Bagh</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 55:37 (Wardatan ka-ad-Dihān), 3:37 &amp; 47:15</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="disney-daffy-donald-islamic-microcosm.html" data-search="disney/daffy &amp; jungle microcosm islamic animalism &amp; husbandry microcosm: donald, daffy, daisy &amp; the jungle book 11. islamic animalism &amp; visual history atlases qur&#39;an 6:38 (umamun amthālukum) • kalīlah wa dimnah disney-daffy-donald-islamic-microcosm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#48 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">disney-daffy-donald-islamic-microcosm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Disney/Daffy &amp; Jungle Microcosm</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 6:38 (Umamun Amthālukum) • Kalīlah wa Dimnah</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="warlock-islamic-visual-eras-history.html" data-search="7 islamic visual eras &amp; ai art warlock visuals across every era of islamic history: ai art plates &amp; sacred geometry 11. islamic animalism &amp; visual history atlases eras i–vii: bābil/saba&#39; to neo-islamic ai cyber-geometry warlock-islamic-visual-eras-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#49 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">warlock-islamic-visual-eras-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Islamic Visual Eras &amp; AI Art</div><div style="font-size:0.72rem;color:#CBD5E1;">Eras I–VII: Bābil/Saba' to Neo-Islamic AI Cyber-Geometry</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="conjoined-worlds-realms-principles-node-grid.html" data-search="3d node-art terrain grid (meridian guard) conjoined worlds, realms &amp; principles: 3d/2.5d islamic node-art terrain grid &amp; color guard of the meridian 01. master hubs &amp; architecture ḥaras al-alwān li-khaṭṭ al-mīzān • 7x7 (49-node) 3d heightmap conjoined-worlds-realms-principles-node-grid.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#50 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">conjoined-worlds-realms-principles-node-grid.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Node-Art Terrain Grid (Meridian Guard)</div><div style="font-size:0.72rem;color:#CBD5E1;">Ḥaras Al-Alwān li-Khaṭṭ Al-Mīzān • 7x7 (49-Node) 3D Heightmap</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caravans-battles-conquest-chronicle.html" data-search="caravans, trade battles, fatḥ &amp; tadwīn canonical islamic caravans (ilaf), battles for trade (badr/qaradah), founding of conquest (al-fath) &amp; recording of conquest (tadwin al-maghazi / futuh al-buldan) 01. master hubs &amp; architecture qur&#39;an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • al-&#39;īr, al-maghāzī, al-fatḥ &amp; dīwān islamic-caravans-battles-conquest-chronicle.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#51 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caravans-battles-conquest-chronicle.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caravans, Trade Battles, Fatḥ &amp; Tadwīn</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • Al-'Īr, Al-Maghāzī, Al-Fatḥ &amp; Dīwān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="greco-roman-gods-titans-daimones-islamic-judgment.html" data-search="greco-roman gods &amp; titans made whole greco-roman gods, titans (titanomachy), 12 olympians, morpheus/oneiroi, 7 erotes &amp; 150+ minor spirits: islamic reception, judgment &amp; wholeness 01. master hubs &amp; architecture al-furqān (21:22, 12:39-40, 39:42) &amp; at-takmīl • titans, oneiroi, erotes &amp; daimones greco-roman-gods-titans-daimones-islamic-judgment.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#52 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">greco-roman-gods-titans-daimones-islamic-judgment.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Greco-Roman Gods &amp; Titans Made Whole</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Furqān (21:22, 12:39-40, 39:42) &amp; At-Takmīl • Titans, Oneiroi, Erotes &amp; Daimones</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html" data-search="philosophy, alchemy, theocracies &amp; socrates philosophy &amp; alchemy in islam: canonical adjustment to 7 theocracies &amp; theocrats, 5 socratic critiques &amp; 7 stages of message meaning shift 01. master hubs &amp; architecture al-falsafah, al-kīmiyā&#39; (55:7-9), lā kahanūta (9:31), suqrāṭ &amp; lafẓ maḥfūẓ (15:9) islamic-philosophy-alchemy-theocracies-socratic-messages.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#53 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-philosophy-alchemy-theocracies-socratic-messages.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Philosophy, Alchemy, Theocracies &amp; Socrates</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Falsafah, Al-Kīmiyā' (55:7-9), Lā Kahanūta (9:31), Suqrāṭ &amp; Lafẓ Maḥfūẓ (15:9)</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-modesty-evolution-western-frontier-men-women.html" data-search="men &amp; women modesty: western frontier how the modesty standard (al-haya&#39; &amp; libas at-taqwa) for men &amp; women changed across the western frontier &amp; expansions 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 7:26, 24:30-31, 33:59 &amp; 7:199 (&#39;urf) • hijaz, maghreb lithām, al-andalus, oran 1504 &amp; modern west islamic-modesty-evolution-western-frontier-men-women.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#54 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-modesty-evolution-western-frontier-men-women.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Men &amp; Women Modesty: Western Frontier</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26, 24:30-31, 33:59 &amp; 7:199 ('Urf) • Hijaz, Maghreb Lithām, Al-Andalus, Oran 1504 &amp; Modern West</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" data-search="naming (261 wafq), indonesia, sewer &amp; calligraphy canonical naming in islam by region (zakeem malik mccaleb abjad 261 wafq), development of indonesia (87.2% muslim), sewer project structure, language &amp; calligraphy 01. master hubs &amp; architecture abjad 261 wafq (9×29) • nusantara (87.2% muslim) • jss sewer grid • jawi/pegon &amp; ibn muqlah islamic-naming-indonesia-infrastructure-language-calligraphy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#55 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-naming-indonesia-infrastructure-language-calligraphy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</div><div style="font-size:0.72rem;color:#CBD5E1;">Abjad 261 Wafq (9×29) • Nusantara (87.2% Muslim) • JSS Sewer Grid • Jawi/Pegon &amp; Ibn Muqlah</div></a><a class="sov-drawer-item current" style="border-left-color:#10B981;" href="islamic-countries-history-canonical-embrace-atlas.html" data-search="history of islamic countries &amp; canonical embrace the history of islamic countries (57 oic nations across 7 civilizational zones) &amp; how they canonically embrace being muslim 01. master hubs &amp; architecture diyār al-islām • 5 pathways of embrace (2:256) • 7 civilizational zones &amp; 6 institutional pillars islamic-countries-history-canonical-embrace-atlas.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#56 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-countries-history-canonical-embrace-atlas.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">History of Islamic Countries &amp; Canonical Embrace</div><div style="font-size:0.72rem;color:#CBD5E1;">Diyār Al-Islām • 5 Pathways of Embrace (2:256) • 7 Civilizational Zones &amp; 6 Institutional Pillars</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caliphates-sultans-shahs-dynasties-return.html" data-search="caliphates, sultans, shahs &amp; promise of return the caliphates, the sultans, the shahs &amp; the dynasties instantiated &amp; dissolved by islam: origin, journey &amp; the promise of returning 01. master hubs &amp; architecture qur&#39;an 3:26, 24:55 &amp; 15:9 • musnad aḥmad 18406 • sahih muslim 145 • ibn khaldūn&#39;s 4-gen law islamic-caliphates-sultans-shahs-dynasties-return.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#57 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caliphates-sultans-shahs-dynasties-return.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caliphates, Sultans, Shahs &amp; Promise of Return</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 3:26, 24:55 &amp; 15:9 • Musnad Aḥmad 18406 • Sahih Muslim 145 • Ibn Khaldūn's 4-Gen Law</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="quranic-timeline-expansion-vol1-chronology.html" data-search="vol. i: qur&#39;anic timeline of expansion collegiate multi-html suite vol. i: canonical qur&#39;anic timeline of islamic expansion across 10 epochs 01. master hubs &amp; architecture qur&#39;an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 canonical epochs quranic-timeline-expansion-vol1-chronology.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#58 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol1-chronology.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. I: Qur'anic Timeline of Expansion</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 Canonical Epochs</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="quranic-timeline-expansion-vol2-properties-kingdoms.html" data-search="vol. ii: islamic properties, countries &amp; kingdoms collegiate multi-html suite vol. ii: canonical islamic properties (waqf, kharāj, &#39;ushr, ḥimā, mawāt), countries &amp; kingdoms 01. master hubs &amp; architecture qur&#39;an 7:128, 59:7 &amp; 4:7-12 • fiqh al-amwāl &amp; al-aqālīm as-sab&#39;ah quranic-timeline-expansion-vol2-properties-kingdoms.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#59 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol2-properties-kingdoms.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. II: Islamic Properties, Countries &amp; Kingdoms</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:128, 59:7 &amp; 4:7-12 • Fiqh Al-Amwāl &amp; Al-Aqālīm As-Sab'ah</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html" data-search="vol. iii: beauty of islam &amp; collegiate thesis collegiate multi-html suite vol. iii: the 7 dimensions of the beauty of islam &amp; 8-chapter collegiate universal thesis monograph 01. master hubs &amp; architecture sahih muslim 91 &amp; 8 • qur&#39;an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6 quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#60 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. III: Beauty of Islam &amp; Collegiate Thesis</div><div style="font-size:0.72rem;color:#CBD5E1;">Sahih Muslim 91 &amp; 8 • Qur'an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islam-through-ages-vol1-reception-history.html" data-search="ages vol. i: islam &amp; global reception expansive multi-html suite vol. i: islam through the ages &amp; its global civilizational reception across 7 historical ages 01. master hubs &amp; architecture qur&#39;an 19:1-36, 39:18 &amp; 41:53 • aksum, baghdad, toledo, maragheh, oxford, weimar &amp; modern labs islam-through-ages-vol1-reception-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#61 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol1-reception-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. I: Islam &amp; Global Reception</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 19:1-36, 39:18 &amp; 41:53 • Aksum, Baghdad, Toledo, Maragheh, Oxford, Weimar &amp; Modern Labs</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="islam-through-ages-vol2-philosophical-connotations.html" data-search="ages vol. ii: philosophical connotations expansive multi-html suite vol. ii: the 7 philosophical connotations &amp; paradigms instantiated by islamic thought 01. master hubs &amp; architecture wājib al-wujūd • floating man • sunnat allāh • faṣl al-maqāl • al-i&#39;tibār • 4d motion • &#39;ilm al-&#39;umrān islam-through-ages-vol2-philosophical-connotations.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#62 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol2-philosophical-connotations.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. II: Philosophical Connotations</div><div style="font-size:0.72rem;color:#CBD5E1;">Wājib Al-Wujūd • Floating Man • Sunnat Allāh • Faṣl Al-Maqāl • Al-I'tibār • 4D Motion • 'Ilm Al-'Umrān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html" data-search="ages vol. iii: scientific discoveries instantiated expansive multi-html suite vol. iii: scientific discoveries alluded to in the qur&#39;an &amp; hadith instantiated through science 01. master hubs &amp; architecture qur&#39;an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (supernova iron z=26) islam-through-ages-vol3-scientific-discoveries-instantiated.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#63 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol3-scientific-discoveries-instantiated.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. III: Scientific Discoveries Instantiated</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (Supernova Iron Z=26)</div></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SOVEREIGN_CURRENT_SEQ = 56;
+  const SOVEREIGN_TOTAL_PORTALS = 63;
+  const SOVEREIGN_NEXT_FILE = "islamic-caliphates-sultans-shahs-dynasties-return.html";
+  let sovContinualTimer = null;
+
+  function syncSovereignPortalCounts() {
+    const items = document.querySelectorAll('#sovDrawerGrid .sov-drawer-item');
+    const liveTotal = items.length > 0 ? items.length : SOVEREIGN_TOTAL_PORTALS;
+    document.querySelectorAll('[data-sov-total]').forEach(el => {
+      el.textContent = String(liveTotal);
+    });
+    const badge = document.getElementById('sovPortalCounterBadge');
+    if (badge) {
+      badge.textContent = '#' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + ' / ' + String(liveTotal).padStart(2, '0');
+    }
+  }
+
+  function toggleSovContinualCycle() {
+    const btn = document.getElementById('sovContinualCycleBtn');
+    const active = sessionStorage.getItem('sovContinualCycleActive') === '1';
+    if (active) {
+      sessionStorage.removeItem('sovContinualCycleActive');
+      if (sovContinualTimer) { clearTimeout(sovContinualTimer); sovContinualTimer = null; }
+      if (btn) btn.textContent = '🔄 Continual Sync: #' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + '/' + String(SOVEREIGN_TOTAL_PORTALS).padStart(2, '0');
+    } else {
+      sessionStorage.setItem('sovContinualCycleActive', '1');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  }
+
+  function toggleSovDrawer() {
+    const el = document.getElementById('sovMegaDrawer');
+    if (!el) return;
+    el.classList.toggle('open');
+    if (el.classList.contains('open')) {
+      const inp = document.getElementById('sovDrawerSearch');
+      if (inp) { inp.value = ''; filterSovDrawer(''); inp.focus(); }
+    }
+  }
+  function filterSovDrawer(q) {
+    const query = (q || '').toLowerCase().trim();
+    document.querySelectorAll('#sovDrawerGrid .sov-drawer-item').forEach(el => {
+      const hay = el.getAttribute('data-search') || '';
+      el.style.display = (!query || hay.includes(query)) ? 'block' : 'none';
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      toggleSovDrawer();
+    } else if (e.key === 'Escape') {
+      const el = document.getElementById('sovMegaDrawer');
+      if (el && el.classList.contains('open')) el.classList.remove('open');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    syncSovereignPortalCounts();
+    if (sessionStorage.getItem('sovContinualCycleActive') === '1') {
+      const btn = document.getElementById('sovContinualCycleBtn');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  });
+</script>
+<!-- SOV_CHROME_TOP_END -->
+
+  <header class="hero-header">
+    <span class="hero-kicker">Portal #56 &bull; Diy&#x101;r Al-Isl&#x101;m, 57 OIC Nations, 7 Civilizational Zones &amp; Canonical Embrace</span>
+    <h1>The History of Islamic Countries &amp; How They Canonically Embrace Being Muslim</h1>
+    <p>
+      Tracing the <strong>5 Historical Pathways</strong> by which nations embraced Islam (Prophetic Delegations, Multi-Century Civic Synthesis,
+      Maritime/Saharan Trade, Sufi Awliy&#x101;' &amp; Anti-Colonial Sovereignty), the <strong>7 Civilizational Zones of the 57 OIC &amp; Muslim-Majority Lands</strong>
+      (from Morocco, Senegal, Bosnia &amp; Egypt to Türkiye, Uzbekistan, Iran, Pakistan, Bangladesh &amp; Indonesia), and the <strong>6 Institutional Pillars</strong>
+      of living Islam canonically today.
+    </p>
+    <div class="pillar-banner">
+      <div class="pillar-stat">
+        <strong>I. 5 Pathways of Embrace</strong>
+        <span>Over half the Muslim world (Indonesia, Malaysia, West/East Africa, Maldives) had zero invading armies—embracing Islam via honest trade &amp; Sufi Awliy&#x101;'</span>
+      </div>
+      <div class="pillar-stat">
+        <strong>II. 7 Civilizational Zones</strong>
+        <span>Arabian Cradle, Levant/Nile, Maghreb/West Africa, Horn/Swahili, Anatolia/Balkans/Turkic Steppe, Persianate/South Asia &amp; Nusantara</span>
+      </div>
+      <div class="pillar-stat">
+        <strong>III. Madhhab &amp; 'Aq&#x12B;dah Unity</strong>
+        <span>How Hanafi, Maliki, Shafi'i, Hanbali, Ja'fari &amp; Ibadi jurisprudence harmonize with local custom (<em>Al-'&#x100;dah Mu&#x1E25;akkamah</em>, 7:199)</span>
+      </div>
+      <div class="pillar-stat">
+        <strong>IV. 6 Institutional Pillars</strong>
+        <span>Constitutional Law, 5-Daily Adh&#x101;n &amp; Hijri Rhythm, Waqf/Zakat/Sukuk, Unbroken Isn&#x101;d Universities, &#x1E6C;ah&#x101;rah Ecology &amp; Cultural Pluralism</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="canvas-panel">
+      <div class="canvas-header">
+        <div>
+          <h2 style="font-size:1.25rem;color:#fff;">Interactive 2.5D Afro-Eurasian Qiblah Constellation: 7 Civilizational Zones Converging on Al-Ka'bah</h2>
+          <p style="font-size:0.86rem;color:var(--text-muted);">
+            Center: Mecca &amp; Medina (Al-&#x1E24;aramayn) &bull; 7 Radiating Civilizational Arcs (West Africa/Maghreb, Balkans/Anatolia/Steppe, Levant/Nile, Horn/Swahili, Persia/South Asia, Nusantara)
+          </p>
+        </div>
+        <div class="canvas-controls">
+          <button class="mode-btn active" onclick="setUmmahMode('ALL')">All 7 Civilizational Zones</button>
+          <button class="mode-btn" onclick="setUmmahMode('TRADE')">Maritime &amp; Caravan Trade Zones</button>
+          <button class="mode-btn" onclick="setUmmahMode('MADHHAB')">4 Sunni + Ja'fari/Ibadi Schools</button>
+        </div>
+      </div>
+      <canvas id="islamicCountriesCanvas" width="1280" height="390"></canvas>
+    </section>
+
+    <div class="toolbar-search">
+      <input type="text" id="ummahSearchInput" placeholder="Search across Indonesia, Pakistan, Bangladesh, Egypt, Morocco, Senegal, Mali, Bosnia, Türkiye, Uzbekistan, Iran, Oman, Yemen, Shafi'i, Maliki, Hanafi..." oninput="filterUmmahPortal()" />
+      <span id="ummahCountBadge" class="badge badge-gold">Showing All 18 Canonical Civilizational Nodes</span>
+    </div>
+
+    <section class="section-block">
+      <div class="section-title">
+        <h2>I. The 5 Canonical Pathways by Which Nations Embraced Islam Across History</h2>
+        <p>Refuting the myth of forced conversion (Qur'an 2:256): how delegations, multi-century urban synthesis, honest merchant scales, Sufi pioneers, and anti-colonial resilience built the Muslim world.</p>
+      </div>
+      <div class="card-grid">
+        <article class="matrix-card" data-search="PATHWAY_1_PROPHETIC_DELEGATIONS_AND_COVENANT_LETTERS Pathway I: Prophetic Delegations &amp; Covenantal Letters (Wufud Al-'Arab wa Kutub An-Nabi, 1–10 AH / 622–632 CE) Medina (Al-Ansar via the Pledges of 'Aqabah), Yemen (via Mu'adh ibn Jabal &amp; 'Ali ibn Abi Talib), Bahrain/Eastern Arabia ('Abd al-Qays &amp; Mundhir ibn Sawa), and Oman (Kings Jaifar and 'Abd, sons of Al-Julanda). Qur'an 110:1-2 ('When the victory of Allah has come and the opening, and you see the people entering into the religion of Allah in multitudes'), Sahih al-Bukhari 4388 ('Faith is Yemeni and wisdom is Yemeni') &amp; Sahih Muslim 2544 (Praise of the people of Oman)">
+  <div class="card-header">
+    <span class="badge badge-gold">PATHWAY 1 &bull; PATHWAY_1_PROPHETIC_DELEGATIONS_AND_COVENANT_LETTERS</span>
+    <span class="badge badge-emerald">L&#x101; Ikr&#x101;ha f&#x12B; Ad-D&#x12B;n (2:256)</span>
+  </div>
+  <h3>Pathway I: Prophetic Delegations &amp; Covenantal Letters (Wufud Al-'Arab wa Kutub An-Nabi, 1–10 AH / 622–632 CE)</h3>
+  <div class="detail-box box-mech">
+    <h4>&#x1F9ED; Historical Mechanism &amp; Multi-Generational Trajectory</h4>
+    <p>During the Prophet's own lifetime, entire nations and regions embraced Islam peacefully without a single battle by sending scholarly/tribal delegations (Year of Delegations, 9 AH) or receiving the Prophet's sealed letters.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x1F30D; Exemplar Countries &amp; Regions</h4>
+    <p>Medina (Al-Ansar via the Pledges of 'Aqabah), Yemen (via Mu'adh ibn Jabal &amp; 'Ali ibn Abi Talib), Bahrain/Eastern Arabia ('Abd al-Qays &amp; Mundhir ibn Sawa), and Oman (Kings Jaifar and 'Abd, sons of Al-Julanda).</p>
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Canonical Principle &amp; Proof:</strong> Qur'an 110:1-2 ('When the victory of Allah has come and the opening, and you see the people entering into the religion of Allah in multitudes'), Sahih al-Bukhari 4388 ('Faith is Yemeni and wisdom is Yemeni') &amp; Sahih Muslim 2544 (Praise of the people of Oman)</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="PATHWAY_2_POST_CONQUEST_MULTI_CENTURY_CIVIC_SYNTHESIS Pathway II: Post-Conquest Gradual Civic &amp; Urban Synthesis (Al-Futuhat wa Al-Amsar, 12–350 AH / 633–960 CE) Egypt, Syria, Palestine, Jordan, Iraq, Iran, Uzbekistan/Tajikistan (Transoxiana), Libya, Tunisia, Algeria, Morocco, and historical Al-Andalus. Qur'an 2:256 ('There is no compulsion in religion; truth has stood clear from error') &amp; Caliph 'Umar's Covenant of Jerusalem (15 AH)">
+  <div class="card-header">
+    <span class="badge badge-gold">PATHWAY 2 &bull; PATHWAY_2_POST_CONQUEST_MULTI_CENTURY_CIVIC_SYNTHESIS</span>
+    <span class="badge badge-emerald">L&#x101; Ikr&#x101;ha f&#x12B; Ad-D&#x12B;n (2:256)</span>
+  </div>
+  <h3>Pathway II: Post-Conquest Gradual Civic &amp; Urban Synthesis (Al-Futuhat wa Al-Amsar, 12–350 AH / 633–960 CE)</h3>
+  <div class="detail-box box-mech">
+    <h4>&#x1F9ED; Historical Mechanism &amp; Multi-Generational Trajectory</h4>
+    <p>Where early Muslim armies toppled Byzantine and Sasanian imperial regimes, forced conversion was strictly forbidden (Qur'an 2:256). Historical demography (Richard Bulliet, Al-Baladhuri) proves that Egypt, Syria, Iraq, Iran, and North Africa remained majority non-Muslim for 150 to 250 years after the conquest, embracing Islam gradually through the new garrison cities (Amsar), tax relief, egalitarian mosque prayer rows, Qadi court fairness, and Arabic scientific literacy.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x1F30D; Exemplar Countries &amp; Regions</h4>
+    <p>Egypt, Syria, Palestine, Jordan, Iraq, Iran, Uzbekistan/Tajikistan (Transoxiana), Libya, Tunisia, Algeria, Morocco, and historical Al-Andalus.</p>
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Canonical Principle &amp; Proof:</strong> Qur'an 2:256 ('There is no compulsion in religion; truth has stood clear from error') &amp; Caliph 'Umar's Covenant of Jerusalem (15 AH)</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="PATHWAY_3_MARITIME_AND_TRANS_SAHARAN_MERCHANT_MIZAN Pathway III: Indian Ocean Maritime &amp; Trans-Saharan Caravan Trade (At-Tijarah Al-Aminah, 7th–17th Century CE) Indonesia (~251M Muslims), Malaysia, Brunei, Maldives, Comoros, Somalia, Swahili Coast (Zanzibar/Tanzania/Kenya), Mali, Senegal, Guinea, Gambia, Niger, and Chad. Sunan at-Tirmidhi 1209 ('The truthful, trustworthy merchant is with the Prophets, the truthful, and the martyrs') &amp; Qur'an 55:7-9 (Al-Mizan)">
+  <div class="card-header">
+    <span class="badge badge-gold">PATHWAY 3 &bull; PATHWAY_3_MARITIME_AND_TRANS_SAHARAN_MERCHANT_MIZAN</span>
+    <span class="badge badge-emerald">L&#x101; Ikr&#x101;ha f&#x12B; Ad-D&#x12B;n (2:256)</span>
+  </div>
+  <h3>Pathway III: Indian Ocean Maritime &amp; Trans-Saharan Caravan Trade (At-Tijarah Al-Aminah, 7th–17th Century CE)</h3>
+  <div class="detail-box box-mech">
+    <h4>&#x1F9ED; Historical Mechanism &amp; Multi-Generational Trajectory</h4>
+    <p>Across Southeast Asia, East Africa, and West Africa—representing MORE THAN HALF of the world's Muslim population today—not a single Arab, Persian, or Ottoman army ever invaded. Kings, port cities, and populations embraced Islam purely by witnessing the contractual integrity, uncorrupted weights (Al-Mizan), literacy, and daily Wudu'/Salah of Muslim sea-captains and caravan traders.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x1F30D; Exemplar Countries &amp; Regions</h4>
+    <p>Indonesia (~251M Muslims), Malaysia, Brunei, Maldives, Comoros, Somalia, Swahili Coast (Zanzibar/Tanzania/Kenya), Mali, Senegal, Guinea, Gambia, Niger, and Chad.</p>
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Canonical Principle &amp; Proof:</strong> Sunan at-Tirmidhi 1209 ('The truthful, trustworthy merchant is with the Prophets, the truthful, and the martyrs') &amp; Qur'an 55:7-9 (Al-Mizan)</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="PATHWAY_4_SUFI_AWLIYA_RIBAT_GUILDS_AND_AGRARIAN_PIONEERS Pathway IV: Sufi Awliya', Futuwwah Guilds &amp; Agrarian Frontier Pioneers (10th–18th Century CE) Bangladesh (~170M Muslims via Shah Jalal &amp; delta pioneers), Pakistan (via Data Ganj Bakhsh Hujwiri, Baba Farid &amp; Baha'uddin Zakariyya), Türkiye &amp; Balkans (Bosnia, Albania, Kosovo), Kazakhstan/Kyrgyzstan (via Ahmad Yasawi), Tatarstan/Volga (922 CE), and Java (via the Wali Songo). Qur'an 10:62 ('Unquestionably, the allies [Awliya'] of Allah—there will be no fear concerning them, nor will they grieve') &amp; Qur'an 16:125">
+  <div class="card-header">
+    <span class="badge badge-gold">PATHWAY 4 &bull; PATHWAY_4_SUFI_AWLIYA_RIBAT_GUILDS_AND_AGRARIAN_PIONEERS</span>
+    <span class="badge badge-emerald">L&#x101; Ikr&#x101;ha f&#x12B; Ad-D&#x12B;n (2:256)</span>
+  </div>
+  <h3>Pathway IV: Sufi Awliya', Futuwwah Guilds &amp; Agrarian Frontier Pioneers (10th–18th Century CE)</h3>
+  <div class="detail-box box-mech">
+    <h4>&#x1F9ED; Historical Mechanism &amp; Multi-Generational Trajectory</h4>
+    <p>Sufi masters and trade-guild brotherhoods traveled into nomadic steppes, mountain valleys, and river deltas: establishing free soup kitchens (Imaret/Langar), clearing jungle deltas for wet-rice agriculture (as in Bengal), composing vernacular devotional poetry in Turkic, Persian, Punjabi, Bengali, and Javanese, and welcoming marginalized castes into universal human brotherhood.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x1F30D; Exemplar Countries &amp; Regions</h4>
+    <p>Bangladesh (~170M Muslims via Shah Jalal &amp; delta pioneers), Pakistan (via Data Ganj Bakhsh Hujwiri, Baba Farid &amp; Baha'uddin Zakariyya), Türkiye &amp; Balkans (Bosnia, Albania, Kosovo), Kazakhstan/Kyrgyzstan (via Ahmad Yasawi), Tatarstan/Volga (922 CE), and Java (via the Wali Songo).</p>
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Canonical Principle &amp; Proof:</strong> Qur'an 10:62 ('Unquestionably, the allies [Awliya'] of Allah—there will be no fear concerning them, nor will they grieve') &amp; Qur'an 16:125</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="PATHWAY_5_ANTI_COLONIAL_LIBERATION_AND_MODERN_CONSTITUTIONALISM Pathway V: Anti-Colonial Liberation, Educational Revival &amp; Constitutional Nationhood (18th–21st Century CE) Algeria (Amir 'Abd al-Qadir &amp; 1954–1962 Liberation), Libya ('Umar al-Mukhtar), Caucasus (Imam Shamil), West Africa (Usman dan Fodio &amp; Ahmadu Bamba), Indonesia (Diponegoro, Muhammadiyah/NU &amp; 1945 Resolusi Jihad), and Pakistan (1947 constitutional homeland). Qur'an 22:39-40, Qur'an 42:38 ('And their affairs are conducted by mutual consultation [Shura]') &amp; OIC Charter (1969)">
+  <div class="card-header">
+    <span class="badge badge-gold">PATHWAY 5 &bull; PATHWAY_5_ANTI_COLONIAL_LIBERATION_AND_MODERN_CONSTITUTIONALISM</span>
+    <span class="badge badge-emerald">L&#x101; Ikr&#x101;ha f&#x12B; Ad-D&#x12B;n (2:256)</span>
+  </div>
+  <h3>Pathway V: Anti-Colonial Liberation, Educational Revival &amp; Constitutional Nationhood (18th–21st Century CE)</h3>
+  <div class="detail-box box-mech">
+    <h4>&#x1F9ED; Historical Mechanism &amp; Multi-Generational Trajectory</h4>
+    <p>When European empires colonized the Muslim world, Islam became the unbreakable spine of indigenous dignity, literacy, and liberation—culminating in the independence of 57 OIC sovereign states that synthesized Islamic legal/moral heritage with modern constitutional governance.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x1F30D; Exemplar Countries &amp; Regions</h4>
+    <p>Algeria (Amir 'Abd al-Qadir &amp; 1954–1962 Liberation), Libya ('Umar al-Mukhtar), Caucasus (Imam Shamil), West Africa (Usman dan Fodio &amp; Ahmadu Bamba), Indonesia (Diponegoro, Muhammadiyah/NU &amp; 1945 Resolusi Jihad), and Pakistan (1947 constitutional homeland).</p>
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F4D6; <strong>Canonical Principle &amp; Proof:</strong> Qur'an 22:39-40, Qur'an 42:38 ('And their affairs are conducted by mutual consultation [Shura]') &amp; OIC Charter (1969)</span>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <h2>II. The 7 Canonical Civilizational Zones of Islamic Countries (Diy&#x101;r Al-Isl&#x101;m)</h2>
+        <p>Country-by-country historical trajectory, canonical legal/theological schools, and how each region embraces and embodies being Muslim today.</p>
+      </div>
+      <div class="card-grid">
+        <article class="matrix-card" data-search="ZONE_1_ARABIAN_CRADLE_AND_GULF_SANCTUARY Zone I: The Arabian Cradle &amp; Gulf Sanctuary (Jazirat Al-'Arab wa Al-Khalij) Saudi Arabia, Yemen, Oman, United Arab Emirates, Qatar, Bahrain, Kuwait Hanbali (Saudi Arabia, Qatar), Maliki (UAE, Bahrain, Kuwait), Shafi'i &amp; Zaydi (Yemen), Ibadi &amp; Sunni (Oman); Salafi/Athari, Ash'ari &amp; Ibadi creedal traditions. Al-Masjid Al-Haram (Mecca), Al-Masjid An-Nabawi (Medina), Masjid 'Abd al-Qays (Bahrain), Dar al-Mustafa (Tarim, Yemen), and Sultan Qaboos Grand Mosque (Oman).">
+  <div class="card-header">
+    <span class="badge badge-cyan">CIVILIZATIONAL ZONE 1 &bull; ZONE_1_ARABIAN_CRADLE_AND_GULF_SANCTUARY</span>
+    <span class="badge badge-gold">Diy&#x101;r Al-Isl&#x101;m</span>
+  </div>
+  <h3>Zone I: The Arabian Cradle &amp; Gulf Sanctuary (Jazirat Al-'Arab wa Al-Khalij)</h3>
+  <p class="countries-line"><strong>&#x1F3F3; Countries &amp; Polities:</strong> Saudi Arabia, Yemen, Oman, United Arab Emirates, Qatar, Bahrain, Kuwait</p>
+  <div class="detail-box box-mech">
+    <h4>&#x1F54C; Historical Pathway of Embracing Islam</h4>
+    <p>Direct Prophetic mission in Mecca and Medina (610–632 CE) and peaceful Prophetic delegations (Wufud) from Bahrain, Oman, and Yemen in 8–10 AH.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x2696; Canonical Madhhab, 'Aq&#x12B;dah &amp; Spiritual School</h4>
+    <p>Hanbali (Saudi Arabia, Qatar), Maliki (UAE, Bahrain, Kuwait), Shafi'i &amp; Zaydi (Yemen), Ibadi &amp; Sunni (Oman); Salafi/Athari, Ash'ari &amp; Ibadi creedal traditions.</p>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2728; How They Canonically Embrace &amp; Live Being Muslim Today:</strong> Custodianship of the Two Holy Mosques (Al-Haramayn Ash-Sharifayn) serving millions of Hajj and 'Umrah pilgrims; constitutional governance grounded in Qur'an and Sunnah; Majlis hospitality; Yemen's unbroken Tarim scholarly Isnad; Oman's maritime tolerance; and global Sovereign Waqf/Humanitarian funds.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F3DB; <strong>Landmark Sanctuaries &amp; Universities:</strong> Al-Masjid Al-Haram (Mecca), Al-Masjid An-Nabawi (Medina), Masjid 'Abd al-Qays (Bahrain), Dar al-Mustafa (Tarim, Yemen), and Sultan Qaboos Grand Mosque (Oman).</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="ZONE_2_FERTILE_CRESCENT_LEVANT_IRAQ_AND_NILE Zone II: The Fertile Crescent, Levant &amp; Nile Valley (Ash-Sham, Al-'Iraq, Misr wa As-Sudan) Egypt (~100M+ Muslims), Iraq, Syria, Palestine, Jordan, Lebanon, Sudan Shafi'i, Hanafi &amp; Maliki (Egypt); Hanafi, Shafi'i &amp; Ja'fari (Iraq &amp; Lebanon); Hanafi &amp; Shafi'i (Syria, Palestine, Jordan); Maliki (Sudan). Predominantly Ash'ari/Maturidi &amp; Ja'fari. Al-Masjid Al-Aqsa (Jerusalem), Umayyad Mosque (Damascus), Al-Azhar Mosque &amp; University (Cairo), Imam Abu Hanifah &amp; 'Abd al-Qadir al-Jilani Sanctuaries (Baghdad).">
+  <div class="card-header">
+    <span class="badge badge-cyan">CIVILIZATIONAL ZONE 2 &bull; ZONE_2_FERTILE_CRESCENT_LEVANT_IRAQ_AND_NILE</span>
+    <span class="badge badge-gold">Diy&#x101;r Al-Isl&#x101;m</span>
+  </div>
+  <h3>Zone II: The Fertile Crescent, Levant &amp; Nile Valley (Ash-Sham, Al-'Iraq, Misr wa As-Sudan)</h3>
+  <p class="countries-line"><strong>&#x1F3F3; Countries &amp; Polities:</strong> Egypt (~100M+ Muslims), Iraq, Syria, Palestine, Jordan, Lebanon, Sudan</p>
+  <div class="detail-box box-mech">
+    <h4>&#x1F54C; Historical Pathway of Embracing Islam</h4>
+    <p>Rashidun openings (12–21 AH / 633–642 CE) under 'Umar's covenants protecting Christian and Jewish communities, followed by 200+ years of gradual civic conversion in Kufah, Basrah, Damascus, and Fustat/Cairo; peaceful Nile merchant/Sufi diffusion into Sudan (Funj Sultanate, 1504 CE).</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x2696; Canonical Madhhab, 'Aq&#x12B;dah &amp; Spiritual School</h4>
+    <p>Shafi'i, Hanafi &amp; Maliki (Egypt); Hanafi, Shafi'i &amp; Ja'fari (Iraq &amp; Lebanon); Hanafi &amp; Shafi'i (Syria, Palestine, Jordan); Maliki (Sudan). Predominantly Ash'ari/Maturidi &amp; Ja'fari.</p>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2728; How They Canonically Embrace &amp; Live Being Muslim Today:</strong> Egypt anchors global Sunni learning at Al-Azhar (970 CE) and the world's premier Qur'anic recitation school (Qurra'); Palestine and Jordan guard Al-Masjid Al-Aqsa in Jerusalem; Iraq and Syria preserve the birthplaces of the 4 Madhhabs and Hadith sciences; Sudan maintains thousands of Khalwah wooden-tablet (Lawh) Qur'an schools.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F3DB; <strong>Landmark Sanctuaries &amp; Universities:</strong> Al-Masjid Al-Aqsa (Jerusalem), Umayyad Mosque (Damascus), Al-Azhar Mosque &amp; University (Cairo), Imam Abu Hanifah &amp; 'Abd al-Qadir al-Jilani Sanctuaries (Baghdad).</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="ZONE_3_MAGHREB_AND_SAHARAN_SAHELIAN_WEST_AFRICA Zone III: The Maghreb &amp; Saharan-Sahelian West Africa (Al-Maghrib wa Gharb Ifriqiya) Morocco, Algeria, Tunisia, Libya, Mauritania, Senegal, Mali, Niger, Guinea, Gambia, Sierra Leone, Burkina Faso, Chad, Northern Nigeria (~260M+ Muslims across the zone) Unified across the entire zone upon the Canonical Maghrebi Triad: (1) Imam Malik's Fiqh, (2) Imam Al-Ash'ari's 'Aqidah, and (3) Junayd's sober Tasawwuf, reciting the Qur'an in Warsh 'an Nafi' and Qalun. Al-Qarawiyyin University (Fez, 859 CE), Az-Zaytunah (Tunis, 737 CE), Great Mosque of Kairouan, Sankore Mosque-University (Timbuktu), and Great Mosque of Touba (Senegal).">
+  <div class="card-header">
+    <span class="badge badge-cyan">CIVILIZATIONAL ZONE 3 &bull; ZONE_3_MAGHREB_AND_SAHARAN_SAHELIAN_WEST_AFRICA</span>
+    <span class="badge badge-gold">Diy&#x101;r Al-Isl&#x101;m</span>
+  </div>
+  <h3>Zone III: The Maghreb &amp; Saharan-Sahelian West Africa (Al-Maghrib wa Gharb Ifriqiya)</h3>
+  <p class="countries-line"><strong>&#x1F3F3; Countries &amp; Polities:</strong> Morocco, Algeria, Tunisia, Libya, Mauritania, Senegal, Mali, Niger, Guinea, Gambia, Sierra Leone, Burkina Faso, Chad, Northern Nigeria (~260M+ Muslims across the zone)</p>
+  <div class="detail-box box-mech">
+    <h4>&#x1F54C; Historical Pathway of Embracing Islam</h4>
+    <p>In North Africa, Amazigh (Berber) peoples embraced Islam from Kairouan (50 AH) and Fez (172 AH); from Morocco and Mauritania (Shinqit), Sanhaja and Juula/Wangara merchants and scholars carried Islam peacefully across the Sahara into Ghana, Mali (Mansa Musa), Songhai, Kanem-Bornu, and Sokoto.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x2696; Canonical Madhhab, 'Aq&#x12B;dah &amp; Spiritual School</h4>
+    <p>Unified across the entire zone upon the Canonical Maghrebi Triad: (1) Imam Malik's Fiqh, (2) Imam Al-Ash'ari's 'Aqidah, and (3) Junayd's sober Tasawwuf, reciting the Qur'an in Warsh 'an Nafi' and Qalun.</p>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2728; How They Canonically Embrace &amp; Live Being Muslim Today:</strong> Morocco preserves the Commander of the Faithful (Imarat Al-Mu'minin) charter, Habous endowments, and Al-Qarawiyyin (world's oldest university, 859 CE); Mauritania's desert Mahdarah tent-schools produce walking Huffaz of the Qur'an and Mudawwanah; Senegal (Touba/Tivaouane), Mali (Timbuktu), and Nigeria integrate Sufi brotherhoods (Tijaniyyah, Muridiyyah, Qadiriyyah) with civic charity and scholarship.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F3DB; <strong>Landmark Sanctuaries &amp; Universities:</strong> Al-Qarawiyyin University (Fez, 859 CE), Az-Zaytunah (Tunis, 737 CE), Great Mosque of Kairouan, Sankore Mosque-University (Timbuktu), and Great Mosque of Touba (Senegal).</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="ZONE_4_HORN_OF_AFRICA_AND_SWAHILI_INDIAN_OCEAN Zone IV: The Horn of Africa &amp; Swahili Indian Ocean Coast (Al-Qarn Al-Ifriqi wa Sahil Az-Zanj) Somalia, Djibouti, Comoros, Eritrea, Ethiopian Muslim Regions (Harar, Afar, Oromia, Somali), Zanzibar/Tanzania, Coastal Kenya &amp; Northern Mozambique Predominantly Imam Ash-Shafi'i's Fiqh and Ash'ari 'Aqidah (with Hanafi and Maliki communities in Eritrea and Ethiopia). Masjid al-Qiblatayn in Zeila (7th c.), Mosque of Fakhr ad-Din in Mogadishu (1269 CE), Walled City of Harar, Great Mosque of Kilwa, and Stone Town (Zanzibar).">
+  <div class="card-header">
+    <span class="badge badge-cyan">CIVILIZATIONAL ZONE 4 &bull; ZONE_4_HORN_OF_AFRICA_AND_SWAHILI_INDIAN_OCEAN</span>
+    <span class="badge badge-gold">Diy&#x101;r Al-Isl&#x101;m</span>
+  </div>
+  <h3>Zone IV: The Horn of Africa &amp; Swahili Indian Ocean Coast (Al-Qarn Al-Ifriqi wa Sahil Az-Zanj)</h3>
+  <p class="countries-line"><strong>&#x1F3F3; Countries &amp; Polities:</strong> Somalia, Djibouti, Comoros, Eritrea, Ethiopian Muslim Regions (Harar, Afar, Oromia, Somali), Zanzibar/Tanzania, Coastal Kenya &amp; Northern Mozambique</p>
+  <div class="detail-box box-mech">
+    <h4>&#x1F54C; Historical Pathway of Embracing Islam</h4>
+    <p>First land outside Arabia to welcome Muslim refugees during the First Hijrah to Abyssinia (615 CE / 7 BH), followed by peaceful Red Sea and Indian Ocean maritime trade and Hadrami/Yemeni scholarly migration across Zeila, Mogadishu, Harar, Kilwa, Lamu, Mombasa, and Zanzibar.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x2696; Canonical Madhhab, 'Aq&#x12B;dah &amp; Spiritual School</h4>
+    <p>Predominantly Imam Ash-Shafi'i's Fiqh and Ash'ari 'Aqidah (with Hanafi and Maliki communities in Eritrea and Ethiopia).</p>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2728; How They Canonically Embrace &amp; Live Being Muslim Today:</strong> Somalia and Djibouti (nearly 100% Sunni Shafi'i) center village and urban life around Dugsi Qur'anic academies, customary Xeer arbitration calibrated by Shari'ah, and oral poetry; Harar ('Madinat Al-Awliya') preserves 82 historic mosques; Comoros and Zanzibar unite Shafi'i scholarship, Mawlid festivals, and Swahili maritime architecture.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F3DB; <strong>Landmark Sanctuaries &amp; Universities:</strong> Masjid al-Qiblatayn in Zeila (7th c.), Mosque of Fakhr ad-Din in Mogadishu (1269 CE), Walled City of Harar, Great Mosque of Kilwa, and Stone Town (Zanzibar).</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="ZONE_5_ANATOLIA_BALKANS_CAUCASUS_AND_TURKIC_EURASIA Zone V: Anatolia, The Balkans, The Caucasus &amp; Central Asian Turkic-Tajik Heartland Türkiye (~85M), Uzbekistan (~36M), Kazakhstan, Azerbaijan, Tajikistan, Turkmenistan, Kyrgyzstan, Bosnia &amp; Herzegovina, Albania, Kosovo, plus Tatarstan, Bashkortostan, Dagestan &amp; Chechnya Imam Abu Hanifah's Fiqh paired with Imam Abu Mansur al-Maturidi's (of Samarkand) rational-traditional 'Aqidah (plus Shafi'i in Dagestan/Chechnya and Ja'fari/Hanafi in Azerbaijan); Naqshbandi, Mawlawi, Yassawi &amp; Qadiri Tasawwuf. Süleymaniye Mosque (Istanbul), Poi-Kalyan &amp; Registan (Bukhara &amp; Samarkand), Mausoleum of Khoja Ahmad Yasawi (Turkistan), Gazi Husrev-beg Mosque (Sarajevo, 1531 CE), and Qolşärif Mosque (Kazan).">
+  <div class="card-header">
+    <span class="badge badge-cyan">CIVILIZATIONAL ZONE 5 &bull; ZONE_5_ANATOLIA_BALKANS_CAUCASUS_AND_TURKIC_EURASIA</span>
+    <span class="badge badge-gold">Diy&#x101;r Al-Isl&#x101;m</span>
+  </div>
+  <h3>Zone V: Anatolia, The Balkans, The Caucasus &amp; Central Asian Turkic-Tajik Heartland</h3>
+  <p class="countries-line"><strong>&#x1F3F3; Countries &amp; Polities:</strong> Türkiye (~85M), Uzbekistan (~36M), Kazakhstan, Azerbaijan, Tajikistan, Turkmenistan, Kyrgyzstan, Bosnia &amp; Herzegovina, Albania, Kosovo, plus Tatarstan, Bashkortostan, Dagestan &amp; Chechnya</p>
+  <div class="detail-box box-mech">
+    <h4>&#x1F54C; Historical Pathway of Embracing Islam</h4>
+    <p>Transoxiana (Bukhara, Samarkand, Khwarazm) became the golden crucible of Hadith and science in the 8th–10th centuries; Volga Bulgaria (Tatarstan) embraced Islam voluntarily via Baghdad embassy in 922 CE (Ibn Fadlan); Karakhanid, Seljuk, and Kipchak Turks embraced Islam via Sufi masters (Ahmad Yasawi) and carried it into Anatolia and the Balkans (Bosnia, Albania, Kosovo).</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x2696; Canonical Madhhab, 'Aq&#x12B;dah &amp; Spiritual School</h4>
+    <p>Imam Abu Hanifah's Fiqh paired with Imam Abu Mansur al-Maturidi's (of Samarkand) rational-traditional 'Aqidah (plus Shafi'i in Dagestan/Chechnya and Ja'fari/Hanafi in Azerbaijan); Naqshbandi, Mawlawi, Yassawi &amp; Qadiri Tasawwuf.</p>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2728; How They Canonically Embrace &amp; Live Being Muslim Today:</strong> Uzbekistan and Tajikistan honor their native sons Imam Al-Bukhari, At-Tirmidhi, Al-Maturidi, Al-Khwarizmi, and Ibn Sina; Türkiye coordinates 90,000+ mosques via the Diyanet, Ramadan Mukabele recitations, and Vakıf foundations; Bosnia &amp; Herzegovina governs religious life through the Rijaset (Islamska Zajednica) and Gazi Husrev-beg Madrasa (operating continuously in Sarajevo since 1537 CE).
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F3DB; <strong>Landmark Sanctuaries &amp; Universities:</strong> Süleymaniye Mosque (Istanbul), Poi-Kalyan &amp; Registan (Bukhara &amp; Samarkand), Mausoleum of Khoja Ahmad Yasawi (Turkistan), Gazi Husrev-beg Mosque (Sarajevo, 1531 CE), and Qolşärif Mosque (Kazan).</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="ZONE_6_PERSIANATE_PLATEAU_AND_SOUTH_ASIAN_SUBCONTINENT Zone VI: The Persianate Plateau &amp; South Asian Subcontinent (Iran, Afghanistan, Pakistan, Bangladesh, India &amp; Maldives — ~680M+ Muslims) Pakistan (~235M Muslims), Bangladesh (~170M), India (~200M+ Muslim minority), Iran (~88M), Afghanistan (~40M), Maldives (~100% Muslim) Hanafi Fiqh &amp; Maturidi/Ash'ari 'Aqidah (Pakistan, Bangladesh, Afghanistan, India); Shafi'i Fiqh (Maldives &amp; Malabar/Konkan Coast); Twelver Ja'fari Fiqh alongside Sunni Shafi'i/Hanafi regions (Iran). Imam Reza Sanctuary (Mashhad), Friday Mosque of Herat, Badshahi &amp; Faisal Mosques (Lahore &amp; Islamabad), Sixty Dome Mosque (Bagerhat, Bangladesh, 15th c.), and Old Friday Mosque of Malé (1658 CE).">
+  <div class="card-header">
+    <span class="badge badge-cyan">CIVILIZATIONAL ZONE 6 &bull; ZONE_6_PERSIANATE_PLATEAU_AND_SOUTH_ASIAN_SUBCONTINENT</span>
+    <span class="badge badge-gold">Diy&#x101;r Al-Isl&#x101;m</span>
+  </div>
+  <h3>Zone VI: The Persianate Plateau &amp; South Asian Subcontinent (Iran, Afghanistan, Pakistan, Bangladesh, India &amp; Maldives — ~680M+ Muslims)</h3>
+  <p class="countries-line"><strong>&#x1F3F3; Countries &amp; Polities:</strong> Pakistan (~235M Muslims), Bangladesh (~170M), India (~200M+ Muslim minority), Iran (~88M), Afghanistan (~40M), Maldives (~100% Muslim)</p>
+  <div class="detail-box box-mech">
+    <h4>&#x1F54C; Historical Pathway of Embracing Islam</h4>
+    <p>Iran and Khorasan embraced Islam gradually (8th–10th c.), producing Sibawayh, the Hadith Six-Book masters, and Persian Sufi poetry; Sindh entered via Muhammad ibn al-Qasim's tolerant Charter of Al-Rur (711 CE); Punjab, Kashmir, and Bengal embraced Islam overwhelmingly through Sufi saints (Data Ganj Bakhsh, Baba Farid, Shah Jalal) and agrarian delta pioneers; Maldives converted peacefully in 1153 CE via Abu al-Barakat al-Barbari.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x2696; Canonical Madhhab, 'Aq&#x12B;dah &amp; Spiritual School</h4>
+    <p>Hanafi Fiqh &amp; Maturidi/Ash'ari 'Aqidah (Pakistan, Bangladesh, Afghanistan, India); Shafi'i Fiqh (Maldives &amp; Malabar/Konkan Coast); Twelver Ja'fari Fiqh alongside Sunni Shafi'i/Hanafi regions (Iran).</p>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2728; How They Canonically Embrace &amp; Live Being Muslim Today:</strong> Pakistan's 1973 Constitution establishes Islam as the state religion with the Council of Islamic Ideology and Federal Shariat Court; Bangladesh combines vibrant mosque/Madrasah networks and Bishwa Ijtema with delta agriculture; Iran centers life around Ja'fari Hawzah seminaries (Qom/Mashhad) and Persian poetic-architectural splendor; Maldives maintains 100% Muslim coral-stone and Friday mosque citizenship.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F3DB; <strong>Landmark Sanctuaries &amp; Universities:</strong> Imam Reza Sanctuary (Mashhad), Friday Mosque of Herat, Badshahi &amp; Faisal Mosques (Lahore &amp; Islamabad), Sixty Dome Mosque (Bagerhat, Bangladesh, 15th c.), and Old Friday Mosque of Malé (1658 CE).</span>
+  </div>
+</article>
+<article class="matrix-card" data-search="ZONE_7_NUSANTARA_MARITIME_SOUTHEAST_ASIA Zone VII: The Maritime Nusantara Archipelago (Indonesia, Malaysia, Brunei, Patani &amp; Bangsamoro — ~285M+ Muslims) Indonesia (~251M Muslims / 87.2% — World's Largest Muslim Nation), Malaysia (~22M), Brunei Darussalam, plus Southern Thailand (Patani) and Southern Philippines (Bangsamoro) Unanimously united upon Imam Ash-Shafi'i's Fiqh, Imam Al-Ash'ari's 'Aqidah, and Imam Al-Ghazali's Tasawwuf. Masjid Agung Demak (1479 CE, 3-tier Tajug roof), Baiturrahman Grand Mosque (Banda Aceh), Istiqlal Mosque (Jakarta), National Mosque of Malaysia (Kuala Lumpur), and Sultan Omar Ali Saifuddien Mosque (Brunei).">
+  <div class="card-header">
+    <span class="badge badge-cyan">CIVILIZATIONAL ZONE 7 &bull; ZONE_7_NUSANTARA_MARITIME_SOUTHEAST_ASIA</span>
+    <span class="badge badge-gold">Diy&#x101;r Al-Isl&#x101;m</span>
+  </div>
+  <h3>Zone VII: The Maritime Nusantara Archipelago (Indonesia, Malaysia, Brunei, Patani &amp; Bangsamoro — ~285M+ Muslims)</h3>
+  <p class="countries-line"><strong>&#x1F3F3; Countries &amp; Polities:</strong> Indonesia (~251M Muslims / 87.2% — World's Largest Muslim Nation), Malaysia (~22M), Brunei Darussalam, plus Southern Thailand (Patani) and Southern Philippines (Bangsamoro)</p>
+  <div class="detail-box box-mech">
+    <h4>&#x1F54C; Historical Pathway of Embracing Islam</h4>
+    <p>Zero military invasions: spread entirely from the 7th to 16th centuries via Arab/Persian/Gujarati maritime merchants, coastal sultanates (Samudera Pasai, Malacca, Aceh 'Serambi Mekkah', Brunei, Demak, Banten, Gowa, Sulu), the Wali Songo's gradualist dakwah (At-Tadarruj), and the Haramayn 'Ashab Al-Jawiyyin' scholarly network.</p>
+  </div>
+  <div class="detail-box box-countries">
+    <h4>&#x2696; Canonical Madhhab, 'Aq&#x12B;dah &amp; Spiritual School</h4>
+    <p>Unanimously united upon Imam Ash-Shafi'i's Fiqh, Imam Al-Ash'ari's 'Aqidah, and Imam Al-Ghazali's Tasawwuf.</p>
+  </div>
+  <div class="invariant-box">
+    <strong>&#x2728; How They Canonically Embrace &amp; Live Being Muslim Today:</strong> Indonesia unites 17,000 islands under Pancasila ('Ketuhanan Yang Maha Esa' — Belief in the One Supreme God), the dual wings of Muhammadiyah (170+ universities, hundreds of hospitals) and Nahdlatul Ulama (36,000+ Pesantrens), Kompilasi Hukum Islam, and Sovereign Green/Waqf Sukuk; Malaysia pioneers global Islamic banking and Tabung Haji; Brunei upholds Melayu Islam Beraja.
+  </div>
+  <div class="anchor-footer">
+    <span>&#x1F3DB; <strong>Landmark Sanctuaries &amp; Universities:</strong> Masjid Agung Demak (1479 CE, 3-tier Tajug roof), Baiturrahman Grand Mosque (Banda Aceh), Istiqlal Mosque (Jakarta), National Mosque of Malaysia (Kuala Lumpur), and Sultan Omar Ali Saifuddien Mosque (Brunei).</span>
+  </div>
+</article>
+
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title">
+        <h2>III. The 6 Institutional &amp; Cultural Pillars of How Islamic Countries Embrace Being Muslim</h2>
+        <p>How constitutional law, the 5-daily Adh&#x101;n, Waqf/Zakat/Sukuk economics, unbroken Isn&#x101;d universities, &#x1E6C;ah&#x101;rah urban ecology, and indigenous cultural pluralism unite 1.9+ billion Muslims.</p>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Pillar &amp; Code</th>
+              <th>Arabic &amp; English Institutional Pillar</th>
+              <th>Constitutional, Economic &amp; Civic Expression</th>
+              <th>Cross-Regional National Examples</th>
+              <th>Qur'anic &amp; Prophetic Anchor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-search="PILLAR_1_SIYASAH_SHARIYYAH_AND_CONSTITUTIONAL_HARMONY 1. Constitutional &amp; Judicial Harmonization (As-Siyasah Ash-Shar'iyyah wa Al-Ahwal Ash-Shakhsiyyah) Morocco's Mudawwanah, Indonesia's Kompilasi Hukum Islam (KHI) &amp; Religious Courts (Peradilan Agama), Malaysia's Syariah Judiciary, and Jordan/Egypt's Dar Al-Ifta'. Qur'an 4:58 ('When you judge between people, judge with justice'), 5:48 &amp; 42:38 (Shura)">
+  <td><span class="badge badge-gold">PILLAR 1</span><br><small>PILLAR_1_SIYASAH_SHARIYYAH_AND_CONSTITUTIONAL_HARMONY</small></td>
+  <td><strong>1. Constitutional &amp; Judicial Harmonization (As-Siyasah Ash-Shar'iyyah wa Al-Ahwal Ash-Shakhsiyyah)</strong></td>
+  <td>Every Muslim-majority country integrates Islamic ethics and family/inheritance/endowment law into its legal system—ranging from direct Shar'i constitutionalism (Saudi Arabia, Brunei) and constitutional Islam clauses (Morocco, Egypt, Jordan, Pakistan, Malaysia) to covenantal monotheistic pluralism (Indonesia's Pancasila &amp; Türkiye/Senegal/Bosnia's autonomous religious directorates).</td>
+  <td>Morocco's Mudawwanah, Indonesia's Kompilasi Hukum Islam (KHI) &amp; Religious Courts (Peradilan Agama), Malaysia's Syariah Judiciary, and Jordan/Egypt's Dar Al-Ifta'.</td>
+  <td><span class="badge badge-emerald">Qur'an 4:58 ('When you judge between people, judge with justice'), 5:48 &amp; 42:38 (Shura)</span></td>
+</tr>
+<tr data-search="PILLAR_2_ADHAN_JUMUAH_AND_SACRED_TEMPORAL_RHYTHM 2. Acoustic &amp; Temporal Sanctification (Al-Adhan, Salat Al-Jumu'ah &amp; The Hijri Sacred Calendar) Indonesian Bedug drum + Adhan; Egyptian and Turkish Maqamat Adhan; Moroccan white Djellaba Friday processions; and universal Eid al-Fitr / Eid al-Adha Qurban meat distribution. Qur'an 62:9 (Surah Al-Jumu'ah), 2:183-185 (Ramadan) &amp; 22:27-28 (Hajj &amp; Adha)">
+  <td><span class="badge badge-gold">PILLAR 2</span><br><small>PILLAR_2_ADHAN_JUMUAH_AND_SACRED_TEMPORAL_RHYTHM</small></td>
+  <td><strong>2. Acoustic &amp; Temporal Sanctification (Al-Adhan, Salat Al-Jumu'ah &amp; The Hijri Sacred Calendar)</strong></td>
+  <td>Across all 57 OIC nations, the public soundscape and civic calendar are synchronized with cosmic worship: the 5 daily calls to prayer (Al-Adhan) rolling from Jakarta to Casablanca, the weekly Friday congregation (Jumu'ah), the month-long fast and night prayers of Ramadan (Tarawih, Iftar tables, Mudik/Bayram homecomings), and the two Eids.</td>
+  <td>Indonesian Bedug drum + Adhan; Egyptian and Turkish Maqamat Adhan; Moroccan white Djellaba Friday processions; and universal Eid al-Fitr / Eid al-Adha Qurban meat distribution.</td>
+  <td><span class="badge badge-emerald">Qur'an 62:9 (Surah Al-Jumu'ah), 2:183-185 (Ramadan) &amp; 22:27-28 (Hajj &amp; Adha)</span></td>
+</tr>
+<tr data-search="PILLAR_3_WAQF_ZAKAT_AND_SOVEREIGN_SUKUK_ECONOMY 3. Endowed Public Welfare &amp; Ethical Economy (Az-Zakah, Al-Waqf / Habous / Vakıf &amp; Sukuk) Malaysia's Tabung Haji ($20B+ pilgrim fund); Indonesia's Badan Amil Zakat Nasional (BAZNAS) &amp; Cash Waqf Linked Sukuk (CWLS); Morocco's Ministry of Habous; and Gulf/Turkish Awqaf. Qur'an 59:7 ('So that wealth may not merely circulate among the rich among you'), 2:275 &amp; Sahih Muslim 1631 (Sadaqah Jariyah)">
+  <td><span class="badge badge-gold">PILLAR 3</span><br><small>PILLAR_3_WAQF_ZAKAT_AND_SOVEREIGN_SUKUK_ECONOMY</small></td>
+  <td><strong>3. Endowed Public Welfare &amp; Ethical Economy (Az-Zakah, Al-Waqf / Habous / Vakıf &amp; Sukuk)</strong></td>
+  <td>Muslim nations institutionalize wealth circulation so prosperity never stagnates among the rich (Qur'an 59:7): national Zakat boards, perpetual Waqf endowments funding hospitals, universities, and water/sanitation, and riba-free Islamic Banking and Sovereign Sukuk.</td>
+  <td>Malaysia's Tabung Haji ($20B+ pilgrim fund); Indonesia's Badan Amil Zakat Nasional (BAZNAS) &amp; Cash Waqf Linked Sukuk (CWLS); Morocco's Ministry of Habous; and Gulf/Turkish Awqaf.</td>
+  <td><span class="badge badge-emerald">Qur'an 59:7 ('So that wealth may not merely circulate among the rich among you'), 2:275 &amp; Sahih Muslim 1631 (Sadaqah Jariyah)</span></td>
+</tr>
+<tr data-search="PILLAR_4_ISNAD_SCHOLARSHIP_MADRASAH_AND_PESANTREN 4. Unbroken Scholarly Transmission &amp; Dual-Wing Education (Al-Isnad, Al-Jami'ah &amp; Pesantren) Al-Qarawiyyin in Fez (859 CE), Al-Azhar in Cairo (970 CE), Gazi Husrev-beg in Sarajevo (1537 CE), 36,000+ Indonesian Pesantrens, Mauritanian Mahdarahs, and West African Daaras/Makarantas. Qur'an 9:122 ('That they may obtain understanding [Tafaqquh] in the religion') &amp; Sahih al-Bukhari 67">
+  <td><span class="badge badge-gold">PILLAR 4</span><br><small>PILLAR_4_ISNAD_SCHOLARSHIP_MADRASAH_AND_PESANTREN</small></td>
+  <td><strong>4. Unbroken Scholarly Transmission &amp; Dual-Wing Education (Al-Isnad, Al-Jami'ah &amp; Pesantren)</strong></td>
+  <td>Islamic countries preserve the world's oldest continuously operating universities alongside grassroots Qur'anic schools—ensuring that classical Fiqh, Hadith, grammar, and spirituality are transmitted person-to-person alongside modern medicine and engineering.</td>
+  <td>Al-Qarawiyyin in Fez (859 CE), Al-Azhar in Cairo (970 CE), Gazi Husrev-beg in Sarajevo (1537 CE), 36,000+ Indonesian Pesantrens, Mauritanian Mahdarahs, and West African Daaras/Makarantas.</td>
+  <td><span class="badge badge-emerald">Qur'an 9:122 ('That they may obtain understanding [Tafaqquh] in the religion') &amp; Sahih al-Bukhari 67</span></td>
+</tr>
+<tr data-search="PILLAR_5_TAHARAH_WATER_ARCHITECTURE_AND_DOMESTIC_HARAM 5. Sacred Urban Ecology, Water Purity &amp; Domestic Sanctuary ('Imarat Al-Masjid wa At-Taharah) Ottoman Külliye complexes (mosque + hospital + soup kitchen + bathhouse); Moroccan Riyads; Iranian Chahar Bagh &amp; Qanat water channels; and Indonesian Eco-Pesantren sanitation. Qur'an 24:36, Sahih Muslim 223 ('Cleanliness [At-Tuhur] is half of faith') &amp; Bukhari 239">
+  <td><span class="badge badge-gold">PILLAR 5</span><br><small>PILLAR_5_TAHARAH_WATER_ARCHITECTURE_AND_DOMESTIC_HARAM</small></td>
+  <td><strong>5. Sacred Urban Ecology, Water Purity &amp; Domestic Sanctuary ('Imarat Al-Masjid wa At-Taharah)</strong></td>
+  <td>Cities across the Muslim world are architected around three spatial anchors: (1) the congregational Mosque with its ablution fountains (Mida'ah) and clean water infrastructure, (2) the ethical marketplace (Suq/Pasar) with honest scales, and (3) the private family home (Haram Al-Bayt) protected from overlooking.</td>
+  <td>Ottoman Külliye complexes (mosque + hospital + soup kitchen + bathhouse); Moroccan Riyads; Iranian Chahar Bagh &amp; Qanat water channels; and Indonesian Eco-Pesantren sanitation.</td>
+  <td><span class="badge badge-emerald">Qur'an 24:36, Sahih Muslim 223 ('Cleanliness [At-Tuhur] is half of faith') &amp; Bukhari 239</span></td>
+</tr>
+<tr data-search="PILLAR_6_URF_CULTURAL_PLURALISM_UNDER_ONE_TAWHID 6. Indigenous Cultural Pluralism Under One Tawhid (Al-'Urf Al-Mahmud — 'Like a Clear Mountain Stream') Javanese Tajug mosques &amp; Batik; Moroccan Zellij &amp; Burnous; Bosnian Sevdalinka &amp; stone bridges; Uzbek turquoise domes &amp; Chapan; Swahili coral mosques; and West African adobe architectures. Qur'an 49:13 ('We made you peoples and tribes that you may know one another') &amp; Qur'an 30:22 ('Diversity of your languages and colors')">
+  <td><span class="badge badge-gold">PILLAR 6</span><br><small>PILLAR_6_URF_CULTURAL_PLURALISM_UNDER_ONE_TAWHID</small></td>
+  <td><strong>6. Indigenous Cultural Pluralism Under One Tawhid (Al-'Urf Al-Mahmud — 'Like a Clear Mountain Stream')</strong></td>
+  <td>As articulated by the juristic maxim 'Islamic law is like a crystal-clear river that takes on the color of the bedrock over which it flows while remaining pure water': Islam never erased a nation's healthy culture, language, cuisine, or architecture—it purified them of idolatry and injustice while celebrating their diversity as a sign of Allah.</td>
+  <td>Javanese Tajug mosques &amp; Batik; Moroccan Zellij &amp; Burnous; Bosnian Sevdalinka &amp; stone bridges; Uzbek turquoise domes &amp; Chapan; Swahili coral mosques; and West African adobe architectures.</td>
+  <td><span class="badge badge-emerald">Qur'an 49:13 ('We made you peoples and tribes that you may know one another') &amp; Qur'an 30:22 ('Diversity of your languages and colors')</span></td>
+</tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let currentUmmahMode = 'ALL';
+    let ummahTick = 0;
+
+    function setUmmahMode(mode) {
+      currentUmmahMode = mode;
+      document.querySelectorAll('.mode-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('onclick').includes("'" + mode + "'"));
+      });
+    }
+
+    function filterUmmahPortal() {
+      const q = (document.getElementById('ummahSearchInput').value || '').toLowerCase().trim();
+      let visible = 0;
+      document.querySelectorAll('.matrix-card, tbody tr').forEach(el => {
+        const hay = (el.getAttribute('data-search') || el.innerText || '').toLowerCase();
+        const match = !q || hay.includes(q);
+        el.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      const badge = document.getElementById('ummahCountBadge');
+      if (badge) badge.textContent = 'Showing ' + visible + ' of 18 Canonical Civilizational Nodes';
+    }
+
+    (function initUmmahCanvas() {
+      const canvas = document.getElementById('islamicCountriesCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      const zones = [
+        { x: 540, y: 205, name: 'I. Arabian Cradle (Mecca/Medina/Yemen/Oman)', madhhab: 'Hanbali / Shafi\'i / Maliki / Ibadi', trade: true },
+        { x: 470, y: 125, name: 'II. Levant, Iraq & Nile (Egypt/Sham/Sudan)', madhhab: 'Shafi\'i / Hanafi / Maliki', trade: false },
+        { x: 215, y: 185, name: 'III. Maghreb & West Africa (Morocco/Senegal/Mali)', madhhab: 'Maliki • Ash\'ari • Junayd', trade: true },
+        { x: 465, y: 310, name: 'IV. Horn & Swahili Coast (Somalia/Zanzibar/Comoros)', madhhab: 'Shafi\'i Maritime', trade: true },
+        { x: 645, y: 85, name: 'V. Anatolia, Balkans & Steppe (Türkiye/Bosnia/Uzbekistan)', madhhab: 'Hanafi • Maturidi', trade: false },
+        { x: 845, y: 165, name: 'VI. Persia & South Asia (Pakistan/Bangladesh/Iran)', madhhab: 'Hanafi / Ja\'fari / Shafi\'i', trade: true },
+        { x: 1085, y: 265, name: 'VII. Nusantara (Indonesia 87.2% / Malaysia / Brunei)', madhhab: 'Shafi\'i • Ash\'ari • Ghazali', trade: true }
+      ];
+
+      function render() {
+        ummahTick += 0.025;
+        const w = canvas.width;
+        const h = canvas.height;
+        ctx.clearRect(0, 0, w, h);
+
+        const kaabaX = 540, kaabaY = 205;
+
+        // Qiblah arcs from every zone to Mecca
+        zones.forEach((z, idx) => {
+          if (idx === 0) return;
+          ctx.beginPath();
+          ctx.moveTo(z.x, z.y);
+          ctx.quadraticCurveTo((z.x + kaabaX) / 2, Math.min(z.y, kaabaY) - 35, kaabaX, kaabaY);
+          ctx.strokeStyle = z.trade ? 'rgba(16, 185, 129, 0.42)' : 'rgba(56, 189, 248, 0.42)';
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          // Animated Qiblah pulse along curve
+          const t = (ummahTick * 0.45 + idx * 0.15) % 1;
+          const cx = (1 - t) * (1 - t) * z.x + 2 * (1 - t) * t * ((z.x + kaabaX) / 2) + t * t * kaabaX;
+          const cy = (1 - t) * (1 - t) * z.y + 2 * (1 - t) * t * (Math.min(z.y, kaabaY) - 35) + t * t * kaabaY;
+          ctx.beginPath();
+          ctx.arc(cx, cy, 4, 0, Math.PI * 2);
+          ctx.fillStyle = '#f59e0b';
+          ctx.fill();
+        });
+
+        // Draw Zone Nodes
+        zones.forEach((z, idx) => {
+          const isCenter = idx === 0;
+          ctx.beginPath();
+          ctx.arc(z.x, z.y, isCenter ? 15 : 11, 0, Math.PI * 2);
+          ctx.fillStyle = isCenter ? '#f59e0b' : (z.trade ? '#10b981' : '#38bdf8');
+          ctx.fill();
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 1.5;
+          ctx.stroke();
+
+          ctx.fillStyle = '#ffffff';
+          ctx.font = 'bold 11.5px Segoe UI, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText(z.name, z.x, z.y - 20);
+
+          ctx.fillStyle = currentUmmahMode === 'MADHHAB' ? '#f59e0b' : '#94a3b8';
+          ctx.font = '10.5px Segoe UI, sans-serif';
+          ctx.fillText(z.madhhab, z.x, z.y + 26);
+        });
+
+        ctx.fillStyle = '#f59e0b';
+        ctx.font = 'bold 13px Segoe UI, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('AFRO-EURASIAN QIBLAH CONSTELLATION: 7 CIVILIZATIONAL ZONES CONVERGING ON AL-KA\'BAH (MECCA)', w / 2, 30);
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '11px Segoe UI, sans-serif';
+        ctx.fillText('Emerald Arcs: Maritime & Saharan Trade Conversion Zones  |  Cyan Arcs: Post-Conquest Multi-Century Urban & Sufi Synthesis', w / 2, 368);
+
+        requestAnimationFrame(render);
+      }
+      render();
+    })();
+  </script>
+
+<!-- SOV_CHROME_FOOTER_START -->
+<footer class="sov-footer-wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;padding-bottom:0.9rem;border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div>
+      <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">COMPLETE <span data-sov-total>63</span>-PORTAL CONTINUALLY UPDATED SITEMAP • CURRENT: #56 / 63 — History of Islamic Countries &amp; Canonical Embrace (islamic-countries-history-canonical-embrace-atlas.html)</div>
+      <div style="font-size:0.84rem;color:#CBD5E1;">Every HTML portal is directly cross-linked and continually synchronized across all 11 Architectural Wings and all 7 Chromatic/Theological Rows.</div>
+    </div>
+    <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+      <a class="sov-pill" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">← Prev: Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a>
+      <span class="sov-pill sov-pill-counter">#56 / 63</span>
+      <a class="sov-pill sov-pill-master" href="index.html">🏠 Master Index (63)</a>
+      <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-countries-history-canonical-embrace-atlas.html">🧭 Combined Omnibus</a>
+      <a class="sov-pill" href="islamic-caliphates-sultans-shahs-dynasties-return.html">Next: Caliphates, Sultans, Shahs &amp; Promise of Return →</a>
+    </div>
+  </div>
+  <div class="sov-footer-cols">
+    <div class="sov-footer-cat"><h4>01. Master Hubs &amp; Architecture</h4><a class="" href="index.html">#01/63 Master Index Hub</a><a class="" href="master-combined-omnibus.html">#02/63 Combined Omnibus Reader</a><a class="" href="dependencies-report.html">#03/63 Dependencies &amp; Java 21+ Audit</a><a class="" href="conjoined-worlds-realms-principles-node-grid.html">#50/63 3D Node-Art Terrain Grid (Meridian Guard)</a><a class="" href="islamic-caravans-battles-conquest-chronicle.html">#51/63 Caravans, Trade Battles, Fatḥ &amp; Tadwīn</a><a class="" href="greco-roman-gods-titans-daimones-islamic-judgment.html">#52/63 Greco-Roman Gods &amp; Titans Made Whole</a><a class="" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">#53/63 Philosophy, Alchemy, Theocracies &amp; Socrates</a><a class="" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">#55/63 Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a><a class="active-link" href="islamic-countries-history-canonical-embrace-atlas.html">#56/63 History of Islamic Countries &amp; Canonical Embrace</a><a class="" href="islamic-caliphates-sultans-shahs-dynasties-return.html">#57/63 Caliphates, Sultans, Shahs &amp; Promise of Return</a><a class="" href="quranic-timeline-expansion-vol1-chronology.html">#58/63 Vol. I: Qur'anic Timeline of Expansion</a><a class="" href="quranic-timeline-expansion-vol2-properties-kingdoms.html">#59/63 Vol. II: Islamic Properties, Countries &amp; Kingdoms</a><a class="" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html">#60/63 Vol. III: Beauty of Islam &amp; Collegiate Thesis</a><a class="" href="islam-through-ages-vol1-reception-history.html">#61/63 Ages Vol. I: Islam &amp; Global Reception</a><a class="" href="islam-through-ages-vol2-philosophical-connotations.html">#62/63 Ages Vol. II: Philosophical Connotations</a><a class="" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">#63/63 Ages Vol. III: Scientific Discoveries Instantiated</a></div><div class="sov-footer-cat"><h4>02. Seven Pre-Prophetic Color Orders</h4><a class="" href="order-1-white.html">#04/63 Order #1: White</a><a class="" href="order-2-black.html">#05/63 Order #2: Black</a><a class="" href="order-3-sapphire.html">#06/63 Order #3: Sapphire</a><a class="" href="order-4-gold.html">#07/63 Order #4: Gold</a><a class="" href="order-5-crimson.html">#08/63 Order #5: Crimson</a><a class="" href="order-6-brass.html">#09/63 Order #6: Brass</a><a class="" href="order-7-emerald.html">#10/63 Order #7: Emerald</a></div><div class="sov-footer-cat"><h4>03. 3D Sanctum &amp; Seven Realms</h4><a class="" href="warlock-3d-sanctum.html">#11/63 3D Sanctum Master</a><a class="" href="realm-1-white.html">#12/63 Realm #1: 'Aravot</a><a class="" href="realm-2-black.html">#13/63 Realm #2: Makhon</a><a class="" href="realm-3-sapphire.html">#14/63 Realm #3: Zevul</a><a class="" href="realm-4-gold.html">#15/63 Realm #4: Shehaqim</a><a class="" href="realm-5-crimson.html">#16/63 Realm #5: Ma'on</a><a class="" href="realm-6-brass.html">#17/63 Realm #6: Raqia'</a><a class="" href="realm-7-emerald.html">#18/63 Realm #7: Vilon</a></div><div class="sov-footer-cat"><h4>04. Negentropic Priory &amp; Seven Planes</h4><a class="" href="priory-negentropy-order.html">#19/63 Negentropic Priory Atlas</a><a class="" href="plane-1-white.html">#20/63 Plane #1: Adam Kadmon / Lahut</a><a class="" href="plane-2-black.html">#21/63 Plane #2: Malbush / Al-Qalam</a><a class="" href="plane-3-sapphire.html">#22/63 Plane #3: Beri'ah / Jabarut</a><a class="" href="plane-4-gold.html">#23/63 Plane #4: Atzilut / Al-Arwah</a><a class="" href="plane-5-crimson.html">#24/63 Plane #5: Tohu / Ash-Shuhub</a><a class="" href="plane-6-brass.html">#25/63 Plane #6: Yetzirah / Al-Marij</a><a class="" href="plane-7-emerald.html">#26/63 Plane #7: Tikkun / Al-Mithal</a></div><div class="sov-footer-cat"><h4>05. Seven Wrongdoer (Az-Zalimun) Profiles</h4><a class="" href="zalim-1-fasad.html">#27/63 Zalim #1: Al-Fasad</a><a class="" href="zalim-2-fahishah.html">#28/63 Zalim #2: Al-Fahishah</a><a class="" href="zalim-3-baghy.html">#29/63 Zalim #3: Al-Baghy (Nimrod)</a><a class="" href="zalim-4-fitnah.html">#30/63 Zalim #4: Al-Fitnah</a><a class="" href="zalim-5-hawa.html">#31/63 Zalim #5: Al-Hawa</a><a class="" href="zalim-6-jibt.html">#32/63 Zalim #6: Al-Jibt &amp; Taghut</a><a class="" href="zalim-7-zulm.html">#33/63 Zalim #7: Masjid Ad-Dirar</a></div><div class="sov-footer-cat"><h4>06. Seven Islamic Worlds of Hegemon &amp; Disorder</h4><a class="" href="worlds-hegemon-disorder.html">#34/63 7 Worlds Master Atlas</a><a class="" href="world-1-mizan-fasad.html">#35/63 World #1: Amanah vs. Fasad</a><a class="" href="world-2-haya-fahishah.html">#36/63 World #2: Haya' vs. Tabarruj</a><a class="" href="world-3-babil-namrud.html">#37/63 World #3: Ibrahim vs. Namrud</a><a class="" href="world-4-ummah-fitnah.html">#38/63 World #4: Ummah vs. Fitnah</a><a class="" href="world-5-furqan-hawa.html">#39/63 World #5: Furqan vs. Hawa</a><a class="" href="world-6-tawhid-taghut.html">#40/63 World #6: Tawhid vs. Taghut</a><a class="" href="world-7-taqwa-dirar.html">#41/63 World #7: Taqwa vs. Dirar</a></div><div class="sov-footer-cat"><h4>07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</h4><a class="" href="warlock-formation-dissolution-jafar-aladdin.html">#42/63 Ja'far &amp; Aladdin Qumqum</a><a class="" href="sequester-between-worlds.html">#43/63 7 Inter-World Sequesters</a></div><div class="sov-footer-cat"><h4>08. The Islamic Egg-in-Baking Intelocketer</h4><a class="" href="interlocker-egg-binder-islam.html">#44/63 Egg-in-Baking Intelocketer</a></div><div class="sov-footer-cat"><h4>09. The Warlock Apocrypha &amp; Modernity Theorems</h4><a class="" href="warlock-apocrypha-islamic-theorems.html">#45/63 Warlock Apocrypha &amp; Theorems</a></div><div class="sov-footer-cat"><h4>10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</h4><a class="" href="islamic-husbandry-sovereign-estate.html">#46/63 Vanguard Husbandry Estate</a><a class="" href="way-of-the-flower-rose-garden-islam.html">#47/63 Flower, Rose &amp; Chahar Bagh</a><a class="" href="islamic-modesty-evolution-western-frontier-men-women.html">#54/63 Men &amp; Women Modesty: Western Frontier</a></div><div class="sov-footer-cat"><h4>11. Islamic Animalism &amp; Visual History Atlases</h4><a class="" href="disney-daffy-donald-islamic-microcosm.html">#48/63 Disney/Daffy &amp; Jungle Microcosm</a><a class="" href="warlock-islamic-visual-eras-history.html">#49/63 7 Islamic Visual Eras &amp; AI Art</a></div>
+  </div>
+</footer>
+<!-- SOV_CHROME_FOOTER_END -->
+</body>
+</html>

@@ -1,0 +1,23 @@
+spring:
+  config:
+    activate:
+      on-profile: zalim-7-zulm
+
+zalim:
+  zalimIndex: 7
+  profileId: "zalim-7-zulm"
+  arabicPrinciple: "Az-Zulm Al-Akbar wa Masjid Ad-Dirar (الظلم الأكبر ومسجد الضرار — The Supreme Wrongdoer & Counter-Sanctuary)"
+  hexCode: "#0D0A14"
+  rgbRed: 13
+  rgbGreen: 10
+  rgbBlue: 20
+  warlockName: "Imam Az-Zalimin"
+  arabicArchetypeTitle: "Bani Juruf Al-Har (Arch-Wrongdoer of the Crumbling Cliff)"
+  quranicAnchor: "Qur'an 2:124 ('La yanalu 'ahdi az-zalimin — My Covenant does not include the Wrongdoers'), Qur'an 31:13 ('Inna ash-shirka la-zulmun 'azim'), Qur'an 9:107-109 (Masjid Ad-Dirar built on a crumbling cliff)"
+  abrahamicChallenge: "The ultimate Wrongdoer (Az-Zalim) explicitly excluded from Abraham's Imamate in Qur'an 2:124. Erects a counterfeit sanctuary (Dirar) on the brink of a collapsing precipice (shafa jurufin harin) to rival Abraham's Foundation of Taqwa and bar Allah's name from His sanctuaries (Qur'an 2:114)."
+  wrongdoerCategory: "COVENANT_EXCLUSION_AND_COUNTER_SANCTUARY"
+  rawEntropyBits: 0.985
+  uncorrectedCp: 0.68
+  uncorrectedSigma: 3.92
+  correctedCp: 1.38
+  prioryContainmentCell: "Quarantine Ward VII: The Abrahamic Covenant Exclusion Seal (Qur'an 2:124, 9:108-109)"

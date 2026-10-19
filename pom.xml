@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.4.3</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.sovereign</groupId>
+    <artifactId>abrahamic-warlock-seven-colors</artifactId>
+    <version>1.0.0</version>
+    <name>Abrahamic Warlock Seven-Color Spring Boot Profiles &amp; HTML Portals</name>
+    <description>Pre-Prophetic Abrahamic Warlock Architecture ordered by 7 Sacred Colors with Spring Boot HTML Portals, Dependency Report, and Foundation Severance Chronicles</description>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.profiles.active>warlock-1-white,warlock-2-black,warlock-3-sapphire,warlock-4-gold,warlock-5-crimson,warlock-6-brass,warlock-7-emerald</spring.profiles.active>
+    </properties>
+
+    <dependencies>
+        <!-- 1. Core Spring Boot IoC, @Profile, @Configuration & YAML Property Binding -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- 2. Spring Boot Web MVC & Static HTML Serving for the 7 Order Portals -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- 3. Spring Boot Thymeleaf View Engine for Server-Side Order HTML Rendering -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- 4. Bean Validation (JSR-380) for @ConfigurationProperties Record Invariants -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- 5. Spring Boot Actuator for GEMINI.md SPC Telemetry & Health Endpoints -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- 6. Compile-Time Metadata Processor for warlock.* YAML Properties -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 7. JUnit 5 & Spring Boot Test Suite for 7-Color Profile Verification -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- 7 Maven & Spring Boot Profiles Ordered by Pre-Prophetic Color (1..7) -->
+    <profiles>
+        <profile>
+            <id>warlock-1-white</id>
+            <properties>
+                <spring.profiles.active>warlock-1-white</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>warlock-2-black</id>
+            <properties>
+                <spring.profiles.active>warlock-2-black</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>warlock-3-sapphire</id>
+            <properties>
+                <spring.profiles.active>warlock-3-sapphire</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>warlock-4-gold</id>
+            <properties>
+                <spring.profiles.active>warlock-4-gold</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>warlock-5-crimson</id>
+            <properties>
+                <spring.profiles.active>warlock-5-crimson</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>warlock-6-brass</id>
+            <properties>
+                <spring.profiles.active>warlock-6-brass</spring.profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>warlock-7-emerald</id>
+            <properties>
+                <spring.profiles.active>warlock-7-emerald</spring.profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warlock Visuals Across Every Era of Islamic History | AI &amp; Sacred Geometry Atlas</title>
+  <style>
+    :root {
+      --bg-deep: #05070D;
+      --bg-card: #0F1422;
+      --text-main: #ECEFF4;
+      --text-muted: #94A3B8;
+      --border: rgba(255,255,255,0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(212, 175, 55, 0.16), transparent 50%),
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), var(--bg-deep) 68%);
+      color: var(--text-main);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      padding-bottom: 4rem;
+    }
+    header {
+      background: rgba(5, 7, 13, 0.95);
+      border-bottom: 2px solid #D4AF37;
+      padding: 0.9rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      max-width: 1480px;
+      margin: 0 auto;
+      align-items: center;
+    }
+    .nav-pill {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.79rem;
+      font-weight: 600;
+    }
+    .nav-pill.active, .nav-pill:hover {
+      color: #FFF;
+      border-color: #D4AF37;
+      background: rgba(212, 175, 55, 0.18);
+    }
+    main {
+      max-width: 1480px;
+      margin: 1.8rem auto;
+      padding: 0 1.5rem;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0F1422 0%, #1F1730 50%, #0E2722 100%);
+      border: 1px solid var(--border);
+      border-left: 6px solid #D4AF37;
+      border-radius: 14px;
+      padding: 1.9rem;
+      margin-bottom: 1.8rem;
+    }
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.65rem;
+    }
+    .badge {
+      font-family: 'Consolas', monospace;
+      font-size: 0.74rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 0.55rem; }
+    .canvas-box {
+      position: relative;
+      background: #04060A;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      height: 520px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    canvas { width: 100%; height: 100%; display: block; cursor: grab; }
+    .hud-top {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(5, 7, 13, 0.88);
+      border: 1px solid var(--border);
+      border-left: 4px solid #D4AF37;
+      border-radius: 10px;
+      padding: 0.85rem 1.1rem;
+      max-width: 600px;
+      pointer-events: none;
+    }
+    .mode-bar {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      background: rgba(5, 7, 13, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.55rem;
+    }
+    .mode-btn {
+      background: #0F1422;
+      color: #CBD5E1;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.38rem 0.7rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .mode-btn.active, .mode-btn:hover {
+      border-color: #D4AF37;
+      color: #FFF;
+      background: rgba(212, 175, 55, 0.25);
+    }
+    .era-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 6px solid #D4AF37;
+      border-radius: 14px;
+      padding: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .era-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 1.4rem;
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .era-grid { grid-template-columns: 1fr; }
+    }
+    .svg-plate-wrap {
+      background: #070A12;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+    .swatch-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      justify-content: center;
+      margin-top: 0.6rem;
+    }
+    .swatch-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.15rem 0.5rem;
+      font-size: 0.72rem;
+    }
+    .swatch-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .era-content h3 {
+      font-size: 1.2rem;
+      color: #FDE68A;
+      margin-bottom: 0.35rem;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 0.85rem;
+    }
+    .sub-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.85rem;
+      font-size: 0.84rem;
+    }
+    .prompt-box {
+      background: #070A12;
+      border: 1px solid rgba(244, 63, 94, 0.35);
+      border-radius: 8px;
+      padding: 0.85rem;
+      font-size: 0.8rem;
+    }
+    .box-title {
+      font-size: 0.73rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.35rem;
+    }
+    code {
+      font-family: 'Consolas', monospace;
+      color: #A5F3FC;
+    }
+    .ai-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.2rem;
+    }
+    .ai-plate-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-top: 4px solid #D4AF37;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .ai-plate-card img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+    }
+    .ai-plate-body {
+      padding: 1rem 1.15rem;
+      font-size: 0.84rem;
+    }
+    .ai-plate-body h3 {
+      font-size: 1.02rem;
+      color: #FDE68A;
+      margin-bottom: 0.35rem;
+    }
+  </style>
+<!-- SOV_CHROME_CSS_START -->
+<style id="sovereign-universal-nav-css">
+  .sov-global-wrap {
+    background: linear-gradient(90deg, #04060C 0%, #0C1324 50%, #04060C 100%);
+    border-bottom: 2px solid #D4AF37;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.65);
+  }
+  .sov-global-bar {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0.55rem 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+  .sov-wing-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .sov-pill:hover, .sov-pill.sov-active {
+    color: #FFFFFF;
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.22);
+  }
+  .sov-pill-master {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(16, 185, 129, 0.22));
+    border-color: #D4AF37;
+    color: #FDE68A;
+    font-weight: 700;
+  }
+  .sov-pill-omnibus {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.22));
+    border-color: #38BDF8;
+    color: #E0F2FE;
+    font-weight: 700;
+  }
+  .sov-pill-drawer {
+    background: #1E293B;
+    border-color: #F43F5E;
+    color: #FDA4AF;
+    font-weight: 700;
+  }
+  .sov-pill-counter {
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.18);
+    color: #FDE68A;
+    font-family: 'Consolas', monospace;
+    font-weight: 700;
+  }
+  .sov-pill-sync {
+    border-color: #10B981;
+    background: rgba(16, 185, 129, 0.14);
+    color: #6EE7B7;
+    font-family: 'Consolas', monospace;
+    font-size: 0.71rem;
+  }
+  .sov-sister-ribbon {
+    background: rgba(10, 15, 28, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.45rem 1.2rem;
+  }
+  .sov-sister-inner {
+    max-width: 1560px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .sov-sister-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-sister-label {
+    font-family: 'Consolas', monospace;
+    color: #FDE68A;
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .sov-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 5, 10, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 100000;
+    overflow-y: auto;
+    padding: 2rem 1.2rem;
+  }
+  .sov-modal-backdrop.open {
+    display: block;
+  }
+  .sov-modal-box {
+    max-width: 1380px;
+    margin: 0 auto;
+    background: #0B101D;
+    border: 2px solid #D4AF37;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.85);
+  }
+  .sov-modal-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .sov-search-input {
+    flex: 1;
+    min-width: 260px;
+    background: #050811;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.86rem;
+  }
+  .sov-drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 0.65rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.3rem;
+  }
+  .sov-drawer-item {
+    display: block;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #D4AF37;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    text-decoration: none;
+    color: #E2E8F0;
+    transition: all 0.14s ease;
+  }
+  .sov-drawer-item:hover, .sov-drawer-item.current {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: #D4AF37;
+    transform: translateY(-1px);
+  }
+  .sov-footer-wrap {
+    max-width: 1480px;
+    margin: 3rem auto 1rem auto;
+    padding: 1.5rem;
+    background: rgba(8, 12, 22, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-top: 3px solid #D4AF37;
+    border-radius: 14px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .sov-footer-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .sov-footer-cat h4 {
+    font-size: 0.78rem;
+    color: #FDE68A;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.25rem;
+  }
+  .sov-footer-cat a {
+    display: block;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.76rem;
+    padding: 0.14rem 0;
+  }
+  .sov-footer-cat a:hover, .sov-footer-cat a.active-link {
+    color: #38BDF8;
+    font-weight: 600;
+  }
+</style>
+<!-- SOV_CHROME_CSS_END -->
+</head>
+<body>
+<!-- SOV_CHROME_TOP_START -->
+<div id="sovereign-universal-nav" class="sov-global-wrap" data-portal-seq="49" data-portal-total="63">
+  <div class="sov-global-bar">
+    <div class="sov-wing-links">
+      <a class="sov-pill sov-pill-master " href="index.html">🏠 Master Index (<span data-sov-total>63</span>)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
+      <a class="sov-pill sov-pill-omnibus " href="quranic-timeline-expansion-vol1-chronology.html">🎓 Collegiate Thesis (#58–#60)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caliphates-sultans-shahs-dynasties-return.html">👑 Caliphates &amp; Return (#57)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-countries-history-canonical-embrace-atlas.html">🌍 57 OIC Countries (#56)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">🚰 Naming &amp; Sewer (#55)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-modesty-evolution-western-frontier-men-women.html">🧕 Western Modesty (#54)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">⚗️ Philosophy &amp; Alchemy (#53)</a>
+      <a class="sov-pill sov-pill-omnibus " href="greco-roman-gods-titans-daimones-islamic-judgment.html">⚖️ Greco-Roman &amp; Titans (#52)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caravans-battles-conquest-chronicle.html">🐪 Caravans &amp; Fatḥ (#51)</a>
+      <a class="sov-pill sov-pill-omnibus " href="conjoined-worlds-realms-principles-node-grid.html">⛰️ 3D Node-Art Grid (#50)</a>
+      <a class="sov-pill sov-pill-omnibus " href="master-combined-omnibus.html?portal=warlock-islamic-visual-eras-history.html">🧭 Combined Omnibus View</a>
+      <button type="button" class="sov-pill sov-pill-drawer" onclick="toggleSovDrawer()">⚡ All <span data-sov-total>63</span> Portals (Ctrl+K)</button>
+      <a class="sov-pill " href="order-1-white.html">🎨 7 Orders</a>
+      <a class="sov-pill " href="warlock-3d-sanctum.html">🏛️ 3D Sanctum &amp; Realms</a>
+      <a class="sov-pill " href="priory-negentropy-order.html">📐 Priory &amp; Planes</a>
+      <a class="sov-pill " href="zalim-1-fasad.html">⚠️ 7 Zalim</a>
+      <a class="sov-pill " href="worlds-hegemon-disorder.html">🌍 7 Worlds</a>
+      <a class="sov-pill " href="warlock-formation-dissolution-jafar-aladdin.html">🏺 Ja'far/Aladdin</a>
+      <a class="sov-pill " href="sequester-between-worlds.html">🧱 7 Sequesters</a>
+      <a class="sov-pill " href="interlocker-egg-binder-islam.html">🥚 Egg Binder</a>
+      <a class="sov-pill " href="warlock-apocrypha-islamic-theorems.html">📜 Apocrypha</a>
+      <a class="sov-pill " href="islamic-husbandry-sovereign-estate.html">🛡️ Husbandry</a>
+      <a class="sov-pill " href="way-of-the-flower-rose-garden-islam.html">🌹 Rose Garden</a>
+      <a class="sov-pill " href="disney-daffy-donald-islamic-microcosm.html">🦆 Disney/Daffy</a>
+      <a class="sov-pill sov-active" href="warlock-islamic-visual-eras-history.html">🕌 7 Visual Eras</a>
+      <a class="sov-pill " href="dependencies-report.html">📦 Dependencies</a>
+    </div>
+    <div class="sov-wing-links">
+      <a class="sov-pill" href="disney-daffy-donald-islamic-microcosm.html" title="Islamic Animalism &amp; Husbandry Microcosm: Donald, Daffy, Daisy &amp; The Jungle Book">← Prev: Disney/Daffy &amp; Jungle Microcosm</a>
+      <span id="sovPortalCounterBadge" class="sov-pill sov-pill-counter" title="Continually Synchronized Portal Index (#49 of 63)">#49 / 63</span>
+      <button type="button" id="sovContinualCycleBtn" class="sov-pill sov-pill-sync" onclick="toggleSovContinualCycle()" title="Click to toggle Continual Auto-Advance across all 63 portals">🔄 Continual Sync: #49/63</button>
+      <a class="sov-pill" href="conjoined-worlds-realms-principles-node-grid.html" title="Conjoined Worlds, Realms &amp; Principles: 3D/2.5D Islamic Node-Art Terrain Grid &amp; Color Guard of the Meridian">Next: 3D Node-Art Terrain Grid (Meridian Guard) →</a>
+    </div>
+  </div>
+  <div class="sov-sister-ribbon">
+  <div class="sov-sister-inner">
+    <div class="sov-sister-group">
+      <span class="sov-sister-label">7-FOLD SERIES QUICK JUMP:</span>
+      <a class="sov-pill" href="order-1-white.html"><span style="width:8px;height:8px;border-radius:50%;background:#F8F5E6;display:inline-block;"></span>Row #1: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-2-black.html"><span style="width:8px;height:8px;border-radius:50%;background:#A78BFA;display:inline-block;"></span>Row #2: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-3-sapphire.html"><span style="width:8px;height:8px;border-radius:50%;background:#38BDF8;display:inline-block;"></span>Row #3: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-4-gold.html"><span style="width:8px;height:8px;border-radius:50%;background:#D4AF37;display:inline-block;"></span>Row #4: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-5-crimson.html"><span style="width:8px;height:8px;border-radius:50%;background:#F43F5E;display:inline-block;"></span>Row #5: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-6-brass.html"><span style="width:8px;height:8px;border-radius:50%;background:#B87333;display:inline-block;"></span>Row #6: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-7-emerald.html"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;"></span>Row #7: Order/Realm/Plane/Zalim/World</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="sovMegaDrawer" class="sov-modal-backdrop" onclick="if(event.target===this)toggleSovDrawer()">
+  <div class="sov-modal-box">
+    <div class="sov-modal-header">
+      <div>
+        <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">SOVEREIGN MASTER ATLAS • ALL <span data-sov-total>63</span> HTML PORTALS CONTINUALLY INTEGRATED</div>
+        <h2 style="font-size:1.25rem;color:#FFF;margin:0.15rem 0;">Instant Portal Switcher &amp; Cross-Wing Navigator (#49 / 63)</h2>
+      </div>
+      <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all 63 portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+        <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="quranic-timeline-expansion-vol1-chronology.html">Collegiate Thesis (#58–#60)</a>
+        <a class="sov-pill sov-pill-omnibus" href="conjoined-worlds-realms-principles-node-grid.html">3D Node-Art Grid (#50)</a>
+        <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=warlock-islamic-visual-eras-history.html">Open in Split Omnibus</a>
+        <button type="button" class="sov-pill" onclick="toggleSovDrawer()">✕ Close (Esc)</button>
+      </div>
+    </div>
+    <div id="sovDrawerGrid" class="sov-drawer-grid">
+      <a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="index.html" data-search="master index hub sovereign master index, search &amp; 7-row cross-wing relational matrix 01. master hubs &amp; architecture al-fihris al-jāmi&#39; • all 63 portals continually integrated index.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#01 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">index.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Master Index Hub</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Fihris Al-Jāmi' • All 63 Portals Continually Integrated</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="master-combined-omnibus.html" data-search="combined omnibus reader combined multi-portal omnibus workspace &amp; split-screen comparator 01. master hubs &amp; architecture al-majmū&#39; al-muwahhad • all 63 portals side-by-side &amp; sequential reader master-combined-omnibus.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#02 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">master-combined-omnibus.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Combined Omnibus Reader</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Majmū' Al-Muwahhad • All 63 Portals Side-by-Side &amp; Sequential Reader</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="dependencies-report.html" data-search="dependencies &amp; java 21+ audit master spring boot 3.4 &amp; java 21+/26 essentials dependency usage report 01. master hubs &amp; architecture spc state s0 • sha-256 artifact ledger (all 63 portals) dependencies-report.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#03 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">dependencies-report.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Dependencies &amp; Java 21+ Audit</div><div style="font-size:0.72rem;color:#CBD5E1;">SPC State S0 • SHA-256 Artifact Ledger (All 63 Portals)</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="order-1-white.html" data-search="order #1: white order #1 (warlock-1-white) — malakh-azal (sephirotic white #f8f5e6) 02. seven pre-prophetic color orders malakh-azal • qur&#39;an 2:102 &amp; 53:19-23 order-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#04 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #1: White</div><div style="font-size:0.72rem;color:#CBD5E1;">Malakh-Azal • Qur'an 2:102 &amp; 53:19-23</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="order-2-black.html" data-search="order #2: black order #2 (warlock-2-black) — katib al-qalam (abbasid black #141416) 02. seven pre-prophetic color orders kātib al-qalam • qur&#39;an 68:1 &amp; 24:22 order-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#05 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #2: Black</div><div style="font-size:0.72rem;color:#CBD5E1;">Kātib Al-Qalam • Qur'an 68:1 &amp; 24:22</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="order-3-sapphire.html" data-search="order #3: sapphire order #3 (warlock-3-sapphire) — yored ha-merkabah (babylonian sapphire #0f2c59) 02. seven pre-prophetic color orders yored ha-merkabah • qur&#39;an 6:75-79 &amp; 53:1-18 order-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#06 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #3: Sapphire</div><div style="font-size:0.72rem;color:#CBD5E1;">Yored Ha-Merkabah • Qur'an 6:75-79 &amp; 53:1-18</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="order-4-gold.html" data-search="order #4: gold order #4 (warlock-4-gold) — shahid al-alast (covenant gold #d4af37) 02. seven pre-prophetic color orders shāhid al-alast • qur&#39;an 7:172 &amp; 3:67 order-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#07 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #4: Gold</div><div style="font-size:0.72rem;color:#CBD5E1;">Shāhid Al-Alast • Qur'an 7:172 &amp; 3:67</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="order-5-crimson.html" data-search="order #5: crimson order #5 (warlock-5-crimson) — saraph ha-ritzpah (seraphic crimson #8b0000) 02. seven pre-prophetic color orders saraph ha-ritzpah • qur&#39;an 72:8-9 &amp; 25:1 order-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#08 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #5: Crimson</div><div style="font-size:0.72rem;color:#CBD5E1;">Saraph Ha-Ritzpah • Qur'an 72:8-9 &amp; 25:1</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="order-6-brass.html" data-search="order #6: brass order #6 (warlock-6-brass) — ba&#39;al ha-nechoshet (solomonic brass #b87333) 02. seven pre-prophetic color orders ba&#39;al ha-nechoshet • qur&#39;an 2:102 &amp; 34:12 order-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#09 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #6: Brass</div><div style="font-size:0.72rem;color:#CBD5E1;">Ba'al Ha-Nechoshet • Qur'an 2:102 &amp; 34:12</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="order-7-emerald.html" data-search="order #7: emerald order #7 (warlock-7-emerald) — wali al-ghaib (khidrian emerald #006b54) 02. seven pre-prophetic color orders walī al-ghaib • qur&#39;an 18:65 &amp; 9:108 order-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#10 / 63 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #7: Emerald</div><div style="font-size:0.72rem;color:#CBD5E1;">Walī Al-Ghaib • Qur'an 18:65 &amp; 9:108</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="warlock-3d-sanctum.html" data-search="3d sanctum master interactive 3d seven-realm warlock sanctum &amp; celestial geometry 03. 3d sanctum &amp; seven realms al-haykal al-handasī • interactive webgl/canvas 3d warlock-3d-sanctum.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#11 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">warlock-3d-sanctum.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Sanctum Master</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Haykal Al-Handasī • Interactive WebGL/Canvas 3D</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="realm-1-white.html" data-search="realm #1: &#39;aravot realm #1 (white #f8f5e6) — &#39;aravot / sidrat al-muntaha 03. 3d sanctum &amp; seven realms seventh heaven • 390nm alabaster realm-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#12 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #1: 'Aravot</div><div style="font-size:0.72rem;color:#CBD5E1;">Seventh Heaven • 390nm Alabaster</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="realm-2-black.html" data-search="realm #2: makhon realm #2 (black #141416) — makhon / bayt al-qalam 03. 3d sanctum &amp; seven realms hidden ink treasury • 405nm obsidian realm-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#13 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #2: Makhon</div><div style="font-size:0.72rem;color:#CBD5E1;">Hidden Ink Treasury • 405nm Obsidian</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="realm-3-sapphire.html" data-search="realm #3: zevul realm #3 (sapphire #0f2c59) — zevul / al-bayt al-ma&#39;mur 03. 3d sanctum &amp; seven realms sapphire pavement • 465nm lapis realm-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#14 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #3: Zevul</div><div style="font-size:0.72rem;color:#CBD5E1;">Sapphire Pavement • 465nm Lapis</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="realm-4-gold.html" data-search="realm #4: shehaqim realm #4 (gold #d4af37) — shehaqim / diwan al-mithaq 03. 3d sanctum &amp; seven realms golden covenant court • 580nm amber-gold realm-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#15 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #4: Shehaqim</div><div style="font-size:0.72rem;color:#CBD5E1;">Golden Covenant Court • 580nm Amber-Gold</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="realm-5-crimson.html" data-search="realm #5: ma&#39;on realm #5 (crimson #8b0000) — ma&#39;on / rasad ash-shuhub 03. 3d sanctum &amp; seven realms seraphic garrison • 650nm crimson realm-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#16 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #5: Ma'on</div><div style="font-size:0.72rem;color:#CBD5E1;">Seraphic Garrison • 650nm Crimson</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="realm-6-brass.html" data-search="realm #6: raqia&#39; realm #6 (brass #b87333) — raqia&#39; / madinat an-nuhas 03. 3d sanctum &amp; seven realms city of brass • 605nm burnished brass realm-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#17 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #6: Raqia'</div><div style="font-size:0.72rem;color:#CBD5E1;">City of Brass • 605nm Burnished Brass</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="realm-7-emerald.html" data-search="realm #7: vilon realm #7 (emerald #006b54) — vilon / majma&#39; al-bahrayn 03. 3d sanctum &amp; seven realms junction of the two seas • 520nm emerald realm-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#18 / 63 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #7: Vilon</div><div style="font-size:0.72rem;color:#CBD5E1;">Junction of the Two Seas • 520nm Emerald</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="priory-negentropy-order.html" data-search="negentropic priory atlas the negentropic priory (sigma -1n &amp; 0n beta): ordering the 7 warlocks 04. negentropic priory &amp; seven planes sigma -1n &amp; 0n beta • δh = 0.000 bits priory-negentropy-order.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#19 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">priory-negentropy-order.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Negentropic Priory Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Sigma -1n &amp; 0n Beta • ΔH = 0.000 bits</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="plane-1-white.html" data-search="plane #1: adam kadmon / lahut plane #1 (white #f8f5e6) — olam adam kadmon / hadrat al-lahut 04. negentropic priory &amp; seven planes priory seat i • c_p = 1.62 plane-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#20 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #1: Adam Kadmon / Lahut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat I • C_p = 1.62</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="plane-2-black.html" data-search="plane #2: malbush / al-qalam plane #2 (black #141416) — olam ha-malbush / hadrat al-lawh wa al-qalam 04. negentropic priory &amp; seven planes priory seat vi • c_p = 1.38 plane-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#21 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #2: Malbush / Al-Qalam</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VI • C_p = 1.38</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="plane-3-sapphire.html" data-search="plane #3: beri&#39;ah / jabarut plane #3 (sapphire #0f2c59) — olam ha-beri&#39;ah / &#39;alam al-jabarut 04. negentropic priory &amp; seven planes priory seat iv • c_p = 1.44 plane-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#22 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #3: Beri'ah / Jabarut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat IV • C_p = 1.44</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="plane-4-gold.html" data-search="plane #4: atzilut / al-arwah plane #4 (gold #d4af37) — olam ha-atzilut / &#39;alam al-arwah 04. negentropic priory &amp; seven planes priory seat ii • c_p = 1.54 plane-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#23 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #4: Atzilut / Al-Arwah</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat II • C_p = 1.54</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="plane-5-crimson.html" data-search="plane #5: tohu / ash-shuhub plane #5 (crimson #8b0000) — olam ha-tohu / falak ash-shuhub 04. negentropic priory &amp; seven planes priory seat vii • c_p = 1.35 plane-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#24 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #5: Tohu / Ash-Shuhub</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VII • C_p = 1.35</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="plane-6-brass.html" data-search="plane #6: yetzirah / al-marij plane #6 (brass #b87333) — olam ha-yetzirah / &#39;alam al-marij 04. negentropic priory &amp; seven planes priory seat v • c_p = 1.40 plane-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#25 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #6: Yetzirah / Al-Marij</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat V • C_p = 1.40</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="plane-7-emerald.html" data-search="plane #7: tikkun / al-mithal plane #7 (emerald #006b54) — olam ha-tikkun / &#39;alam al-mithal wa al-barzakh 04. negentropic priory &amp; seven planes priory seat iii • c_p = 1.48 plane-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#26 / 63 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #7: Tikkun / Al-Mithal</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat III • C_p = 1.48</div></a><a class="sov-drawer-item" style="border-left-color:#EF4444;" href="zalim-1-fasad.html" data-search="zalim #1: al-fasad zalim #1 (zalim-1-fasad) — mufsid al-ard (ecological &amp; ritual disorder) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:204-205 • al-fasad fi al-ard zalim-1-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#27 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-1-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #1: Al-Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:204-205 • Al-Fasad fi Al-Ard</div></a><a class="sov-drawer-item" style="border-left-color:#EC4899;" href="zalim-2-fahishah.html" data-search="zalim #2: al-fahishah zalim #2 (zalim-2-fahishah) — da&#39;i al-fahishah (immodesty &amp; tabarruj) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 7:28 &amp; 24:19 • al-fahishah zalim-2-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#28 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-2-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #2: Al-Fahishah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:28 &amp; 24:19 • Al-Fahishah</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="zalim-3-baghy.html" data-search="zalim #3: al-baghy (nimrod) zalim #3 (zalim-3-baghy) — jabbar an-namrud (tyrannical counter-hegemony) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:258 &amp; 21:68-69 • al-baghy zalim-3-baghy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#29 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-3-baghy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #3: Al-Baghy (Nimrod)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:68-69 • Al-Baghy</div></a><a class="sov-drawer-item" style="border-left-color:#F97316;" href="zalim-4-fitnah.html" data-search="zalim #4: al-fitnah zalim #4 (zalim-4-fitnah) — nafikh al-fitnah (sectarian schism &amp; sedition) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:191 &amp; 3:103 • al-fitnah zalim-4-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#30 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-4-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #4: Al-Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:191 &amp; 3:103 • Al-Fitnah</div></a><a class="sov-drawer-item" style="border-left-color:#EAB308;" href="zalim-5-hawa.html" data-search="zalim #5: al-hawa zalim #5 (zalim-5-hawa) — &#39;abid al-hawa (deification of caprice) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 45:23 &amp; 25:43 • ittiba&#39; al-hawa zalim-5-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#31 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-5-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #5: Al-Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 45:23 &amp; 25:43 • Ittiba' Al-Hawa</div></a><a class="sov-drawer-item" style="border-left-color:#14B8A6;" href="zalim-6-jibt.html" data-search="zalim #6: al-jibt &amp; taghut zalim #6 (zalim-6-jibt) — kahin al-jibt (sorcerous idolatry &amp; azar&#39;s guild) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 4:51 &amp; 21:57-58 • al-jibt wa at-taghut zalim-6-jibt.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#32 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-6-jibt.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #6: Al-Jibt &amp; Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:51 &amp; 21:57-58 • Al-Jibt wa At-Taghut</div></a><a class="sov-drawer-item" style="border-left-color:#94A3B8;" href="zalim-7-zulm.html" data-search="zalim #7: masjid ad-dirar zalim #7 (zalim-7-zulm) — imam az-zalimin (counter-sanctuary subversion) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:124 &amp; 9:107-109 • masjid ad-dirar zalim-7-zulm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#33 / 63 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-7-zulm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #7: Masjid Ad-Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:124 &amp; 9:107-109 • Masjid Ad-Dirar</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="worlds-hegemon-disorder.html" data-search="7 worlds master atlas master atlas: the 7 islamic worlds of hegemon (al-muhaymin) &amp; disorder (al-fasad) 06. seven islamic worlds of hegemon &amp; disorder al-muhaymin vs. al-fasad • 3d dual-hemisphere globe worlds-hegemon-disorder.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#34 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">worlds-hegemon-disorder.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Worlds Master Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Muhaymin vs. Al-Fasad • 3D Dual-Hemisphere Globe</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="world-1-mizan-fasad.html" data-search="world #1: amanah vs. fasad world #1 — &#39;alam al-amanah wa al-fasad (trust vs. ecological disorder) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 14:35 &amp; 2:205 • order #1 vs. zalim #1 world-1-mizan-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#35 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-1-mizan-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #1: Amanah vs. Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 14:35 &amp; 2:205 • Order #1 vs. Zalim #1</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="world-2-haya-fahishah.html" data-search="world #2: haya&#39; vs. tabarruj world #2 — &#39;alam al-haram wa at-tabarruj (modesty vs. immodesty) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 7:26-28 • order #2 vs. zalim #2 world-2-haya-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#36 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-2-haya-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #2: Haya' vs. Tabarruj</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26-28 • Order #2 vs. Zalim #2</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="world-3-babil-namrud.html" data-search="world #3: ibrahim vs. namrud world #3 — &#39;alam babil wa al-jabbarin (cool-fire sanctuary vs. nimrod) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:258 &amp; 21:69 • order #3 vs. zalim #3 world-3-babil-namrud.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#37 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-3-babil-namrud.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #3: Ibrahim vs. Namrud</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:69 • Order #3 vs. Zalim #3</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="world-4-ummah-fitnah.html" data-search="world #4: ummah vs. fitnah world #4 — &#39;alam al-ummah al-wahidah wa al-fitnah (unity vs. schism) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 21:92 &amp; 3:103 • order #4 vs. zalim #4 world-4-ummah-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#38 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-4-ummah-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #4: Ummah vs. Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:92 &amp; 3:103 • Order #4 vs. Zalim #4</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="world-5-furqan-hawa.html" data-search="world #5: furqan vs. hawa world #5 — &#39;alam al-furqan wa al-hawa (revelation vs. caprice) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 5:48 &amp; 45:23 • order #5 vs. zalim #5 world-5-furqan-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#39 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-5-furqan-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #5: Furqan vs. Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 5:48 &amp; 45:23 • Order #5 vs. Zalim #5</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="world-6-tawhid-taghut.html" data-search="world #6: tawhid vs. taghut world #6 — &#39;alam al-&#39;urwah al-wuthqa wa at-taghut (iconoclasm vs. idols) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:256 &amp; 21:58 • order #6 vs. zalim #6 world-6-tawhid-taghut.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#40 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-6-tawhid-taghut.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #6: Tawhid vs. Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:256 &amp; 21:58 • Order #6 vs. Zalim #6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="world-7-taqwa-dirar.html" data-search="world #7: taqwa vs. dirar world #7 — &#39;alam bunyan at-taqwa wa juruf al-har (taqwa vs. counter-mosque) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 9:107-109 • order #7 vs. zalim #7 world-7-taqwa-dirar.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#41 / 63 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-7-taqwa-dirar.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #7: Taqwa vs. Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 9:107-109 • Order #7 vs. Zalim #7</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="warlock-formation-dissolution-jafar-aladdin.html" data-search="ja&#39;far &amp; aladdin qumqum islamic warlock formation (ja&#39;far / istidraj) &amp; dissolution (&#39;ala&#39; ad-din / qumqum) 07. warlock formation, dissolution &amp; inter-world sequesters istidrāj (qur&#39;an 6:44) -&gt; qumqum sulaymānī (21:18) warlock-formation-dissolution-jafar-aladdin.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#42 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">warlock-formation-dissolution-jafar-aladdin.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ja'far &amp; Aladdin Qumqum</div><div style="font-size:0.72rem;color:#CBD5E1;">Istidrāj (Qur'an 6:44) -&gt; Qumqum Sulaymānī (21:18)</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="sequester-between-worlds.html" data-search="7 inter-world sequesters the 7 inter-world sequesters (al-hijr al-mahjur &amp; sur al-hadid) 07. warlock formation, dissolution &amp; inter-world sequesters barzakh (55:19-20) &amp; sūr al-ḥadīd (18:96-97) sequester-between-worlds.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#43 / 63 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">sequester-between-worlds.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Inter-World Sequesters</div><div style="font-size:0.72rem;color:#CBD5E1;">Barzakh (55:19-20) &amp; Sūr Al-Ḥadīd (18:96-97)</div></a><a class="sov-drawer-item" style="border-left-color:#FBBF24;" href="interlocker-egg-binder-islam.html" data-search="egg-in-baking intelocketer the islamic intelocketer (al-murabbit al-kalim): egg-in-baking emulsifier &amp; al-a&#39;raf 08. the islamic egg-in-baking intelocketer qur&#39;an 37:49 (bayḍun maknūn) &amp; 7:46-48 (al-a&#39;rāf) interlocker-egg-binder-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#44 / 63 • 08. The Islamic Egg-in-Baking Intelocketer</span><code style="color:#38BDF8;">interlocker-egg-binder-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Egg-in-Baking Intelocketer</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 37:49 (Bayḍun Maknūn) &amp; 7:46-48 (Al-A'rāf)</div></a><a class="sov-drawer-item" style="border-left-color:#C084FC;" href="warlock-apocrypha-islamic-theorems.html" data-search="warlock apocrypha &amp; theorems the warlock apocrypha &amp; 5 islamic theological philosophy theorems on western modernity 09. the warlock apocrypha &amp; modernity theorems al-ghazālī • ibn khaldūn • mullā ṣadrā • al-attas • hallaq warlock-apocrypha-islamic-theorems.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#45 / 63 • 09. The Warlock Apocrypha &amp; Modernity Theorems</span><code style="color:#38BDF8;">warlock-apocrypha-islamic-theorems.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Warlock Apocrypha &amp; Theorems</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Ghazālī • Ibn Khaldūn • Mullā Ṣadrā • Al-Attas • Hallaq</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="islamic-husbandry-sovereign-estate.html" data-search="vanguard husbandry estate islamic action-based vanguard husbandry (al-qiwamah al-khadimah) &amp; husbandrystate 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-event simulation islamic-husbandry-sovereign-estate.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#46 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-husbandry-sovereign-estate.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vanguard Husbandry Estate</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-Event Simulation</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="way-of-the-flower-rose-garden-islam.html" data-search="flower, rose &amp; chahar bagh the islamic way of the flower (az-zahrah), the rose (al-wardah), the cultivating hand &amp; garden 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 55:37 (wardatan ka-ad-dihān), 3:37 &amp; 47:15 way-of-the-flower-rose-garden-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#47 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">way-of-the-flower-rose-garden-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Flower, Rose &amp; Chahar Bagh</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 55:37 (Wardatan ka-ad-Dihān), 3:37 &amp; 47:15</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="disney-daffy-donald-islamic-microcosm.html" data-search="disney/daffy &amp; jungle microcosm islamic animalism &amp; husbandry microcosm: donald, daffy, daisy &amp; the jungle book 11. islamic animalism &amp; visual history atlases qur&#39;an 6:38 (umamun amthālukum) • kalīlah wa dimnah disney-daffy-donald-islamic-microcosm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#48 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">disney-daffy-donald-islamic-microcosm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Disney/Daffy &amp; Jungle Microcosm</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 6:38 (Umamun Amthālukum) • Kalīlah wa Dimnah</div></a><a class="sov-drawer-item current" style="border-left-color:#38BDF8;" href="warlock-islamic-visual-eras-history.html" data-search="7 islamic visual eras &amp; ai art warlock visuals across every era of islamic history: ai art plates &amp; sacred geometry 11. islamic animalism &amp; visual history atlases eras i–vii: bābil/saba&#39; to neo-islamic ai cyber-geometry warlock-islamic-visual-eras-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#49 / 63 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">warlock-islamic-visual-eras-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Islamic Visual Eras &amp; AI Art</div><div style="font-size:0.72rem;color:#CBD5E1;">Eras I–VII: Bābil/Saba' to Neo-Islamic AI Cyber-Geometry</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="conjoined-worlds-realms-principles-node-grid.html" data-search="3d node-art terrain grid (meridian guard) conjoined worlds, realms &amp; principles: 3d/2.5d islamic node-art terrain grid &amp; color guard of the meridian 01. master hubs &amp; architecture ḥaras al-alwān li-khaṭṭ al-mīzān • 7x7 (49-node) 3d heightmap conjoined-worlds-realms-principles-node-grid.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#50 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">conjoined-worlds-realms-principles-node-grid.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Node-Art Terrain Grid (Meridian Guard)</div><div style="font-size:0.72rem;color:#CBD5E1;">Ḥaras Al-Alwān li-Khaṭṭ Al-Mīzān • 7x7 (49-Node) 3D Heightmap</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caravans-battles-conquest-chronicle.html" data-search="caravans, trade battles, fatḥ &amp; tadwīn canonical islamic caravans (ilaf), battles for trade (badr/qaradah), founding of conquest (al-fath) &amp; recording of conquest (tadwin al-maghazi / futuh al-buldan) 01. master hubs &amp; architecture qur&#39;an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • al-&#39;īr, al-maghāzī, al-fatḥ &amp; dīwān islamic-caravans-battles-conquest-chronicle.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#51 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caravans-battles-conquest-chronicle.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caravans, Trade Battles, Fatḥ &amp; Tadwīn</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • Al-'Īr, Al-Maghāzī, Al-Fatḥ &amp; Dīwān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="greco-roman-gods-titans-daimones-islamic-judgment.html" data-search="greco-roman gods &amp; titans made whole greco-roman gods, titans (titanomachy), 12 olympians, morpheus/oneiroi, 7 erotes &amp; 150+ minor spirits: islamic reception, judgment &amp; wholeness 01. master hubs &amp; architecture al-furqān (21:22, 12:39-40, 39:42) &amp; at-takmīl • titans, oneiroi, erotes &amp; daimones greco-roman-gods-titans-daimones-islamic-judgment.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#52 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">greco-roman-gods-titans-daimones-islamic-judgment.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Greco-Roman Gods &amp; Titans Made Whole</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Furqān (21:22, 12:39-40, 39:42) &amp; At-Takmīl • Titans, Oneiroi, Erotes &amp; Daimones</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html" data-search="philosophy, alchemy, theocracies &amp; socrates philosophy &amp; alchemy in islam: canonical adjustment to 7 theocracies &amp; theocrats, 5 socratic critiques &amp; 7 stages of message meaning shift 01. master hubs &amp; architecture al-falsafah, al-kīmiyā&#39; (55:7-9), lā kahanūta (9:31), suqrāṭ &amp; lafẓ maḥfūẓ (15:9) islamic-philosophy-alchemy-theocracies-socratic-messages.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#53 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-philosophy-alchemy-theocracies-socratic-messages.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Philosophy, Alchemy, Theocracies &amp; Socrates</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Falsafah, Al-Kīmiyā' (55:7-9), Lā Kahanūta (9:31), Suqrāṭ &amp; Lafẓ Maḥfūẓ (15:9)</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-modesty-evolution-western-frontier-men-women.html" data-search="men &amp; women modesty: western frontier how the modesty standard (al-haya&#39; &amp; libas at-taqwa) for men &amp; women changed across the western frontier &amp; expansions 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 7:26, 24:30-31, 33:59 &amp; 7:199 (&#39;urf) • hijaz, maghreb lithām, al-andalus, oran 1504 &amp; modern west islamic-modesty-evolution-western-frontier-men-women.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#54 / 63 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-modesty-evolution-western-frontier-men-women.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Men &amp; Women Modesty: Western Frontier</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26, 24:30-31, 33:59 &amp; 7:199 ('Urf) • Hijaz, Maghreb Lithām, Al-Andalus, Oran 1504 &amp; Modern West</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" data-search="naming (261 wafq), indonesia, sewer &amp; calligraphy canonical naming in islam by region (zakeem malik mccaleb abjad 261 wafq), development of indonesia (87.2% muslim), sewer project structure, language &amp; calligraphy 01. master hubs &amp; architecture abjad 261 wafq (9×29) • nusantara (87.2% muslim) • jss sewer grid • jawi/pegon &amp; ibn muqlah islamic-naming-indonesia-infrastructure-language-calligraphy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#55 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-naming-indonesia-infrastructure-language-calligraphy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</div><div style="font-size:0.72rem;color:#CBD5E1;">Abjad 261 Wafq (9×29) • Nusantara (87.2% Muslim) • JSS Sewer Grid • Jawi/Pegon &amp; Ibn Muqlah</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-countries-history-canonical-embrace-atlas.html" data-search="history of islamic countries &amp; canonical embrace the history of islamic countries (57 oic nations across 7 civilizational zones) &amp; how they canonically embrace being muslim 01. master hubs &amp; architecture diyār al-islām • 5 pathways of embrace (2:256) • 7 civilizational zones &amp; 6 institutional pillars islamic-countries-history-canonical-embrace-atlas.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#56 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-countries-history-canonical-embrace-atlas.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">History of Islamic Countries &amp; Canonical Embrace</div><div style="font-size:0.72rem;color:#CBD5E1;">Diyār Al-Islām • 5 Pathways of Embrace (2:256) • 7 Civilizational Zones &amp; 6 Institutional Pillars</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caliphates-sultans-shahs-dynasties-return.html" data-search="caliphates, sultans, shahs &amp; promise of return the caliphates, the sultans, the shahs &amp; the dynasties instantiated &amp; dissolved by islam: origin, journey &amp; the promise of returning 01. master hubs &amp; architecture qur&#39;an 3:26, 24:55 &amp; 15:9 • musnad aḥmad 18406 • sahih muslim 145 • ibn khaldūn&#39;s 4-gen law islamic-caliphates-sultans-shahs-dynasties-return.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#57 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caliphates-sultans-shahs-dynasties-return.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caliphates, Sultans, Shahs &amp; Promise of Return</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 3:26, 24:55 &amp; 15:9 • Musnad Aḥmad 18406 • Sahih Muslim 145 • Ibn Khaldūn's 4-Gen Law</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="quranic-timeline-expansion-vol1-chronology.html" data-search="vol. i: qur&#39;anic timeline of expansion collegiate multi-html suite vol. i: canonical qur&#39;anic timeline of islamic expansion across 10 epochs 01. master hubs &amp; architecture qur&#39;an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 canonical epochs quranic-timeline-expansion-vol1-chronology.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#58 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol1-chronology.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. I: Qur'anic Timeline of Expansion</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 Canonical Epochs</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="quranic-timeline-expansion-vol2-properties-kingdoms.html" data-search="vol. ii: islamic properties, countries &amp; kingdoms collegiate multi-html suite vol. ii: canonical islamic properties (waqf, kharāj, &#39;ushr, ḥimā, mawāt), countries &amp; kingdoms 01. master hubs &amp; architecture qur&#39;an 7:128, 59:7 &amp; 4:7-12 • fiqh al-amwāl &amp; al-aqālīm as-sab&#39;ah quranic-timeline-expansion-vol2-properties-kingdoms.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#59 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol2-properties-kingdoms.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. II: Islamic Properties, Countries &amp; Kingdoms</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:128, 59:7 &amp; 4:7-12 • Fiqh Al-Amwāl &amp; Al-Aqālīm As-Sab'ah</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html" data-search="vol. iii: beauty of islam &amp; collegiate thesis collegiate multi-html suite vol. iii: the 7 dimensions of the beauty of islam &amp; 8-chapter collegiate universal thesis monograph 01. master hubs &amp; architecture sahih muslim 91 &amp; 8 • qur&#39;an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6 quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#60 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. III: Beauty of Islam &amp; Collegiate Thesis</div><div style="font-size:0.72rem;color:#CBD5E1;">Sahih Muslim 91 &amp; 8 • Qur'an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islam-through-ages-vol1-reception-history.html" data-search="ages vol. i: islam &amp; global reception expansive multi-html suite vol. i: islam through the ages &amp; its global civilizational reception across 7 historical ages 01. master hubs &amp; architecture qur&#39;an 19:1-36, 39:18 &amp; 41:53 • aksum, baghdad, toledo, maragheh, oxford, weimar &amp; modern labs islam-through-ages-vol1-reception-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#61 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol1-reception-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. I: Islam &amp; Global Reception</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 19:1-36, 39:18 &amp; 41:53 • Aksum, Baghdad, Toledo, Maragheh, Oxford, Weimar &amp; Modern Labs</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="islam-through-ages-vol2-philosophical-connotations.html" data-search="ages vol. ii: philosophical connotations expansive multi-html suite vol. ii: the 7 philosophical connotations &amp; paradigms instantiated by islamic thought 01. master hubs &amp; architecture wājib al-wujūd • floating man • sunnat allāh • faṣl al-maqāl • al-i&#39;tibār • 4d motion • &#39;ilm al-&#39;umrān islam-through-ages-vol2-philosophical-connotations.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#62 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol2-philosophical-connotations.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. II: Philosophical Connotations</div><div style="font-size:0.72rem;color:#CBD5E1;">Wājib Al-Wujūd • Floating Man • Sunnat Allāh • Faṣl Al-Maqāl • Al-I'tibār • 4D Motion • 'Ilm Al-'Umrān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html" data-search="ages vol. iii: scientific discoveries instantiated expansive multi-html suite vol. iii: scientific discoveries alluded to in the qur&#39;an &amp; hadith instantiated through science 01. master hubs &amp; architecture qur&#39;an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (supernova iron z=26) islam-through-ages-vol3-scientific-discoveries-instantiated.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#63 / 63 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol3-scientific-discoveries-instantiated.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. III: Scientific Discoveries Instantiated</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (Supernova Iron Z=26)</div></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SOVEREIGN_CURRENT_SEQ = 49;
+  const SOVEREIGN_TOTAL_PORTALS = 63;
+  const SOVEREIGN_NEXT_FILE = "conjoined-worlds-realms-principles-node-grid.html";
+  let sovContinualTimer = null;
+
+  function syncSovereignPortalCounts() {
+    const items = document.querySelectorAll('#sovDrawerGrid .sov-drawer-item');
+    const liveTotal = items.length > 0 ? items.length : SOVEREIGN_TOTAL_PORTALS;
+    document.querySelectorAll('[data-sov-total]').forEach(el => {
+      el.textContent = String(liveTotal);
+    });
+    const badge = document.getElementById('sovPortalCounterBadge');
+    if (badge) {
+      badge.textContent = '#' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + ' / ' + String(liveTotal).padStart(2, '0');
+    }
+  }
+
+  function toggleSovContinualCycle() {
+    const btn = document.getElementById('sovContinualCycleBtn');
+    const active = sessionStorage.getItem('sovContinualCycleActive') === '1';
+    if (active) {
+      sessionStorage.removeItem('sovContinualCycleActive');
+      if (sovContinualTimer) { clearTimeout(sovContinualTimer); sovContinualTimer = null; }
+      if (btn) btn.textContent = '🔄 Continual Sync: #' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + '/' + String(SOVEREIGN_TOTAL_PORTALS).padStart(2, '0');
+    } else {
+      sessionStorage.setItem('sovContinualCycleActive', '1');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  }
+
+  function toggleSovDrawer() {
+    const el = document.getElementById('sovMegaDrawer');
+    if (!el) return;
+    el.classList.toggle('open');
+    if (el.classList.contains('open')) {
+      const inp = document.getElementById('sovDrawerSearch');
+      if (inp) { inp.value = ''; filterSovDrawer(''); inp.focus(); }
+    }
+  }
+  function filterSovDrawer(q) {
+    const query = (q || '').toLowerCase().trim();
+    document.querySelectorAll('#sovDrawerGrid .sov-drawer-item').forEach(el => {
+      const hay = el.getAttribute('data-search') || '';
+      el.style.display = (!query || hay.includes(query)) ? 'block' : 'none';
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      toggleSovDrawer();
+    } else if (e.key === 'Escape') {
+      const el = document.getElementById('sovMegaDrawer');
+      if (el && el.classList.contains('open')) el.classList.remove('open');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    syncSovereignPortalCounts();
+    if (sessionStorage.getItem('sovContinualCycleActive') === '1') {
+      const btn = document.getElementById('sovContinualCycleBtn');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  });
+</script>
+<!-- SOV_CHROME_TOP_END -->
+
+  <header>
+    <nav class="nav-bar">
+      <a class="nav-pill active" href="warlock-islamic-visual-eras-history.html">7 Islamic Visual Eras Atlas</a>
+      <a class="nav-pill" href="disney-daffy-donald-islamic-microcosm.html">Disney/Daffy Animalism Microcosm</a>
+      <a class="nav-pill" href="way-of-the-flower-rose-garden-islam.html">Way of the Flower, Rose &amp; Garden</a>
+      <a class="nav-pill" href="islamic-husbandry-sovereign-estate.html">Islamic Husbandry (Al-Qiwamah)</a>
+      <a class="nav-pill" href="warlock-apocrypha-islamic-theorems.html">Warlock Apocrypha &amp; Theorems</a>
+      <a class="nav-pill" href="interlocker-egg-binder-islam.html">Islamic Intelocketer (Egg Binder)</a>
+      <a class="nav-pill" href="warlock-3d-sanctum.html">3D Sanctum</a>
+      <a class="nav-pill" href="order-1-white.html">Order #1..#7</a>
+      <a class="nav-pill" href="dependencies-report.html">Dependencies Report</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">ERA I: BABIL &amp; SABA' LAPIS RELIEFS</span>
+        <span class="badge" style="color:#38BDF8;">ERA II: ABBASID BAGHDAD GOLD KUFIC &amp; AL-WASITI</span>
+        <span class="badge" style="color:#F43F5E;">ERA III–IV: MAMLUK MISHKAT &amp; ALHAMBRA ZELLIJ</span>
+        <span class="badge" style="color:#C084FC;">ERA V–VI: PERSIAN MINIATURE &amp; OTTOMAN IZNIK</span>
+        <span class="badge" style="color:#34D399;">ERA VII: SOVEREIGN NEO-ISLAMIC AI CYBER-GEOMETRY</span>
+      </div>
+      <h1>Warlock Visuals Across Every Era of Islamic History: AI &amp; Sacred Geometry Visual Atlas</h1>
+      <p style="color:#CBD5E1;font-size:0.95rem;">
+        A complete visual and architectural chronicle across <strong>7 Historical Eras of Islamic Aesthetics</strong> —
+        tracing the visual representation of the <strong>7 Pre-Prophetic Color Orders</strong>, the
+        <strong>Brass <em>Qumqum</em> Containment of Ja'far</strong>, the <strong>Negentropic Priory Keep</strong>,
+        and the <strong>Walled Crimson Rose Sanctuary (<em>Gulistan</em>)</strong> from ancient Babylonian lapis reliefs
+        and Abbasid Baghdad manuscripts to Mamluk enameled glass, Alhambra <em>Zellij</em>, Timurid/Safavid miniatures,
+        Ottoman <em>Nakkashane</em> topography, and 21st-century Sovereign AI Cyber-Geometry.
+      </p>
+    </section>
+
+    <section class="canvas-box">
+      <canvas id="eraCanvas"></canvas>
+      <div class="hud-top">
+        <div id="hudEra" style="font-family:Consolas,monospace;font-size:0.75rem;color:#FDE68A;">ERA I (PRE-610 CE): BABIL &amp; SABA' LAPIS-LAZULI RELIEF &amp; INVERTED WELL</div>
+        <div id="hudTitle" style="font-size:1rem;font-weight:700;margin:0.2rem 0;">8-Pointed Star of Babil | Subterranean Well | Alabaster Musnad Altar</div>
+        <div id="hudDesc" style="font-size:0.8rem;color:#CBD5E1;">Kiln-fired Babylonian lapis blue (#0F2C59), Sabaean alabaster (#F8F5E6), and hammered gold (#D4AF37) rendering the Inverted Well of Harut &amp; Marut severed by the Criterion of Qur'an 2:102.</div>
+      </div>
+      <div class="mode-bar">
+        <button class="mode-btn active" onclick="setEra(1, this)">Era I: Babil &amp; Saba' (8-Fold)</button>
+        <button class="mode-btn" onclick="setEra(2, this)">Era II: Abbasid Baghdad (10-Fold Kufic)</button>
+        <button class="mode-btn" onclick="setEra(3, this)">Era III: Mamluk Mishkat (12-Fold Ablaq)</button>
+        <button class="mode-btn" onclick="setEra(4, this)">Era IV: Alhambra Zellij (16-Fold Chahar Bagh)</button>
+        <button class="mode-btn" onclick="setEra(5, this)">Era V: Persian Miniature (7-Tiered Keep)</button>
+        <button class="mode-btn" onclick="setEra(6, this)">Era VI: Ottoman Iznik (9-Fold Gul-i Muhammadi)</button>
+        <button class="mode-btn" onclick="setEra(7, this)">Era VII: Sovereign AI Cyber-Geometry</button>
+      </div>
+    </section>
+
+    <h2 style="font-size:1.35rem;margin-bottom:1.1rem;color:#38BDF8;">
+      AI-Generated Islamic Historical Visual Plates (Eras I–VII)
+    </h2>
+    <section class="ai-gallery-grid">
+      <div class="ai-plate-card">
+        <img src="era1-abbasid-qumqum.jpg" alt="Era I &amp; II: Abbasid Baghdad Bayt al-Hikmah Manuscript &amp; Sealed Qumqum">
+        <div class="ai-plate-body">
+          <h3>Plate I (Eras I–II): Abbasid Baghdad <em>Bayt al-Ḥikmah</em> &amp; Sealed Brass <em>Qumqum</em></h3>
+          <p style="color:#CBD5E1;">Illuminated in the style of Yaḥyā ibn Maḥmūd al-Wāsiṭī and the Kairouan <em>Blue Qur'an</em> (chrysography gold Kufic on deep indigo vellum): an ascetic scholar-mystic inside a domed brass observatory with astrolabes, 10-fold star geometry, and the lead-stoppered Solomonic <em>Qumqum</em> vessel.</p>
+        </div>
+      </div>
+      <div class="ai-plate-card" style="border-top-color:#F43F5E;">
+        <img src="era2-andalusian-mamluk.jpg" alt="Era III &amp; IV: Mamluk Mishkat Lamp &amp; Andalusian Alhambra Zellij Rose Courtyard">
+        <div class="ai-plate-body">
+          <h3>Plate II (Eras III–IV): Mamluk <em>Mishkāt</em> Lamp &amp; Alhambra <em>Zellīj</em> Rose Sanctuary</h3>
+          <p style="color:#CBD5E1;">Carved stucco <em>Muqarnas</em> vaults and 16-fold Nasrid crystallographic <em>Zellīj</em> tilework framing an enameled Mamluk glass mosque lamp (<em>Āyat an-Nūr</em>, Qur'an 24:35) suspended above a quadripartite <em>Chahār Bāgh</em> reflecting pool and blooming Damascus roses.</p>
+        </div>
+      </div>
+      <div class="ai-plate-card" style="border-top-color:#C084FC;">
+        <img src="era3-timurid-priory.jpg" alt="Era V &amp; VI: Timurid/Safavid Persian Miniature &amp; Ottoman Iznik 7-Tiered Priory Tower">
+        <div class="ai-plate-body">
+          <h3>Plate III (Eras V–VI): Timurid/Safavid Miniature &amp; Ottoman <em>Iznik</em> Priory Keep</h3>
+          <p style="color:#CBD5E1;">Rendered in crushed Badakhshan lapis lazuli, 24k burnished gold leaf, turquoise <em>Firuze</em> glazes, and bole-red <em>Saz</em> roses: the 7-tiered Negentropic Priory Tower rising at the Junction of the Two Seas (<em>Majma' al-Baḥrayn</em>, Qur'an 18:60–82).</p>
+        </div>
+      </div>
+      <div class="ai-plate-card" style="border-top-color:#34D399;">
+        <img src="era4-neoislamic-cyber.jpg" alt="Era VII: Sovereign Neo-Islamic AI Cyber-Geometric Sanctum">
+        <div class="ai-plate-body">
+          <h3>Plate IV (Era VII): Sovereign Neo-Islamic AI Cyber-Geometric Sanctum</h3>
+          <p style="color:#CBD5E1;">21st-century parametric volumetric <em>Muqarnas</em> fractals, glowing Kufic light-geometry, and a decagonal Penrose-<em>Girih</em> quasicrystal Faraday dome shielding the tranquil emerald garden in State <code>S_0</code> (<code>C_p = 1.98</code>, <code>ΔH = 0.000 bits</code>).</p>
+        </div>
+      </div>
+    </section>
+
+    <h2 style="font-size:1.35rem;margin-bottom:1.1rem;color:#FDE68A;">
+      The 7 Historical Eras of Islamic Visual Style &amp; Sacred Geometry Dossiers
+    </h2>
+    <div class="era-card" style="border-left-color:#F8F5E6;">
+  <div class="era-grid">
+    <div class="svg-plate-wrap">
+      <svg viewBox="0 0 280 260" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;border:1px solid rgba(255,255,255,0.15);">
+  <defs>
+    <radialGradient id="bgGrad1" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#0F2C59" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="260" fill="url(#bgGrad1)"/>
+  <rect x="8" y="8" width="264" height="244" fill="none" stroke="#F8F5E6" stroke-width="1.5" stroke-opacity="0.7"/>
+  <path d="M 38 242 L 38 115 Q 140 24 242 115 L 242 242" fill="none" stroke="#D4AF37" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="140" cy="125" r="86" fill="none" stroke="#141416" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="125" r="42" fill="none" stroke="#F8F5E6" stroke-width="1.4"/>
+  <line x1="140.0" y1="43.0" x2="156.1" y2="86.2" stroke="#F8F5E6" stroke-width="2.2" /><line x1="156.1" y1="86.2" x2="198.0" y2="67.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="43.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" /><line x1="198.0" y1="67.0" x2="178.8" y2="108.9" stroke="#F8F5E6" stroke-width="2.2" /><line x1="178.8" y1="108.9" x2="222.0" y2="125.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="198.0" y2="67.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" /><line x1="222.0" y1="125.0" x2="178.8" y2="141.1" stroke="#F8F5E6" stroke-width="2.2" /><line x1="178.8" y1="141.1" x2="198.0" y2="183.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="222.0" y2="125.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" /><line x1="198.0" y1="183.0" x2="156.1" y2="163.8" stroke="#F8F5E6" stroke-width="2.2" /><line x1="156.1" y1="163.8" x2="140.0" y2="207.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="198.0" y2="183.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" /><line x1="140.0" y1="207.0" x2="123.9" y2="163.8" stroke="#F8F5E6" stroke-width="2.2" /><line x1="123.9" y1="163.8" x2="82.0" y2="183.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="207.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" /><line x1="82.0" y1="183.0" x2="101.2" y2="141.1" stroke="#F8F5E6" stroke-width="2.2" /><line x1="101.2" y1="141.1" x2="58.0" y2="125.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="82.0" y2="183.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" /><line x1="58.0" y1="125.0" x2="101.2" y2="108.9" stroke="#F8F5E6" stroke-width="2.2" /><line x1="101.2" y1="108.9" x2="82.0" y2="67.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="58.0" y2="125.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" /><line x1="82.0" y1="67.0" x2="123.9" y2="86.2" stroke="#F8F5E6" stroke-width="2.2" /><line x1="123.9" y1="86.2" x2="140.0" y2="43.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="82.0" y2="67.0" stroke="#D4AF37" stroke-width="1.2" stroke-opacity="0.65" />
+  <circle cx="140" cy="125" r="9" fill="#F8F5E6"/>
+  <text x="140" y="232" fill="#FDE68A" font-size="10" font-family="Segoe UI, sans-serif" text-anchor="middle" font-weight="700">ERA 1 • 8-FOLD GIRIH SANCTUM</text>
+</svg>
+
+      <div class="swatch-bar"><span class="swatch-pill"><span class="swatch-dot" style="background:#0F2C59;"></span><code>#0F2C59</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#F8F5E6;"></span><code>#F8F5E6</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#D4AF37;"></span><code>#D4AF37</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#141416;"></span><code>#141416</code></span></div>
+    </div>
+    <div class="era-content">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">VISUAL_ERA_I_BABIL_SABA_LAPIS</span>
+        <span class="badge" style="color:#38BDF8;">Pre-610 CE (Pre-Prophetic Antiquity)</span>
+        <span class="badge" style="color:#34D399;">8-FOLD SACRED GEOMETRY (BABYLONIAN_EIGHT_POINTED_SHAMash_STAR)</span>
+      </div>
+      <h3>1. Pre-Prophetic Babil &amp; Sabaean Antiquity: Glazed Lapis-Lazuli Reliefs &amp; Alabaster Altars</h3>
+      <p style="font-size:0.86rem;color:#C084FC;margin-bottom:0.7rem;">
+        <strong>Era I: 'Asr Babil wa Saba' wa Al-Lazaward Al-Qadim (عصر بابل وسبأ واللازورد القديم)</strong> | <strong>Centers:</strong> Ancient Babylon (Babil of Harut &amp; Marut), Marib (Saba' of Queen Bilqis), and Nabataean Petra.
+      </p>
+      <div class="detail-grid">
+        <div class="sub-box">
+          <div class="box-title" style="color:#FDE68A;">I. Historical Pigments &amp; Geometric/Calligraphic Grammar</div>
+          <p><strong>Pigments:</strong> Kiln-fired Babylonian cobalt/lapis glaze, Mesopotamian bitumen black, Sabaean translucent alabaster white, and hammered bronze.</p>
+          <p style="margin-top:0.35rem;"><strong>Grammar:</strong> Stepped ziggurat crenellations, 8-pointed star of Babylon (Najmat Babil), South Arabian geometric Musnad epigraphy, and concentric astrolabic rings.</p>
+        </div>
+        <div class="sub-box">
+          <div class="box-title" style="color:#34D399;">II. Warlock Visual Subject &amp; Qur'anic Anchor</div>
+          <p>Order #1 (Malakh-Azal) and Order #3 (Yored Ha-Merkabah) standing above the Inverted Well of Babil (Bi'r Babil) as the Criterion of Qur'an 2:102 severs ancient planetary sorcery.</p>
+          <p style="margin-top:0.35rem;color:#A5F3FC;"><strong>Anchor:</strong> Qur'an 2:102 (Harut and Marut in Babil), Qur'an 27:22-44 (The Glass Pavilion of Sulayman &amp; Saba'), &amp; Order #1/#3 Foundation Severance.</p>
+        </div>
+      </div>
+      <div class="prompt-box">
+        <div class="box-title" style="color:#FDA4AF;">III. Canonical AI Generative Visual Prompt Specification</div>
+        <code>Museum-grade glazed Babylonian lapis-lazuli brick relief and Sabaean alabaster tablet illustration: an ascetic pre-prophetic sage in parchment-white and sapphire robes beside the subterranean well of Babylon, bronze armillary rings, 8-pointed gold star geometry, dramatic chiaroscuro torchlight.</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="era-card" style="border-left-color:#FBBF24;">
+  <div class="era-grid">
+    <div class="svg-plate-wrap">
+      <svg viewBox="0 0 280 260" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;border:1px solid rgba(255,255,255,0.15);">
+  <defs>
+    <radialGradient id="bgGrad2" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#0B1938" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="260" fill="url(#bgGrad2)"/>
+  <rect x="8" y="8" width="264" height="244" fill="none" stroke="#FBBF24" stroke-width="1.5" stroke-opacity="0.7"/>
+  <path d="M 38 242 L 38 115 Q 140 24 242 115 L 242 242" fill="none" stroke="#006B54" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="140" cy="125" r="86" fill="none" stroke="#DC2626" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="125" r="42" fill="none" stroke="#FBBF24" stroke-width="1.4"/>
+  <line x1="140.0" y1="43.0" x2="153.0" y2="85.1" stroke="#FBBF24" stroke-width="2.2" /><line x1="153.0" y1="85.1" x2="188.2" y2="58.7" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="43.0" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="188.2" y1="58.7" x2="174.0" y2="100.3" stroke="#FBBF24" stroke-width="2.2" /><line x1="174.0" y1="100.3" x2="218.0" y2="99.7" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="188.2" y2="58.7" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="218.0" y1="99.7" x2="182.0" y2="125.0" stroke="#FBBF24" stroke-width="2.2" /><line x1="182.0" y1="125.0" x2="218.0" y2="150.3" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="218.0" y2="99.7" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="218.0" y1="150.3" x2="174.0" y2="149.7" stroke="#FBBF24" stroke-width="2.2" /><line x1="174.0" y1="149.7" x2="188.2" y2="191.3" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="218.0" y2="150.3" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="188.2" y1="191.3" x2="153.0" y2="164.9" stroke="#FBBF24" stroke-width="2.2" /><line x1="153.0" y1="164.9" x2="140.0" y2="207.0" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="188.2" y2="191.3" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="140.0" y1="207.0" x2="127.0" y2="164.9" stroke="#FBBF24" stroke-width="2.2" /><line x1="127.0" y1="164.9" x2="91.8" y2="191.3" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="207.0" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="91.8" y1="191.3" x2="106.0" y2="149.7" stroke="#FBBF24" stroke-width="2.2" /><line x1="106.0" y1="149.7" x2="62.0" y2="150.3" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="91.8" y2="191.3" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="62.0" y1="150.3" x2="98.0" y2="125.0" stroke="#FBBF24" stroke-width="2.2" /><line x1="98.0" y1="125.0" x2="62.0" y2="99.7" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="62.0" y2="150.3" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="62.0" y1="99.7" x2="106.0" y2="100.3" stroke="#FBBF24" stroke-width="2.2" /><line x1="106.0" y1="100.3" x2="91.8" y2="58.7" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="62.0" y2="99.7" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" /><line x1="91.8" y1="58.7" x2="127.0" y2="85.1" stroke="#FBBF24" stroke-width="2.2" /><line x1="127.0" y1="85.1" x2="140.0" y2="43.0" stroke="#FBBF24" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="91.8" y2="58.7" stroke="#006B54" stroke-width="1.2" stroke-opacity="0.65" />
+  <circle cx="140" cy="125" r="9" fill="#FBBF24"/>
+  <text x="140" y="232" fill="#FDE68A" font-size="10" font-family="Segoe UI, sans-serif" text-anchor="middle" font-weight="700">ERA 2 • 10-FOLD GIRIH SANCTUM</text>
+</svg>
+
+      <div class="swatch-bar"><span class="swatch-pill"><span class="swatch-dot" style="background:#0B1938;"></span><code>#0B1938</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#FBBF24;"></span><code>#FBBF24</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#006B54;"></span><code>#006B54</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#DC2626;"></span><code>#DC2626</code></span></div>
+    </div>
+    <div class="era-content">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">VISUAL_ERA_II_ABBASID_BAYT_AL_HIKMAH</span>
+        <span class="badge" style="color:#38BDF8;">661–1050 CE (Umayyad &amp; Early Abbasid Golden Age)</span>
+        <span class="badge" style="color:#34D399;">10-FOLD SACRED GEOMETRY (ABBASID_DECAGONAL_KUFIC_ROSETTE)</span>
+      </div>
+      <h3>2. Umayyad &amp; Abbasid Baghdad Manuscript Style: Gold Kufic on Indigo Vellum &amp; Al-Wasiti Miniatures</h3>
+      <p style="font-size:0.86rem;color:#C084FC;margin-bottom:0.7rem;">
+        <strong>Era II: 'Asr Bayt Al-Hikmah wa Al-Raqq Al-Azraq (عصر بيت الحكمة والرق الأزرق العباسي)</strong> | <strong>Centers:</strong> Damascus (Umayyad Great Mosque Mosaics), Kairouan (Blue Qur'an), and Baghdad (Bayt al-Hikmah / Yahya ibn Mahmud al-Wasiti).
+      </p>
+      <div class="detail-grid">
+        <div class="sub-box">
+          <div class="box-title" style="color:#FDE68A;">I. Historical Pigments &amp; Geometric/Calligraphic Grammar</div>
+          <p><strong>Pigments:</strong> Indigo-dyed parchment (`#0B1938`), Chrysography liquid gold ink (`#FBBF24`), verdigris copper-green (`#006B54`), and vermilion cinnabar (`#DC2626`).</p>
+          <p style="margin-top:0.35rem;"><strong>Grammar:</strong> Monumental angular Kufic script without diacritics, Abbasid horseshoe arches, botanical vine scrolls, and scientific treatise diagrams of optics (Ibn al-Haytham) and celestial mechanics.</p>
+        </div>
+        <div class="sub-box">
+          <div class="box-title" style="color:#34D399;">II. Warlock Visual Subject &amp; Qur'anic Anchor</div>
+          <p>Order #2 (Katib Al-Qalam) and Order #6 (Ba'al Ha-Nechoshet) inside an Abbasid Baghdad observatory, sealing the smoky Marid of Ja'far inside a Solomonic brass Qumqum beneath a gold Kufic frieze.</p>
+          <p style="margin-top:0.35rem;color:#A5F3FC;"><strong>Anchor:</strong> Qur'an 68:1 ('Nun. By the Pen and what they inscribe'), Qur'an 34:12 (Sulayman's molten brass fountain), &amp; Ibn al-Haytham's Kitab Al-Manazir.</p>
+        </div>
+      </div>
+      <div class="prompt-box">
+        <div class="box-title" style="color:#FDA4AF;">III. Canonical AI Generative Visual Prompt Specification</div>
+        <code>13th-century Abbasid Baghdad illuminated manuscript page by Al-Wasiti merged with Blue Qur'an gold Kufic on deep indigo vellum: a scholar-guardian in a domed Islamic observatory surrounded by brass astrolabes, optical light rays, and a sealed brass Qumqum vessel, flat gold-leaf background.</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="era-card" style="border-left-color:#F8F5E6;">
+  <div class="era-grid">
+    <div class="svg-plate-wrap">
+      <svg viewBox="0 0 280 260" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;border:1px solid rgba(255,255,255,0.15);">
+  <defs>
+    <radialGradient id="bgGrad3" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#8B0000" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="260" fill="url(#bgGrad3)"/>
+  <rect x="8" y="8" width="264" height="244" fill="none" stroke="#F8F5E6" stroke-width="1.5" stroke-opacity="0.7"/>
+  <path d="M 38 242 L 38 115 Q 140 24 242 115 L 242 242" fill="none" stroke="#B87333" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="140" cy="125" r="86" fill="none" stroke="#1D4ED8" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="125" r="42" fill="none" stroke="#F8F5E6" stroke-width="1.4"/>
+  <line x1="140.0" y1="43.0" x2="150.9" y2="84.4" stroke="#F8F5E6" stroke-width="2.2" /><line x1="150.9" y1="84.4" x2="181.0" y2="54.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="43.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="181.0" y1="54.0" x2="169.7" y2="95.3" stroke="#F8F5E6" stroke-width="2.2" /><line x1="169.7" y1="95.3" x2="211.0" y2="84.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="181.0" y2="54.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="211.0" y1="84.0" x2="180.6" y2="114.1" stroke="#F8F5E6" stroke-width="2.2" /><line x1="180.6" y1="114.1" x2="222.0" y2="125.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="211.0" y2="84.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="222.0" y1="125.0" x2="180.6" y2="135.9" stroke="#F8F5E6" stroke-width="2.2" /><line x1="180.6" y1="135.9" x2="211.0" y2="166.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="222.0" y2="125.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="211.0" y1="166.0" x2="169.7" y2="154.7" stroke="#F8F5E6" stroke-width="2.2" /><line x1="169.7" y1="154.7" x2="181.0" y2="196.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="211.0" y2="166.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="181.0" y1="196.0" x2="150.9" y2="165.6" stroke="#F8F5E6" stroke-width="2.2" /><line x1="150.9" y1="165.6" x2="140.0" y2="207.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="181.0" y2="196.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="140.0" y1="207.0" x2="129.1" y2="165.6" stroke="#F8F5E6" stroke-width="2.2" /><line x1="129.1" y1="165.6" x2="99.0" y2="196.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="207.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="99.0" y1="196.0" x2="110.3" y2="154.7" stroke="#F8F5E6" stroke-width="2.2" /><line x1="110.3" y1="154.7" x2="69.0" y2="166.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="99.0" y2="196.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="69.0" y1="166.0" x2="99.4" y2="135.9" stroke="#F8F5E6" stroke-width="2.2" /><line x1="99.4" y1="135.9" x2="58.0" y2="125.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="69.0" y2="166.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="58.0" y1="125.0" x2="99.4" y2="114.1" stroke="#F8F5E6" stroke-width="2.2" /><line x1="99.4" y1="114.1" x2="69.0" y2="84.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="58.0" y2="125.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="69.0" y1="84.0" x2="110.3" y2="95.3" stroke="#F8F5E6" stroke-width="2.2" /><line x1="110.3" y1="95.3" x2="99.0" y2="54.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="69.0" y2="84.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" /><line x1="99.0" y1="54.0" x2="129.1" y2="84.4" stroke="#F8F5E6" stroke-width="2.2" /><line x1="129.1" y1="84.4" x2="140.0" y2="43.0" stroke="#F8F5E6" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="99.0" y2="54.0" stroke="#B87333" stroke-width="1.2" stroke-opacity="0.65" />
+  <circle cx="140" cy="125" r="9" fill="#F8F5E6"/>
+  <text x="140" y="232" fill="#FDE68A" font-size="10" font-family="Segoe UI, sans-serif" text-anchor="middle" font-weight="700">ERA 3 • 12-FOLD GIRIH SANCTUM</text>
+</svg>
+
+      <div class="swatch-bar"><span class="swatch-pill"><span class="swatch-dot" style="background:#8B0000;"></span><code>#8B0000</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#F8F5E6;"></span><code>#F8F5E6</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#B87333;"></span><code>#B87333</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#1D4ED8;"></span><code>#1D4ED8</code></span></div>
+    </div>
+    <div class="era-content">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">VISUAL_ERA_III_MAMLUK_ABLAQ_MISHKAT</span>
+        <span class="badge" style="color:#38BDF8;">969–1517 CE (Fatimid, Ayyubid &amp; Mamluk Cairo &amp; Damascus)</span>
+        <span class="badge" style="color:#34D399;">12-FOLD SACRED GEOMETRY (MAMLUK_TWELVE_POINTED_TABAQ_NAJMI)</span>
+      </div>
+      <h3>3. Mamluk Cairo &amp; Damascus Style: Polychrome Ablaq Masonry, Muqarnas Vaults &amp; Enameled Glass Mishkat</h3>
+      <p style="font-size:0.86rem;color:#C084FC;margin-bottom:0.7rem;">
+        <strong>Era III: 'Asr Al-Mamalik wa المشكاة والربط الحديدي (عصر المماليك والمشكاة والربط)</strong> | <strong>Centers:</strong> Cairo (Citadel of Saladin &amp; Sultan Hasan Madrasa), Damascus, and Jerusalem (Al-Quds).
+      </p>
+      <div class="detail-grid">
+        <div class="sub-box">
+          <div class="box-title" style="color:#FDE68A;">I. Historical Pigments &amp; Geometric/Calligraphic Grammar</div>
+          <p><strong>Pigments:</strong> Mamluk Ablaq crimson-red stone (`#8B0000`), basalt black (`#141416`), limestone cream (`#F8F5E6`), Damascus silver-inlaid brass (`#B87333`), and cobalt enameled glass (`#1D4ED8`).</p>
+          <p style="margin-top:0.35rem;"><strong>Grammar:</strong> 12-pointed Mamluk star girih medallions (`Tabaq Najmi`), honeycomb Muqarnas stalactite pendentives, Thuluth calligraphic bands, and silver-and-gold inlaid metalwork (`Takfit`).</p>
+        </div>
+        <div class="sub-box">
+          <div class="box-title" style="color:#34D399;">II. Warlock Visual Subject &amp; Qur'anic Anchor</div>
+          <p>The Negentropic Priory Keep and Inter-World Sequester (`Sur Al-Hadid`): a Mamluk vaulted hall where an enameled glass Mishkat lamp (Qur'an 24:35) hangs from chains, casting geometric star-light over the 7 quarantined brass Qumqum vessels.</p>
+          <p style="margin-top:0.35rem;color:#A5F3FC;"><strong>Anchor:</strong> Qur'an 24:35 (Ayat An-Nur — The Niche, the Glass like a Pearly Star, and the Blessed Olive Tree) &amp; Qur'an 18:96 (Dhu al-Qarnayn's Iron-and-Copper Barrier).</p>
+        </div>
+      </div>
+      <div class="prompt-box">
+        <div class="box-title" style="color:#FDA4AF;">III. Canonical AI Generative Visual Prompt Specification</div>
+        <code>Interior of a grand Mamluk Cairo citadel chamber with alternating red-and-white Ablaq stone arches, carved Muqarnas stalactite dome, a glowing enameled glass mosque lamp (Mishkat) with blue and gold Thuluth calligraphy, and ornate Damascus brass vessels on a geometric marble floor.</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="era-card" style="border-left-color:#D97706;">
+  <div class="era-grid">
+    <div class="svg-plate-wrap">
+      <svg viewBox="0 0 280 260" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;border:1px solid rgba(255,255,255,0.15);">
+  <defs>
+    <radialGradient id="bgGrad4" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#006B54" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="260" fill="url(#bgGrad4)"/>
+  <rect x="8" y="8" width="264" height="244" fill="none" stroke="#D97706" stroke-width="1.5" stroke-opacity="0.7"/>
+  <path d="M 38 242 L 38 115 Q 140 24 242 115 L 242 242" fill="none" stroke="#F8F5E6" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="140" cy="125" r="86" fill="none" stroke="#F43F5E" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="125" r="42" fill="none" stroke="#D97706" stroke-width="1.4"/>
+  <line x1="140.0" y1="43.0" x2="148.2" y2="83.8" stroke="#D97706" stroke-width="2.2" /><line x1="148.2" y1="83.8" x2="171.4" y2="49.2" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="43.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="171.4" y1="49.2" x2="163.3" y2="90.1" stroke="#D97706" stroke-width="2.2" /><line x1="163.3" y1="90.1" x2="198.0" y2="67.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="171.4" y2="49.2" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="198.0" y1="67.0" x2="174.9" y2="101.7" stroke="#D97706" stroke-width="2.2" /><line x1="174.9" y1="101.7" x2="215.8" y2="93.6" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="198.0" y2="67.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="215.8" y1="93.6" x2="181.2" y2="116.8" stroke="#D97706" stroke-width="2.2" /><line x1="181.2" y1="116.8" x2="222.0" y2="125.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="215.8" y2="93.6" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="222.0" y1="125.0" x2="181.2" y2="133.2" stroke="#D97706" stroke-width="2.2" /><line x1="181.2" y1="133.2" x2="215.8" y2="156.4" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="222.0" y2="125.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="215.8" y1="156.4" x2="174.9" y2="148.3" stroke="#D97706" stroke-width="2.2" /><line x1="174.9" y1="148.3" x2="198.0" y2="183.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="215.8" y2="156.4" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="198.0" y1="183.0" x2="163.3" y2="159.9" stroke="#D97706" stroke-width="2.2" /><line x1="163.3" y1="159.9" x2="171.4" y2="200.8" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="198.0" y2="183.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="171.4" y1="200.8" x2="148.2" y2="166.2" stroke="#D97706" stroke-width="2.2" /><line x1="148.2" y1="166.2" x2="140.0" y2="207.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="171.4" y2="200.8" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="140.0" y1="207.0" x2="131.8" y2="166.2" stroke="#D97706" stroke-width="2.2" /><line x1="131.8" y1="166.2" x2="108.6" y2="200.8" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="207.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="108.6" y1="200.8" x2="116.7" y2="159.9" stroke="#D97706" stroke-width="2.2" /><line x1="116.7" y1="159.9" x2="82.0" y2="183.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="108.6" y2="200.8" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="82.0" y1="183.0" x2="105.1" y2="148.3" stroke="#D97706" stroke-width="2.2" /><line x1="105.1" y1="148.3" x2="64.2" y2="156.4" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="82.0" y2="183.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="64.2" y1="156.4" x2="98.8" y2="133.2" stroke="#D97706" stroke-width="2.2" /><line x1="98.8" y1="133.2" x2="58.0" y2="125.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="64.2" y2="156.4" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="58.0" y1="125.0" x2="98.8" y2="116.8" stroke="#D97706" stroke-width="2.2" /><line x1="98.8" y1="116.8" x2="64.2" y2="93.6" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="58.0" y2="125.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="64.2" y1="93.6" x2="105.1" y2="101.7" stroke="#D97706" stroke-width="2.2" /><line x1="105.1" y1="101.7" x2="82.0" y2="67.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="64.2" y2="93.6" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="82.0" y1="67.0" x2="116.7" y2="90.1" stroke="#D97706" stroke-width="2.2" /><line x1="116.7" y1="90.1" x2="108.6" y2="49.2" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="82.0" y2="67.0" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="108.6" y1="49.2" x2="131.8" y2="83.8" stroke="#D97706" stroke-width="2.2" /><line x1="131.8" y1="83.8" x2="140.0" y2="43.0" stroke="#D97706" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="108.6" y2="49.2" stroke="#F8F5E6" stroke-width="1.2" stroke-opacity="0.65" />
+  <circle cx="140" cy="125" r="9" fill="#D97706"/>
+  <text x="140" y="232" fill="#FDE68A" font-size="10" font-family="Segoe UI, sans-serif" text-anchor="middle" font-weight="700">ERA 4 • 16-FOLD GIRIH SANCTUM</text>
+</svg>
+
+      <div class="swatch-bar"><span class="swatch-pill"><span class="swatch-dot" style="background:#006B54;"></span><code>#006B54</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#D97706;"></span><code>#D97706</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#F8F5E6;"></span><code>#F8F5E6</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#F43F5E;"></span><code>#F43F5E</code></span></div>
+    </div>
+    <div class="era-content">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">VISUAL_ERA_IV_ANDALUSIAN_ALHAMBRA_ZELLIJ</span>
+        <span class="badge" style="color:#38BDF8;">711–1492 CE (Moorish Al-Andalus &amp; Maghreb)</span>
+        <span class="badge" style="color:#34D399;">16-FOLD SACRED GEOMETRY (ALHAMBRA_SIXTEEN_FOLD_ZELLIJ_LATTICE)</span>
+      </div>
+      <h3>4. Andalusian Alhambra &amp; Moorish Style: Mathematical Zellij Tilework, Sebka Arches &amp; The Chahar Bagh Rose Sanctuary</h3>
+      <p style="font-size:0.86rem;color:#C084FC;margin-bottom:0.7rem;">
+        <strong>Era IV: 'Asr Al-Andalus wa الزليج وجنة العريف (عصر الأندلس والزليج وجنة العريف)</strong> | <strong>Centers:</strong> Cordoba (Madinat al-Zahra), Seville, Granada (The Alhambra &amp; Generalife), and Fez.
+      </p>
+      <div class="detail-grid">
+        <div class="sub-box">
+          <div class="box-title" style="color:#FDE68A;">I. Historical Pigments &amp; Geometric/Calligraphic Grammar</div>
+          <p><strong>Pigments:</strong> Alhambra emerald-teal glaze (`#006B54`), terracotta ochre (`#D97706`), plaster ivory (`#F8F5E6`), lapis cobalt (`#1E3A8A`), and Damascus rose crimson (`#F43F5E`).</p>
+          <p style="margin-top:0.35rem;"><strong>Grammar:</strong> 16-fold Andalusian Zellij ceramic tessellations (completing all 17 crystallographic wallpaper symmetry groups), diamond-fret Sebka stucco arches, and Whispering Water Qanat channels.</p>
+        </div>
+        <div class="sub-box">
+          <div class="box-title" style="color:#34D399;">II. Warlock Visual Subject &amp; Qur'anic Anchor</div>
+          <p>The Islamic Way of the Flower, the Rose, and the Cultivating Hand (`Al-Jannah bi-Rabwah`): an Alhambra Mihrab courtyard where the 4 Rivers of Qur'an 47:15 meet at a central marble fountain surrounded by blooming crimson Damascus roses and outward-facing vanguard thorns.</p>
+          <p style="margin-top:0.35rem;color:#A5F3FC;"><strong>Anchor:</strong> Qur'an 3:37 (Maryam's Mihrab &amp; Nabatan Hasana), Qur'an 2:265 (Jannah bi-Rabwah), &amp; Qur'an 47:15 (The Four Rivers of Paradise).</p>
+        </div>
+      </div>
+      <div class="prompt-box">
+        <div class="box-title" style="color:#FDA4AF;">III. Canonical AI Generative Visual Prompt Specification</div>
+        <code>Moorish Andalusian Alhambra courtyard at golden twilight: intricate geometric Zellij mosaic dado tiles, lacy carved stucco Muqarnas arches, slender marble columns, a tranquil reflecting pool fed by four marble water channels, and lush crimson Damascus roses in bloom.</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="era-card" style="border-left-color:#FACC15;">
+  <div class="era-grid">
+    <div class="svg-plate-wrap">
+      <svg viewBox="0 0 280 260" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;border:1px solid rgba(255,255,255,0.15);">
+  <defs>
+    <radialGradient id="bgGrad5" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#1E40AF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="260" fill="url(#bgGrad5)"/>
+  <rect x="8" y="8" width="264" height="244" fill="none" stroke="#FACC15" stroke-width="1.5" stroke-opacity="0.7"/>
+  <path d="M 38 242 L 38 115 Q 140 24 242 115 L 242 242" fill="none" stroke="#06B6D4" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="140" cy="125" r="86" fill="none" stroke="#10B981" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="125" r="42" fill="none" stroke="#FACC15" stroke-width="1.4"/>
+  <line x1="140.0" y1="43.0" x2="158.2" y2="87.2" stroke="#FACC15" stroke-width="2.2" /><line x1="158.2" y1="87.2" x2="204.1" y2="73.9" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="43.0" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.65" /><line x1="204.1" y1="73.9" x2="180.9" y2="115.7" stroke="#FACC15" stroke-width="2.2" /><line x1="180.9" y1="115.7" x2="219.9" y2="143.2" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="204.1" y2="73.9" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.65" /><line x1="219.9" y1="143.2" x2="172.8" y2="151.2" stroke="#FACC15" stroke-width="2.2" /><line x1="172.8" y1="151.2" x2="175.6" y2="198.9" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="219.9" y2="143.2" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.65" /><line x1="175.6" y1="198.9" x2="140.0" y2="167.0" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="167.0" x2="104.4" y2="198.9" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="175.6" y2="198.9" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.65" /><line x1="104.4" y1="198.9" x2="107.2" y2="151.2" stroke="#FACC15" stroke-width="2.2" /><line x1="107.2" y1="151.2" x2="60.1" y2="143.2" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="104.4" y2="198.9" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.65" /><line x1="60.1" y1="143.2" x2="99.1" y2="115.7" stroke="#FACC15" stroke-width="2.2" /><line x1="99.1" y1="115.7" x2="75.9" y2="73.9" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="60.1" y2="143.2" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.65" /><line x1="75.9" y1="73.9" x2="121.8" y2="87.2" stroke="#FACC15" stroke-width="2.2" /><line x1="121.8" y1="87.2" x2="140.0" y2="43.0" stroke="#FACC15" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="75.9" y2="73.9" stroke="#06B6D4" stroke-width="1.2" stroke-opacity="0.65" />
+  <circle cx="140" cy="125" r="9" fill="#FACC15"/>
+  <text x="140" y="232" fill="#FDE68A" font-size="10" font-family="Segoe UI, sans-serif" text-anchor="middle" font-weight="700">ERA 5 • 7-FOLD GIRIH SANCTUM</text>
+</svg>
+
+      <div class="swatch-bar"><span class="swatch-pill"><span class="swatch-dot" style="background:#1E40AF;"></span><code>#1E40AF</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#FACC15;"></span><code>#FACC15</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#06B6D4;"></span><code>#06B6D4</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#10B981;"></span><code>#10B981</code></span></div>
+    </div>
+    <div class="era-content">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">VISUAL_ERA_V_TIMURID_SAFAVID_MINIATURE</span>
+        <span class="badge" style="color:#38BDF8;">1370–1722 CE (Timurid Herat/Samarkand &amp; Safavid Tabriz/Isfahan)</span>
+        <span class="badge" style="color:#34D399;">7-FOLD SACRED GEOMETRY (TIMURID_HEPTAGONAL_HAFT_PAYKAR_STAR)</span>
+      </div>
+      <h3>5. Timurid &amp; Safavid Persian Miniature Style: Crushed Lapis, Gold-Leaf Skies &amp; The 7-Tiered Keep of Majma' Al-Bahrayn</h3>
+      <p style="font-size:0.86rem;color:#C084FC;margin-bottom:0.7rem;">
+        <strong>Era V: 'Asr Al-منمنمات التيمورية والصفوية (عصر المنمنمات الفارسية في هرات وتبريز وأصفهان)</strong> | <strong>Centers:</strong> Samarkand, Herat (School of Behzad), Tabriz (Sultan Muhammad), and Isfahan (Riza 'Abbasi).
+      </p>
+      <div class="detail-grid">
+        <div class="sub-box">
+          <div class="box-title" style="color:#FDE68A;">I. Historical Pigments &amp; Geometric/Calligraphic Grammar</div>
+          <p><strong>Pigments:</strong> Badakhshan crushed lapis lazuli (`#1E40AF`), burnished 24k gold leaf (`#FACC15`), turquoise (`#06B6D4`), malachite green (`#10B981`), and vermilion (`#EF4444`).</p>
+          <p style="margin-top:0.35rem;"><strong>Grammar:</strong> Multi-plane isometric axonometric perspective (simultaneous interior/exterior cutaway of Realm, Castle, Tower, and Keep), spiraling golden flame-halos, Nasta'liq calligraphy cartouches, and stylized craggy coral rocks.</p>
+        </div>
+        <div class="sub-box">
+          <div class="box-title" style="color:#34D399;">II. Warlock Visual Subject &amp; Qur'anic Anchor</div>
+          <p>Order #7 (Wali Al-Ghaib) and Order #4 (Shahid Al-Alast) in the 7-Tiered Emerald &amp; Sapphire Keep at the Confluence of the Two Seas (`Majma' Al-Bahrayn`, Qur'an 18:60-65), with the Al-A'raf Interlocutor on the high crest above.</p>
+          <p style="margin-top:0.35rem;color:#A5F3FC;"><strong>Anchor:</strong> Qur'an 18:60-65 (Musa and Al-Khidr at Majma' Al-Bahrayn), Qur'an 7:46 (The Men of Al-A'raf), &amp; Sa'di's Gulistan.</p>
+        </div>
+      </div>
+      <div class="prompt-box">
+        <div class="box-title" style="color:#FDA4AF;">III. Canonical AI Generative Visual Prompt Specification</div>
+        <code>Masterpiece 16th-century Timurid and Safavid Persian miniature painting (style of Behzad and Sultan Muhammad): a 7-tiered turquoise and lapis-lazuli castle keep rising at the meeting of two seas, golden sky with swirling clouds, cypress trees, pomegranates, and Nasta'liq script borders.</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="era-card" style="border-left-color:#1D4ED8;">
+  <div class="era-grid">
+    <div class="svg-plate-wrap">
+      <svg viewBox="0 0 280 260" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;border:1px solid rgba(255,255,255,0.15);">
+  <defs>
+    <radialGradient id="bgGrad6" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#E11D48" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="260" fill="url(#bgGrad6)"/>
+  <rect x="8" y="8" width="264" height="244" fill="none" stroke="#1D4ED8" stroke-width="1.5" stroke-opacity="0.7"/>
+  <path d="M 38 242 L 38 115 Q 140 24 242 115 L 242 242" fill="none" stroke="#14B8A6" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="140" cy="125" r="86" fill="none" stroke="#D4AF37" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="125" r="42" fill="none" stroke="#1D4ED8" stroke-width="1.4"/>
+  <line x1="140.0" y1="43.0" x2="154.4" y2="85.5" stroke="#1D4ED8" stroke-width="2.2" /><line x1="154.4" y1="85.5" x2="192.7" y2="62.2" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="43.0" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="192.7" y1="62.2" x2="176.4" y2="104.0" stroke="#1D4ED8" stroke-width="2.2" /><line x1="176.4" y1="104.0" x2="220.8" y2="110.8" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="192.7" y2="62.2" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="220.8" y1="110.8" x2="181.4" y2="132.3" stroke="#1D4ED8" stroke-width="2.2" /><line x1="181.4" y1="132.3" x2="211.0" y2="166.0" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="220.8" y2="110.8" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="211.0" y1="166.0" x2="167.0" y2="157.2" stroke="#1D4ED8" stroke-width="2.2" /><line x1="167.0" y1="157.2" x2="168.0" y2="202.1" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="211.0" y2="166.0" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="168.0" y1="202.1" x2="140.0" y2="167.0" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="167.0" x2="112.0" y2="202.1" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="168.0" y2="202.1" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="112.0" y1="202.1" x2="113.0" y2="157.2" stroke="#1D4ED8" stroke-width="2.2" /><line x1="113.0" y1="157.2" x2="69.0" y2="166.0" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="112.0" y2="202.1" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="69.0" y1="166.0" x2="98.6" y2="132.3" stroke="#1D4ED8" stroke-width="2.2" /><line x1="98.6" y1="132.3" x2="59.2" y2="110.8" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="69.0" y2="166.0" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="59.2" y1="110.8" x2="103.6" y2="104.0" stroke="#1D4ED8" stroke-width="2.2" /><line x1="103.6" y1="104.0" x2="87.3" y2="62.2" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="59.2" y2="110.8" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" /><line x1="87.3" y1="62.2" x2="125.6" y2="85.5" stroke="#1D4ED8" stroke-width="2.2" /><line x1="125.6" y1="85.5" x2="140.0" y2="43.0" stroke="#1D4ED8" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="87.3" y2="62.2" stroke="#14B8A6" stroke-width="1.2" stroke-opacity="0.65" />
+  <circle cx="140" cy="125" r="9" fill="#1D4ED8"/>
+  <text x="140" y="232" fill="#FDE68A" font-size="10" font-family="Segoe UI, sans-serif" text-anchor="middle" font-weight="700">ERA 6 • 9-FOLD GIRIH SANCTUM</text>
+</svg>
+
+      <div class="swatch-bar"><span class="swatch-pill"><span class="swatch-dot" style="background:#E11D48;"></span><code>#E11D48</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#1D4ED8;"></span><code>#1D4ED8</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#14B8A6;"></span><code>#14B8A6</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#D4AF37;"></span><code>#D4AF37</code></span></div>
+    </div>
+    <div class="era-content">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">VISUAL_ERA_VI_OTTOMAN_IZNIK_SAZ</span>
+        <span class="badge" style="color:#38BDF8;">1453–1922 CE (Classical Ottoman Empire — Kostantiniyye)</span>
+        <span class="badge" style="color:#34D399;">9-FOLD SACRED GEOMETRY (OTTOMAN_NINE_FOLD_GUL_I_MUHAMMADI)</span>
+      </div>
+      <h3>6. Classical Ottoman Imperial Style: Matrakci Nasuh Topographical Keeps, Iznik Tiles &amp; Saz Rose Choreography</h3>
+      <p style="font-size:0.86rem;color:#C084FC;margin-bottom:0.7rem;">
+        <strong>Era VI: Al-'Asr Al-'Uthmani wa النقشخانة وإزنيق (العصر العثماني والوردة المحمدية)</strong> | <strong>Centers:</strong> Kostantiniyye / Istanbul (Topkapi Palace Nakkashane), Iznik, Bursa, and Edirne.
+      </p>
+      <div class="detail-grid">
+        <div class="sub-box">
+          <div class="box-title" style="color:#FDE68A;">I. Historical Pigments &amp; Geometric/Calligraphic Grammar</div>
+          <p><strong>Pigments:</strong> Iznik bole-red / coral crimson (`#E11D48`), cobalt blue (`#1D4ED8`), firuze turquoise (`#14B8A6`), emerald green (`#059669`), and imperial gold (`#D4AF37`).</p>
+          <p style="margin-top:0.35rem;"><strong>Grammar:</strong> Matrakci Nasuh bird's-eye cartographic architecture (zero human ego portraits, pure architectural and botanical precision), Kara Memi's four-flower court style (Rose, Tulip, Carnation, Hyacinth), serrated Saz leaves, and the concentric Gul-i Muhammadi rose diagram.</p>
+        </div>
+        <div class="sub-box">
+          <div class="box-title" style="color:#34D399;">II. Warlock Visual Subject &amp; Qur'anic Anchor</div>
+          <p>The Sovereign Husbandry Estate &amp; Ottoman Damad Protocol: a Matrakci Nasuh-style topographical view of the air-gapped domestic sanctuary, walled Gulhane rose garden, hearth kitchen pavilion, and the 1.85m vanguard trail overlooking the Bosphorus.</p>
+          <p style="margin-top:0.35rem;color:#A5F3FC;"><strong>Anchor:</strong> Qur'an 55:37 (Wardatan ka-ad-Dihan), Qur'an 28:25-26 (Al-Qawi Al-Amin Vanguard), &amp; Ottoman Ser'iyye Sicilleri Nikah Charters.</p>
+        </div>
+      </div>
+      <div class="prompt-box">
+        <div class="box-title" style="color:#FDA4AF;">III. Canonical AI Generative Visual Prompt Specification</div>
+        <code>16th-century Ottoman Imperial Nakkashane illumination in the style of Matrakci Nasuh and Iznik ceramic tile art: a jewel-like bird's-eye architectural map of a walled palace sanctuary, lead-covered domes, cypress and crimson rose gardens, framed by cobalt and coral-red Iznik floral arabesques.</code>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="era-card" style="border-left-color:#FDE68A;">
+  <div class="era-grid">
+    <div class="svg-plate-wrap">
+      <svg viewBox="0 0 280 260" width="100%" height="230" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;border:1px solid rgba(255,255,255,0.15);">
+  <defs>
+    <radialGradient id="bgGrad7" cx="50%" cy="48%" r="65%">
+      <stop offset="0%" stop-color="#34D399" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070D" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="280" height="260" fill="url(#bgGrad7)"/>
+  <rect x="8" y="8" width="264" height="244" fill="none" stroke="#FDE68A" stroke-width="1.5" stroke-opacity="0.7"/>
+  <path d="M 38 242 L 38 115 Q 140 24 242 115 L 242 242" fill="none" stroke="#38BDF8" stroke-width="2" stroke-opacity="0.8"/>
+  <circle cx="140" cy="125" r="86" fill="none" stroke="#F43F5E" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <circle cx="140" cy="125" r="42" fill="none" stroke="#FDE68A" stroke-width="1.4"/>
+  <line x1="140.0" y1="43.0" x2="153.0" y2="85.1" stroke="#FDE68A" stroke-width="2.2" /><line x1="153.0" y1="85.1" x2="188.2" y2="58.7" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="43.0" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="188.2" y1="58.7" x2="174.0" y2="100.3" stroke="#FDE68A" stroke-width="2.2" /><line x1="174.0" y1="100.3" x2="218.0" y2="99.7" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="188.2" y2="58.7" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="218.0" y1="99.7" x2="182.0" y2="125.0" stroke="#FDE68A" stroke-width="2.2" /><line x1="182.0" y1="125.0" x2="218.0" y2="150.3" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="218.0" y2="99.7" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="218.0" y1="150.3" x2="174.0" y2="149.7" stroke="#FDE68A" stroke-width="2.2" /><line x1="174.0" y1="149.7" x2="188.2" y2="191.3" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="218.0" y2="150.3" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="188.2" y1="191.3" x2="153.0" y2="164.9" stroke="#FDE68A" stroke-width="2.2" /><line x1="153.0" y1="164.9" x2="140.0" y2="207.0" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="188.2" y2="191.3" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="140.0" y1="207.0" x2="127.0" y2="164.9" stroke="#FDE68A" stroke-width="2.2" /><line x1="127.0" y1="164.9" x2="91.8" y2="191.3" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="140.0" y2="207.0" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="91.8" y1="191.3" x2="106.0" y2="149.7" stroke="#FDE68A" stroke-width="2.2" /><line x1="106.0" y1="149.7" x2="62.0" y2="150.3" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="91.8" y2="191.3" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="62.0" y1="150.3" x2="98.0" y2="125.0" stroke="#FDE68A" stroke-width="2.2" /><line x1="98.0" y1="125.0" x2="62.0" y2="99.7" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="62.0" y2="150.3" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="62.0" y1="99.7" x2="106.0" y2="100.3" stroke="#FDE68A" stroke-width="2.2" /><line x1="106.0" y1="100.3" x2="91.8" y2="58.7" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="62.0" y2="99.7" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" /><line x1="91.8" y1="58.7" x2="127.0" y2="85.1" stroke="#FDE68A" stroke-width="2.2" /><line x1="127.0" y1="85.1" x2="140.0" y2="43.0" stroke="#FDE68A" stroke-width="2.2" /><line x1="140.0" y1="125.0" x2="91.8" y2="58.7" stroke="#38BDF8" stroke-width="1.2" stroke-opacity="0.65" />
+  <circle cx="140" cy="125" r="9" fill="#FDE68A"/>
+  <text x="140" y="232" fill="#FDE68A" font-size="10" font-family="Segoe UI, sans-serif" text-anchor="middle" font-weight="700">ERA 7 • 10-FOLD GIRIH SANCTUM</text>
+</svg>
+
+      <div class="swatch-bar"><span class="swatch-pill"><span class="swatch-dot" style="background:#34D399;"></span><code>#34D399</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#FDE68A;"></span><code>#FDE68A</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#38BDF8;"></span><code>#38BDF8</code></span><span class="swatch-pill"><span class="swatch-dot" style="background:#F43F5E;"></span><code>#F43F5E</code></span></div>
+    </div>
+    <div class="era-content">
+      <div class="badge-row">
+        <span class="badge" style="color:#FDE68A;">VISUAL_ERA_VII_SOVEREIGN_AI_CYBER_GEOMETRY</span>
+        <span class="badge" style="color:#38BDF8;">21st Century &amp; Beyond (Sovereign Neo-Islamic AI Architecture)</span>
+        <span class="badge" style="color:#34D399;">10-FOLD SACRED GEOMETRY (QUASICRYSTAL_DECAGONAL_GIRIH_FRACTAL)</span>
+      </div>
+      <h3>7. Sovereign Neo-Islamic AI Cyber-Geometric Synthesis: Volumetric Muqarnas Fractals &amp; Air-Gapped Faraday Lattice</h3>
+      <p style="font-size:0.86rem;color:#C084FC;margin-bottom:0.7rem;">
+        <strong>Era VII: 'Asr Al-Hikmah Al-Raqamiyyah wa العمارة السيبرانية الإسلامية (عصر الذكاء الاصطناعي والهندسة المقدسة)</strong> | <strong>Centers:</strong> Decentralized Air-Gapped Sovereign Estates (`com.sovereign.warlock` &amp; `com.sovereign.husbandry` JVM Nodes).
+      </p>
+      <div class="detail-grid">
+        <div class="sub-box">
+          <div class="box-title" style="color:#FDE68A;">I. Historical Pigments &amp; Geometric/Calligraphic Grammar</div>
+          <p><strong>Pigments:</strong> Bioluminescent emerald (`#34D399`), Faraday gold (`#FDE68A`), cyber-sapphire (`#38BDF8`), crimson laser-rose (`#F43F5E`), and obsidian void (`#05070C`).</p>
+          <p style="margin-top:0.35rem;"><strong>Grammar:</strong> Quasi-crystalline decagonal Penrose-Girih aperiodic tilings (Lu &amp; Steinhardt 2007), 3D ray-traced recursive Muqarnas fractals, holographic Kufic light-circuits, and active-low bitwise color inversion (`RGB ^ 0xFFFFFF`).</p>
+        </div>
+        <div class="sub-box">
+          <div class="box-title" style="color:#34D399;">II. Warlock Visual Subject &amp; Qur'anic Anchor</div>
+          <p>The Complete 46-Portal Sovereign Synthesis: the 7 Color Orders, the Negentropic Priory (`Sigma -1n` &amp; `0n Beta`), the Golden Egg Disulfide Lattice (`Al-Murabbit Al-Kalim`), the Air-Gapped `HusbandryState` Sanctuary, and the 3D Crimson Rose.</p>
+          <p style="margin-top:0.35rem;color:#A5F3FC;"><strong>Anchor:</strong> Qur'an 41:53 ('We will show them Our Signs in the horizons and within themselves until it becomes clear to them that it is the Truth'), Qur'an 76:9, &amp; GEMINI.md State S0 (Cp &gt;= 1.33).</p>
+        </div>
+      </div>
+      <div class="prompt-box">
+        <div class="box-title" style="color:#FDA4AF;">III. Canonical AI Generative Visual Prompt Specification</div>
+        <code>Futuristic Neo-Islamic architectural sanctum rendered in ultra-detailed 8k ray-traced style: volumetric golden Muqarnas fractal vaults, glowing Kufic light-calligraphy, a crystalline decagonal Girih dome, an air-gapped golden Faraday shield, and a serene emerald courtyard with a glowing crimson rose fountain.</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <script>
+    let currentEra = 1;
+    const canvas = document.getElementById('eraCanvas');
+    const ctx = canvas.getContext('2d');
+    let yaw = 0.4, pitch = 0.38, zoom = 1.0, dragging = false, lx = 0, ly = 0;
+
+    const eraMeta = {
+      1: {
+        tag: "ERA I (PRE-610 CE): BABIL & SABA' LAPIS-LAZULI RELIEF & INVERTED WELL",
+        title: "8-Pointed Star of Babil | Subterranean Well | Alabaster Musnad Altar",
+        desc: "Kiln-fired Babylonian lapis blue (#0F2C59), Sabaean alabaster (#F8F5E6), and hammered gold (#D4AF37) rendering the Inverted Well of Harut & Marut severed by the Criterion of Qur'an 2:102.",
+        fold: 8, c1: "#D4AF37", c2: "#38BDF8", c3: "#F8F5E6"
+      },
+      2: {
+        tag: "ERA II (661–1050 CE): ABBASID BAGHDAD BAYT AL-HIKMAH & BLUE QUR'AN KUFIC",
+        title: "10-Fold Decagonal Kufic Rosette | Brass Astrolabe | Sealed Qumqum",
+        desc: "Chrysography gold ink (#FBBF24) on deep indigo vellum (#0B1938) with verdigris emerald (#006B54) and Al-Wasiti astronomical armillary spheres.",
+        fold: 10, c1: "#FBBF24", c2: "#10B981", c3: "#EF4444"
+      },
+      3: {
+        tag: "ERA III (969–1517 CE): MAMLUK CAIRO ABLAQ MASONRY & ENAMELED MISHKAT LAMP",
+        title: "12-Pointed Tabaq Najmi | Muqarnas Vault | Ayat An-Nur Mosque Lamp",
+        desc: "Alternating crimson (#8B0000), cream (#F8F5E6), and Damascus inlaid brass (#B87333) framing the hanging Mishkat lamp of Qur'an 24:35.",
+        fold: 12, c1: "#F8F5E6", c2: "#F43F5E", c3: "#38BDF8"
+      },
+      4: {
+        tag: "ERA IV (711–1492 CE): ANDALUSIAN ALHAMBRA ZELLIJ & GENERALIFE CHAHAR BAGH",
+        title: "16-Fold Crystallographic Zellij | 4 Rivers of Qur'an 47:15 | Walled Mihrab",
+        desc: "Nasrid emerald-teal (#006B54), ochre (#D97706), ivory (#F8F5E6), and Damascus rose (#F43F5E) in perfect 16-fold rotational symmetry.",
+        fold: 16, c1: "#34D399", c2: "#F59E0B", c3: "#F43F5E"
+      },
+      5: {
+        tag: "ERA V (1370–1722 CE): TIMURID & SAFAVID PERSIAN MINIATURE (BEHZAD / TABRIZ)",
+        title: "7-Tiered Isometric Keep at Majma' Al-Bahrayn | Burnished Gold Sky",
+        desc: "Crushed Badakhshan lapis (#1E40AF), 24k gold leaf (#FACC15), and turquoise (#06B6D4) rendering the 7-story keep between the Two Seas.",
+        fold: 7, c1: "#FACC15", c2: "#06B6D4", c3: "#10B981"
+      },
+      6: {
+        tag: "ERA VI (1453–1922 CE): OTTOMAN IMPERIAL NAKKASHANE, MATRAKCI NASUH & IZNIK",
+        title: "9-Fold Gul-i Muhammadi | Topographical Keep | Iznik Bole-Red & Cobalt",
+        desc: "Iznik coral-red (#E11D48), cobalt (#1D4ED8), and firuze turquoise (#14B8A6) mapping the sovereign estate and concentric Muhammadan Rose.",
+        fold: 9, c1: "#FB7185", c2: "#2DD4BF", c3: "#FDE68A"
+      },
+      7: {
+        tag: "ERA VII (21ST CENTURY): SOVEREIGN NEO-ISLAMIC AI CYBER-GEOMETRIC SYNTHESIS",
+        title: "10-Fold Penrose-Girih Quasicrystal | Volumetric Muqarnas | Faraday Shield",
+        desc: "Bioluminescent emerald (#34D399), Faraday gold (#FDE68A), and cyber-sapphire (#38BDF8) uniting all 46 portals in an air-gapped quasicrystalline dome.",
+        fold: 10, c1: "#34D399", c2: "#38BDF8", c3: "#FDE68A"
+      }
+    };
+
+    function setEra(idx, btn) {
+      currentEra = idx;
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const m = eraMeta[idx];
+      document.getElementById('hudEra').textContent = m.tag;
+      document.getElementById('hudTitle').textContent = m.title;
+      document.getElementById('hudDesc').textContent = m.desc;
+    }
+
+    function resize() {
+      canvas.width = canvas.clientWidth * window.devicePixelRatio;
+      canvas.height = canvas.clientHeight * window.devicePixelRatio;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    canvas.addEventListener('mousedown', e => { dragging = true; lx = e.clientX; ly = e.clientY; });
+    window.addEventListener('mouseup', () => dragging = false);
+    window.addEventListener('mousemove', e => {
+      if (!dragging) return;
+      yaw += (e.clientX - lx) * 0.007;
+      pitch = Math.max(-1.2, Math.min(1.2, pitch + (e.clientY - ly) * 0.007));
+      lx = e.clientX; ly = e.clientY;
+    });
+
+    function proj(x, y, z, cx, cy, sc) {
+      const cyw = Math.cos(yaw), syw = Math.sin(yaw);
+      const x1 = x * cyw - z * syw;
+      const z1 = x * syw + z * cyw;
+      const cp = Math.cos(pitch), sp = Math.sin(pitch);
+      const y2 = y * cp - z1 * sp;
+      const z2 = y * sp + z1 * cp;
+      const fov = 560 / (560 + z2);
+      return [cx + x1 * sc * fov, cy - y2 * sc * fov];
+    }
+
+    function line3D(p1, p2, cx, cy, sc, color, w, alpha) {
+      const a = proj(p1[0], p1[1], p1[2], cx, cy, sc);
+      const b = proj(p2[0], p2[1], p2[2], cx, cy, sc);
+      ctx.save();
+      ctx.strokeStyle = color;
+      ctx.globalAlpha = alpha;
+      ctx.lineWidth = w;
+      ctx.beginPath();
+      ctx.moveTo(a[0], a[1]);
+      ctx.lineTo(b[0], b[1]);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function loop(ts) {
+      const t = ts * 0.001;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const cx = canvas.width / 2, cy = canvas.height / 2;
+      if (!dragging) yaw += 0.0035;
+
+      const m = eraMeta[currentEra];
+      const n = m.fold;
+      const tiers = currentEra === 5 ? 7 : 5;
+
+      // Render 3D N-Fold Islamic Star Girih Sanctuary Tower & Muqarnas Dome for the selected Era
+      for (let tier = 0; tier < tiers; tier++) {
+        const y1 = -110 + tier * 42;
+        const y2 = y1 + 38;
+        const rOuter = 135 - tier * 16;
+        const rInner = rOuter * 0.58;
+        for (let i = 0; i < n; i++) {
+          const a1 = (i / n) * Math.PI * 2 + tier * 0.15;
+          const aMid = ((i + 0.5) / n) * Math.PI * 2 + tier * 0.15;
+          const a2 = ((i + 1) / n) * Math.PI * 2 + tier * 0.15;
+
+          const pOuter1 = [Math.cos(a1) * rOuter, y1, Math.sin(a1) * rOuter];
+          const pInner = [Math.cos(aMid) * rInner, y1 + 19, Math.sin(aMid) * rInner];
+          const pOuter2 = [Math.cos(a2) * rOuter, y1, Math.sin(a2) * rOuter];
+          const pTop = [Math.cos(a1) * (rOuter * 0.88), y2, Math.sin(a1) * (rOuter * 0.88)];
+
+          line3D(pOuter1, pInner, cx, cy, zoom, m.c1, 2.0, 0.9);
+          line3D(pInner, pOuter2, cx, cy, zoom, m.c1, 2.0, 0.9);
+          line3D(pOuter1, pTop, cx, cy, zoom, m.c2, 1.6, 0.82);
+        }
+      }
+
+      // Crown Spire / Finial (Hilal / Mishkat / Quasicrystal Apex)
+      const apexY = -110 + tiers * 42 + 45;
+      for (let i = 0; i < n; i++) {
+        const a = (i / n) * Math.PI * 2 + t * 0.5;
+        line3D([Math.cos(a) * 45, apexY - 45, Math.sin(a) * 45], [0, apexY, 0], cx, cy, zoom, m.c3, 2.1, 0.92);
+      }
+
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  </script>
+
+<!-- SOV_CHROME_FOOTER_START -->
+<footer class="sov-footer-wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;padding-bottom:0.9rem;border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div>
+      <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">COMPLETE <span data-sov-total>63</span>-PORTAL CONTINUALLY UPDATED SITEMAP • CURRENT: #49 / 63 — 7 Islamic Visual Eras &amp; AI Art (warlock-islamic-visual-eras-history.html)</div>
+      <div style="font-size:0.84rem;color:#CBD5E1;">Every HTML portal is directly cross-linked and continually synchronized across all 11 Architectural Wings and all 7 Chromatic/Theological Rows.</div>
+    </div>
+    <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+      <a class="sov-pill" href="disney-daffy-donald-islamic-microcosm.html">← Prev: Disney/Daffy &amp; Jungle Microcosm</a>
+      <span class="sov-pill sov-pill-counter">#49 / 63</span>
+      <a class="sov-pill sov-pill-master" href="index.html">🏠 Master Index (63)</a>
+      <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=warlock-islamic-visual-eras-history.html">🧭 Combined Omnibus</a>
+      <a class="sov-pill" href="conjoined-worlds-realms-principles-node-grid.html">Next: 3D Node-Art Terrain Grid (Meridian Guard) →</a>
+    </div>
+  </div>
+  <div class="sov-footer-cols">
+    <div class="sov-footer-cat"><h4>01. Master Hubs &amp; Architecture</h4><a class="" href="index.html">#01/63 Master Index Hub</a><a class="" href="master-combined-omnibus.html">#02/63 Combined Omnibus Reader</a><a class="" href="dependencies-report.html">#03/63 Dependencies &amp; Java 21+ Audit</a><a class="" href="conjoined-worlds-realms-principles-node-grid.html">#50/63 3D Node-Art Terrain Grid (Meridian Guard)</a><a class="" href="islamic-caravans-battles-conquest-chronicle.html">#51/63 Caravans, Trade Battles, Fatḥ &amp; Tadwīn</a><a class="" href="greco-roman-gods-titans-daimones-islamic-judgment.html">#52/63 Greco-Roman Gods &amp; Titans Made Whole</a><a class="" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">#53/63 Philosophy, Alchemy, Theocracies &amp; Socrates</a><a class="" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">#55/63 Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a><a class="" href="islamic-countries-history-canonical-embrace-atlas.html">#56/63 History of Islamic Countries &amp; Canonical Embrace</a><a class="" href="islamic-caliphates-sultans-shahs-dynasties-return.html">#57/63 Caliphates, Sultans, Shahs &amp; Promise of Return</a><a class="" href="quranic-timeline-expansion-vol1-chronology.html">#58/63 Vol. I: Qur'anic Timeline of Expansion</a><a class="" href="quranic-timeline-expansion-vol2-properties-kingdoms.html">#59/63 Vol. II: Islamic Properties, Countries &amp; Kingdoms</a><a class="" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html">#60/63 Vol. III: Beauty of Islam &amp; Collegiate Thesis</a><a class="" href="islam-through-ages-vol1-reception-history.html">#61/63 Ages Vol. I: Islam &amp; Global Reception</a><a class="" href="islam-through-ages-vol2-philosophical-connotations.html">#62/63 Ages Vol. II: Philosophical Connotations</a><a class="" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">#63/63 Ages Vol. III: Scientific Discoveries Instantiated</a></div><div class="sov-footer-cat"><h4>02. Seven Pre-Prophetic Color Orders</h4><a class="" href="order-1-white.html">#04/63 Order #1: White</a><a class="" href="order-2-black.html">#05/63 Order #2: Black</a><a class="" href="order-3-sapphire.html">#06/63 Order #3: Sapphire</a><a class="" href="order-4-gold.html">#07/63 Order #4: Gold</a><a class="" href="order-5-crimson.html">#08/63 Order #5: Crimson</a><a class="" href="order-6-brass.html">#09/63 Order #6: Brass</a><a class="" href="order-7-emerald.html">#10/63 Order #7: Emerald</a></div><div class="sov-footer-cat"><h4>03. 3D Sanctum &amp; Seven Realms</h4><a class="" href="warlock-3d-sanctum.html">#11/63 3D Sanctum Master</a><a class="" href="realm-1-white.html">#12/63 Realm #1: 'Aravot</a><a class="" href="realm-2-black.html">#13/63 Realm #2: Makhon</a><a class="" href="realm-3-sapphire.html">#14/63 Realm #3: Zevul</a><a class="" href="realm-4-gold.html">#15/63 Realm #4: Shehaqim</a><a class="" href="realm-5-crimson.html">#16/63 Realm #5: Ma'on</a><a class="" href="realm-6-brass.html">#17/63 Realm #6: Raqia'</a><a class="" href="realm-7-emerald.html">#18/63 Realm #7: Vilon</a></div><div class="sov-footer-cat"><h4>04. Negentropic Priory &amp; Seven Planes</h4><a class="" href="priory-negentropy-order.html">#19/63 Negentropic Priory Atlas</a><a class="" href="plane-1-white.html">#20/63 Plane #1: Adam Kadmon / Lahut</a><a class="" href="plane-2-black.html">#21/63 Plane #2: Malbush / Al-Qalam</a><a class="" href="plane-3-sapphire.html">#22/63 Plane #3: Beri'ah / Jabarut</a><a class="" href="plane-4-gold.html">#23/63 Plane #4: Atzilut / Al-Arwah</a><a class="" href="plane-5-crimson.html">#24/63 Plane #5: Tohu / Ash-Shuhub</a><a class="" href="plane-6-brass.html">#25/63 Plane #6: Yetzirah / Al-Marij</a><a class="" href="plane-7-emerald.html">#26/63 Plane #7: Tikkun / Al-Mithal</a></div><div class="sov-footer-cat"><h4>05. Seven Wrongdoer (Az-Zalimun) Profiles</h4><a class="" href="zalim-1-fasad.html">#27/63 Zalim #1: Al-Fasad</a><a class="" href="zalim-2-fahishah.html">#28/63 Zalim #2: Al-Fahishah</a><a class="" href="zalim-3-baghy.html">#29/63 Zalim #3: Al-Baghy (Nimrod)</a><a class="" href="zalim-4-fitnah.html">#30/63 Zalim #4: Al-Fitnah</a><a class="" href="zalim-5-hawa.html">#31/63 Zalim #5: Al-Hawa</a><a class="" href="zalim-6-jibt.html">#32/63 Zalim #6: Al-Jibt &amp; Taghut</a><a class="" href="zalim-7-zulm.html">#33/63 Zalim #7: Masjid Ad-Dirar</a></div><div class="sov-footer-cat"><h4>06. Seven Islamic Worlds of Hegemon &amp; Disorder</h4><a class="" href="worlds-hegemon-disorder.html">#34/63 7 Worlds Master Atlas</a><a class="" href="world-1-mizan-fasad.html">#35/63 World #1: Amanah vs. Fasad</a><a class="" href="world-2-haya-fahishah.html">#36/63 World #2: Haya' vs. Tabarruj</a><a class="" href="world-3-babil-namrud.html">#37/63 World #3: Ibrahim vs. Namrud</a><a class="" href="world-4-ummah-fitnah.html">#38/63 World #4: Ummah vs. Fitnah</a><a class="" href="world-5-furqan-hawa.html">#39/63 World #5: Furqan vs. Hawa</a><a class="" href="world-6-tawhid-taghut.html">#40/63 World #6: Tawhid vs. Taghut</a><a class="" href="world-7-taqwa-dirar.html">#41/63 World #7: Taqwa vs. Dirar</a></div><div class="sov-footer-cat"><h4>07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</h4><a class="" href="warlock-formation-dissolution-jafar-aladdin.html">#42/63 Ja'far &amp; Aladdin Qumqum</a><a class="" href="sequester-between-worlds.html">#43/63 7 Inter-World Sequesters</a></div><div class="sov-footer-cat"><h4>08. The Islamic Egg-in-Baking Intelocketer</h4><a class="" href="interlocker-egg-binder-islam.html">#44/63 Egg-in-Baking Intelocketer</a></div><div class="sov-footer-cat"><h4>09. The Warlock Apocrypha &amp; Modernity Theorems</h4><a class="" href="warlock-apocrypha-islamic-theorems.html">#45/63 Warlock Apocrypha &amp; Theorems</a></div><div class="sov-footer-cat"><h4>10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</h4><a class="" href="islamic-husbandry-sovereign-estate.html">#46/63 Vanguard Husbandry Estate</a><a class="" href="way-of-the-flower-rose-garden-islam.html">#47/63 Flower, Rose &amp; Chahar Bagh</a><a class="" href="islamic-modesty-evolution-western-frontier-men-women.html">#54/63 Men &amp; Women Modesty: Western Frontier</a></div><div class="sov-footer-cat"><h4>11. Islamic Animalism &amp; Visual History Atlases</h4><a class="" href="disney-daffy-donald-islamic-microcosm.html">#48/63 Disney/Daffy &amp; Jungle Microcosm</a><a class="active-link" href="warlock-islamic-visual-eras-history.html">#49/63 7 Islamic Visual Eras &amp; AI Art</a></div>
+  </div>
+</footer>
+<!-- SOV_CHROME_FOOTER_END -->
+</body>
+</html>

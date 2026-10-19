@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: warlock-1-white
+
+warlock:
+  orderIndex: 1
+  profileId: "warlock-1-white"
+  colorName: "Parchment White Fire (Esh Levanah)"
+  hexCode: "#F8F5E6"
+  rgbRed: 248
+  rgbGreen: 245
+  rgbBlue: 230
+  wavelengthNm: 390
+  warlockName: "Malakh-Azal"
+  hebrewTitle: "Ba'al Ohr Ein Sof"
+  arabicTitle: "Qadi Al-Azal"
+  prePropheticStratum: "OMEGA_0_EIN_SOF_AL_AZAL"
+  primaryPillar: "MERKABAH_KABBALISTIC_MYSTICISM"
+  patronEntity: "Ohr Ein Sof (The Unconditioned Infinite Light before Tzimtzum)"
+  sacredImplement: "Uncreased White Gazelle Scroll of Pre-Eternity"
+  signatureInvocation: "Ray of Kav & Tzimtzum Void Contraction"
+  recitationMode: "Six-Beat Madd Al-Lazim (Infinite Vowel Elongation)"
+  processCapabilityCp: 1.48
+  varianceSigma: 0.42

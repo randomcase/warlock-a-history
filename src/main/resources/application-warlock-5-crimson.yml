@@ -1,0 +1,25 @@
+spring:
+  config:
+    activate:
+      on-profile: warlock-5-crimson
+
+warlock:
+  orderIndex: 5
+  profileId: "warlock-5-crimson"
+  colorName: "Gevurah Covenant Crimson (Esh Ritzpah)"
+  hexCode: "#8B0000"
+  rgbRed: 139
+  rgbGreen: 0
+  rgbBlue: 0
+  wavelengthNm: 650
+  warlockName: "Saraph Ha-Ritzpah"
+  hebrewTitle: "Ba'al Gachelet Ha-Mizbe'ach"
+  arabicTitle: "Sa'iqat Al-'Arsh Al-Muhriqah"
+  prePropheticStratum: "OMEGA_2_SERAPHIC_ALTAR_OF_FIRE"
+  primaryPillar: "PROPHETIC_APOCALYPTIC_COVENANT"
+  patronEntity: "Six-Winged Seraphim of the Burning Coal & Pillar of Gevurah"
+  sacredImplement: "First Tongs of Twilight (Madei-Esh) & Live Altar Ember"
+  signatureInvocation: "Apocalyptic Seventh Seal & Sixfold Seraphic Purge"
+  recitationMode: "Qalqalah Plosive Acoustic Shock & Seven Thunders Cadence"
+  processCapabilityCp: 1.39
+  varianceSigma: 0.63
