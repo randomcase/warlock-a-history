@@ -342,6 +342,10 @@ public final class WarlockHtmlPortalService {
                     new IslamicAlchemicalHygieneCaravanAndSuffragePortalGenerator();
             artifacts.add(alchemicalCaravanSuffrageGenerator.generatePortal(outputDir));
 
+            IslamicConquestMovementsPinnaclesAndRecessionsPortalGenerator conquestMovementsGenerator =
+                    new IslamicConquestMovementsPinnaclesAndRecessionsPortalGenerator();
+            artifacts.add(conquestMovementsGenerator.generatePortal(outputDir));
+
             MasterNavigationAndIndexGenerator masterNavGenerator = new MasterNavigationAndIndexGenerator();
             return masterNavGenerator.integrateAllPortalsAndGenerateMasterIndex(outputDir, artifacts);
         } catch (IOException e) {

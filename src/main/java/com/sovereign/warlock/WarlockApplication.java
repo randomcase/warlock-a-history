@@ -8,6 +8,7 @@ import com.sovereign.warlock.domain.IslamicAlchemicalHygieneCaravanAndSuffrageAt
 import com.sovereign.warlock.domain.IslamicCaliphatesSultansShahsAndPromiseOfReturn;
 import com.sovereign.warlock.domain.IslamicCaravansBattlesAndConquestChronicle;
 import com.sovereign.warlock.domain.IslamicCompassCaliphateMapsAndFlagsAtlas;
+import com.sovereign.warlock.domain.IslamicConquestMovementsPinnaclesAndRecessionsAtlas;
 import com.sovereign.warlock.domain.IslamicCountriesHistoryAndCanonicalEmbrace;
 import com.sovereign.warlock.domain.IslamicDisneyAnimalismMicrocosm;
 import com.sovereign.warlock.domain.IslamicHusbandrySovereignCharter;
@@ -95,6 +96,7 @@ public class WarlockApplication {
         printIslamicMaritimeBoatingPiracyMercantilismAndOmanYemen();
         printIslamicCompassCaliphateMapsAndFlagsAtlas();
         printIslamicAlchemicalHygieneCaravanAndSuffrageAtlas();
+        printIslamicConquestMovementsPinnaclesAndRecessionsAtlas();
         printGeneratedHtmlArtifacts(htmlArtifacts);
         printOpticalSpectrumSort(warlocksByColor7);
         printPillarGrouping(engine.groupByMysticalPillar(warlocksByColor7));
@@ -753,8 +755,32 @@ public class WarlockApplication {
         System.out.println("----------------------------------------------------------------------------------------------------------");
     }
 
+    private static void printIslamicConquestMovementsPinnaclesAndRecessionsAtlas() {
+        System.out.println("\n[26] INTERACTIVE ERAS OF ISLAMIC CONQUEST, CALIPHATES, CANONICAL MOVEMENTS (E/W/N/S), PINNACLES & RECESSIONS AS THEY HAPPEN:");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicConquestMovementsPinnaclesAndRecessionsAtlas.ChronologicalEraSimulationState e :
+                IslamicConquestMovementsPinnaclesAndRecessionsAtlas.allSixteenAsTheyHappenEras()) {
+            System.out.printf("  * ERA #%02d (%s | %s): %s [%.1fM km² | Momentum: %d/100]%n",
+                    e.eraStep(), e.yearRangeCe(), e.phaseClassification(), e.eraHeadline(),
+                    e.estimatedTerritoryMillionKm2(), e.civilizationalMomentumScore());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicConquestMovementsPinnaclesAndRecessionsAtlas.DirectionalCompassMovementAxis ax :
+                IslamicConquestMovementsPinnaclesAndRecessionsAtlas.allFourDirectionalMovementAxes()) {
+            System.out.printf("  * COMPASS VECTOR [%s]: %s (%s)%n",
+                    ax.directionCode(), ax.englishDirectionTitle(), ax.compassAzimuthSector());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicConquestMovementsPinnaclesAndRecessionsAtlas.CanonicalMuslimMovementDossier m :
+                IslamicConquestMovementsPinnaclesAndRecessionsAtlas.allTenCanonicalMuslimMovements()) {
+            System.out.printf("  * CANONICAL MOVEMENT #%02d (%s): %s [%s]%n",
+                    m.movementIndex(), m.movementCode(), m.englishMovementTitle(), m.chronologicalEra());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+    }
+
     private static void printGeneratedHtmlArtifacts(List<WarlockHtmlPortalService.GeneratedHtmlArtifact> artifacts) {
-        System.out.println("\n[26] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
+        System.out.println("\n[27] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
         for (WarlockHtmlPortalService.GeneratedHtmlArtifact a : artifacts) {
             System.out.printf("  * %-26s | %6d bytes | SHA-256: %s... | %s%n",
                     a.fileName(), a.byteSize(), a.sha256Hash().substring(0, 16), a.description());

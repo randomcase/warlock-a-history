@@ -125,17 +125,17 @@ public final class MasterNavigationAndIndexGenerator {
                 new PortalCatalogEntry(1, "index.html", "Master Index Hub",
                         "Sovereign Master Index, Search & 7-Row Cross-Wing Relational Matrix",
                         "01. Master Hubs & Architecture", "#D4AF37", 0, "#D4AF37",
-                        "Al-Fihris Al-Jāmi' • All 63 Portals Continually Integrated",
+                        "Al-Fihris Al-Jāmi' • All 67 Portals Continually Integrated",
                         "Central navigation command center with instant search, multi-wing filter, 7-row cross-series matrix, continual sync, and embedded live workspace."),
                 new PortalCatalogEntry(2, "master-combined-omnibus.html", "Combined Omnibus Reader",
                         "Combined Multi-Portal Omnibus Workspace & Split-Screen Comparator",
                         "01. Master Hubs & Architecture", "#38BDF8", 0, "#38BDF8",
-                        "Al-Majmū' Al-Muwahhad • All 63 Portals Side-by-Side & Sequential Reader",
-                        "Combines all 63 HTML portals into a single unified application with sidebar tree navigation, single or dual split-screen comparison, continual auto-cycle, and keyboard shortcuts."),
+                        "Al-Majmū' Al-Muwahhad • All 67 Portals Side-by-Side & Sequential Reader",
+                        "Combines all 67 HTML portals into a single unified application with sidebar tree navigation, single or dual split-screen comparison, continual auto-cycle, and keyboard shortcuts."),
                 new PortalCatalogEntry(3, "dependencies-report.html", "Dependencies & Java 21+ Audit",
                         "Master Spring Boot 3.4 & Java 21+/26 Essentials Dependency Usage Report",
                         "01. Master Hubs & Architecture", "#34D399", 0, "#34D399",
-                        "SPC State S0 • SHA-256 Artifact Ledger (All 63 Portals)",
+                        "SPC State S0 • SHA-256 Artifact Ledger (All 67 Portals)",
                         "Complete audit of Spring Boot starters, Java 21+/26 virtual threads, sealed types, record patterns, and SHA-256 verification across all generated portals."),
 
                 // Wing 02: 7 Pre-Prophetic Color Orders
@@ -509,7 +509,14 @@ public final class MasterNavigationAndIndexGenerator {
                         "Alchemical Wares, Douching & Hygiene, Homogeneity & Insular Governance, The 7 Caravan & Man Archetypes, Caliphate Organization & Islamic Suffrage",
                         "01. Master Hubs & Architecture", "#F43F5E", 0, "#F43F5E",
                         "Qur'an 58:1 (Al-Mujādilah), 42:38 (Al-Shūrā), 60:12 (Bay'at Al-Nisā'), 9:60 & 9:118 • Ālāt Al-Kīmiyā', Fiqh Al-Ṭahārah, 7 Caravan Stations & Suffrage",
-                        "Synthesizes alchemical wares, clinical/ritual douching & hygiene, evidentiary privacy (Satr), liturgical/urban homogeneity, insular self-governance (Waqf/Maḥallah/Futūwwah), the 7 Islamic Man & Caravan archetypes, Caliphate organization, and Islamic Suffrage across Common, Royal, Young, Old & Gender causes.")
+                        "Synthesizes alchemical wares, clinical/ritual douching & hygiene, evidentiary privacy (Satr), liturgical/urban homogeneity, insular self-governance (Waqf/Maḥallah/Futūwwah), the 7 Islamic Man & Caravan archetypes, Caliphate organization, and Islamic Suffrage across Common, Royal, Young, Old & Gender causes."),
+
+                // Wing 01 / 67: Interactive Chronological Simulator of Every Era of Islamic Conquest, Caliphates, Canonical Movements (East, West, North & South), Pinnacles & Recessions As They Happen
+                new PortalCatalogEntry(67, "islamic-conquest-caliphates-movements-pinnacles-and-recessions-interactive.html", "Interactive Conquest, N/S/E/W Movements, Pinnacles & Recessions (#67)",
+                        "Interactive Simulator of Every Era of Islamic Conquest, Caliphates, Canonical Movements (East, West, North & South), Pinnacles & Recessions As They Happen",
+                        "01. Master Hubs & Architecture", "#38BDF8", 0, "#38BDF8",
+                        "Qur'an 3:140 (Sunnat Al-Tadāwul), 24:55, 48:1 & 110:1-2 • 16 Chronological Eras (610–2026 CE) • 4 Compass Vectors (N/S/E/W) • 10 Canonical Movements • 8 Pinnacle/Recession Cycles",
+                        "AI-illustrated and live interactive 16-era simulator tracking every Caliphate, Sultanate, Imamate, and canonical movement across East, West, North, and South — animating every historical Pinnacle (Al-Awj) and Recession/Rebirth (Al-Inḥisār wa Al-Inbi'āth) as they happen.")
         );
     }
 

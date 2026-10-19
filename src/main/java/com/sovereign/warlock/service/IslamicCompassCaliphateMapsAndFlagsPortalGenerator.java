@@ -766,6 +766,21 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
     </p>
 
     <section class="map-stage-box" id="caliphateMapExplorer">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.75rem;margin-bottom:0.75rem;padding:0.7rem 0.95rem;background:rgba(15,23,42,0.88);border:1px solid rgba(212,175,55,0.45);border-radius:10px;">
+        <div style="display:flex;align-items:center;gap:0.45rem;flex-wrap:wrap;">
+          <button type="button" class="action-btn" style="margin:0;padding:0.42rem 0.8rem;" onclick="stepCaliphateAge(-1)">⏮ Prev Era</button>
+          <button type="button" id="caliphateAutoPlayBtn" class="action-btn" style="margin:0;padding:0.42rem 0.9rem;background:linear-gradient(135deg,#059669,#047857);color:#FFF;" onclick="toggleCaliphateAutoPlay()">▶ Play Eras As They Happen</button>
+          <button type="button" class="action-btn" style="margin:0;padding:0.42rem 0.8rem;" onclick="stepCaliphateAge(1)">Next Era ⏭</button>
+          <button type="button" class="action-btn" style="margin:0;padding:0.42rem 0.75rem;" onclick="toggleMapVectorsOverlay()">🧭 Toggle N/S/E/W Vectors</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.65rem;flex:1;min-width:250px;">
+          <span style="font-size:0.76rem;color:#FDE68A;font-family:Consolas,monospace;white-space:nowrap;">TIMELINE SCRUBBER:</span>
+          <input id="caliphateTimelineSlider" type="range" min="0" max="14" value="0" step="1" style="flex:1;accent-color:#D4AF37;cursor:pointer;" oninput="onTimelineSliderInput(this.value)">
+          <span id="caliphateSliderReadout" style="font-size:0.78rem;color:#34D399;font-family:Consolas,monospace;font-weight:700;min-width:95px;text-align:right;">ALL 14 AGES</span>
+        </div>
+        <a href="/islamic-conquest-caliphates-movements-pinnacles-and-recessions-interactive.html" style="font-size:0.76rem;color:#38BDF8;text-decoration:none;border:1px solid #38BDF8;padding:0.35rem 0.7rem;border-radius:6px;font-weight:700;">⚡ Open Full Conquest, N/S/E/W Movements, Pinnacles &amp; Recessions Simulator (#67) →</a>
+      </div>
+
       <div class="age-tabs-bar">
         <button type="button" id="age-btn-0" class="age-tab-btn active" onclick="showAllCaliphatePolygons()">🌍 Show All 14 Caliphates &amp; 57 Capitals</button>
         %s
@@ -773,6 +788,20 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
 
       <div style="background:#040814;border:1px solid rgba(212,175,55,0.4);border-radius:12px;overflow:hidden;position:relative;">
         <svg id="caliphatesWorldMapSvg" viewBox="0 0 920 440" width="100%%" style="display:block;background:linear-gradient(180deg,#050B1A 0%%,#09152B 55%%,#040914 100%%);">
+          <defs>
+            <marker id="arrowGold" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#FDE68A"/>
+            </marker>
+            <marker id="arrowEmerald" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#10B981"/>
+            </marker>
+            <marker id="arrowCyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#38BDF8"/>
+            </marker>
+            <marker id="arrowCrimson" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#F43F5E"/>
+            </marker>
+          </defs>
           <!-- Latitude & Longitude Graticule -->
           <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
             <line x1="0" y1="110" x2="920" y2="110"/>
@@ -801,6 +830,26 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
           <!-- Caliphate Territorial Polygons -->
           <g id="caliphatePolygonsLayer">
             %s
+          </g>
+
+          <!-- 4-Direction Canonical Expansion & Movement Vectors (N / S / E / W) -->
+          <g id="directionalVectorsLayer" opacity="0.88">
+            <!-- WEST Vector: Mecca -> Cairo -> Kairouan -> Cordoba & Timbuktu/Sokoto -->
+            <path d="M 459,242 Q 350,200 245,192 T 192,155" fill="none" stroke="#FDE68A" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#arrowGold)"/>
+            <path d="M 255,195 Q 230,245 215,275" fill="none" stroke="#FDE68A" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrowGold)"/>
+            <text x="295" y="184" fill="#FDE68A" font-size="8.5" font-weight="700">⬅ WEST: MAGHREB, AL-ANDALUS &amp; SOKOTO</text>
+
+            <!-- EAST Vector: Mecca -> Baghdad -> Samarkand -> Delhi -> Aceh/Nusantara -->
+            <path d="M 459,242 Q 515,190 568,168 T 640,222 T 758,312" fill="none" stroke="#10B981" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#arrowEmerald)"/>
+            <text x="585" y="152" fill="#34D399" font-size="8.5" font-weight="700">➡ EAST: KHURASAN, HIND &amp; NUSANTARA</text>
+
+            <!-- NORTH Vector: Mecca -> Damascus -> Istanbul -> Caucasus & Volga Bulgaria (Kazan) -->
+            <path d="M 459,242 Q 435,180 392,148 T 485,95" fill="none" stroke="#38BDF8" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#arrowCyan)"/>
+            <text x="395" y="102" fill="#38BDF8" font-size="8.5" font-weight="700">⬆ NORTH: SHĀM, ANATOLIA, BALKANS &amp; VOLGA</text>
+
+            <!-- SOUTH Vector: Mecca -> Yemen & Oman -> Horn of Africa -> Zanzibar, Kilwa & Sofala -->
+            <path d="M 459,242 Q 485,275 502,265 Q 485,330 448,395" fill="none" stroke="#F43F5E" stroke-width="2.2" stroke-dasharray="6,3" marker-end="url(#arrowCrimson)"/>
+            <text x="495" y="348" fill="#FDA4AF" font-size="8.5" font-weight="700">⬇ SOUTH: YEMEN, OMAN &amp; SWAHILI COAST</text>
           </g>
 
           <!-- 57 Islamic Capital Nodes & Geodesic Qiblah Rays to Mecca -->
@@ -832,13 +881,17 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
       </div>
 
       <div id="mapActiveAgeBanner" style="margin-top:0.85rem;background:#091020;border:1px solid var(--gold);border-radius:10px;padding:0.85rem 1.1rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;">
-        <div>
-          <span id="mapBannerCode" class="pill">ALL 14 CALIPHATE AGES ACTIVE</span>
-          <h3 id="mapBannerTitle" style="color:#FFF;font-size:1.1rem;margin-top:0.25rem;">
+        <div style="flex:1;min-width:280px;">
+          <div style="display:flex;gap:0.45rem;flex-wrap:wrap;align-items:center;">
+            <span id="mapBannerCode" class="pill">ALL 14 CALIPHATE AGES ACTIVE</span>
+            <span id="mapBannerDirection" class="pill" style="border-color:#38BDF8;color:#38BDF8;">🧭 N • S • E • W OMNI-DIRECTIONAL</span>
+            <span id="mapBannerPinnacle" class="pill" style="border-color:#10B981;color:#34D399;">🌟 PINNACLE &amp; REBIRTH CONTINUUM</span>
+          </div>
+          <h3 id="mapBannerTitle" style="color:#FFF;font-size:1.1rem;margin-top:0.35rem;">
             Pan-Islamic Civilizational Continuum (622 CE – Present • 14 Caliphate/Sultanate Ages &amp; 57 Sovereign Nations)
           </h3>
           <p id="mapBannerDesc" style="font-size:0.82rem;color:#CBD5E1;margin-top:0.2rem;">
-            Click any age tab above or any Caliphate Flag card below to isolate its territorial polygon, capitals, and vexillological banner.
+            Click any age tab above, drag the Timeline Scrubber, or press <strong>▶ Play Eras As They Happen</strong> to watch every Caliphate expand across North, South, East, and West, reach its Pinnacle, weather historical Recessions, and regenerate.
           </p>
         </div>
       </div>
@@ -917,7 +970,25 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
     const CALIPHATE_AGES = [
       %s
     ];
+    const AGE_DYNAMICS = {
+      1: { dir: "🧭 Core Hijaz -> N (Mu’tah/Tabuk) • S (Yemen/Oman) • E (Bahrain)", status: "🌟 PROPHETIC INCEPTION PINNACLE (Constitution of Medina & Unified Arabia)" },
+      2: { dir: "🧭 N (Damascus/Armenia) • W (Egypt/Tripoli) • E (Ctesiphon/Khorasan) • S (Red Sea)", status: "🌟 RĀSHIDŪN OPENING PINNACLE (Simultaneous Collapse of Sasanian & Byzantine Levant)" },
+      3: { dir: "🧭 W (Kairouan -> Córdoba -> Narbonne) • E (Samarkand/Fergana & Indus/Sindh)", status: "🌟 TRANSCONTINENTAL TERRITORIAL PINNACLE (11.1M km² from Atlantic to Indus)" },
+      4: { dir: "🧭 E (Baghdad/Merv/Talas) • N (Tarsus/Caucasus) • S (Mecca/Aden/Siraf)", status: "🌟 GOLDEN AGE SCIENTIFIC PINNACLE (Bayt Al-Ḥikmah) -> 1258 Baghdad Siege Recession" },
+      5: { dir: "🧭 W & N (Córdoba, Seville, Granada, Fez, Marrakesh, Tlemcen)", status: "🌟 CORDOBAN & ALHAMBRA PINNACLE (929–1031) -> 1085–1492 Reconquista Recession" },
+      6: { dir: "🧭 W -> E (Ifriqiyah to Cairo, Hijaz, Yemen & Red Sea Corridor)", status: "🌟 AL-QĀHIRAH & AL-AZHAR PINNACLE (969–1050) -> 1099 Crusader Coastal Recession" },
+      7: { dir: "🧭 N & W (Cairo & Damascus uniting to liberate Jerusalem & Yemen)", status: "🌟 1187 ḤIṬṬĪN & JERUSALEM REBIRTH (Reversing the Crusader Recession)" },
+      8: { dir: "🧭 N & E (Cairo -> 'Ayn Jālūt -> Syria/Anatolian Frontier & Hijaz)", status: "🌟 1260 'AYN JĀLŪT MIRACULOUS REBIRTH (Halting the Mongol Recession & Saving Cairo)" },
+      9: { dir: "🧭 S & E (Ta'izz, Zabīd & Aden governing Red Sea & Monsoon Kārimī Trade)", status: "🌟 RASULID ASTRONOMICAL & MARITIME PINNACLE (Sultan Al-Ashraf Qiblah Compass)" },
+      10: { dir: "🧭 S (Muscat & Sohar -> Mombasa, Pemba, Zanzibar, Kilwa & Sofala)", status: "🌟 1650–1856 OMANI MARITIME REBIRTH (Expelling Portuguese & Uniting Muscat-Zanzibar)" },
+      11: { dir: "🧭 N & W (1453 Constantinople -> Vienna, Algiers, Cairo, Mecca, Aden)", status: "🌟 TRICONTINENTAL CALIPHATE PINNACLE (1453–1683) -> 1683–1924 Recession" },
+      12: { dir: "🧭 N & E (Samarkand, Herat, Tabriz, Isfahan & Shiraz)", status: "🌟 TIMURID RENAISSANCE & SAFAVID ISFAHAN PINNACLE (Naqsh-e Jahan)" },
+      13: { dir: "🧭 E & S (Kabul, Lahore, Delhi, Agra, Bengal & Deccan)", status: "🌟 MUGHAL GLOBAL GDP PINNACLE (~25%% World Manufacturing) -> 1757–1857 Colonial Recession" },
+      14: { dir: "🧭 W (Timbuktu/Sokoto) • E (Aceh/Malacca/Java) • Global 57 OIC Nations", status: "🌟 GLOBAL SUFI-MERCHANT EXPANSION & MODERN 57-NATION SOVEREIGN RESURGENCE" }
+    };
     let currentZoneFilter = 'ALL';
+    let currentAgeIndex = 0;
+    let caliphateAutoPlayTimer = null;
 
     function toRad(d) { return d * Math.PI / 180.0; }
     function toDeg(r) { return r * 180.0 / Math.PI; }
@@ -950,7 +1021,7 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
       const distKm = Math.round(R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)));
       const isba = Math.max(0.5, (Math.abs(lat) / 1.607)).toFixed(2);
 
-      focusCountryOnCompassAndMap(0, lat, lon, brng, distKm, 'Custom Coordinates (' + lat.toFixed(2) + '°, ' + lon.toFixed(2) + '°)', 'User Location', isba + ' Iṣba\'');
+      focusCountryOnCompassAndMap(0, lat, lon, brng, distKm, 'Custom Coordinates (' + lat.toFixed(2) + '°, ' + lon.toFixed(2) + '°)', 'User Location', isba + ' Iṣba’');
     }
 
     function focusCountryOnCompassAndMap(idx, lat, lon, qiblahDeg, distKm, countryName, capital, starRhumb) {
@@ -962,10 +1033,10 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
       document.getElementById('compassActiveTargetTitle').textContent =
         countryName + ' (' + capital + ') — Qiblah Bearing: ' + qiblahDeg.toFixed(1) + '°';
       document.getElementById('compassActiveSub').textContent =
-        'Star Rhumb to Mecca: ' + starRhumb + ' • Great-Circle Distance to Ka\'bah: ' + distKm.toLocaleString() + ' km';
+        'Star Rhumb to Mecca: ' + starRhumb + ' • Great-Circle Distance to Ka’bah: ' + distKm.toLocaleString() + ' km';
       document.getElementById('telAzimuth').textContent = qiblahDeg.toFixed(1) + '° Clockwise';
       document.getElementById('telDistance').textContent = distKm.toLocaleString() + ' km';
-      document.getElementById('telKamal').textContent = isba + ' Iṣba\' (' + lat.toFixed(2) + '°)';
+      document.getElementById('telKamal').textContent = isba + ' Iṣba’ (' + lat.toFixed(2) + '°)';
       document.getElementById('telRhumb').textContent = starRhumb;
       document.getElementById('customLatInput').value = lat;
       document.getElementById('customLonInput').value = lon;
@@ -973,20 +1044,38 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
     }
 
     function showAllCaliphatePolygons() {
+      currentAgeIndex = 0;
+      const slider = document.getElementById('caliphateTimelineSlider');
+      if (slider) slider.value = 0;
+      const readout = document.getElementById('caliphateSliderReadout');
+      if (readout) readout.textContent = 'ALL 14 AGES';
+
       document.querySelectorAll('.age-tab-btn').forEach(b => b.classList.remove('active'));
       const allBtn = document.getElementById('age-btn-0');
       if (allBtn) allBtn.classList.add('active');
       document.querySelectorAll('.caliph-poly').forEach(p => {
         p.style.display = 'block';
-        p.setAttribute('fill-opacity', '0.20');
+        p.setAttribute('fill-opacity', '0.22');
         p.setAttribute('stroke-width', '2.0');
       });
       document.getElementById('mapBannerCode').textContent = 'ALL 14 CALIPHATE AGES ACTIVE';
+      document.getElementById('mapBannerDirection').textContent = '🧭 N • S • E • W OMNI-DIRECTIONAL';
+      document.getElementById('mapBannerPinnacle').textContent = '🌟 PINNACLE & REBIRTH CONTINUUM';
       document.getElementById('mapBannerTitle').textContent = 'Pan-Islamic Civilizational Continuum (622 CE – Present • 14 Caliphate/Sultanate Ages & 57 Sovereign Nations)';
       document.getElementById('mapBannerDesc').textContent = 'Showing all 14 overlapping Caliphate domains from Al-Andalus and Morocco to Nusantara.';
     }
 
-    function selectCaliphateAge(ageIdx) {
+    function selectCaliphateAge(ageIdx, skipScroll) {
+      if (ageIdx <= 0) {
+        showAllCaliphatePolygons();
+        return;
+      }
+      currentAgeIndex = ageIdx;
+      const slider = document.getElementById('caliphateTimelineSlider');
+      if (slider) slider.value = ageIdx;
+      const readout = document.getElementById('caliphateSliderReadout');
+      if (readout) readout.textContent = 'AGE #' + String(ageIdx).padStart(2, '0') + ' / 14';
+
       document.querySelectorAll('.age-tab-btn').forEach(b => b.classList.remove('active'));
       const btn = document.getElementById('age-btn-' + ageIdx);
       if (btn) btn.classList.add('active');
@@ -994,20 +1083,66 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
       document.querySelectorAll('.caliph-poly').forEach(p => {
         if (p.id === 'caliph-poly-' + ageIdx) {
           p.style.display = 'block';
-          p.setAttribute('fill-opacity', '0.52');
-          p.setAttribute('stroke-width', '3.6');
+          p.setAttribute('fill-opacity', '0.56');
+          p.setAttribute('stroke-width', '3.8');
         } else {
           p.style.display = 'none';
         }
       });
 
       const info = CALIPHATE_AGES.find(x => x.idx === ageIdx);
+      const dyn = AGE_DYNAMICS[ageIdx] || { dir: '🧭 N • S • E • W', status: '🌟 HISTORICAL EPOCH' };
       if (info) {
         document.getElementById('mapBannerCode').textContent = info.code + ' • PEAK AREA: ' + info.area;
-        document.getElementById('mapBannerTitle').textContent = info.title + ' — ' + info.flag;
+        document.getElementById('mapBannerDirection').textContent = dyn.dir;
+        document.getElementById('mapBannerPinnacle').textContent = dyn.status;
+        document.getElementById('mapBannerTitle').textContent = info.title + ' (' + info.span + ') — ' + info.flag;
         document.getElementById('mapBannerDesc').textContent = info.vex + ' | Capitals & Ports: ' + info.caps;
       }
-      document.getElementById('caliphateMapExplorer').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (!skipScroll) {
+        document.getElementById('caliphateMapExplorer').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    function stepCaliphateAge(delta) {
+      let next = currentAgeIndex + delta;
+      if (next > 14) next = 0;
+      if (next < 0) next = 14;
+      selectCaliphateAge(next, true);
+    }
+
+    function onTimelineSliderInput(val) {
+      const idx = parseInt(val, 10) || 0;
+      selectCaliphateAge(idx, true);
+    }
+
+    function toggleCaliphateAutoPlay() {
+      const btn = document.getElementById('caliphateAutoPlayBtn');
+      if (caliphateAutoPlayTimer) {
+        clearInterval(caliphateAutoPlayTimer);
+        caliphateAutoPlayTimer = null;
+        if (btn) {
+          btn.textContent = '▶ Play Eras As They Happen';
+          btn.style.background = 'linear-gradient(135deg,#059669,#047857)';
+        }
+      } else {
+        if (currentAgeIndex === 0) selectCaliphateAge(1, true);
+        if (btn) {
+          btn.textContent = '⏸ Pause Era Playback';
+          btn.style.background = 'linear-gradient(135deg,#D97706,#B45309)';
+        }
+        caliphateAutoPlayTimer = setInterval(() => {
+          let next = currentAgeIndex + 1;
+          if (next > 14) next = 1;
+          selectCaliphateAge(next, true);
+        }, 2400);
+      }
+    }
+
+    function toggleMapVectorsOverlay() {
+      const g = document.getElementById('directionalVectorsLayer');
+      if (!g) return;
+      g.style.display = (g.style.display === 'none') ? 'block' : 'none';
     }
 
     function filterCountryZone(zone, btn) {
@@ -1210,7 +1345,7 @@ public final class IslamicCompassCaliphateMapsAndFlagsPortalGenerator {
     }
 
     private static String escapeAttr(String s) {
-        return escape(s).replace("'", "&#39;");
+        return escape(s).replace("'", "\u2019");
     }
 
     private static String sha256(String content) {
