@@ -488,7 +488,14 @@ public final class MasterNavigationAndIndexGenerator {
                         "Expansive Multi-HTML Suite Vol. III: Scientific Discoveries Alluded to in the Qur'an & Hadith Instantiated Through Science",
                         "01. Master Hubs & Architecture", "#38BDF8", 0, "#38BDF8",
                         "Qur'an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 & 57:25 (Supernova Iron Z=26)",
-                        "Maps 7 scientific domains where Qur'anic and Prophetic allusions catalyzed classical Islamic laboratory breakthroughs (Ibn Al-Haytham, Ibn Sahl, Ibn Al-Nafīs, Al-Khwārizmī, Al-Khāzinī) and modern empirical verification.")
+                        "Maps 7 scientific domains where Qur'anic and Prophetic allusions catalyzed classical Islamic laboratory breakthroughs (Ibn Al-Haytham, Ibn Sahl, Ibn Al-Nafīs, Al-Khwārizmī, Al-Khāzinī) and modern empirical verification."),
+
+                // Wing 01 / 64: Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses & Omani/Yemeni Coasting Caliphates
+                new PortalCatalogEntry(64, "islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html", "Maritime: Boating, Piracy, Currency, Astrolabe & Oman/Yemen",
+                        "Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses & The Omani and Yemeni Coasting Caliphates & Sultanates",
+                        "01. Master Hubs & Architecture", "#D4AF37", 0, "#D4AF37",
+                        "Qur'an 16:14, 55:24 & 18:71/79 • Sewn Dhows, Akriyat Al-Sufun, Qirāḍ/Ṣakk, Dīnār/Lārīn, Kamāl, 32-Star Compass, Oman & Yemen",
+                        "Comprehensive atlas of Islamic naval engineering, piracy & maritime law, venture mercantilism, gold/silver currency, Al-Idrīsī/Piri Reis maps, astrolabes, the Kamāl, Ibn Mājid's 32-point star compass, and Omani/Yemeni maritime polities.")
         );
     }
 
@@ -869,6 +876,7 @@ public final class MasterNavigationAndIndexGenerator {
     <div class="sov-global-bar">
       <div class="sov-wing-links">
         <a class="sov-pill sov-pill-master %s" href="index.html">🏠 Master Index (<span data-sov-total>%d</span>)</a>
+        <a class="sov-pill sov-pill-omnibus %s" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime, Astrolabe &amp; Oman/Yemen (#64)</a>
         <a class="sov-pill sov-pill-omnibus %s" href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
         <a class="sov-pill sov-pill-omnibus %s" href="quranic-timeline-expansion-vol1-chronology.html">🎓 Collegiate Thesis (#58–#60)</a>
         <a class="sov-pill sov-pill-omnibus %s" href="islamic-caliphates-sultans-shahs-dynasties-return.html">👑 Caliphates &amp; Return (#57)</a>
@@ -916,6 +924,7 @@ public final class MasterNavigationAndIndexGenerator {
         <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all %d portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
         <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
           <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (%d)</a>
+          <a class="sov-pill sov-pill-omnibus" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime &amp; Oman/Yemen (#64)</a>
           <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
           <a class="sov-pill sov-pill-omnibus" href="quranic-timeline-expansion-vol1-chronology.html">Collegiate Thesis (#58–#60)</a>
           <a class="sov-pill sov-pill-omnibus" href="conjoined-worlds-realms-principles-node-grid.html">3D Node-Art Grid (#50)</a>
@@ -1003,6 +1012,7 @@ public final class MasterNavigationAndIndexGenerator {
                 totalPortals,
                 current.fileName().equals("index.html") ? "sov-active" : "",
                 totalPortals,
+                current.fileName().equals("islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html") ? "sov-active" : "",
                 current.fileName().startsWith("islam-through-ages-") ? "sov-active" : "",
                 current.fileName().startsWith("quranic-timeline-expansion-") ? "sov-active" : "",
                 current.fileName().equals("islamic-caliphates-sultans-shahs-dynasties-return.html") ? "sov-active" : "",
@@ -1541,10 +1551,14 @@ public final class MasterNavigationAndIndexGenerator {
         the Disney/Daffy Animalism Microcosm, the 7 Historical Eras of Islamic Visual Style, the 3D/2.5D Node-Art Terrain Grid,
         Canonical Caravans &amp; Conquest, Greco-Roman Gods &amp; Titans Made Whole, Philosophy &amp; Alchemy, Western Frontier Modesty,
         Canonical Naming &amp; Sewer Economics, the 57 OIC Countries, Caliphates/Sultans/Shahs &amp; Promise of Return,
-        the 3-Volume Collegiate Qur'anic Timeline &amp; Properties Thesis (`#58–#60`), and the 3-Volume Suite on
-        <strong>Islam Through the Ages: Global Reception, Philosophical Connotations &amp; Scientific Discoveries Instantiated (`#61–#63`)</strong>.
+        the 3-Volume Collegiate Qur'anic Timeline &amp; Properties Thesis (`#58–#60`), the 3-Volume Suite on
+        Islam Through the Ages: Global Reception, Philosophical Connotations &amp; Scientific Discoveries Instantiated (`#61–#63`), and
+        <strong>Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses &amp; Omani/Yemeni Coasting Caliphates (`#64`)</strong>.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+        <a class="card-btn primary" style="padding:0.55rem 1.1rem;font-size:0.86rem;" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">
+          ⛵ Portal #64: Maritime, Piracy, Mercantilism, Currency, Maps, Astrolabes &amp; Oman/Yemen →
+        </a>
         <a class="card-btn primary" style="padding:0.55rem 1.1rem;font-size:0.86rem;" href="islam-through-ages-vol1-reception-history.html">
           🌍 Vol. I (#61): Islam Through the Ages &amp; Global Reception →
         </a>
@@ -1599,14 +1613,14 @@ public final class MasterNavigationAndIndexGenerator {
       <div class="preview-dock-header">
         <div>
           <span style="font-family:Consolas,monospace;font-size:0.75rem;color:#38BDF8;">LIVE EMBEDDED PORTAL WORKSPACE (CONTINUALLY UPDATED)</span>
-          <strong id="dockTitle" style="margin-left:0.6rem;color:#FDE68A;">islam-through-ages-vol3-scientific-discoveries-instantiated.html — #63 / %d: Scientific Discoveries Alluded to &amp; Instantiated Through Science</strong>
+          <strong id="dockTitle" style="margin-left:0.6rem;color:#FDE68A;">islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html — #64 / %d: Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses &amp; Omani/Yemeni Coasting Caliphates</strong>
         </div>
         <div style="display:flex;gap:0.45rem;">
-          <a id="dockFullLink" class="card-btn primary" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">Open Standalone Page ↗</a>
+          <a id="dockFullLink" class="card-btn primary" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">Open Standalone Page ↗</a>
           <button type="button" class="card-btn" onclick="toggleDockHeight()">↕ Expand/Collapse Height</button>
         </div>
       </div>
-      <iframe id="dockIframe" class="preview-iframe" style="height:740px;" src="islam-through-ages-vol3-scientific-discoveries-instantiated.html" title="Embedded Portal Preview"></iframe>
+      <iframe id="dockIframe" class="preview-iframe" style="height:740px;" src="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html" title="Embedded Portal Preview"></iframe>
     </section>
 
     <section class="control-panel">

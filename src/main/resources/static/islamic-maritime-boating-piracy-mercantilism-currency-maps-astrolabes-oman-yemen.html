@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses &amp; Omani/Yemeni Coasting Caliphates | Portal #64</title>
+  <style>
+    :root {
+      --bg-deep: #040812;
+      --bg-card: #0B1324;
+      --bg-alt: #101C35;
+      --gold: #D4AF37;
+      --cyan: #38BDF8;
+      --emerald: #10B981;
+      --rose: #F43F5E;
+      --text: #ECEFF4;
+      --muted: #94A3B8;
+      --border: rgba(255,255,255,0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background:
+        radial-gradient(circle at 12% 10%, rgba(56, 189, 248, 0.16), transparent 45%),
+        radial-gradient(circle at 88% 15%, rgba(212, 175, 55, 0.15), var(--bg-deep) 65%);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      padding-bottom: 4rem;
+    }
+    main { max-width: 1520px; margin: 1.6rem auto; padding: 0 1.4rem; }
+    .hero {
+      background: linear-gradient(135deg, #09152B 0%, #0F293A 50%, #1E182B 100%);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--gold);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 16px 44px rgba(0,0,0,0.55);
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.75rem; }
+    .tag {
+      display: inline-block;
+      font-family: 'Consolas', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.18rem 0.55rem;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--gold);
+      color: #FDE68A;
+    }
+    h1 { font-size: 2.05rem; color: #FFF; margin-bottom: 0.55rem; }
+    .ayat-box {
+      background: rgba(16, 185, 129, 0.09);
+      border-left: 4px solid var(--emerald);
+      padding: 0.9rem 1.2rem;
+      border-radius: 0 10px 10px 0;
+      margin: 1rem 0;
+      font-size: 0.94rem;
+      color: #D1FAE5;
+    }
+    .workbench {
+      background: var(--bg-card);
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 1.6rem;
+      margin-bottom: 2rem;
+    }
+    .wb-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr 390px;
+      gap: 1.25rem;
+      align-items: start;
+      margin-top: 1rem;
+    }
+    @media (max-width: 1180px) {
+      .wb-grid { grid-template-columns: 1fr; }
+    }
+    .port-list { display: flex; flex-direction: column; gap: 0.45rem; }
+    .port-btn {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.55rem 0.75rem;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-size: 0.82rem;
+    }
+    .port-btn:hover, .port-btn.active {
+      background: rgba(212, 175, 55, 0.18);
+      border-color: var(--gold);
+      color: #FFF;
+    }
+    .compass-stage {
+      background: #050914;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .telemetry-box {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.15rem;
+    }
+    .sec-title {
+      font-size: 1.4rem;
+      color: #FDE68A;
+      margin: 2.2rem 0 0.85rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid rgba(212, 175, 55, 0.35);
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+      gap: 1.2rem;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .card h3 { font-size: 1.08rem; color: #FFF; }
+    .sub-ar {
+      font-family: 'Consolas', monospace;
+      font-size: 0.8rem;
+      color: #FDE68A;
+      margin-bottom: 0.2rem;
+    }
+    .kv { font-size: 0.86rem; color: #CBD5E1; }
+    .kv strong { color: #F8FAFC; }
+    .kv.proof {
+      margin-top: auto;
+      padding-top: 0.55rem;
+      border-top: 1px dashed rgba(255,255,255,0.12);
+      color: #A7F3D0;
+      font-size: 0.82rem;
+    }
+  </style>
+<!-- SOV_CHROME_CSS_START -->
+<style id="sovereign-universal-nav-css">
+  .sov-global-wrap {
+    background: linear-gradient(90deg, #04060C 0%, #0C1324 50%, #04060C 100%);
+    border-bottom: 2px solid #D4AF37;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.65);
+  }
+  .sov-global-bar {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0.55rem 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+  }
+  .sov-wing-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.74rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+  .sov-pill:hover, .sov-pill.sov-active {
+    color: #FFFFFF;
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.22);
+  }
+  .sov-pill-master {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(16, 185, 129, 0.22));
+    border-color: #D4AF37;
+    color: #FDE68A;
+    font-weight: 700;
+  }
+  .sov-pill-omnibus {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.22));
+    border-color: #38BDF8;
+    color: #E0F2FE;
+    font-weight: 700;
+  }
+  .sov-pill-drawer {
+    background: #1E293B;
+    border-color: #F43F5E;
+    color: #FDA4AF;
+    font-weight: 700;
+  }
+  .sov-pill-counter {
+    border-color: #D4AF37;
+    background: rgba(212, 175, 55, 0.18);
+    color: #FDE68A;
+    font-family: 'Consolas', monospace;
+    font-weight: 700;
+  }
+  .sov-pill-sync {
+    border-color: #10B981;
+    background: rgba(16, 185, 129, 0.14);
+    color: #6EE7B7;
+    font-family: 'Consolas', monospace;
+    font-size: 0.71rem;
+  }
+  .sov-sister-ribbon {
+    background: rgba(10, 15, 28, 0.96);
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 0.45rem 1.2rem;
+  }
+  .sov-sister-inner {
+    max-width: 1560px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .sov-sister-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .sov-sister-label {
+    font-family: 'Consolas', monospace;
+    color: #FDE68A;
+    font-weight: 700;
+    margin-right: 0.25rem;
+  }
+  .sov-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(3, 5, 10, 0.88);
+    backdrop-filter: blur(6px);
+    z-index: 100000;
+    overflow-y: auto;
+    padding: 2rem 1.2rem;
+  }
+  .sov-modal-backdrop.open {
+    display: block;
+  }
+  .sov-modal-box {
+    max-width: 1380px;
+    margin: 0 auto;
+    background: #0B101D;
+    border: 2px solid #D4AF37;
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.85);
+  }
+  .sov-modal-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .sov-search-input {
+    flex: 1;
+    min-width: 260px;
+    background: #050811;
+    border: 1px solid #38BDF8;
+    color: #FFFFFF;
+    padding: 0.55rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.86rem;
+  }
+  .sov-drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 0.65rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.3rem;
+  }
+  .sov-drawer-item {
+    display: block;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-left: 4px solid #D4AF37;
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    text-decoration: none;
+    color: #E2E8F0;
+    transition: all 0.14s ease;
+  }
+  .sov-drawer-item:hover, .sov-drawer-item.current {
+    background: rgba(212, 175, 55, 0.16);
+    border-color: #D4AF37;
+    transform: translateY(-1px);
+  }
+  .sov-footer-wrap {
+    max-width: 1480px;
+    margin: 3rem auto 1rem auto;
+    padding: 1.5rem;
+    background: rgba(8, 12, 22, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-top: 3px solid #D4AF37;
+    border-radius: 14px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+  .sov-footer-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .sov-footer-cat h4 {
+    font-size: 0.78rem;
+    color: #FDE68A;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.25rem;
+  }
+  .sov-footer-cat a {
+    display: block;
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 0.76rem;
+    padding: 0.14rem 0;
+  }
+  .sov-footer-cat a:hover, .sov-footer-cat a.active-link {
+    color: #38BDF8;
+    font-weight: 600;
+  }
+</style>
+<!-- SOV_CHROME_CSS_END -->
+</head>
+<body>
+<!-- SOV_CHROME_TOP_START -->
+<div id="sovereign-universal-nav" class="sov-global-wrap" data-portal-seq="64" data-portal-total="64">
+  <div class="sov-global-bar">
+    <div class="sov-wing-links">
+      <a class="sov-pill sov-pill-master " href="index.html">🏠 Master Index (<span data-sov-total>64</span>)</a>
+      <a class="sov-pill sov-pill-omnibus sov-active" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime, Astrolabe &amp; Oman/Yemen (#64)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islam-through-ages-vol1-reception-history.html">🔬 Ages, Philosophy &amp; Science (#61–#63)</a>
+      <a class="sov-pill sov-pill-omnibus " href="quranic-timeline-expansion-vol1-chronology.html">🎓 Collegiate Thesis (#58–#60)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caliphates-sultans-shahs-dynasties-return.html">👑 Caliphates &amp; Return (#57)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-countries-history-canonical-embrace-atlas.html">🌍 57 OIC Countries (#56)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">🚰 Naming &amp; Sewer (#55)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-modesty-evolution-western-frontier-men-women.html">🧕 Western Modesty (#54)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">⚗️ Philosophy &amp; Alchemy (#53)</a>
+      <a class="sov-pill sov-pill-omnibus " href="greco-roman-gods-titans-daimones-islamic-judgment.html">⚖️ Greco-Roman &amp; Titans (#52)</a>
+      <a class="sov-pill sov-pill-omnibus " href="islamic-caravans-battles-conquest-chronicle.html">🐪 Caravans &amp; Fatḥ (#51)</a>
+      <a class="sov-pill sov-pill-omnibus " href="conjoined-worlds-realms-principles-node-grid.html">⛰️ 3D Node-Art Grid (#50)</a>
+      <a class="sov-pill sov-pill-omnibus " href="master-combined-omnibus.html?portal=islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">🧭 Combined Omnibus View</a>
+      <button type="button" class="sov-pill sov-pill-drawer" onclick="toggleSovDrawer()">⚡ All <span data-sov-total>64</span> Portals (Ctrl+K)</button>
+      <a class="sov-pill " href="order-1-white.html">🎨 7 Orders</a>
+      <a class="sov-pill " href="warlock-3d-sanctum.html">🏛️ 3D Sanctum &amp; Realms</a>
+      <a class="sov-pill " href="priory-negentropy-order.html">📐 Priory &amp; Planes</a>
+      <a class="sov-pill " href="zalim-1-fasad.html">⚠️ 7 Zalim</a>
+      <a class="sov-pill " href="worlds-hegemon-disorder.html">🌍 7 Worlds</a>
+      <a class="sov-pill " href="warlock-formation-dissolution-jafar-aladdin.html">🏺 Ja'far/Aladdin</a>
+      <a class="sov-pill " href="sequester-between-worlds.html">🧱 7 Sequesters</a>
+      <a class="sov-pill " href="interlocker-egg-binder-islam.html">🥚 Egg Binder</a>
+      <a class="sov-pill " href="warlock-apocrypha-islamic-theorems.html">📜 Apocrypha</a>
+      <a class="sov-pill " href="islamic-husbandry-sovereign-estate.html">🛡️ Husbandry</a>
+      <a class="sov-pill " href="way-of-the-flower-rose-garden-islam.html">🌹 Rose Garden</a>
+      <a class="sov-pill " href="disney-daffy-donald-islamic-microcosm.html">🦆 Disney/Daffy</a>
+      <a class="sov-pill " href="warlock-islamic-visual-eras-history.html">🕌 7 Visual Eras</a>
+      <a class="sov-pill " href="dependencies-report.html">📦 Dependencies</a>
+    </div>
+    <div class="sov-wing-links">
+      <a class="sov-pill" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html" title="Expansive Multi-HTML Suite Vol. III: Scientific Discoveries Alluded to in the Qur&#39;an &amp; Hadith Instantiated Through Science">← Prev: Ages Vol. III: Scientific Discoveries Instantiated</a>
+      <span id="sovPortalCounterBadge" class="sov-pill sov-pill-counter" title="Continually Synchronized Portal Index (#64 of 64)">#64 / 64</span>
+      <button type="button" id="sovContinualCycleBtn" class="sov-pill sov-pill-sync" onclick="toggleSovContinualCycle()" title="Click to toggle Continual Auto-Advance across all 64 portals">🔄 Continual Sync: #64/64</button>
+      <a class="sov-pill" href="index.html" title="Sovereign Master Index, Search &amp; 7-Row Cross-Wing Relational Matrix">Next: Master Index Hub →</a>
+    </div>
+  </div>
+  <div class="sov-sister-ribbon">
+  <div class="sov-sister-inner">
+    <div class="sov-sister-group">
+      <span class="sov-sister-label">7-FOLD SERIES QUICK JUMP:</span>
+      <a class="sov-pill" href="order-1-white.html"><span style="width:8px;height:8px;border-radius:50%;background:#F8F5E6;display:inline-block;"></span>Row #1: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-2-black.html"><span style="width:8px;height:8px;border-radius:50%;background:#A78BFA;display:inline-block;"></span>Row #2: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-3-sapphire.html"><span style="width:8px;height:8px;border-radius:50%;background:#38BDF8;display:inline-block;"></span>Row #3: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-4-gold.html"><span style="width:8px;height:8px;border-radius:50%;background:#D4AF37;display:inline-block;"></span>Row #4: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-5-crimson.html"><span style="width:8px;height:8px;border-radius:50%;background:#F43F5E;display:inline-block;"></span>Row #5: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-6-brass.html"><span style="width:8px;height:8px;border-radius:50%;background:#B87333;display:inline-block;"></span>Row #6: Order/Realm/Plane/Zalim/World</a><a class="sov-pill" href="order-7-emerald.html"><span style="width:8px;height:8px;border-radius:50%;background:#10B981;display:inline-block;"></span>Row #7: Order/Realm/Plane/Zalim/World</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="sovMegaDrawer" class="sov-modal-backdrop" onclick="if(event.target===this)toggleSovDrawer()">
+  <div class="sov-modal-box">
+    <div class="sov-modal-header">
+      <div>
+        <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">SOVEREIGN MASTER ATLAS • ALL <span data-sov-total>64</span> HTML PORTALS CONTINUALLY INTEGRATED</div>
+        <h2 style="font-size:1.25rem;color:#FFF;margin:0.15rem 0;">Instant Portal Switcher &amp; Cross-Wing Navigator (#64 / 64)</h2>
+      </div>
+      <input id="sovDrawerSearch" class="sov-search-input" type="text" placeholder="Type to filter all 64 portals by name, Qur'anic verse, philosopher, scientist, color, or file..." oninput="filterSovDrawer(this.value)">
+      <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
+        <a class="sov-pill sov-pill-master" href="index.html">Open Master Index (64)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">⛵ Maritime &amp; Oman/Yemen (#64)</a>
+        <a class="sov-pill sov-pill-omnibus" href="islam-through-ages-vol1-reception-history.html">Ages &amp; Science (#61–#63)</a>
+        <a class="sov-pill sov-pill-omnibus" href="quranic-timeline-expansion-vol1-chronology.html">Collegiate Thesis (#58–#60)</a>
+        <a class="sov-pill sov-pill-omnibus" href="conjoined-worlds-realms-principles-node-grid.html">3D Node-Art Grid (#50)</a>
+        <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">Open in Split Omnibus</a>
+        <button type="button" class="sov-pill" onclick="toggleSovDrawer()">✕ Close (Esc)</button>
+      </div>
+    </div>
+    <div id="sovDrawerGrid" class="sov-drawer-grid">
+      <a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="index.html" data-search="master index hub sovereign master index, search &amp; 7-row cross-wing relational matrix 01. master hubs &amp; architecture al-fihris al-jāmi&#39; • all 63 portals continually integrated index.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#01 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">index.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Master Index Hub</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Fihris Al-Jāmi' • All 63 Portals Continually Integrated</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="master-combined-omnibus.html" data-search="combined omnibus reader combined multi-portal omnibus workspace &amp; split-screen comparator 01. master hubs &amp; architecture al-majmū&#39; al-muwahhad • all 63 portals side-by-side &amp; sequential reader master-combined-omnibus.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#02 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">master-combined-omnibus.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Combined Omnibus Reader</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Majmū' Al-Muwahhad • All 63 Portals Side-by-Side &amp; Sequential Reader</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="dependencies-report.html" data-search="dependencies &amp; java 21+ audit master spring boot 3.4 &amp; java 21+/26 essentials dependency usage report 01. master hubs &amp; architecture spc state s0 • sha-256 artifact ledger (all 63 portals) dependencies-report.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#03 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">dependencies-report.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Dependencies &amp; Java 21+ Audit</div><div style="font-size:0.72rem;color:#CBD5E1;">SPC State S0 • SHA-256 Artifact Ledger (All 63 Portals)</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="order-1-white.html" data-search="order #1: white order #1 (warlock-1-white) — malakh-azal (sephirotic white #f8f5e6) 02. seven pre-prophetic color orders malakh-azal • qur&#39;an 2:102 &amp; 53:19-23 order-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#04 / 64 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #1: White</div><div style="font-size:0.72rem;color:#CBD5E1;">Malakh-Azal • Qur'an 2:102 &amp; 53:19-23</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="order-2-black.html" data-search="order #2: black order #2 (warlock-2-black) — katib al-qalam (abbasid black #141416) 02. seven pre-prophetic color orders kātib al-qalam • qur&#39;an 68:1 &amp; 24:22 order-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#05 / 64 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #2: Black</div><div style="font-size:0.72rem;color:#CBD5E1;">Kātib Al-Qalam • Qur'an 68:1 &amp; 24:22</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="order-3-sapphire.html" data-search="order #3: sapphire order #3 (warlock-3-sapphire) — yored ha-merkabah (babylonian sapphire #0f2c59) 02. seven pre-prophetic color orders yored ha-merkabah • qur&#39;an 6:75-79 &amp; 53:1-18 order-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#06 / 64 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #3: Sapphire</div><div style="font-size:0.72rem;color:#CBD5E1;">Yored Ha-Merkabah • Qur'an 6:75-79 &amp; 53:1-18</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="order-4-gold.html" data-search="order #4: gold order #4 (warlock-4-gold) — shahid al-alast (covenant gold #d4af37) 02. seven pre-prophetic color orders shāhid al-alast • qur&#39;an 7:172 &amp; 3:67 order-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#07 / 64 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #4: Gold</div><div style="font-size:0.72rem;color:#CBD5E1;">Shāhid Al-Alast • Qur'an 7:172 &amp; 3:67</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="order-5-crimson.html" data-search="order #5: crimson order #5 (warlock-5-crimson) — saraph ha-ritzpah (seraphic crimson #8b0000) 02. seven pre-prophetic color orders saraph ha-ritzpah • qur&#39;an 72:8-9 &amp; 25:1 order-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#08 / 64 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #5: Crimson</div><div style="font-size:0.72rem;color:#CBD5E1;">Saraph Ha-Ritzpah • Qur'an 72:8-9 &amp; 25:1</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="order-6-brass.html" data-search="order #6: brass order #6 (warlock-6-brass) — ba&#39;al ha-nechoshet (solomonic brass #b87333) 02. seven pre-prophetic color orders ba&#39;al ha-nechoshet • qur&#39;an 2:102 &amp; 34:12 order-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#09 / 64 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #6: Brass</div><div style="font-size:0.72rem;color:#CBD5E1;">Ba'al Ha-Nechoshet • Qur'an 2:102 &amp; 34:12</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="order-7-emerald.html" data-search="order #7: emerald order #7 (warlock-7-emerald) — wali al-ghaib (khidrian emerald #006b54) 02. seven pre-prophetic color orders walī al-ghaib • qur&#39;an 18:65 &amp; 9:108 order-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#10 / 64 • 02. Seven Pre-Prophetic Color Orders</span><code style="color:#38BDF8;">order-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Order #7: Emerald</div><div style="font-size:0.72rem;color:#CBD5E1;">Walī Al-Ghaib • Qur'an 18:65 &amp; 9:108</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="warlock-3d-sanctum.html" data-search="3d sanctum master interactive 3d seven-realm warlock sanctum &amp; celestial geometry 03. 3d sanctum &amp; seven realms al-haykal al-handasī • interactive webgl/canvas 3d warlock-3d-sanctum.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#11 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">warlock-3d-sanctum.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Sanctum Master</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Haykal Al-Handasī • Interactive WebGL/Canvas 3D</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="realm-1-white.html" data-search="realm #1: &#39;aravot realm #1 (white #f8f5e6) — &#39;aravot / sidrat al-muntaha 03. 3d sanctum &amp; seven realms seventh heaven • 390nm alabaster realm-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#12 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #1: 'Aravot</div><div style="font-size:0.72rem;color:#CBD5E1;">Seventh Heaven • 390nm Alabaster</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="realm-2-black.html" data-search="realm #2: makhon realm #2 (black #141416) — makhon / bayt al-qalam 03. 3d sanctum &amp; seven realms hidden ink treasury • 405nm obsidian realm-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#13 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #2: Makhon</div><div style="font-size:0.72rem;color:#CBD5E1;">Hidden Ink Treasury • 405nm Obsidian</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="realm-3-sapphire.html" data-search="realm #3: zevul realm #3 (sapphire #0f2c59) — zevul / al-bayt al-ma&#39;mur 03. 3d sanctum &amp; seven realms sapphire pavement • 465nm lapis realm-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#14 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #3: Zevul</div><div style="font-size:0.72rem;color:#CBD5E1;">Sapphire Pavement • 465nm Lapis</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="realm-4-gold.html" data-search="realm #4: shehaqim realm #4 (gold #d4af37) — shehaqim / diwan al-mithaq 03. 3d sanctum &amp; seven realms golden covenant court • 580nm amber-gold realm-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#15 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #4: Shehaqim</div><div style="font-size:0.72rem;color:#CBD5E1;">Golden Covenant Court • 580nm Amber-Gold</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="realm-5-crimson.html" data-search="realm #5: ma&#39;on realm #5 (crimson #8b0000) — ma&#39;on / rasad ash-shuhub 03. 3d sanctum &amp; seven realms seraphic garrison • 650nm crimson realm-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#16 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #5: Ma'on</div><div style="font-size:0.72rem;color:#CBD5E1;">Seraphic Garrison • 650nm Crimson</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="realm-6-brass.html" data-search="realm #6: raqia&#39; realm #6 (brass #b87333) — raqia&#39; / madinat an-nuhas 03. 3d sanctum &amp; seven realms city of brass • 605nm burnished brass realm-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#17 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #6: Raqia'</div><div style="font-size:0.72rem;color:#CBD5E1;">City of Brass • 605nm Burnished Brass</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="realm-7-emerald.html" data-search="realm #7: vilon realm #7 (emerald #006b54) — vilon / majma&#39; al-bahrayn 03. 3d sanctum &amp; seven realms junction of the two seas • 520nm emerald realm-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#18 / 64 • 03. 3D Sanctum &amp; Seven Realms</span><code style="color:#38BDF8;">realm-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Realm #7: Vilon</div><div style="font-size:0.72rem;color:#CBD5E1;">Junction of the Two Seas • 520nm Emerald</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="priory-negentropy-order.html" data-search="negentropic priory atlas the negentropic priory (sigma -1n &amp; 0n beta): ordering the 7 warlocks 04. negentropic priory &amp; seven planes sigma -1n &amp; 0n beta • δh = 0.000 bits priory-negentropy-order.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#19 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">priory-negentropy-order.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Negentropic Priory Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Sigma -1n &amp; 0n Beta • ΔH = 0.000 bits</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="plane-1-white.html" data-search="plane #1: adam kadmon / lahut plane #1 (white #f8f5e6) — olam adam kadmon / hadrat al-lahut 04. negentropic priory &amp; seven planes priory seat i • c_p = 1.62 plane-1-white.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#20 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-1-white.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #1: Adam Kadmon / Lahut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat I • C_p = 1.62</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="plane-2-black.html" data-search="plane #2: malbush / al-qalam plane #2 (black #141416) — olam ha-malbush / hadrat al-lawh wa al-qalam 04. negentropic priory &amp; seven planes priory seat vi • c_p = 1.38 plane-2-black.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#21 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-2-black.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #2: Malbush / Al-Qalam</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VI • C_p = 1.38</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="plane-3-sapphire.html" data-search="plane #3: beri&#39;ah / jabarut plane #3 (sapphire #0f2c59) — olam ha-beri&#39;ah / &#39;alam al-jabarut 04. negentropic priory &amp; seven planes priory seat iv • c_p = 1.44 plane-3-sapphire.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#22 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-3-sapphire.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #3: Beri'ah / Jabarut</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat IV • C_p = 1.44</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="plane-4-gold.html" data-search="plane #4: atzilut / al-arwah plane #4 (gold #d4af37) — olam ha-atzilut / &#39;alam al-arwah 04. negentropic priory &amp; seven planes priory seat ii • c_p = 1.54 plane-4-gold.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#23 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-4-gold.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #4: Atzilut / Al-Arwah</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat II • C_p = 1.54</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="plane-5-crimson.html" data-search="plane #5: tohu / ash-shuhub plane #5 (crimson #8b0000) — olam ha-tohu / falak ash-shuhub 04. negentropic priory &amp; seven planes priory seat vii • c_p = 1.35 plane-5-crimson.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#24 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-5-crimson.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #5: Tohu / Ash-Shuhub</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat VII • C_p = 1.35</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="plane-6-brass.html" data-search="plane #6: yetzirah / al-marij plane #6 (brass #b87333) — olam ha-yetzirah / &#39;alam al-marij 04. negentropic priory &amp; seven planes priory seat v • c_p = 1.40 plane-6-brass.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#25 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-6-brass.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #6: Yetzirah / Al-Marij</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat V • C_p = 1.40</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="plane-7-emerald.html" data-search="plane #7: tikkun / al-mithal plane #7 (emerald #006b54) — olam ha-tikkun / &#39;alam al-mithal wa al-barzakh 04. negentropic priory &amp; seven planes priory seat iii • c_p = 1.48 plane-7-emerald.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#26 / 64 • 04. Negentropic Priory &amp; Seven Planes</span><code style="color:#38BDF8;">plane-7-emerald.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Plane #7: Tikkun / Al-Mithal</div><div style="font-size:0.72rem;color:#CBD5E1;">Priory Seat III • C_p = 1.48</div></a><a class="sov-drawer-item" style="border-left-color:#EF4444;" href="zalim-1-fasad.html" data-search="zalim #1: al-fasad zalim #1 (zalim-1-fasad) — mufsid al-ard (ecological &amp; ritual disorder) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:204-205 • al-fasad fi al-ard zalim-1-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#27 / 64 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-1-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #1: Al-Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:204-205 • Al-Fasad fi Al-Ard</div></a><a class="sov-drawer-item" style="border-left-color:#EC4899;" href="zalim-2-fahishah.html" data-search="zalim #2: al-fahishah zalim #2 (zalim-2-fahishah) — da&#39;i al-fahishah (immodesty &amp; tabarruj) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 7:28 &amp; 24:19 • al-fahishah zalim-2-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#28 / 64 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-2-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #2: Al-Fahishah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:28 &amp; 24:19 • Al-Fahishah</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="zalim-3-baghy.html" data-search="zalim #3: al-baghy (nimrod) zalim #3 (zalim-3-baghy) — jabbar an-namrud (tyrannical counter-hegemony) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:258 &amp; 21:68-69 • al-baghy zalim-3-baghy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#29 / 64 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-3-baghy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #3: Al-Baghy (Nimrod)</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:68-69 • Al-Baghy</div></a><a class="sov-drawer-item" style="border-left-color:#F97316;" href="zalim-4-fitnah.html" data-search="zalim #4: al-fitnah zalim #4 (zalim-4-fitnah) — nafikh al-fitnah (sectarian schism &amp; sedition) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:191 &amp; 3:103 • al-fitnah zalim-4-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#30 / 64 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-4-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #4: Al-Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:191 &amp; 3:103 • Al-Fitnah</div></a><a class="sov-drawer-item" style="border-left-color:#EAB308;" href="zalim-5-hawa.html" data-search="zalim #5: al-hawa zalim #5 (zalim-5-hawa) — &#39;abid al-hawa (deification of caprice) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 45:23 &amp; 25:43 • ittiba&#39; al-hawa zalim-5-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#31 / 64 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-5-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #5: Al-Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 45:23 &amp; 25:43 • Ittiba' Al-Hawa</div></a><a class="sov-drawer-item" style="border-left-color:#14B8A6;" href="zalim-6-jibt.html" data-search="zalim #6: al-jibt &amp; taghut zalim #6 (zalim-6-jibt) — kahin al-jibt (sorcerous idolatry &amp; azar&#39;s guild) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 4:51 &amp; 21:57-58 • al-jibt wa at-taghut zalim-6-jibt.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#32 / 64 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-6-jibt.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #6: Al-Jibt &amp; Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:51 &amp; 21:57-58 • Al-Jibt wa At-Taghut</div></a><a class="sov-drawer-item" style="border-left-color:#94A3B8;" href="zalim-7-zulm.html" data-search="zalim #7: masjid ad-dirar zalim #7 (zalim-7-zulm) — imam az-zalimin (counter-sanctuary subversion) 05. seven wrongdoer (az-zalimun) profiles qur&#39;an 2:124 &amp; 9:107-109 • masjid ad-dirar zalim-7-zulm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#33 / 64 • 05. Seven Wrongdoer (Az-Zalimun) Profiles</span><code style="color:#38BDF8;">zalim-7-zulm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Zalim #7: Masjid Ad-Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:124 &amp; 9:107-109 • Masjid Ad-Dirar</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="worlds-hegemon-disorder.html" data-search="7 worlds master atlas master atlas: the 7 islamic worlds of hegemon (al-muhaymin) &amp; disorder (al-fasad) 06. seven islamic worlds of hegemon &amp; disorder al-muhaymin vs. al-fasad • 3d dual-hemisphere globe worlds-hegemon-disorder.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#34 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">worlds-hegemon-disorder.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Worlds Master Atlas</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Muhaymin vs. Al-Fasad • 3D Dual-Hemisphere Globe</div></a><a class="sov-drawer-item" style="border-left-color:#F8F5E6;" href="world-1-mizan-fasad.html" data-search="world #1: amanah vs. fasad world #1 — &#39;alam al-amanah wa al-fasad (trust vs. ecological disorder) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 14:35 &amp; 2:205 • order #1 vs. zalim #1 world-1-mizan-fasad.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#35 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-1-mizan-fasad.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #1: Amanah vs. Fasad</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 14:35 &amp; 2:205 • Order #1 vs. Zalim #1</div></a><a class="sov-drawer-item" style="border-left-color:#A78BFA;" href="world-2-haya-fahishah.html" data-search="world #2: haya&#39; vs. tabarruj world #2 — &#39;alam al-haram wa at-tabarruj (modesty vs. immodesty) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 7:26-28 • order #2 vs. zalim #2 world-2-haya-fahishah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#36 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-2-haya-fahishah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #2: Haya' vs. Tabarruj</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26-28 • Order #2 vs. Zalim #2</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="world-3-babil-namrud.html" data-search="world #3: ibrahim vs. namrud world #3 — &#39;alam babil wa al-jabbarin (cool-fire sanctuary vs. nimrod) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:258 &amp; 21:69 • order #3 vs. zalim #3 world-3-babil-namrud.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#37 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-3-babil-namrud.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #3: Ibrahim vs. Namrud</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:258 &amp; 21:69 • Order #3 vs. Zalim #3</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="world-4-ummah-fitnah.html" data-search="world #4: ummah vs. fitnah world #4 — &#39;alam al-ummah al-wahidah wa al-fitnah (unity vs. schism) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 21:92 &amp; 3:103 • order #4 vs. zalim #4 world-4-ummah-fitnah.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#38 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-4-ummah-fitnah.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #4: Ummah vs. Fitnah</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:92 &amp; 3:103 • Order #4 vs. Zalim #4</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="world-5-furqan-hawa.html" data-search="world #5: furqan vs. hawa world #5 — &#39;alam al-furqan wa al-hawa (revelation vs. caprice) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 5:48 &amp; 45:23 • order #5 vs. zalim #5 world-5-furqan-hawa.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#39 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-5-furqan-hawa.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #5: Furqan vs. Hawa</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 5:48 &amp; 45:23 • Order #5 vs. Zalim #5</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="world-6-tawhid-taghut.html" data-search="world #6: tawhid vs. taghut world #6 — &#39;alam al-&#39;urwah al-wuthqa wa at-taghut (iconoclasm vs. idols) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 2:256 &amp; 21:58 • order #6 vs. zalim #6 world-6-tawhid-taghut.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#40 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-6-tawhid-taghut.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #6: Tawhid vs. Taghut</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 2:256 &amp; 21:58 • Order #6 vs. Zalim #6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="world-7-taqwa-dirar.html" data-search="world #7: taqwa vs. dirar world #7 — &#39;alam bunyan at-taqwa wa juruf al-har (taqwa vs. counter-mosque) 06. seven islamic worlds of hegemon &amp; disorder qur&#39;an 9:107-109 • order #7 vs. zalim #7 world-7-taqwa-dirar.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#41 / 64 • 06. Seven Islamic Worlds of Hegemon &amp; Disorder</span><code style="color:#38BDF8;">world-7-taqwa-dirar.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">World #7: Taqwa vs. Dirar</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 9:107-109 • Order #7 vs. Zalim #7</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="warlock-formation-dissolution-jafar-aladdin.html" data-search="ja&#39;far &amp; aladdin qumqum islamic warlock formation (ja&#39;far / istidraj) &amp; dissolution (&#39;ala&#39; ad-din / qumqum) 07. warlock formation, dissolution &amp; inter-world sequesters istidrāj (qur&#39;an 6:44) -&gt; qumqum sulaymānī (21:18) warlock-formation-dissolution-jafar-aladdin.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#42 / 64 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">warlock-formation-dissolution-jafar-aladdin.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ja'far &amp; Aladdin Qumqum</div><div style="font-size:0.72rem;color:#CBD5E1;">Istidrāj (Qur'an 6:44) -&gt; Qumqum Sulaymānī (21:18)</div></a><a class="sov-drawer-item" style="border-left-color:#B87333;" href="sequester-between-worlds.html" data-search="7 inter-world sequesters the 7 inter-world sequesters (al-hijr al-mahjur &amp; sur al-hadid) 07. warlock formation, dissolution &amp; inter-world sequesters barzakh (55:19-20) &amp; sūr al-ḥadīd (18:96-97) sequester-between-worlds.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#43 / 64 • 07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</span><code style="color:#38BDF8;">sequester-between-worlds.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Inter-World Sequesters</div><div style="font-size:0.72rem;color:#CBD5E1;">Barzakh (55:19-20) &amp; Sūr Al-Ḥadīd (18:96-97)</div></a><a class="sov-drawer-item" style="border-left-color:#FBBF24;" href="interlocker-egg-binder-islam.html" data-search="egg-in-baking intelocketer the islamic intelocketer (al-murabbit al-kalim): egg-in-baking emulsifier &amp; al-a&#39;raf 08. the islamic egg-in-baking intelocketer qur&#39;an 37:49 (bayḍun maknūn) &amp; 7:46-48 (al-a&#39;rāf) interlocker-egg-binder-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#44 / 64 • 08. The Islamic Egg-in-Baking Intelocketer</span><code style="color:#38BDF8;">interlocker-egg-binder-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Egg-in-Baking Intelocketer</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 37:49 (Bayḍun Maknūn) &amp; 7:46-48 (Al-A'rāf)</div></a><a class="sov-drawer-item" style="border-left-color:#C084FC;" href="warlock-apocrypha-islamic-theorems.html" data-search="warlock apocrypha &amp; theorems the warlock apocrypha &amp; 5 islamic theological philosophy theorems on western modernity 09. the warlock apocrypha &amp; modernity theorems al-ghazālī • ibn khaldūn • mullā ṣadrā • al-attas • hallaq warlock-apocrypha-islamic-theorems.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#45 / 64 • 09. The Warlock Apocrypha &amp; Modernity Theorems</span><code style="color:#38BDF8;">warlock-apocrypha-islamic-theorems.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Warlock Apocrypha &amp; Theorems</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Ghazālī • Ibn Khaldūn • Mullā Ṣadrā • Al-Attas • Hallaq</div></a><a class="sov-drawer-item" style="border-left-color:#34D399;" href="islamic-husbandry-sovereign-estate.html" data-search="vanguard husbandry estate islamic action-based vanguard husbandry (al-qiwamah al-khadimah) &amp; husbandrystate 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-event simulation islamic-husbandry-sovereign-estate.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#46 / 64 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-husbandry-sovereign-estate.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vanguard Husbandry Estate</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 4:4, 4:34, 28:25-26 &amp; 76:9 • 18-Event Simulation</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="way-of-the-flower-rose-garden-islam.html" data-search="flower, rose &amp; chahar bagh the islamic way of the flower (az-zahrah), the rose (al-wardah), the cultivating hand &amp; garden 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 55:37 (wardatan ka-ad-dihān), 3:37 &amp; 47:15 way-of-the-flower-rose-garden-islam.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#47 / 64 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">way-of-the-flower-rose-garden-islam.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Flower, Rose &amp; Chahar Bagh</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 55:37 (Wardatan ka-ad-Dihān), 3:37 &amp; 47:15</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="disney-daffy-donald-islamic-microcosm.html" data-search="disney/daffy &amp; jungle microcosm islamic animalism &amp; husbandry microcosm: donald, daffy, daisy &amp; the jungle book 11. islamic animalism &amp; visual history atlases qur&#39;an 6:38 (umamun amthālukum) • kalīlah wa dimnah disney-daffy-donald-islamic-microcosm.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#48 / 64 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">disney-daffy-donald-islamic-microcosm.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Disney/Daffy &amp; Jungle Microcosm</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 6:38 (Umamun Amthālukum) • Kalīlah wa Dimnah</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="warlock-islamic-visual-eras-history.html" data-search="7 islamic visual eras &amp; ai art warlock visuals across every era of islamic history: ai art plates &amp; sacred geometry 11. islamic animalism &amp; visual history atlases eras i–vii: bābil/saba&#39; to neo-islamic ai cyber-geometry warlock-islamic-visual-eras-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#49 / 64 • 11. Islamic Animalism &amp; Visual History Atlases</span><code style="color:#38BDF8;">warlock-islamic-visual-eras-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">7 Islamic Visual Eras &amp; AI Art</div><div style="font-size:0.72rem;color:#CBD5E1;">Eras I–VII: Bābil/Saba' to Neo-Islamic AI Cyber-Geometry</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="conjoined-worlds-realms-principles-node-grid.html" data-search="3d node-art terrain grid (meridian guard) conjoined worlds, realms &amp; principles: 3d/2.5d islamic node-art terrain grid &amp; color guard of the meridian 01. master hubs &amp; architecture ḥaras al-alwān li-khaṭṭ al-mīzān • 7x7 (49-node) 3d heightmap conjoined-worlds-realms-principles-node-grid.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#50 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">conjoined-worlds-realms-principles-node-grid.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">3D Node-Art Terrain Grid (Meridian Guard)</div><div style="font-size:0.72rem;color:#CBD5E1;">Ḥaras Al-Alwān li-Khaṭṭ Al-Mīzān • 7x7 (49-Node) 3D Heightmap</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caravans-battles-conquest-chronicle.html" data-search="caravans, trade battles, fatḥ &amp; tadwīn canonical islamic caravans (ilaf), battles for trade (badr/qaradah), founding of conquest (al-fath) &amp; recording of conquest (tadwin al-maghazi / futuh al-buldan) 01. master hubs &amp; architecture qur&#39;an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • al-&#39;īr, al-maghāzī, al-fatḥ &amp; dīwān islamic-caravans-battles-conquest-chronicle.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#51 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caravans-battles-conquest-chronicle.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caravans, Trade Battles, Fatḥ &amp; Tadwīn</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 106:1-4, 8:7, 48:1 &amp; 59:7-10 • Al-'Īr, Al-Maghāzī, Al-Fatḥ &amp; Dīwān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="greco-roman-gods-titans-daimones-islamic-judgment.html" data-search="greco-roman gods &amp; titans made whole greco-roman gods, titans (titanomachy), 12 olympians, morpheus/oneiroi, 7 erotes &amp; 150+ minor spirits: islamic reception, judgment &amp; wholeness 01. master hubs &amp; architecture al-furqān (21:22, 12:39-40, 39:42) &amp; at-takmīl • titans, oneiroi, erotes &amp; daimones greco-roman-gods-titans-daimones-islamic-judgment.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#52 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">greco-roman-gods-titans-daimones-islamic-judgment.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Greco-Roman Gods &amp; Titans Made Whole</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Furqān (21:22, 12:39-40, 39:42) &amp; At-Takmīl • Titans, Oneiroi, Erotes &amp; Daimones</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html" data-search="philosophy, alchemy, theocracies &amp; socrates philosophy &amp; alchemy in islam: canonical adjustment to 7 theocracies &amp; theocrats, 5 socratic critiques &amp; 7 stages of message meaning shift 01. master hubs &amp; architecture al-falsafah, al-kīmiyā&#39; (55:7-9), lā kahanūta (9:31), suqrāṭ &amp; lafẓ maḥfūẓ (15:9) islamic-philosophy-alchemy-theocracies-socratic-messages.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#53 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-philosophy-alchemy-theocracies-socratic-messages.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Philosophy, Alchemy, Theocracies &amp; Socrates</div><div style="font-size:0.72rem;color:#CBD5E1;">Al-Falsafah, Al-Kīmiyā' (55:7-9), Lā Kahanūta (9:31), Suqrāṭ &amp; Lafẓ Maḥfūẓ (15:9)</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-modesty-evolution-western-frontier-men-women.html" data-search="men &amp; women modesty: western frontier how the modesty standard (al-haya&#39; &amp; libas at-taqwa) for men &amp; women changed across the western frontier &amp; expansions 10. islamic vanguard husbandry &amp; botanical sanctuary qur&#39;an 7:26, 24:30-31, 33:59 &amp; 7:199 (&#39;urf) • hijaz, maghreb lithām, al-andalus, oran 1504 &amp; modern west islamic-modesty-evolution-western-frontier-men-women.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#54 / 64 • 10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</span><code style="color:#38BDF8;">islamic-modesty-evolution-western-frontier-men-women.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Men &amp; Women Modesty: Western Frontier</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:26, 24:30-31, 33:59 &amp; 7:199 ('Urf) • Hijaz, Maghreb Lithām, Al-Andalus, Oran 1504 &amp; Modern West</div></a><a class="sov-drawer-item" style="border-left-color:#F59E0B;" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html" data-search="naming (261 wafq), indonesia, sewer &amp; calligraphy canonical naming in islam by region (zakeem malik mccaleb abjad 261 wafq), development of indonesia (87.2% muslim), sewer project structure, language &amp; calligraphy 01. master hubs &amp; architecture abjad 261 wafq (9×29) • nusantara (87.2% muslim) • jss sewer grid • jawi/pegon &amp; ibn muqlah islamic-naming-indonesia-infrastructure-language-calligraphy.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#55 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-naming-indonesia-infrastructure-language-calligraphy.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</div><div style="font-size:0.72rem;color:#CBD5E1;">Abjad 261 Wafq (9×29) • Nusantara (87.2% Muslim) • JSS Sewer Grid • Jawi/Pegon &amp; Ibn Muqlah</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islamic-countries-history-canonical-embrace-atlas.html" data-search="history of islamic countries &amp; canonical embrace the history of islamic countries (57 oic nations across 7 civilizational zones) &amp; how they canonically embrace being muslim 01. master hubs &amp; architecture diyār al-islām • 5 pathways of embrace (2:256) • 7 civilizational zones &amp; 6 institutional pillars islamic-countries-history-canonical-embrace-atlas.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#56 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-countries-history-canonical-embrace-atlas.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">History of Islamic Countries &amp; Canonical Embrace</div><div style="font-size:0.72rem;color:#CBD5E1;">Diyār Al-Islām • 5 Pathways of Embrace (2:256) • 7 Civilizational Zones &amp; 6 Institutional Pillars</div></a><a class="sov-drawer-item" style="border-left-color:#D4AF37;" href="islamic-caliphates-sultans-shahs-dynasties-return.html" data-search="caliphates, sultans, shahs &amp; promise of return the caliphates, the sultans, the shahs &amp; the dynasties instantiated &amp; dissolved by islam: origin, journey &amp; the promise of returning 01. master hubs &amp; architecture qur&#39;an 3:26, 24:55 &amp; 15:9 • musnad aḥmad 18406 • sahih muslim 145 • ibn khaldūn&#39;s 4-gen law islamic-caliphates-sultans-shahs-dynasties-return.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#57 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-caliphates-sultans-shahs-dynasties-return.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Caliphates, Sultans, Shahs &amp; Promise of Return</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 3:26, 24:55 &amp; 15:9 • Musnad Aḥmad 18406 • Sahih Muslim 145 • Ibn Khaldūn's 4-Gen Law</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="quranic-timeline-expansion-vol1-chronology.html" data-search="vol. i: qur&#39;anic timeline of expansion collegiate multi-html suite vol. i: canonical qur&#39;anic timeline of islamic expansion across 10 epochs 01. master hubs &amp; architecture qur&#39;an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 canonical epochs quranic-timeline-expansion-vol1-chronology.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#58 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol1-chronology.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. I: Qur'anic Timeline of Expansion</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:172, 2:127, 48:1, 59:7-10 &amp; 41:53 • 10 Canonical Epochs</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="quranic-timeline-expansion-vol2-properties-kingdoms.html" data-search="vol. ii: islamic properties, countries &amp; kingdoms collegiate multi-html suite vol. ii: canonical islamic properties (waqf, kharāj, &#39;ushr, ḥimā, mawāt), countries &amp; kingdoms 01. master hubs &amp; architecture qur&#39;an 7:128, 59:7 &amp; 4:7-12 • fiqh al-amwāl &amp; al-aqālīm as-sab&#39;ah quranic-timeline-expansion-vol2-properties-kingdoms.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#59 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol2-properties-kingdoms.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. II: Islamic Properties, Countries &amp; Kingdoms</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 7:128, 59:7 &amp; 4:7-12 • Fiqh Al-Amwāl &amp; Al-Aqālīm As-Sab'ah</div></a><a class="sov-drawer-item" style="border-left-color:#F43F5E;" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html" data-search="vol. iii: beauty of islam &amp; collegiate thesis collegiate multi-html suite vol. iii: the 7 dimensions of the beauty of islam &amp; 8-chapter collegiate universal thesis monograph 01. master hubs &amp; architecture sahih muslim 91 &amp; 8 • qur&#39;an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6 quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#60 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Vol. III: Beauty of Islam &amp; Collegiate Thesis</div><div style="font-size:0.72rem;color:#CBD5E1;">Sahih Muslim 91 &amp; 8 • Qur'an 12:18, 15:85, 16:90, 24:35, 39:23 &amp; 50:6</div></a><a class="sov-drawer-item" style="border-left-color:#10B981;" href="islam-through-ages-vol1-reception-history.html" data-search="ages vol. i: islam &amp; global reception expansive multi-html suite vol. i: islam through the ages &amp; its global civilizational reception across 7 historical ages 01. master hubs &amp; architecture qur&#39;an 19:1-36, 39:18 &amp; 41:53 • aksum, baghdad, toledo, maragheh, oxford, weimar &amp; modern labs islam-through-ages-vol1-reception-history.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#61 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol1-reception-history.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. I: Islam &amp; Global Reception</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 19:1-36, 39:18 &amp; 41:53 • Aksum, Baghdad, Toledo, Maragheh, Oxford, Weimar &amp; Modern Labs</div></a><a class="sov-drawer-item" style="border-left-color:#A855F7;" href="islam-through-ages-vol2-philosophical-connotations.html" data-search="ages vol. ii: philosophical connotations expansive multi-html suite vol. ii: the 7 philosophical connotations &amp; paradigms instantiated by islamic thought 01. master hubs &amp; architecture wājib al-wujūd • floating man • sunnat allāh • faṣl al-maqāl • al-i&#39;tibār • 4d motion • &#39;ilm al-&#39;umrān islam-through-ages-vol2-philosophical-connotations.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#62 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol2-philosophical-connotations.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. II: Philosophical Connotations</div><div style="font-size:0.72rem;color:#CBD5E1;">Wājib Al-Wujūd • Floating Man • Sunnat Allāh • Faṣl Al-Maqāl • Al-I'tibār • 4D Motion • 'Ilm Al-'Umrān</div></a><a class="sov-drawer-item" style="border-left-color:#38BDF8;" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html" data-search="ages vol. iii: scientific discoveries instantiated expansive multi-html suite vol. iii: scientific discoveries alluded to in the qur&#39;an &amp; hadith instantiated through science 01. master hubs &amp; architecture qur&#39;an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (supernova iron z=26) islam-through-ages-vol3-scientific-discoveries-instantiated.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#63 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islam-through-ages-vol3-scientific-discoveries-instantiated.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Ages Vol. III: Scientific Discoveries Instantiated</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 21:30, 51:47, 24:35, 23:12-14, 55:19-20, 78:7 &amp; 57:25 (Supernova Iron Z=26)</div></a><a class="sov-drawer-item current" style="border-left-color:#D4AF37;" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html" data-search="maritime: boating, piracy, currency, astrolabe &amp; oman/yemen boating, piracy, mercantilism, currency, maps, astrolabes, compasses &amp; the omani and yemeni coasting caliphates &amp; sultanates 01. master hubs &amp; architecture qur&#39;an 16:14, 55:24 &amp; 18:71/79 • sewn dhows, akriyat al-sufun, qirāḍ/ṣakk, dīnār/lārīn, kamāl, 32-star compass, oman &amp; yemen islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html"><div style="display:flex;justify-content:space-between;font-size:0.7rem;color:#94A3B8;"><span>#64 / 64 • 01. Master Hubs &amp; Architecture</span><code style="color:#38BDF8;">islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html</code></div><div style="font-weight:700;font-size:0.83rem;color:#F8FAFC;margin:0.15rem 0;">Maritime: Boating, Piracy, Currency, Astrolabe &amp; Oman/Yemen</div><div style="font-size:0.72rem;color:#CBD5E1;">Qur'an 16:14, 55:24 &amp; 18:71/79 • Sewn Dhows, Akriyat Al-Sufun, Qirāḍ/Ṣakk, Dīnār/Lārīn, Kamāl, 32-Star Compass, Oman &amp; Yemen</div></a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const SOVEREIGN_CURRENT_SEQ = 64;
+  const SOVEREIGN_TOTAL_PORTALS = 64;
+  const SOVEREIGN_NEXT_FILE = "index.html";
+  let sovContinualTimer = null;
+
+  function syncSovereignPortalCounts() {
+    const items = document.querySelectorAll('#sovDrawerGrid .sov-drawer-item');
+    const liveTotal = items.length > 0 ? items.length : SOVEREIGN_TOTAL_PORTALS;
+    document.querySelectorAll('[data-sov-total]').forEach(el => {
+      el.textContent = String(liveTotal);
+    });
+    const badge = document.getElementById('sovPortalCounterBadge');
+    if (badge) {
+      badge.textContent = '#' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + ' / ' + String(liveTotal).padStart(2, '0');
+    }
+  }
+
+  function toggleSovContinualCycle() {
+    const btn = document.getElementById('sovContinualCycleBtn');
+    const active = sessionStorage.getItem('sovContinualCycleActive') === '1';
+    if (active) {
+      sessionStorage.removeItem('sovContinualCycleActive');
+      if (sovContinualTimer) { clearTimeout(sovContinualTimer); sovContinualTimer = null; }
+      if (btn) btn.textContent = '🔄 Continual Sync: #' + String(SOVEREIGN_CURRENT_SEQ).padStart(2, '0') + '/' + String(SOVEREIGN_TOTAL_PORTALS).padStart(2, '0');
+    } else {
+      sessionStorage.setItem('sovContinualCycleActive', '1');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  }
+
+  function toggleSovDrawer() {
+    const el = document.getElementById('sovMegaDrawer');
+    if (!el) return;
+    el.classList.toggle('open');
+    if (el.classList.contains('open')) {
+      const inp = document.getElementById('sovDrawerSearch');
+      if (inp) { inp.value = ''; filterSovDrawer(''); inp.focus(); }
+    }
+  }
+  function filterSovDrawer(q) {
+    const query = (q || '').toLowerCase().trim();
+    document.querySelectorAll('#sovDrawerGrid .sov-drawer-item').forEach(el => {
+      const hay = el.getAttribute('data-search') || '';
+      el.style.display = (!query || hay.includes(query)) ? 'block' : 'none';
+    });
+  }
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      toggleSovDrawer();
+    } else if (e.key === 'Escape') {
+      const el = document.getElementById('sovMegaDrawer');
+      if (el && el.classList.contains('open')) el.classList.remove('open');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    syncSovereignPortalCounts();
+    if (sessionStorage.getItem('sovContinualCycleActive') === '1') {
+      const btn = document.getElementById('sovContinualCycleBtn');
+      if (btn) btn.textContent = '⏩ Auto-Cycling (6s) → ' + SOVEREIGN_NEXT_FILE;
+      sovContinualTimer = setTimeout(() => {
+        window.location.href = SOVEREIGN_NEXT_FILE;
+      }, 6000);
+    }
+  });
+</script>
+<!-- SOV_CHROME_TOP_END -->
+
+  <main>
+    <section class="hero">
+      <div class="badge-row">
+        <span class="tag">PORTAL #64 • ISLAMIC MARITIME CIVILIZATION &amp; THALASSOCRACY</span>
+        <span class="tag" style="border-color:#38BDF8;color:#38BDF8;">SEWN DHOWS, LATEEN SAILS &amp; FIQH AL-BAḤR</span>
+        <span class="tag" style="border-color:#10B981;color:#34D399;">QIRĀḌ (COMMENDA), ṢAKK (CHEQUE) &amp; DĪNĀR/DIRHAM/LĀRĪN</span>
+        <span class="tag" style="border-color:#F43F5E;color:#FDA4AF;">ASTROLABE, KAMĀL, 32-STAR COMPASS &amp; OMANI/YEMENI POLITIES</span>
+      </div>
+      <h1>Boating, Piracy, Mercantilism, Currency, Maps, Astrolabes, Compasses &amp; The Omani and Yemeni Coasting Caliphates</h1>
+      <p style="color:#CBD5E1;font-size:0.96rem;">
+        A canonical historical, legal, numismatic, and navigational synthesis of how Islam transformed the Mediterranean, Red Sea, Persian Gulf,
+        and Indian Ocean into a rule-of-law maritime commonwealth—from stitched-plank <strong>Omani China Dhows (<em>Al-Khayṭīyah</em>)</strong>
+        and <strong>Yemeni Red Sea <em>Sambūqs</em></strong> to <strong><em>Kitāb Akriyat Al-Sufun</em></strong> (anti-piracy and General Average jettison law),
+        <strong><em>Qirāḍ / Commenda</em></strong> venture capital, <strong>Caliphal Gold <em>Dīnārs</em> &amp; Hormuzi <em>Lārīns</em></strong>,
+        <strong>Al-Idrīsī &amp; Piri Reis cartography</strong>, the <strong>Universal Astrolabe &amp; Mariner's <em>Kamāl</em></strong>,
+        <strong>Aḥmad ibn Mājid's 32-Point Sidereal Compass Rose (<em>Dā'irat Al-Akhnān</em>)</strong>, and the great
+        <strong>Yemeni (Sulayhid, Rasulid, Tahirid, Mocha/Hadhrami)</strong> and <strong>Omani (Al-Julandā, First Imamate, Nabhani, Ya'rubid, Al Bu Sa'id)</strong> maritime states.
+      </p>
+      <div class="ayat-box">
+        <strong>Qur'an 16:14 &amp; 55:24 (The Divine Subjection of the Sea &amp; Mountain-Tall Sails):</strong><br>
+        <em>"And it is He who subjected the sea (Sakhkhara al-baḥra) that you may eat from it tender meat and extract from it ornaments which you wear; and you see the ships plowing through it (Wa tarā al-fulka mawākhira fīhi), and that you may seek of His bounty (Wa li-tabtaghū min faḍlihi)..."</em> (Surah An-Naḥl 16:14) •
+        <em>"And to Him belong the ships with raised sails (Al-Jawārī al-Munsha'āt) in the sea like mountains (ka-al-a'lām)."</em> (Surah Ar-Raḥmān 55:24)
+      </div>
+    </section>
+
+    <section class="workbench">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;">
+        <div>
+          <span class="tag">INTERACTIVE CELESTIAL &amp; MONSOON NAVIGATION WORKBENCH</span>
+          <h2 style="font-size:1.3rem;color:#FFF;margin-top:0.3rem;">
+            Ibn Mājid's 32-Point Star Compass (<em>Dā'irat Al-Akhnān</em>), Astrolabe &amp; Mariner's <em>Kamāl</em> Simulator
+          </h2>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.65rem;">
+          <label for="kamalSlider" style="font-family:Consolas,monospace;font-size:0.8rem;color:#FDE68A;">
+            Adjust Mariner's Kamāl Knot (Iṣba' Altitude of Polaris):
+          </label>
+          <input id="kamalSlider" type="range" min="1.0" max="11.5" step="0.25" value="11.0" oninput="onKamalSliderChange(this.value)">
+          <span id="kamalReadout" class="tag" style="font-size:0.84rem;">11.00 Iṣba'</span>
+        </div>
+      </div>
+
+      <div class="wb-grid">
+        <div class="port-list">
+          <div style="font-family:Consolas,monospace;font-size:0.75rem;color:#FDE68A;margin-bottom:0.2rem;">
+            SELECT OMANI, YEMENI OR INDIAN OCEAN PORT:
+          </div>
+          <button type="button" class="port-btn active" style="border-left:4px solid #D4AF37;" onclick="selectMaritimePort(0, this)"><strong>#1 Muscat &amp; Sohar (Oman)</strong><br><small style="color:#38BDF8;">Kamāl: 11.00 Iṣba' (23.61°)</small></button><button type="button" class="port-btn " style="border-left:4px solid #10B981;" onclick="selectMaritimePort(1, this)"><strong>#2 Sur &amp; Qalhāt (Oman)</strong><br><small style="color:#38BDF8;">Kamāl: 10.25 Iṣba' (22.56°)</small></button><button type="button" class="port-btn " style="border-left:4px solid #34D399;" onclick="selectMaritimePort(2, this)"><strong>#3 Dhofar — Mirbāṭ &amp; Salalah (Southern Oman)</strong><br><small style="color:#38BDF8;">Kamāl: 7.75 Iṣba' (17.01°)</small></button><button type="button" class="port-btn " style="border-left:4px solid #38BDF8;" onclick="selectMaritimePort(3, this)"><strong>#4 Al-Shiḥr &amp; Mukallā (Hadhramaut, Yemen)</strong><br><small style="color:#38BDF8;">Kamāl: 6.75 Iṣba' (14.75°)</small></button><button type="button" class="port-btn " style="border-left:4px solid #F59E0B;" onclick="selectMaritimePort(4, this)"><strong>#5 Aden ('Adan, Southern Yemen)</strong><br><small style="color:#38BDF8;">Kamāl: 5.00 Iṣba' (12.78°)</small></button><button type="button" class="port-btn " style="border-left:4px solid #F43F5E;" onclick="selectMaritimePort(5, this)"><strong>#6 Al-Mukhā / Mocha &amp; Zabīd (Red Sea Yemen)</strong><br><small style="color:#38BDF8;">Kamāl: 5.50 Iṣba' (13.32°)</small></button><button type="button" class="port-btn " style="border-left:4px solid #A855F7;" onclick="selectMaritimePort(6, this)"><strong>#7 Calicut / Kozhikode (Malabar Coast, India)</strong><br><small style="color:#38BDF8;">Kamāl: 4.50 Iṣba' (11.25°)</small></button><button type="button" class="port-btn " style="border-left:4px solid #EC4899;" onclick="selectMaritimePort(7, this)"><strong>#8 Zanzibar &amp; Kilwa (Swahili Coast / Omani East Africa)</strong><br><small style="color:#38BDF8;">Kamāl: 1.00 Iṣba' (-6.16°)</small></button>
+        </div>
+
+        <div class="compass-stage">
+          <svg id="starCompassSvg" viewBox="0 0 460 420" style="width:100%;max-width:450px;height:auto;">
+            <defs>
+              <radialGradient id="oceanGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#1E3A5F" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#050914" stop-opacity="1"/>
+              </radialGradient>
+            </defs>
+            <rect width="460" height="420" rx="12" fill="url(#oceanGlow)"/>
+            <!-- Outer Astrolabe Degree & 32-Rhumb Star Ring -->
+            <circle cx="230" cy="210" r="175" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+            <circle cx="230" cy="210" r="145" fill="none" stroke="rgba(56,189,248,0.45)" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <circle cx="230" cy="210" r="105" fill="none" stroke="rgba(212,175,55,0.35)" stroke-width="1"/>
+            <!-- Cardinal & Monsoon Axes -->
+            <line x1="230" y1="25" x2="230" y2="395" stroke="rgba(212,175,55,0.5)" stroke-width="1.5"/>
+            <line x1="45" y1="210" x2="415" y2="210" stroke="rgba(212,175,55,0.5)" stroke-width="1.5"/>
+            <line x1="100" y1="80" x2="360" y2="340" stroke="rgba(16,185,129,0.45)" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <line x1="360" y1="80" x2="100" y2="340" stroke="rgba(244,63,94,0.45)" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+            <!-- Star Labels -->
+            <text x="230" y="18" fill="#FDE68A" font-size="11" font-family="Consolas,monospace" text-anchor="middle" font-weight="bold">▲ N: AL-JĀH (POLARIS • 0°)</text>
+            <text x="230" y="412" fill="#FDA4AF" font-size="11" font-family="Consolas,monospace" text-anchor="middle" font-weight="bold">▼ S: AL-QUṬB AL-SUHAYLĪ (CANOPUS • 180°)</text>
+            <text x="448" y="214" fill="#38BDF8" font-size="10" font-family="Consolas,monospace" text-anchor="end" font-weight="bold">E: MAṬLA' AL-JAWZĀ' ►</text>
+            <text x="12" y="214" fill="#34D399" font-size="10" font-family="Consolas,monospace" text-anchor="start" font-weight="bold">◄ W: MAGHĪB</text>
+            <text x="368" y="74" fill="#6EE7B7" font-size="9.5" font-family="Consolas,monospace" text-anchor="middle">NE Monsoon (Azyab)</text>
+            <text x="95" y="355" fill="#FDE68A" font-size="9.5" font-family="Consolas,monospace" text-anchor="middle">SW Monsoon (Kaws)</text>
+
+            <!-- Rotating Magnetic Needle & Alidade Sight -->
+            <g id="compassNeedleGroup" transform="rotate(15, 230, 210)">
+              <polygon points="230,52 221,210 239,210" fill="#D4AF37" opacity="0.9"/>
+              <polygon points="230,368 221,210 239,210" fill="#38BDF8" opacity="0.75"/>
+              <circle cx="230" cy="210" r="11" fill="#0B1324" stroke="#D4AF37" stroke-width="3"/>
+            </g>
+
+            <!-- Kamal Horizon & Star Sight Overlay -->
+            <rect x="155" y="135" width="150" height="44" rx="4" fill="rgba(212,175,55,0.16)" stroke="#D4AF37" stroke-width="1.5"/>
+            <text id="svgKamalLabel" x="230" y="154" fill="#FFF" font-size="11" font-family="Consolas,monospace" text-anchor="middle" font-weight="bold">KAMĀL: 11.00 IṢBA'</text>
+            <text id="svgPortLabel" x="230" y="170" fill="#38BDF8" font-size="10" font-family="Consolas,monospace" text-anchor="middle">Muscat &amp; Sohar (23.61° N)</text>
+          </svg>
+        </div>
+
+        <div class="telemetry-box">
+          <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#38BDF8;">LIVE MU'ALLIM CELESTIAL &amp; MONSOON TELEMETRY</div>
+          <h3 id="telPortTitle" style="font-size:1.18rem;color:#FDE68A;margin:0.25rem 0;">#1 Muscat &amp; Sohar (Oman)</h3>
+          <div id="telPortAr" style="font-family:Consolas,monospace;font-size:0.84rem;color:#34D399;margin-bottom:0.65rem;">Masqaṭ wa Ṣuḥār (مسقط وصحار)</div>
+          <div class="kv" style="margin-bottom:0.45rem;"><strong>🌊 Coasting Zone:</strong> <span id="telZone">Omani Heartlands (Gulf of Oman)</span></div>
+          <div class="kv" style="margin-bottom:0.45rem;"><strong>⭐ Star Compass Rhumb (Al-Khunn):</strong> <span id="telRhumb">Maṭla' Al-Nisr Al-Ṭā'ir (Rising of Altair — E by N)</span></div>
+          <div class="kv" style="margin-bottom:0.45rem;"><strong>📏 Kamāl Altitude &amp; Latitude:</strong> <span id="telKamal" style="color:#FDE68A;font-family:Consolas,monospace;">11.00 Iṣba' → 23.61° Lat</span></div>
+          <div class="kv" style="margin-bottom:0.45rem;"><strong>🌬️ Monsoon Sailing Window (Al-Mawsim):</strong> <span id="telWind">NE Winter Monsoon (Al-Azyab / Kaws, Nov–Mar)</span></div>
+          <div class="kv"><strong>🪙 Cargoes &amp; Currency Standard:</strong> <span id="telTrade">Frankincense, Copper, Dates, Arabian Horses, Pearls • Abbasid Dīnār &amp; Omani Sa'īdī Riyāl</span></div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="sec-title">I. Canonical Boating &amp; Naval Architecture (<em>Ṣinā'at Al-Sufun</em>): Sewn Dhows, Lateen Sails &amp; War Galleys</h2>
+    <div class="grid-2">
+      <article class="card" style="border-top:4px solid #10B981;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#10B981;color:#10B981;">VESSEL CLASS #1</span>
+    <code style="font-size:0.75rem;color:#38BDF8;">Oman (Sohar, Muscat), Siraf, Basrah &amp; Yemeni Aden -&gt; Malabar, Malacca &amp; Canton (Khānfū)</code>
+  </div>
+  <h3>Abbasid &amp; Omani Sewn-Plank 'China Dhow' (Belitung Type)</h3>
+  <div class="sub-ar">Al-Khayṭīyah / Sufun Al-Ṣīn (السفن الخيطية / سفن الصين)</div>
+  <div class="kv"><strong> Hull &amp; Lateen/Sewn Engineering:</strong> Built of Malabar teak (Sāj) planks stitched edge-to-edge with coconut coir cordage (Qanbar) over wadding and waterproofed with shark/whale liver oil (Duhn Al-Qirsh) and lime pitch (Nūrah)—using ZERO iron nails so hulls flex over Red Sea coral reefs (Shi'āb Marjāniyyah) and heavy monsoon swells without splitting or rusting.</div>
+  <div class="kv"><strong>📦 Cargo &amp; Naval Role:</strong> Carried 60,000+ Changsha ceramics, gold/silver ingots, Omani frankincense, Basran cobalt-blue glazed jars, and pearls across the 10,000 km Sohar-to-Canton ocean highway.</div>
+  <div class="kv proof"><strong>📜 Canonical &amp; Archaeological Anchor:</strong> Qur'an 55:24 ('And to Him belong the ships with raised sails in the sea like mountains') • Belitung Shipwreck (c. 830 CE) &amp; Akhbār Al-Ṣīn wa Al-Hind (851 CE)</div>
+</article>
+<article class="card" style="border-top:4px solid #F59E0B;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F59E0B;color:#F59E0B;">VESSEL CLASS #2</span>
+    <code style="font-size:0.75rem;color:#38BDF8;">Yemen (Aden, Al-Mukhā/Mocha, Al-Shiḥr, Hodeidah), Hijaz (Jeddah) &amp; Horn of Africa (Zeila, Massawa)</code>
+  </div>
+  <h3>The Yemeni &amp; Red Sea Sambuk (Lateen-Rigged Reef Coaster)</h3>
+  <div class="sub-ar">Al-Sambūq Al-Yamanī (السمبوق اليمني)</div>
+  <div class="kv"><strong> Hull &amp; Lateen/Sewn Engineering:</strong> Features a curved, scimitar-like stempost (low draft forward) and a high, squared overhanging transom stern, rigged with two massive triangular Lateen (or settee) sails capable of tacking within 50 degrees of the fierce Red Sea northerly winds (Al-Shimāl).</div>
+  <div class="kv"><strong>📦 Cargo &amp; Naval Role:</strong> Premier coaster of the Red Sea coffee (Mocha Qahwah), spice, and Hajj pilgrim routes, threading treacherous coral archipelagos (Farasān and Dahlak).</div>
+  <div class="kv proof"><strong>📜 Canonical &amp; Archaeological Anchor:</strong> Rasulid Mulakhkhaṣ Al-Fiṭan (1411 CE, Aden) &amp; Ibn Mājid's Kitāb Al-Fawā'id (1490 CE)</div>
+</article>
+<article class="card" style="border-top:4px solid #D4AF37;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#D4AF37;color:#D4AF37;">VESSEL CLASS #3</span>
+    <code style="font-size:0.75rem;color:#38BDF8;">Muscat, Sur, Sohar, Hormuz, Gujarat (Surat/Calicut) &amp; Swahili Coast (Mombasa, Zanzibar)</code>
+  </div>
+  <h3>The Omani Deep-Sea Baghlah &amp; Ghanjah Merchant Galleon</h3>
+  <div class="sub-ar">Al-Baghlah &amp; Al-Ghunjah Al-'Umāniyyah (البغلة والغنجة العمانية)</div>
+  <div class="kv"><strong> Hull &amp; Lateen/Sewn Engineering:</strong> 200-to-500-ton deep-sea teak vessels with a high, richly carved quarter-gallery stern with five windows, a curved trefoil stemhead (on the Ghanjah), two or three masts carrying towering lateen/settee yards, and gunports for broadside cannon defense against pirates.</div>
+  <div class="kv"><strong>📦 Cargo &amp; Naval Role:</strong> Backbone of the Ya'rubid and Al Bu Sa'id Omani thalassocracy, transporting Arabian warhorses, dates, copper, cloves, ivory, and Indian textiles across the Arabian Sea.</div>
+  <div class="kv proof"><strong>📜 Canonical &amp; Archaeological Anchor:</strong> Omani Maritime Archives of Sur &amp; Muscat (17th–19th c. CE)</div>
+</article>
+<article class="card" style="border-top:4px solid #38BDF8;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#38BDF8;color:#38BDF8;">VESSEL CLASS #4</span>
+    <code style="font-size:0.75rem;color:#38BDF8;">Coasts of Oman (Al-Bāṭinah, Musandam, Dhofar), Persian Gulf &amp; Makran Coast</code>
+  </div>
+  <h3>The Omani Bādān High-Stern Coastal Sprinter</h3>
+  <div class="sub-ar">Al-Bādān Al-Musammāh (البدن العماني)</div>
+  <div class="kv"><strong> Hull &amp; Lateen/Sewn Engineering:</strong> Shallow-draft sewn and pegged double-ended coaster distinguished by a towering vertical sternpost (Finjān) and a rudder controlled by twin rope tackles (Sukkān bi-Al-Ḥibāl) rather than a tiller, allowing rapid beaching on open sandy shores without harbors.</div>
+  <div class="kv"><strong>📦 Cargo &amp; Naval Role:</strong> Rapid coastal cabotage, frankincense transport from Dhofar (Mirbāṭ/Ẓafār), pearl-bank logistics, and naval reconnaissance.</div>
+  <div class="kv proof"><strong>📜 Canonical &amp; Archaeological Anchor:</strong> Ibn Baṭṭūṭah's visit to Qalhāt &amp; Dhofar (1331 CE)</div>
+</article>
+<article class="card" style="border-top:4px solid #F43F5E;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F43F5E;color:#F43F5E;">VESSEL CLASS #5</span>
+    <code style="font-size:0.75rem;color:#38BDF8;">Mediterranean (Dār Al-Ṣinā'ah in Alexandria, Tunis, Acre, Istanbul) &amp; Red Sea (Suez, Jeddah, Aden)</code>
+  </div>
+  <h3>Caliphal, Ayyubid, Rasulid &amp; Ottoman War Galleys</h3>
+  <div class="sub-ar">Al-Shīnī wa Al-Ghurbān (الشيني والغربان الحربية)</div>
+  <div class="kv"><strong> Hull &amp; Lateen/Sewn Engineering:</strong> Oared and lateen-rigged warships (140–180 oars, twin lateen masts, reinforced ramming prow) equipped with marine archers, boarding bridges, and early naval artillery. The Arabic word 'Dār Al-Ṣinā'ah' (House of Naval Manufacturing) directly entered Italian and English as 'Arsenal'!</div>
+  <div class="kv"><strong>📦 Cargo &amp; Naval Role:</strong> Protected the Mediterranean and Red Sea against Crusader/Portuguese raids; Rasulid Sultans of Yemen stationed a permanent Shīnī squadron at Aden to escort Kārimī merchant convoys.</div>
+  <div class="kv proof"><strong>📜 Canonical &amp; Archaeological Anchor:</strong> Battle of the Masts (Dhāt Al-Ṣawārī, 34 AH / 655 CE), Saladin's Red Sea Fleet (1183 CE) &amp; Selman Reis at Jeddah/Aden (1517 CE)</div>
+</article>
+<article class="card" style="border-top:4px solid #A855F7;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#A855F7;color:#A855F7;">VESSEL CLASS #6</span>
+    <code style="font-size:0.75rem;color:#38BDF8;">Tigris-Euphrates, Nile, Mediterranean &amp; Red Sea</code>
+  </div>
+  <h3>Abbasid/Fatimid Naphtha Fire-Ships &amp; Cavalry Landing Transports</h3>
+  <div class="sub-ar">Al-Ḥarrāqah wa Al-Ṭarīdah (الحراقة والطريدة)</div>
+  <div class="kv"><strong> Hull &amp; Lateen/Sewn Engineering:</strong> Al-Ḥarrāqah carried pressurized copper siphons (Zarrāqāt Al-Nafṭ) projecting Greek fire / distilled petroleum naphtha coated with sulfur and quicklime (invented/refined by Callinicus and Al-Rāzī/Ḥasan al-Rammāḥ). Al-Ṭarīdah featured watertight stern doors and ramps holding 40 fully saddled horses ready to charge directly onto enemy beaches.</div>
+  <div class="kv"><strong>📦 Cargo &amp; Naval Role:</strong> Amphibious coastal landings, harbor defense, and riverine-oceanic naval projection.</div>
+  <div class="kv proof"><strong>📜 Canonical &amp; Archaeological Anchor:</strong> Ḥasan al-Rammāḥ, Al-Furūsiyyah wa Al-Manāṣib Al-Ḥarbiyyah (c. 1280 CE) &amp; Ibn Khaldūn on Islamic Admirals (Amīr Al-Baḥr -&gt; 'Admiral')</div>
+</article>
+
+    </div>
+
+    <h2 class="sec-title">II. Piracy (<em>Al-Ghaṣb</em>), Privateering (<em>Ghazw Al-Baḥr</em>), Islamic Maritime Law (<em>Kitāb Akriyat Al-Sufun</em>) &amp; Anti-Piracy Fleets</h2>
+    <div class="grid-2">
+      <article class="card" style="border-top:4px solid #10B981;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#10B981;color:#10B981;">MARITIME LAW &amp; ANTI-PIRACY #1</span>
+    <code style="font-size:0.74rem;color:#FDE68A;">Qur'anic Archetype • Surah Al-Kahf (18:71 &amp; 18:79)</code>
+  </div>
+  <h3>Al-Khiḍr &amp; The Pirate-King Who Seized Every Sound Ship by Force (Ghaṣb)</h3>
+  <div class="sub-ar">Taḥrīm Al-Ghaṣb Al-Baḥrī vs. Irtikāb Akhaff Al-Ḍararayn (Lesser of Two Harms) • Majma' Al-Baḥrayn (Junction of the Two Seas — Red Sea / Gulf of Suez &amp; Bab al-Mandab / Arabian Sea)</div>
+  <div class="kv"><strong>⚖️ Canonical Ruling &amp; Naval Action:</strong> When Moses and Al-Khiḍr boarded the boat of poor working mariners (Masākīn ya'malūna fī al-baḥr), Al-Khiḍr knocked out a plank to make the ship appear defective because 'behind them was a predatory king seizing every sound ship by piratical force (ya'khudhu kulla safīnatin ghaṣbā).' Islamic jurists derived from this verse both the absolute prohibition of piratical seizure (Ghaṣb) and the legal doctrine of inflicting a minor reversible property defect to save an entire vessel from piracy.</div>
+  <div class="kv proof"><strong>📜 Primary Source Proof:</strong> Qur'an 18:71 &amp; 18:79; Sahih al-Bukhari 4725</div>
+</article>
+<article class="card" style="border-top:4px solid #38BDF8;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#38BDF8;color:#38BDF8;">MARITIME LAW &amp; ANTI-PIRACY #2</span>
+    <code style="font-size:0.74rem;color:#FDE68A;">9th–10th Century CE (3rd–4th Century AH) • Córdoba, Qayrawān &amp; Alexandria</code>
+  </div>
+  <h3>Kitāb Akriyat Al-Sufun: The World's Earliest Codified Islamic Maritime &amp; Anti-Piracy Law</h3>
+  <div class="sub-ar">Fiqh Al-Baḥr, Ta'wīḍ Al-Taghrīq (General Average Jettison) &amp; Qaṭ' Al-Ṭarīq fī Al-Baḥr • Mediterranean, Red Sea &amp; Indian Ocean Shipping Lanes</div>
+  <div class="kv"><strong>⚖️ Canonical Ruling &amp; Naval Action:</strong> Codified by Maliki jurist Muḥammad ibn 'Umar al-Kinānī al-Andalusī in 'Kitāb Akriyat Al-Sufun wa Al-Nizā' bayna Ahlihā': 1) Sea pirates (Luṣūṣ Al-Baḥr) are legally prosecuted under Qur'an 5:33 (Ḥirābah); 2) If a ship is attacked by pirates or caught in a storm and cargo must be jettisoned to save the ship, ALL merchants on board share the loss proportionally according to the market value of their saved goods (General Average); 3) If pirates capture a ship, freight fees are suspended or prorated by distance sailed.</div>
+  <div class="kv proof"><strong>📜 Primary Source Proof:</strong> Kitāb Akriyat Al-Sufun (ed. Khalilieh); Qur'an 5:33 &amp; 16:14</div>
+</article>
+<article class="card" style="border-top:4px solid #D4AF37;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#D4AF37;color:#D4AF37;">MARITIME LAW &amp; ANTI-PIRACY #3</span>
+    <code style="font-size:0.74rem;color:#FDE68A;">807–860 CE (192–246 AH) • First Ibāḍī Imamate of Oman &amp; Socotra</code>
+  </div>
+  <h3>Imam Ghassān ibn 'Abdullāh's Shadhāt Coast Guard vs. The Bawārij Pirates</h3>
+  <div class="sub-ar">Ḥimāyat Al-Baḥr (Sovereign Sea-Lane Protection) &amp; Bawārij Suppression • Omani Coast (Sohar, Muscat, Sur), Socotra Island &amp; Mouth of the Indus/Kathiawar</div>
+  <div class="kv"><strong>⚖️ Canonical Ruling &amp; Naval Action:</strong> When piratical fleets known as Al-Bawārij raided merchant dhows sailing between Basrah, Sohar, and India/China, Imam Ghassān ibn 'Abdullāh Al-Yaḥmadī (r. 807–823 CE) constructed the first specialized Omani anti-piracy naval flotilla (Al-Shadhāt)—fast, maneuverable oared-and-sailed interceptors that cleared the Arabian Sea and established permanent Omani naval convoys.</div>
+  <div class="kv proof"><strong>📜 Primary Source Proof:</strong> Al-Sālimī, Tuḥfat Al-A'yān bi-Sīrat Ahl 'Umān; Al-Mas'ūdī, Murūj Al-Dhahab</div>
+</article>
+<article class="card" style="border-top:4px solid #F59E0B;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F59E0B;color:#F59E0B;">MARITIME LAW &amp; ANTI-PIRACY #4</span>
+    <code style="font-size:0.74rem;color:#FDE68A;">1229–1454 CE (626–858 AH) • Rasulid Sultanate of Yemen (Aden &amp; Bab al-Mandab)</code>
+  </div>
+  <h3>The Rasulid Galley Squadron of Aden (*Shīnī Al-Thaghr*) &amp; Convoy Escort Tax (*Al-Shawānī*)</h3>
+  <div class="sub-ar">Rasulid State Anti-Piracy Convoy System for the Kārimī Spice Fleet • Port of Aden, Bab al-Mandab, Dahlak Islands, Al-Shiḥr &amp; Malabar Sea Route</div>
+  <div class="kv"><strong>⚖️ Canonical Ruling &amp; Naval Action:</strong> To protect Indian Ocean merchant dhows from piracy at the chokepoint of Bab al-Mandab and the Somali/Dahlak reefs, the Rasulid Sultans of Yemen maintained a permanent squadron of armed war galleys (Al-Shawānī) stationed at Aden, funded by a transparent, fixed convoy-protection tariff recorded in the royal customs ledger Mulakhkhaṣ Al-Fiṭan (1411 CE).</div>
+  <div class="kv proof"><strong>📜 Primary Source Proof:</strong> Mulakhkhaṣ Al-Fiṭan (1411 CE, Aden); Ibn Al-Mujāwir, Tārīkh Al-Mustabṣir</div>
+</article>
+<article class="card" style="border-top:4px solid #F43F5E;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F43F5E;color:#F43F5E;">MARITIME LAW &amp; ANTI-PIRACY #5</span>
+    <code style="font-size:0.74rem;color:#FDE68A;">1498–1698 CE (903–1110 AH) • Aden, Jeddah, Muscat &amp; Mombasa</code>
+  </div>
+  <h3>Yemeni, Ottoman &amp; Omani Ya'rubid Liberation of the Indian Ocean from Portuguese Cartaz Piracy</h3>
+  <div class="sub-ar">Counter-Blockade Against the Coercive Portuguese Cartaz System • Aden (1513 Defense), Jeddah (1517 Defense), Muscat (Liberated 1650) &amp; Mombasa Fort Jesus (Liberated 1698)</div>
+  <div class="kv"><strong>⚖️ Canonical Ruling &amp; Naval Action:</strong> When Portuguese fleets entered the Indian Ocean demanding extortionate Cartaz protection passes and burning unarmed pilgrim ships (such as the Mīrī in 1502), Yemeni Tahirid commander Amir Murjān repulsed Albuquerque at the walls of Aden (1513); Ottoman Admiral Selman Reis defeated Lopo Soares at Jeddah (1517); and the Ya'rubid Imams of Oman (Sulṭān ibn Sayf I and Sayf ibn Sulṭān) built Western-gunned multi-decked ocean warships, expelled the Portuguese from Muscat (1650), and liberated Mombasa and Zanzibar (1698) at the request of East African Muslim rulers.</div>
+  <div class="kv proof"><strong>📜 Primary Source Proof:</strong> Qutb al-Dīn al-Nahrawālī, Al-Barq Al-Yamānī; Omani Chronicle of Ibn Ruzayq (Al-Fatḥ Al-Mubīn)</div>
+</article>
+<article class="card" style="border-top:4px solid #A855F7;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#A855F7;color:#A855F7;">MARITIME LAW &amp; ANTI-PIRACY #6</span>
+    <code style="font-size:0.74rem;color:#FDE68A;">1516–1786 CE (922–1200 AH) • Algiers, Tunis, Tripoli, Salé &amp; Tangier</code>
+  </div>
+  <h3>Mediterranean Corsairs (Ta'ifat Al-Ra'īs), Rescue of Andalusian Exiles &amp; The 1786 Moroccan-US Treaty</h3>
+  <div class="sub-ar">Jihād Al-Baḥr (State-Commissioned Privateering) vs. Treaty Safe-Conduct (Amān Al-Sufun) • Western Mediterranean &amp; Atlantic Coast of Morocco</div>
+  <div class="kv"><strong>⚖️ Canonical Ruling &amp; Naval Action:</strong> Operating under Ottoman and Moroccan state commissions (distinct from lawless piracy), admirals Hayreddin Barbarossa (Kapudan Pasha), Oruç Reis, and Turgut Reis evacuated over 70,000 persecuted Andalusian Muslims and Jews from Spain. Under Islamic international law (Siyar), any nation signing a bilateral treaty of Amān received full maritime immunity—culminating in Sultan Muḥammad III of Morocco being the first monarch on earth to recognize the United States (1777) and signing the 1786 Moroccan-American Treaty of Peace and Friendship guaranteeing safe passage for American merchant ships.</div>
+  <div class="kv proof"><strong>📜 Primary Source Proof:</strong> Kâtip Çelebi, Tuḥfat Al-Kibār fī Asfār Al-Biḥār; 1786 Treaty of Marrakech (signed by Thomas Jefferson &amp; John Adams)</div>
+</article>
+
+    </div>
+
+    <h2 class="sec-title">III. Islamic Maritime Mercantilism &amp; Global Currency Standards (<em>Dīnār, Dirham, Qirāḍ, Ṣakk, Kārimī &amp; Lārīn</em>)</h2>
+    <div class="grid-2">
+      <article class="card" style="border-top:4px solid #D4AF37;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#D4AF37;color:#D4AF37;">1. Caliphal Gold &amp; Silver Monetary Standard</span>
+  </div>
+  <h3>Caliph 'Abd al-Malik's Epigraphic Gold Dinar (4.25g) &amp; Silver Dirham (2.97g)</h3>
+  <div class="sub-ar">Al-Dīnār Al-Dhahabī &amp; Al-Dirham Al-Fiḍḍī (الدينار الذهبي والدرهم الفضي — Ratio 7:10)</div>
+  <div class="kv"><strong>🪙 Weight Standard / Financial Mechanism:</strong> Instituted in 77 AH (696–697 CE): 1 Mithqāl Gold Dīnār = 4.25 grams of 97%+ pure 24k gold (= weight of 72 grains of barley); 1 Silver Dirham = 2.975 grams of pure silver (exact 7:10 weight ratio where 10 Dirhams = 7 Mithqāls). Zero human portraits; stamped with Surah Al-Ikhlāṣ (112:1–4) and Surah At-Tawbah (9:33).</div>
+  <div class="kv"><strong>🌊 Maritime Circulation &amp; Global Reception:</strong> Served for 500+ years as the 'Dollar of the Middle Ages' from Córdoba and London to Aden, Sohar, Malabar, and Canton. In 774 CE, Anglo-Saxon King Offa of Mercia minted his famous English gold 'Mancus' as a direct replica of Caliph Al-Manṣūr's 157 AH Abbasid Dīnār, complete with the Arabic Shahādah!</div>
+  <div class="kv proof"><strong>📜 Scriptural &amp; Numismatic Proof:</strong> Qur'an 3:75 (Qintār &amp; Dīnār), 12:20 (Darāhim Ma'dūdah), 18:19 (Wariqikum); Al-Maqrīzī, Shudhūr Al-'Uqūd fī Dhikr Al-Nuqūd</div>
+</article>
+<article class="card" style="border-top:4px solid #10B981;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#10B981;color:#10B981;">2. Maritime Venture-Capital Partnership</span>
+  </div>
+  <h3>Risk-Sharing Sea-Venture Partnership (Origin of the European Commenda)</h3>
+  <div class="sub-ar">Al-Qirāḍ / Al-Muḍārabah Al-Baḥriyyah (القراض / المضاربة البحرية -&gt; Latin 'Commenda')</div>
+  <div class="kv"><strong>🪙 Weight Standard / Financial Mechanism:</strong> Capital investor (Rabb Al-Māl) entrusts gold Dīnārs or trade goods to a traveling shipmaster/merchant (Al-Muḍārib). Upon safe return from Yemen, Oman, India, or East Africa, net profits are divided by pre-agreed percentage (e.g., 50/50 or 2/3–1/3). If the ship is lost to storm or piracy without negligence, financial loss falls 100% on capital—the sailor only loses his labor and is never enslaved by interest-bearing debt (Ribā).</div>
+  <div class="kv"><strong>🌊 Maritime Circulation &amp; Global Reception:</strong> Enabled small and medium mariners in Aden, Sohar, Siraf, Fustat, and Qayrawān to finance trans-oceanic voyages; copied verbatim by 11th-century Amalfi, Pisa, Genoa, and Venice as the 'Commenda' contract that launched Italian Renaissance capitalism.</div>
+  <div class="kv proof"><strong>📜 Scriptural &amp; Numismatic Proof:</strong> Qur'an 2:275, 62:10, 73:20 ('And others traveling through the land seeking the bounty of Allah'); Muwaṭṭa' Imām Mālik (Kitāb Al-Qirāḍ)</div>
+</article>
+<article class="card" style="border-top:4px solid #38BDF8;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#38BDF8;color:#38BDF8;">3. Paper Banking, Checks &amp; Letters of Credit</span>
+  </div>
+  <h3>Long-Distance Bills of Exchange, Checks &amp; Debt-Transfer Clearing</h3>
+  <div class="sub-ar">Al-Ṣakk (الصك -&gt; 'Check/Cheque'), Al-Suftajah (السفتجة) &amp; Al-Ḥawālah (الحوالة)</div>
+  <div class="kv"><strong>🪙 Weight Standard / Financial Mechanism:</strong> To avoid carrying heavy chests of gold and silver across pirate-infested straits, a merchant deposited funds with a banker (Ṣarrāf / Jahbadh) in Basrah or Cairo and received a sealed paper Suftajah or Ṣakk redeemable in Aden, Muscat, Samarkand, or Quanzhou.</div>
+  <div class="kv"><strong>🌊 Maritime Circulation &amp; Global Reception:</strong> Nāṣir-i Khusraw (1050 CE) recorded that in Basrah and Aden, all maritime wholesale transactions were conducted by written paper checks (Khaṭṭ-i Ṣarrāf), never physical cash!</div>
+  <div class="kv proof"><strong>📜 Scriptural &amp; Numismatic Proof:</strong> Qur'an 2:282 (The Verse of Recording Debt — Āyat Al-Mudāyanah); Sahih al-Bukhari 2287 (Ḥawālah)</div>
+</article>
+<article class="card" style="border-top:4px solid #F59E0B;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F59E0B;color:#F59E0B;">4. Red Sea &amp; Indian Ocean Merchant Syndicate</span>
+  </div>
+  <h3>Trans-Oceanic Merchant Consortium of Aden, Zabīd, Jeddah &amp; Cairo (11th–15th c. CE)</h3>
+  <div class="sub-ar">Tujjār Al-Kārim (تجار الكارم — The Kārimī Spice &amp; Maritime Banking Guild)</div>
+  <div class="kv"><strong>🪙 Weight Standard / Financial Mechanism:</strong> Family-networked merchant houses (such as the Banū Kuwayk, Banū Al-Kharrūbī, and Banū Al-Maḥallī) operating multi-ship convoys (Al-Kārim) between Malabar/Calicut, Rasulid Aden, Jeddah, and Mamluk Cairo/Alexandria, with their own private armed escorts, warehouses, and international banking desks.</div>
+  <div class="kv"><strong>🌊 Maritime Circulation &amp; Global Reception:</strong> Controlled the global pepper, cinnamon, clove, ginger, porcelain, and silk trade before 1500 CE while endowing Waqf schools, hospitals, and mosques from Yemen to Cairo.</div>
+  <div class="kv proof"><strong>📜 Scriptural &amp; Numismatic Proof:</strong> Al-Qalqashandī, Ṣubḥ Al-A'shā; Ibn Ḥajar Al-'Asqalānī, Inbā' Al-Ghumr</div>
+</article>
+<article class="card" style="border-top:4px solid #A855F7;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#A855F7;color:#A855F7;">5. Bonded Maritime Entrepôts &amp; Free-Trade Customs</span>
+  </div>
+  <h3>Waterfront Bonded Warehouses, Merchant Consulates &amp; Transparent Customs Ledgers</h3>
+  <div class="sub-ar">Al-Funduq (الفندق -&gt; Venetian 'Fondaco'), Al-Wakālah &amp; Al-Furḍah (الفرضة)</div>
+  <div class="kv"><strong>🪙 Weight Standard / Financial Mechanism:</strong> Islamic maritime mercantilism rejected monopolistic hoarding (Iḥtikār) in favor of high-volume, low-tariff entrepôt trade ('Ushūr: 2.5% for Muslims, 5% for Dhimmīs, 10% for foreign treaty merchants, often lowered by Omani/Yemeni rulers to 3–5% to attract global shipping). Foreign merchants (Jewish Cairo Geniza traders, Hindu Banians, Chinese, Venetians) lived in self-governing Funduqs with their own courts and places of worship.</div>
+  <div class="kv"><strong>🌊 Maritime Circulation &amp; Global Reception:</strong> Instantiated in Aden's Furḍah (documented in the 1411 CE Mulakhkhaṣ Al-Fiṭan), Muscat, Hormuz, Sohar, Alexandria, and Malacca.</div>
+  <div class="kv proof"><strong>📜 Scriptural &amp; Numismatic Proof:</strong> Sahih Muslim 1605 ('No one hoards [yaḥtakiru] except a wrongdoer'); Cairo Geniza India Book Documents (ed. S. D. Goitein)</div>
+</article>
+<article class="card" style="border-top:4px solid #F43F5E;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F43F5E;color:#F43F5E;">6. Omani, Yemeni &amp; Indian Ocean Regional Trade Currencies</span>
+  </div>
+  <h3>Rasulid Silver Dirhams, Hormuzi Twisted-Silver Larins, Maria Theresa Thalers &amp; Omani/Zanzibari Coinage</h3>
+  <div class="sub-ar">Dirham Al-Rasūlī, Al-Lārīn Al-Hurmuzī (اللارين), Riyāl Faransī &amp; Baysah 'Umāniyyah (البيسة)</div>
+  <div class="kv"><strong>🪙 Weight Standard / Financial Mechanism:</strong> 1) Rasulid Yemeni Dirhams (minted at Aden, Zabīd, Ta'izz with zodiacal/heraldic emblems); 2) Hormuzi &amp; Omani 'Lārīn' (pure silver wire bent into a twin-pronged fish-hook/hairpin shape stamped with Arabic inscriptions, prized across the Persian Gulf, Oman, Maldives, and Ceylon); 3) The 1780 silver Maria Theresa Thaler ('Riyāl Faransī' / 'Abū Nuqṭah', 28.06g, 83.3% silver) and Omani Sultanate 'Riyāl Sa'īdī / Barghashī' &amp; copper 'Baysah' circulating across Yemen, Oman, and East Africa.</div>
+  <div class="kv"><strong>🌊 Maritime Circulation &amp; Global Reception:</strong> Unified coastal pricing of Mocha coffee, Dhofari frankincense, Omani dates, Gulf pearls, and Zanzibari cloves.</div>
+  <div class="kv proof"><strong>📜 Scriptural &amp; Numismatic Proof:</strong> Numismatic Collections of the National Museum of Oman (Muscat) &amp; Aden Museum</div>
+</article>
+
+    </div>
+
+    <h2 class="sec-title">IV. Maps (<em>Kharā'iṭ</em>), Astrolabes (<em>Al-Asṭurlāb</em>), The Mariner's <em>Kamāl</em> &amp; The 32-Point Magnetic Star Compass</h2>
+    <div class="grid-2">
+      <article class="card" style="border-top:4px solid #38BDF8;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#38BDF8;color:#38BDF8;">1. Geodesy &amp; Open-Ocean World Map</span>
+    <code style="font-size:0.74rem;color:#34D399;">c. 830 CE (215 AH) • Baghdad &amp; Plain of Sinjār</code>
+  </div>
+  <h3>Al-Ṣūrah Al-Ma'mūniyyah &amp; Kitāb Ṣūrat Al-Arḍ (Book of the Configuration of the Earth)</h3>
+  <div class="sub-ar">Caliph Al-Ma'mūn's 70 Geographers &amp; Al-Khwārizmī</div>
+  <div class="kv"><strong>📐 Mathematical, Optical &amp; Magnetic Principle:</strong> Measured 1 degree of terrestrial latitude on the flat desert of Sinjār using astrolabes and Surveying cords (56.67 Arabic miles = 111.8 km, within 0.6% of modern satellite geodesy!). Corrected 2,400 coordinates from Ptolemy's Geography and overturned Ptolemy's false dogma that the Indian Ocean was a landlocked lake, proving it is an open ocean connected to the Pacific and Atlantic.</div>
+  <div class="kv proof"><strong>🧭 Global Navigational Impact:</strong> Established mathematical latitude/longitude coordinate tables (Zīj) for every port from Tangier to Canton.</div>
+</article>
+<article class="card" style="border-top:4px solid #D4AF37;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#D4AF37;color:#D4AF37;">2. Silver Planisphere &amp; 70-Map World Atlas</span>
+    <code style="font-size:0.74rem;color:#34D399;">1154 CE (548 AH) • Palermo, Sicily</code>
+  </div>
+  <h3>Nuzhat Al-Mushtāq fī Ikhtirāq Al-Āfāq (Tabula Rogeriana) &amp; The 300-lb Silver Disk</h3>
+  <div class="sub-ar">Al-Sharīf Al-Idrīsī (1100–1165 CE, Ceuta / Córdoba / Palermo)</div>
+  <div class="kv"><strong>📐 Mathematical, Optical &amp; Magnetic Principle:</strong> Divided the inhabited hemisphere into 7 latitudinal climes (Al-Aqālīm Al-Sab'ah) × 10 longitudinal sections = 70 detailed regional maps (oriented with South at the top), synthesizing merchant itineraries, maritime soundings, and astronomical coordinates from Spain and West Africa across the Red Sea, Yemen (Aden/Shihr), Oman (Sohar/Qalhat), India, Nusantara, and Korea (Al-Sīlā).</div>
+  <div class="kv proof"><strong>🧭 Global Navigational Impact:</strong> Remained the most accurate world atlas on earth for over three centuries.</div>
+</article>
+<article class="card" style="border-top:4px solid #F43F5E;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F43F5E;color:#F43F5E;">3. Ottoman Portolan Atlases &amp; Atlantic/Red Sea Cartography</span>
+    <code style="font-size:0.74rem;color:#34D399;">1513, 1521/1525 &amp; 1554 CE • Gallipoli, Cairo, Suez, Aden &amp; Muscat</code>
+  </div>
+  <h3>1513 Piri Reis World Map, Kitāb-ı Baḥriye (Book of Navigation, 210+ portolan charts) &amp; Kitāb Al-Muḥīṭ</h3>
+  <div class="sub-ar">Admiral Piri Reis (Ḥājjī Muḥyī al-Dīn Pīrī, c. 1465–1553 CE) &amp; Seydi Ali Reis</div>
+  <div class="kv"><strong>📐 Mathematical, Optical &amp; Magnetic Principle:</strong> Used multi-center wind-rose rhumb networks (Loxodromes) to chart every harbor, reef, freshwater spring, anchorage depth, and wind pattern in the Mediterranean and Aegean (Kitāb-ı Baḥriye), while his 1513 world map on gazelle skin synthesized 20 Arabic, Portuguese, and Columbian charts showing South America and the Atlantic. In 1554, Ottoman Admiral Seydi Ali Reis compiled 'Al-Muḥīṭ' in Gujarat, translating Omani/Yemeni navigator Ibn Mājid's Indian Ocean star-compass science into Ottoman Turkish.</div>
+  <div class="kv proof"><strong>🧭 Global Navigational Impact:</strong> Bridged Mediterranean portolan cartography with Omani-Yemeni Indian Ocean celestial navigation.</div>
+</article>
+<article class="card" style="border-top:4px solid #10B981;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#10B981;color:#10B981;">4. The Planispheric &amp; Universal Astrolabe</span>
+    <code style="font-size:0.74rem;color:#34D399;">8th–11th Centuries CE • Baghdad, Shiraz, Aleppo &amp; Toledo</code>
+  </div>
+  <h3>Al-Asṭurlāb Al-Musaṭṭaḥ &amp; Al-Ṣafīḥah Al-Zarqāliyyah (The Universal Saphaea)</h3>
+  <div class="sub-ar">Al-Fazārī, Al-Ṣūfī (903–986 CE), Maryam Al-Asṭurlābiyyah &amp; Al-Zarqālī (1029–1087 CE)</div>
+  <div class="kv"><strong>📐 Mathematical, Optical &amp; Magnetic Principle:</strong> Uses stereographic projection to map the 3D celestial sphere (the skeletal 'Ankabūt / Rete with flame-shaped star pointers) onto flat brass altitude/azimuth plates (Ṣafā'iḥ / Tympans) for specific latitudes, with a sighting rule (Al-'Iḍādah -&gt; English 'Alidade') on the back. Al-Zarqālī in Toledo invented the Universal Astrolabe (Al-Ṣafīḥah) using the equinoctial points as projection poles so mariners and travelers could use a SINGLE plate at any latitude on earth!</div>
+  <div class="kv proof"><strong>🧭 Global Navigational Impact:</strong> Gave international astronomy over 200 Arabic star names (Aldebaran, Altair, Vega, Rigel, Betelgeuse, Deneb, Fomalhaut) and directly birthed the European Mariner's Astrolabe and Quadrant.</div>
+</article>
+<article class="card" style="border-top:4px solid #F59E0B;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F59E0B;color:#F59E0B;">5. The Omani &amp; Yemeni Mariner's Kamāl (Al-Lawḥ wa Al-Khayṭ)</span>
+    <code style="font-size:0.74rem;color:#34D399;">9th–16th Centuries CE • Sohar, Muscat, Qalhāt, Aden, Al-Shiḥr &amp; Malindi</code>
+  </div>
+  <h3>Al-Kamāl / Khashabāt Al-Qiyās (The Celestial Latitude Tablet &amp; Knotted Cord)</h3>
+  <div class="sub-ar">Arab Indian Ocean Navigators (Mu'allimūn — Ibn Mājid &amp; Sulaymān Al-Mahrī)</div>
+  <div class="kv"><strong>📐 Mathematical, Optical &amp; Magnetic Principle:</strong> Because a heavy brass astrolabe pendulums wildly on a pitching ship deck, Omani and Yemeni navigators engineered the Kamāl: a 2×1 inch rectangular horn or teakwood tablet threaded with a silk cord tied with calibrated knots representing specific ports. Holding a knot between the teeth with string taut, the navigator aligned the lower edge of the wood with the sea horizon and the upper edge with Polaris (Al-Jāh) or the Little Bear guards (Al-Farqadān), measuring altitude in 'Aṣābi'' (finger-widths, 1 Iṣba' = 1° 36' 25&quot; ≈ 97 nautical miles of latitude!).</div>
+  <div class="kv proof"><strong>🧭 Global Navigational Impact:</strong> Demonstrated to Vasco da Gama at Malindi in 1498 CE; directly inspired the European Mariner's Cross-Staff (Balestilha) and Backstaff.</div>
+</article>
+<article class="card" style="border-top:4px solid #A855F7;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#A855F7;color:#A855F7;">6. The Dry-Pivot Magnetic Compass &amp; 32-Point Sidereal Wind Rose</span>
+    <code style="font-size:0.74rem;color:#34D399;">1242–1490 CE • Aden/Ta'izz (Yemen), Julfar/Sohar (Oman) &amp; Red Sea</code>
+  </div>
+  <h3>Bayt Al-Ibrah / Al-Ḥuqqah &amp; Dā'irat Al-Akhnān (The 32-Rhumb Star Compass Rose)</h3>
+  <div class="sub-ar">Sultan Al-Ashraf 'Umar II of Yemen (1293 CE) &amp; Omani Navigator Aḥmad ibn Mājid (1490 CE)</div>
+  <div class="kv"><strong>📐 Mathematical, Optical &amp; Magnetic Principle:</strong> While early mariners floated a magnetized iron fish (Samakah) in water (documented by Baylak Al-Qibjāqī, 1242/1282 CE), Rasulid Yemeni Sultan Al-Ashraf 'Umar II wrote the earliest scientific treatise on the dry-pivot compass box (Ṭāsat Al-Qiblah, 1293 CE). Omani master navigator Shihāb al-Dīn Aḥmad ibn Mājid ('The Lion of the Sea', b. Julfar/Oman, c. 1421 CE) housed the magnetic needle inside a gimbaled brass box (Al-Ḥuqqah) beneath the 32-Point Sidereal Compass Rose (Al-Akhnān), where each 11.25° rhumb is named after the rising (Maṭla') and setting (Maghīb) of 15 fixed equatorial/northern/southern stars plus Polaris (Al-Jāh) and Canopus/South Pole (Al-Quṭb Al-Suhaylī).</div>
+  <div class="kv proof"><strong>🧭 Global Navigational Impact:</strong> Enabled precision open-ocean dead reckoning (Al-Dīrah) and latitude sailing (Al-Majrā) across 4,000+ miles of featureless ocean during the monsoon.</div>
+</article>
+
+    </div>
+
+    <h2 class="sec-title">V. The Omani &amp; Yemeni Coasting Caliphates, Imamates &amp; Sultanates (<code>630 CE – 1856+ CE</code>)</h2>
+    <div class="grid-2">
+      <article class="card" style="border-left:5px solid #10B981;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#10B981;color:#10B981;">YEMEN &amp; OMAN IN THE PROPHETIC &amp; RĀSHIDŪN / UMAYYAD / ABBASID CALIPHATES</span>
+    <code style="font-size:0.75rem;color:#FDE68A;">630–1050 CE (8–442 AH)</code>
+  </div>
+  <h3>1. Peaceful Embrace of Al-Julandā Oman &amp; Badhān Yemen (8 AH / 630 CE – 1050 CE)</h3>
+  <div class="sub-ar">Ports &amp; Capitals: Sohar (Ṣuḥār), Daba, Muscat, Qalhāt (Oman) • Sana'a, Aden, Al-Shiḥr, Zabīd (Yemen)</div>
+  <div class="kv"><strong>🏛️ Caliphal Relationship &amp; Constitutional Sovereignty:</strong> Both Yemen and Oman embraced Islam PEACEFULLY without military conquest in 628–630 CE (8 AH): Governor Badhān of Yemen accepted the Prophet's letter, followed by Mu'ādh ibn Jabal's mission; in Oman, Kings Jayfar and 'Abd (sons of Al-Julandā) embraced Islam via the Prophet's letter carried by 'Amr ibn al-'Āṣ, earning the Prophetic supplication: 'May Allah have mercy on the people of Al-Ghubayrā' (Oman); they believed in me without having seen me!' Under the Umayyads and Abbasids, Omani Sohar and Yemeni Aden served as the twin maritime lungs of the Caliphate.</div>
+  <div class="kv"><strong>⛵ Naval Fleets, Navigation &amp; Oceanic Trade:</strong> Omani navigator Abū 'Ubaydah 'Abdullāh ibn al-Qāsim (8th c.) sailed 7,000 miles from Sohar to Guangzhou (Canton), establishing the Muslim merchant mosque in Tang China; Al-Maqdisī (985 CE) called Sohar 'the hallway to China, the storehouse of the East and Iraq, and the lifeline of Yemen.'</div>
+  <div class="kv proof"><strong>🕌 Architectural &amp; Scientific Monuments:</strong> Great Mosque of Sana'a (630 CE) &amp; Mosque of Al-Miḍmār (Samā'il, Oman — built by Māzin ibn Ghaḍūbah, first Omani companion).</div>
+</article>
+<article class="card" style="border-left:5px solid #38BDF8;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#38BDF8;color:#38BDF8;">YEMENI FATIMID-SULAYHID &amp; ZURAY'ID MARITIME ENTREPÔT</span>
+    <code style="font-size:0.75rem;color:#FDE68A;">1047–1173 CE (439–569 AH)</code>
+  </div>
+  <h3>2. The Sulayhid Dynasty (Queen Arwā) &amp; Zuray'id Port-Kingdom of Aden</h3>
+  <div class="sub-ar">Ports &amp; Capitals: Jiblah, Sana'a, Aden ('Adan) &amp; Dahlak Archipelago</div>
+  <div class="kv"><strong>🏛️ Caliphal Relationship &amp; Constitutional Sovereignty:</strong> Aligned with the Fatimid Caliphate in Cairo, shifting the entire Indian Ocean spice trade away from the Persian Gulf into the Red Sea corridor (Aden -&gt; Aidhab/Jeddah -&gt; Cairo -&gt; Alexandria). Queen Arwā bint Aḥmad al-Ṣulayḥī ('Al-Sayyidah Al-Ḥurrah', r. 1067–1138 CE) ruled Yemen for 71 years as Hujjah and sovereign monarch, fortifying Aden's harbor walls and customs house (Al-Furḍah).</div>
+  <div class="kv"><strong>⛵ Naval Fleets, Navigation &amp; Oceanic Trade:</strong> Cairo Geniza letters (11th–12th c.) document Jewish, Muslim, and Hindu shipowners in Aden operating joint Qirāḍ shipping partnerships under Zuray'id protection, with coast-guard fleets rescuing shipwrecked cargos along Bab al-Mandab.</div>
+  <div class="kv proof"><strong>🕌 Architectural &amp; Scientific Monuments:</strong> Queen Arwā Mosque &amp; Palace at Jiblah, Cisterns of Tawīlah (Ṣahārīj 'Adan) &amp; Sīrah Island Fortress.</div>
+</article>
+<article class="card" style="border-left:5px solid #F59E0B;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F59E0B;color:#F59E0B;">YEMENI RASULID &amp; TAHIRID MARITIME SULTANATES</span>
+    <code style="font-size:0.75rem;color:#FDE68A;">1229–1517 CE (626–923 AH)</code>
+  </div>
+  <h3>3. The Rasulid Sultanate (Banū Rasūl, 1229–1454 CE) &amp; Tahirid Sultanate (1454–1517 CE)</h3>
+  <div class="sub-ar">Ports &amp; Capitals: Ta'izz, Zabīd, Aden, Al-Shiḥr &amp; Al-Mukhā (Mocha)</div>
+  <div class="kv"><strong>🏛️ Caliphal Relationship &amp; Constitutional Sovereignty:</strong> Founded by Nūr al-Dīn 'Umar ibn 'Alī ibn Rasūl (originally Ayyubid deputy), the Rasulids received diplomatic investiture from the Abbasid Caliph Al-Mustanṣir in Baghdad while sending embassies to Ming China, Mamluk Egypt, India, and Abyssinia.</div>
+  <div class="kv"><strong>⛵ Naval Fleets, Navigation &amp; Oceanic Trade:</strong> Instituted the world's most sophisticated medieval maritime customs administration (Mulakhkhaṣ Al-Fiṭan, 1411 CE), maintained the Shīnī war-galley fleet at Aden, patronized the Kārimī merchant guild, and in 1513 CE under Tahirid governor Amir Murjān defeated Afonso de Albuquerque's Portuguese armada at the walls of Aden.</div>
+  <div class="kv proof"><strong>🕌 Architectural &amp; Scientific Monuments:</strong> Sultan Al-Ashraf 'Umar II's 1293 CE treatise on the Magnetic Compass &amp; Astrolabe; Ashrafiyyah Madrasah (Ta'izz) &amp; 'Āmiriyyah Madrasah (Radā').</div>
+</article>
+<article class="card" style="border-left:5px solid #F43F5E;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#F43F5E;color:#F43F5E;">YEMENI MOCHA COFFEE EMPIRE &amp; HADHRAMI INDIAN OCEAN DIASPORA</span>
+    <code style="font-size:0.75rem;color:#FDE68A;">1450–1850 CE (854–1266 AH)</code>
+  </div>
+  <h3>4. Ottoman/Qasimid Mocha Coffee Trade &amp; The Hadhrami Coasting Network</h3>
+  <div class="sub-ar">Ports &amp; Capitals: Al-Mukhā (Mocha), Hodeidah, Bait al-Faqīh, Al-Shiḥr, Mukallā &amp; Tarīm</div>
+  <div class="kv"><strong>🏛️ Caliphal Relationship &amp; Constitutional Sovereignty:</strong> Under Ottoman Eyalet naval protection (from 1538 CE) and the Qasimid Imamate (from 1597 CE), the Red Sea port of Al-Mukhā (Mocha) held a global monopoly on Coffea arabica cultivated on the terraced mountains of Harāz and Yāfi'. Simultaneously, Hadhrami Sayyids (Bā 'Alawī) and mariners (such as Sulaymān Al-Mahrī of Al-Shiḥr) sailed every monsoon across the Indian Ocean.</div>
+  <div class="kv"><strong>⛵ Naval Fleets, Navigation &amp; Oceanic Trade:</strong> Mocha drew silver Spanish pieces-of-eight and Austrian thalers from across the globe, while Hadhrami coasting dhows peacefully Islamized the Comoros, Swahili coast, Malabar (Mappila), and the Malay-Indonesian Archipelago (Wali Songo / Aceh / Pontianak / Siak).</div>
+  <div class="kv proof"><strong>🕌 Architectural &amp; Scientific Monuments:</strong> Sulaymān Al-Mahrī's 'Al-'Umdah Al-Mahrīyah fī Ḍabṭ Al-'Ulūm Al-Baḥrīyah' (1511 CE) &amp; Al-Miḥḍār Library of Tarīm.</div>
+</article>
+<article class="card" style="border-left:5px solid #A855F7;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#A855F7;color:#A855F7;">OMANI NABHANI DYNASTY, HORMUZI QALHĀT &amp; AḤMAD IBN MĀJID</span>
+    <code style="font-size:0.75rem;color:#FDE68A;">1154–1624 CE (549–1033 AH)</code>
+  </div>
+  <h3>5. The Nabhani Kings, The Merchant Metropolis of Qalhāt &amp; The Golden Age of Navigation</h3>
+  <div class="sub-ar">Ports &amp; Capitals: Qalhāt, Sohar, Muscat, Julfar (Ra's al-Khaimah), Bahla &amp; Nizwa</div>
+  <div class="kv"><strong>🏛️ Caliphal Relationship &amp; Constitutional Sovereignty:</strong> Linking the interior Omani oasis citadels with the coastal emporia of Qalhāt and Julfar, Oman dominated the horse, pearl, and spice trade between the Persian Gulf, India, and Kilwa (East Africa).</div>
+  <div class="kv"><strong>⛵ Naval Fleets, Navigation &amp; Oceanic Trade:</strong> Produced history's greatest ocean navigator: Shihāb al-Dīn Aḥmad ibn Mājid Al-Sa'dī Al-Najdī (b. c. 1421 CE in Julfar, Oman), author of 40 treatises in prose and verse including 'Kitāb Al-Fawā'id fī Uṣūl 'Ilm Al-Baḥr wa Al-Qawā'id' (1490 CE) and 'Ḥāwiyat Al-Ikhtiṣār', codifying the 32-point star compass, Kamāl latitude measurements, monsoon departure calendars (Al-Nayrūz), and coastal pilotage (Al-Rahnāmaj) for the entire Red Sea and Indian Ocean.</div>
+  <div class="kv proof"><strong>🕌 Architectural &amp; Scientific Monuments:</strong> UNESCO World Heritage Port of Qalhāt (Mausoleum of Bībī Maryam), Bahla Fort &amp; Ibn Mājid's 40 Navigational Codices.</div>
+</article>
+<article class="card" style="border-left:5px solid #D4AF37;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#D4AF37;color:#D4AF37;">OMANI YA'RUBID IMAMATE — NAVAL LIBERATION OF MUSCAT &amp; EAST AFRICA</span>
+    <code style="font-size:0.75rem;color:#FDE68A;">1624–1744 CE (1033–1157 AH)</code>
+  </div>
+  <h3>6. Dawlat Al-Ya'āribah (The Ya'rubid Imamate of Oman, 1624–1744 CE)</h3>
+  <div class="sub-ar">Ports &amp; Capitals: Rustaq, Nizwa, Muscat, Sur, Sohar, Mombasa (Fort Jesus), Pemba &amp; Zanzibar</div>
+  <div class="kv"><strong>🏛️ Caliphal Relationship &amp; Constitutional Sovereignty:</strong> Elected at Rustaq in 1624 CE, Imam Nāṣir ibn Murshid unified interior and coastal Oman. His cousin Imam Sulṭān ibn Sayf I (r. 1649–1688 CE) liberated Muscat from 143 years of Portuguese occupation in January 1650 CE and built the first indigenous Indian Ocean blue-water battleship fleet.</div>
+  <div class="kv"><strong>⛵ Naval Fleets, Navigation &amp; Oceanic Trade:</strong> Under Imam Sayf ibn Sulṭān ('Qayd Al-Arḍ', r. 1692–1711 CE), the Omani fleet possessed 28 square-rigged frigates and giant Baghlahs (headed by the 80-gun flagship 'Al-Falak') and 1,700 naval cannons! After a heroic 33-month siege (1696–1698 CE), Omani forces liberated Fort Jesus in Mombasa, expelling the Portuguese from the entire Swahili Coast north of Mozambique.</div>
+  <div class="kv proof"><strong>🕌 Architectural &amp; Scientific Monuments:</strong> Jabrin Castle (1675 CE), Al-Ḥazm Castle, Al-Jalālī &amp; Al-Mīrānī Forts of Muscat, and restoration of 17 Aflāj water systems.</div>
+</article>
+<article class="card" style="border-left:5px solid #EC4899;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.45rem;">
+    <span class="tag" style="border-color:#EC4899;color:#EC4899;">OMANI AL BU SA'ID MARITIME EMPIRE OF MUSCAT &amp; ZANZIBAR</span>
+    <code style="font-size:0.75rem;color:#FDE68A;">1744–1856+ CE (1157–1273+ AH)</code>
+  </div>
+  <h3>7. The Al Bu Sa'id Thalassocracy &amp; Sayyid Sa'īd ibn Sulṭān (1744–1856+ CE)</h3>
+  <div class="sub-ar">Ports &amp; Capitals: Muscat, Sohar, Sur, Bandar Abbas, Gwadar (Balochistan), Mogadishu, Mombasa, Kilwa &amp; Zanzibar</div>
+  <div class="kv"><strong>🏛️ Caliphal Relationship &amp; Constitutional Sovereignty:</strong> Founded by Imam Aḥmad ibn Sa'īd (r. 1744–1783 CE, who sent a 10-ship Omani relief fleet in 1775 to aid Ottoman Basrah) and expanded by Sayyid Sa'īd ibn Sulṭān (r. 1806–1856 CE) into a bi-continental Afro-Arabian maritime empire with twin capitals at Muscat and Zanzibar (Stone Town).</div>
+  <div class="kv"><strong>⛵ Naval Fleets, Navigation &amp; Oceanic Trade:</strong> Commanded a modern navy (including the 74-gun ship-of-the-line 'Liverpool/Imām', the 50-gun 'Shāh 'Ālam', and the corvette 'Al-Sulṭānah') alongside hundreds of merchant dhows. Signed the 1833 Treaty of Amity and Commerce with the United States and in 1840 sailed the Omani ship 'Al-Sulṭānah' under envoy Aḥmad ibn Na'mān all the way to New York Harbor!</div>
+  <div class="kv proof"><strong>🕌 Architectural &amp; Scientific Monuments:</strong> Bait Al-Falaj &amp; Bait Al-'Ajā'ib (Zanzibar), introduction of Swahili-Arabic printing, and global clove/frankincense maritime commerce.</div>
+</article>
+
+    </div>
+  </main>
+
+  <script>
+    const MARITIME_PORTS = [
+      {idx:1,name:"Muscat & Sohar (Oman)",ar:"Masqaṭ wa Ṣuḥār (مسقط وصحار)",zone:"Omani Heartlands (Gulf of Oman)",rhumb:"Maṭla' Al-Nisr Al-Ṭā'ir (Rising of Altair — E by N) / Al-Jāh",isba:11.00,lat:23.61,wind:"NE Winter Monsoon (Al-Azyab / Kaws, Nov–Mar) -> S/SW to India & East Africa",trade:"Frankincense, Copper, Dates, Arabian Horses, Pearls • Abbasid Dīnār & Omani Sa'īdī Riyāl",color:"#D4AF37"},
+{idx:2,name:"Sur & Qalhāt (Oman)",ar:"Ṣūr wa Qalhāt (صور وقلهات)",zone:"Eastern Omani Cape (Ra's Al-Ḥadd)",rhumb:"Maṭla' Al-Simāk (Rising of Arcturus) / Departure Point for India",isba:10.25,lat:22.56,wind:"Gateway Cape where Gulf of Oman meets the open Arabian Sea monsoon swells",trade:"Deep-Sea Baghlah & Ghanjah Shipbuilding, Horses, Indigo • Hormuzi Lārīn & Gold Dīnār",color:"#10B981"},
+{idx:3,name:"Dhofar — Mirbāṭ & Salalah (Southern Oman)",ar:"Ẓafār wa Mirbāṭ (ظفار ومرباط)",zone:"Southern Omani Frankincense Coast",rhumb:"Maṭla' Al-Iklīl (Rising of Antares/Scorpio)",isba:7.75,lat:17.01,wind:"Summer Khareef Monsoon (Al-Kharīf / Dāmān, May–Sep) cools coastal mountains into emerald mist",trade:"Sacred Royal Frankincense (Al-Lubān Al-Ḥojari), Myrrh, Cavalry • Rasulid & Omani Silver Dirhams",color:"#34D399"},
+{idx:4,name:"Al-Shiḥr & Mukallā (Hadhramaut, Yemen)",ar:"Al-Shiḥr wa Al-Mukallā (الشحر والمكلا)",zone:"Yemeni Hadhrami Coast",rhumb:"Maṭla' Al-'Aqrab (Rising of Scorpio)",isba:6.75,lat:14.75,wind:"Launchpad of the Hadhrami Bā 'Alawī & Al-Mahrī navigators to Malabar, Aceh, Java & Swahili Rim",trade:"Ambergris ('Anbar), Dragon's Blood Resin, Frankincense, Textiles • Rasulid/Kathiri Coinage",color:"#38BDF8"},
+{idx:5,name:"Aden ('Adan, Southern Yemen)",ar:"Thaghr 'Adan Al-Maḥrūs (ثغر عدن المحروس)",zone:"Yemeni Volcanic Harbor & Gate of Bab al-Mandab",rhumb:"Maṭla' Al-Ḥimārayn (Rising of Alpha/Beta Centauri)",isba:5.00,lat:12.78,wind:"Dual-Monsoon Hinge where Red Sea winds meet Indian Ocean monsoons (Mulakhkhaṣ Al-Fiṭan)",trade:"Kārimī Spice Clearinghouse, Pepper, Silk, Porcelain, Madder Dye • Rasulid Multi-Dirham & Gold Dīnār",color:"#F59E0B"},
+{idx:6,name:"Al-Mukhā / Mocha & Zabīd (Red Sea Yemen)",ar:"Al-Mukhā wa Zabīd (المخا وزبيد)",zone:"Yemeni Tihāmah Red Sea Coast",rhumb:"Maghīb Al-Thurayyā (Setting of the Pleiades — WNW)",isba:5.50,lat:13.32,wind:"Red Sea Seasonal Wind Regime (Southerly Azyab in winter, Northerly Shimāl in summer)",trade:"Global Birthplace of Coffee Trade (Al-Qahwah Al-Yamanīyah), Indigo, Manuscripts • Ottoman Sultānī & Silver Riyāl",color:"#F43F5E"},
+{idx:7,name:"Calicut / Kozhikode (Malabar Coast, India)",ar:"Qālīqūṭ / Malībār (قاليقوط — ساحل مليبار)",zone:"Eastern Terminus of the Omani-Yemeni 28-Day Monsoon Crossing",rhumb:"Maṭla' Al-Jawzā' (Rising of Orion's Belt — Due East)",isba:4.50,lat:11.25,wind:"20-to-28-day direct open-ocean latitude run (Al-Majrā) from Ra's Al-Ḥadd / Aden on the SW Monsoon",trade:"Black Pepper (Al-Filfil), Teak Timber (Sāj for Dhow Hulls), Cardamom, Ginger • Caliphal Gold Dīnār",color:"#A855F7"},
+{idx:8,name:"Zanzibar & Kilwa (Swahili Coast / Omani East Africa)",ar:"Zinjibār wa Kilwah (زنجبار وكلوة)",zone:"Southern Terminus of the Omani Monsoon Corridor (6°–9° S)",rhumb:"Al-Quṭb Al-Suhaylī & Al-Farqadān (Measured by Canopus / Southern Cross & Beta Ursae Minoris)",isba:1.00,lat:-6.16,wind:"Sail South on the NE Winter Monsoon (Nov–Feb); Return North to Oman/Yemen on the SW Monsoon (Apr–Aug)",trade:"Cloves (Qaranful), Mangrove Poles (Boriti), Gold of Sofala, Ivory • Kilwa Copper Fals & Omani/Zanzibari Riyāl",color:"#EC4899"},
+
+    ];
+
+    function selectMaritimePort(index, btnEl) {
+      const p = MARITIME_PORTS[index] || MARITIME_PORTS[0];
+      document.querySelectorAll('.port-btn').forEach((b, i) => {
+        b.classList.toggle('active', i === index);
+      });
+      document.getElementById('telPortTitle').textContent = '#' + p.idx + ' ' + p.name;
+      document.getElementById('telPortAr').textContent = p.ar;
+      document.getElementById('telZone').textContent = p.zone;
+      document.getElementById('telRhumb').textContent = p.rhumb;
+      document.getElementById('telKamal').textContent = p.isba.toFixed(2) + " Iṣba' → " + p.lat.toFixed(2) + "° Lat";
+      document.getElementById('telWind').textContent = p.wind;
+      document.getElementById('telTrade').textContent = p.trade;
+
+      const slider = document.getElementById('kamalSlider');
+      if (slider) slider.value = p.isba;
+      document.getElementById('kamalReadout').textContent = p.isba.toFixed(2) + " Iṣba'";
+      document.getElementById('svgKamalLabel').textContent = "KAMĀL: " + p.isba.toFixed(2) + " IṢBA'";
+      document.getElementById('svgPortLabel').textContent = p.name + " (" + p.lat.toFixed(2) + "°)";
+
+      const angle = (index * 42 + 15) % 360;
+      const needle = document.getElementById('compassNeedleGroup');
+      if (needle) needle.setAttribute('transform', 'rotate(' + angle + ', 230, 210)');
+    }
+
+    function onKamalSliderChange(val) {
+      const num = parseFloat(val);
+      document.getElementById('kamalReadout').textContent = num.toFixed(2) + " Iṣba'";
+      let bestIdx = 0;
+      let bestDiff = 999;
+      MARITIME_PORTS.forEach((p, idx) => {
+        const d = Math.abs(p.isba - num);
+        if (d < bestDiff) { bestDiff = d; bestIdx = idx; }
+      });
+      selectMaritimePort(bestIdx);
+    }
+  </script>
+
+<!-- SOV_CHROME_FOOTER_START -->
+<footer class="sov-footer-wrap">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:0.8rem;padding-bottom:0.9rem;border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div>
+      <div style="font-family:Consolas,monospace;font-size:0.74rem;color:#FDE68A;">COMPLETE <span data-sov-total>64</span>-PORTAL CONTINUALLY UPDATED SITEMAP • CURRENT: #64 / 64 — Maritime: Boating, Piracy, Currency, Astrolabe &amp; Oman/Yemen (islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html)</div>
+      <div style="font-size:0.84rem;color:#CBD5E1;">Every HTML portal is directly cross-linked and continually synchronized across all 11 Architectural Wings and all 7 Chromatic/Theological Rows.</div>
+    </div>
+    <div style="display:flex;gap:0.45rem;flex-wrap:wrap;">
+      <a class="sov-pill" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">← Prev: Ages Vol. III: Scientific Discoveries Instantiated</a>
+      <span class="sov-pill sov-pill-counter">#64 / 64</span>
+      <a class="sov-pill sov-pill-master" href="index.html">🏠 Master Index (64)</a>
+      <a class="sov-pill sov-pill-omnibus" href="master-combined-omnibus.html?portal=islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">🧭 Combined Omnibus</a>
+      <a class="sov-pill" href="index.html">Next: Master Index Hub →</a>
+    </div>
+  </div>
+  <div class="sov-footer-cols">
+    <div class="sov-footer-cat"><h4>01. Master Hubs &amp; Architecture</h4><a class="" href="index.html">#01/64 Master Index Hub</a><a class="" href="master-combined-omnibus.html">#02/64 Combined Omnibus Reader</a><a class="" href="dependencies-report.html">#03/64 Dependencies &amp; Java 21+ Audit</a><a class="" href="conjoined-worlds-realms-principles-node-grid.html">#50/64 3D Node-Art Terrain Grid (Meridian Guard)</a><a class="" href="islamic-caravans-battles-conquest-chronicle.html">#51/64 Caravans, Trade Battles, Fatḥ &amp; Tadwīn</a><a class="" href="greco-roman-gods-titans-daimones-islamic-judgment.html">#52/64 Greco-Roman Gods &amp; Titans Made Whole</a><a class="" href="islamic-philosophy-alchemy-theocracies-socratic-messages.html">#53/64 Philosophy, Alchemy, Theocracies &amp; Socrates</a><a class="" href="islamic-naming-indonesia-infrastructure-language-calligraphy.html">#55/64 Naming (261 Wafq), Indonesia, Sewer &amp; Calligraphy</a><a class="" href="islamic-countries-history-canonical-embrace-atlas.html">#56/64 History of Islamic Countries &amp; Canonical Embrace</a><a class="" href="islamic-caliphates-sultans-shahs-dynasties-return.html">#57/64 Caliphates, Sultans, Shahs &amp; Promise of Return</a><a class="" href="quranic-timeline-expansion-vol1-chronology.html">#58/64 Vol. I: Qur'anic Timeline of Expansion</a><a class="" href="quranic-timeline-expansion-vol2-properties-kingdoms.html">#59/64 Vol. II: Islamic Properties, Countries &amp; Kingdoms</a><a class="" href="quranic-timeline-expansion-vol3-beauty-collegiate-thesis.html">#60/64 Vol. III: Beauty of Islam &amp; Collegiate Thesis</a><a class="" href="islam-through-ages-vol1-reception-history.html">#61/64 Ages Vol. I: Islam &amp; Global Reception</a><a class="" href="islam-through-ages-vol2-philosophical-connotations.html">#62/64 Ages Vol. II: Philosophical Connotations</a><a class="" href="islam-through-ages-vol3-scientific-discoveries-instantiated.html">#63/64 Ages Vol. III: Scientific Discoveries Instantiated</a><a class="active-link" href="islamic-maritime-boating-piracy-mercantilism-currency-maps-astrolabes-oman-yemen.html">#64/64 Maritime: Boating, Piracy, Currency, Astrolabe &amp; Oman/Yemen</a></div><div class="sov-footer-cat"><h4>02. Seven Pre-Prophetic Color Orders</h4><a class="" href="order-1-white.html">#04/64 Order #1: White</a><a class="" href="order-2-black.html">#05/64 Order #2: Black</a><a class="" href="order-3-sapphire.html">#06/64 Order #3: Sapphire</a><a class="" href="order-4-gold.html">#07/64 Order #4: Gold</a><a class="" href="order-5-crimson.html">#08/64 Order #5: Crimson</a><a class="" href="order-6-brass.html">#09/64 Order #6: Brass</a><a class="" href="order-7-emerald.html">#10/64 Order #7: Emerald</a></div><div class="sov-footer-cat"><h4>03. 3D Sanctum &amp; Seven Realms</h4><a class="" href="warlock-3d-sanctum.html">#11/64 3D Sanctum Master</a><a class="" href="realm-1-white.html">#12/64 Realm #1: 'Aravot</a><a class="" href="realm-2-black.html">#13/64 Realm #2: Makhon</a><a class="" href="realm-3-sapphire.html">#14/64 Realm #3: Zevul</a><a class="" href="realm-4-gold.html">#15/64 Realm #4: Shehaqim</a><a class="" href="realm-5-crimson.html">#16/64 Realm #5: Ma'on</a><a class="" href="realm-6-brass.html">#17/64 Realm #6: Raqia'</a><a class="" href="realm-7-emerald.html">#18/64 Realm #7: Vilon</a></div><div class="sov-footer-cat"><h4>04. Negentropic Priory &amp; Seven Planes</h4><a class="" href="priory-negentropy-order.html">#19/64 Negentropic Priory Atlas</a><a class="" href="plane-1-white.html">#20/64 Plane #1: Adam Kadmon / Lahut</a><a class="" href="plane-2-black.html">#21/64 Plane #2: Malbush / Al-Qalam</a><a class="" href="plane-3-sapphire.html">#22/64 Plane #3: Beri'ah / Jabarut</a><a class="" href="plane-4-gold.html">#23/64 Plane #4: Atzilut / Al-Arwah</a><a class="" href="plane-5-crimson.html">#24/64 Plane #5: Tohu / Ash-Shuhub</a><a class="" href="plane-6-brass.html">#25/64 Plane #6: Yetzirah / Al-Marij</a><a class="" href="plane-7-emerald.html">#26/64 Plane #7: Tikkun / Al-Mithal</a></div><div class="sov-footer-cat"><h4>05. Seven Wrongdoer (Az-Zalimun) Profiles</h4><a class="" href="zalim-1-fasad.html">#27/64 Zalim #1: Al-Fasad</a><a class="" href="zalim-2-fahishah.html">#28/64 Zalim #2: Al-Fahishah</a><a class="" href="zalim-3-baghy.html">#29/64 Zalim #3: Al-Baghy (Nimrod)</a><a class="" href="zalim-4-fitnah.html">#30/64 Zalim #4: Al-Fitnah</a><a class="" href="zalim-5-hawa.html">#31/64 Zalim #5: Al-Hawa</a><a class="" href="zalim-6-jibt.html">#32/64 Zalim #6: Al-Jibt &amp; Taghut</a><a class="" href="zalim-7-zulm.html">#33/64 Zalim #7: Masjid Ad-Dirar</a></div><div class="sov-footer-cat"><h4>06. Seven Islamic Worlds of Hegemon &amp; Disorder</h4><a class="" href="worlds-hegemon-disorder.html">#34/64 7 Worlds Master Atlas</a><a class="" href="world-1-mizan-fasad.html">#35/64 World #1: Amanah vs. Fasad</a><a class="" href="world-2-haya-fahishah.html">#36/64 World #2: Haya' vs. Tabarruj</a><a class="" href="world-3-babil-namrud.html">#37/64 World #3: Ibrahim vs. Namrud</a><a class="" href="world-4-ummah-fitnah.html">#38/64 World #4: Ummah vs. Fitnah</a><a class="" href="world-5-furqan-hawa.html">#39/64 World #5: Furqan vs. Hawa</a><a class="" href="world-6-tawhid-taghut.html">#40/64 World #6: Tawhid vs. Taghut</a><a class="" href="world-7-taqwa-dirar.html">#41/64 World #7: Taqwa vs. Dirar</a></div><div class="sov-footer-cat"><h4>07. Warlock Formation, Dissolution &amp; Inter-World Sequesters</h4><a class="" href="warlock-formation-dissolution-jafar-aladdin.html">#42/64 Ja'far &amp; Aladdin Qumqum</a><a class="" href="sequester-between-worlds.html">#43/64 7 Inter-World Sequesters</a></div><div class="sov-footer-cat"><h4>08. The Islamic Egg-in-Baking Intelocketer</h4><a class="" href="interlocker-egg-binder-islam.html">#44/64 Egg-in-Baking Intelocketer</a></div><div class="sov-footer-cat"><h4>09. The Warlock Apocrypha &amp; Modernity Theorems</h4><a class="" href="warlock-apocrypha-islamic-theorems.html">#45/64 Warlock Apocrypha &amp; Theorems</a></div><div class="sov-footer-cat"><h4>10. Islamic Vanguard Husbandry &amp; Botanical Sanctuary</h4><a class="" href="islamic-husbandry-sovereign-estate.html">#46/64 Vanguard Husbandry Estate</a><a class="" href="way-of-the-flower-rose-garden-islam.html">#47/64 Flower, Rose &amp; Chahar Bagh</a><a class="" href="islamic-modesty-evolution-western-frontier-men-women.html">#54/64 Men &amp; Women Modesty: Western Frontier</a></div><div class="sov-footer-cat"><h4>11. Islamic Animalism &amp; Visual History Atlases</h4><a class="" href="disney-daffy-donald-islamic-microcosm.html">#48/64 Disney/Daffy &amp; Jungle Microcosm</a><a class="" href="warlock-islamic-visual-eras-history.html">#49/64 7 Islamic Visual Eras &amp; AI Art</a></div>
+  </div>
+</footer>
+<!-- SOV_CHROME_FOOTER_END -->
+</body>
+</html>

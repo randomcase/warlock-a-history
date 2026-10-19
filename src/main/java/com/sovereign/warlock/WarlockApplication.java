@@ -10,6 +10,7 @@ import com.sovereign.warlock.domain.IslamicCountriesHistoryAndCanonicalEmbrace;
 import com.sovereign.warlock.domain.IslamicDisneyAnimalismMicrocosm;
 import com.sovereign.warlock.domain.IslamicHusbandrySovereignCharter;
 import com.sovereign.warlock.domain.IslamicInterlockerEggBinder;
+import com.sovereign.warlock.domain.IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen;
 import com.sovereign.warlock.domain.IslamicModestyWesternFrontierEvolution;
 import com.sovereign.warlock.domain.IslamicNamingIndonesiaLanguageAndCalligraphy;
 import com.sovereign.warlock.domain.IslamicPhilosophyAlchemyTheocraciesAndMessages;
@@ -89,6 +90,7 @@ public class WarlockApplication {
         printIslamicCaliphatesSultansShahsAndPromiseOfReturn();
         printQuranicTimelinePropertiesKingdomsAndBeautyThesis();
         printIslamThroughAgesReceptionPhilosophyAndScience();
+        printIslamicMaritimeBoatingPiracyMercantilismAndOmanYemen();
         printGeneratedHtmlArtifacts(htmlArtifacts);
         printOpticalSpectrumSort(warlocksByColor7);
         printPillarGrouping(engine.groupByMysticalPillar(warlocksByColor7));
@@ -669,8 +671,43 @@ public class WarlockApplication {
         System.out.println("----------------------------------------------------------------------------------------------------------");
     }
 
+    private static void printIslamicMaritimeBoatingPiracyMercantilismAndOmanYemen() {
+        System.out.println("\n[23] ISLAMIC MARITIME ARCHITECTURE: BOATING, PIRACY, MERCANTILISM, CURRENCY, MAPS, ASTROLABES, COMPASSES & OMANI/YEMENI COASTING CALIPHATES:");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.MaritimeVesselProfile v :
+                IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.canonicalVesselProfiles()) {
+            System.out.printf("  * VESSEL CLASS #%d (%s): %s [%s]%n",
+                    v.vesselIndex(), v.arabicName(), v.englishTitle(), v.oceanBasinAndOrigin());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.PiracyAndMaritimeLawCase p :
+                IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.canonicalPiracyAndMaritimeLawCases()) {
+            System.out.printf("  * PIRACY & SEA LAW #%d (%s): %s%n",
+                    p.caseIndex(), p.eraAndDate(), p.title());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.MercantilismAndCurrencyInstrument m :
+                IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.canonicalMercantilismAndCurrencyInstruments()) {
+            System.out.printf("  * MERCANTILISM & CURRENCY #%d (%s): %s%n",
+                    m.instrumentIndex(), m.category(), m.englishEquivalent());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.CartographyAstrolabeCompassMilestone c :
+                IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.canonicalCartographyAstrolabeCompassMilestones()) {
+            System.out.printf("  * MAPS, ASTROLABES & COMPASSES #%d (%s): %s%n",
+                    c.milestoneIndex(), c.instrumentOrAtlasClass(), c.arabicWorkOrDeviceName());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.OmaniYemeniCoastingPolity pol :
+                IslamicMaritimeBoatingPiracyMercantilismAndOmanYemen.canonicalOmaniYemeniPolities()) {
+            System.out.printf("  * OMANI/YEMENI COASTING POLITY #%d (%s): %s [%s]%n",
+                    pol.polityIndex(), pol.regionAxis(), pol.dynastyOrImamateName(), pol.dateSpan());
+        }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+    }
+
     private static void printGeneratedHtmlArtifacts(List<WarlockHtmlPortalService.GeneratedHtmlArtifact> artifacts) {
-        System.out.println("\n[23] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
+        System.out.println("\n[24] GENERATED SPRING BOOT STATIC HTML PORTALS & DEPENDENCY REPORT (src/main/resources/static/):");
         for (WarlockHtmlPortalService.GeneratedHtmlArtifact a : artifacts) {
             System.out.printf("  * %-26s | %6d bytes | SHA-256: %s... | %s%n",
                     a.fileName(), a.byteSize(), a.sha256Hash().substring(0, 16), a.description());

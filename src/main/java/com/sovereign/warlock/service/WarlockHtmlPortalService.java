@@ -331,6 +331,9 @@ public final class WarlockHtmlPortalService {
                 ));
             }
 
+            IslamicMaritimeOmanYemenPortalGenerator maritimeGenerator = new IslamicMaritimeOmanYemenPortalGenerator();
+            artifacts.add(maritimeGenerator.generateMaritimeOmanYemenPortal(outputDir));
+
             MasterNavigationAndIndexGenerator masterNavGenerator = new MasterNavigationAndIndexGenerator();
             return masterNavGenerator.integrateAllPortalsAndGenerateMasterIndex(outputDir, artifacts);
         } catch (IOException e) {
